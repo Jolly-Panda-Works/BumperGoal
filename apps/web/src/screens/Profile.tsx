@@ -2,11 +2,12 @@ import { useCollectibleReaction } from '../ui/collectibleReaction';
 import { TeamAttributes } from '../ui/TeamAttributes';
 import { TeamCarPreview } from '../ui/TeamCarPreview';
 import { TrailPreview } from '../ui/TrailPreview';
+import { PageHeading } from '../ui/PageHeading';
 import { ResourceMeters } from '../ui/ResourceMeters';
 import { LevelStar } from '../ui/LevelStar';
 import { lazy, Suspense, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link, useNavigate } from 'react-router';
+import { Link, useSearchParams } from 'react-router';
 import { cosmetics, progressionConfig, physicsConfig } from '@flickkick/config';
 import { levelProgress } from '@flickkick/rules';
 import { formatNumber } from '../i18n';
@@ -15,7 +16,6 @@ import { connect, getOnline, linkEmail, refreshProfile, rpc, updateProfile, useO
 import {
   Avatar,
   Dialog,
-  ConfirmDialog,
   ArtImage,
   BallPreview,
   Badge,
@@ -30,15 +30,10 @@ import {
 } from '../ui/components';
 import {
   IconCheck,
-  IconBack,
-  IconGarage,
   IconUsers,
   IconTrophy,
   IconUser,
   IconHistory,
-  IconGift,
-  IconSchool,
-  IconGear,
   IconShirt,
   IconBall,
   IconFormation,
@@ -54,8 +49,6 @@ const ProfileModel = lazy(() => import('../ui/HomeCar'));
 export function ProfileScreen() {
   const { t } = useTranslation();
   const reaction = useCollectibleReaction();
-  const navigate = useNavigate();
-  const [replayTutorial, setReplayTutorial] = useState(false);
   const profile = useLocalProfile();
   const server = useOnline();
   const [name, setName] = useState(profile.displayName);
@@ -86,22 +79,8 @@ export function ProfileScreen() {
   return (
     <div className="screen profile-screen profile-art">
       <header className="profile-art__header">
-        <Link to="/home" className="cartoon-button cartoon-button--blue profile-art__back">
-          <IconBack size={30} />
-          <span>{t('common.back')}</span>
-        </Link>
-        <div className="profile-art__brand">
-          <img src={assetUrl('home/wordmark.webp')} alt="Bumper Goal" width={900} height={450} />
-          <h1>{t('profile.title')}</h1>
-        </div>
+        <PageHeading title={t('profile.title')} to="/home" />
         <ResourceMeters />
-        <Link
-          className="cartoon-button cartoon-button--blue profile-art__settings"
-          to="/settings"
-          aria-label={t('nav.settings')}
-        >
-          <IconGear size={40} />
-        </Link>
       </header>
       <div className="profile-art__layout">
         <section className="profile-art__identity" aria-label={t('profile.displayName')}>
@@ -114,7 +93,9 @@ export function ProfileScreen() {
             <span className="stadium-profile__portrait">
               <Avatar id={profile.avatarId} size={240} />
             </span>
-            <ArtImage className="profile-art__avatar-edit" src={assetUrl('lobby/edit.webp')} size={34} />
+            <span className="icon-btn profile-art__avatar-edit">
+              <ArtImage src={assetUrl('lobby/edit.webp')} size={26} />
+            </span>
           </button>
           <div className="profile-art__name">
             <h2>
@@ -134,13 +115,13 @@ export function ProfileScreen() {
             </button>
           </div>
           <div className="profile-art__experience">
-            <span
+            <Link
               className="profile-art__level"
-              role="img"
-              aria-label={t('common.levelLong', { level: formatNumber(profile.knownLevel) })}
+              to="/rewards/levels"
+              aria-label={`${t('rewards.levelRewards')} — ${t('common.levelLong', { level: formatNumber(profile.knownLevel) })}`}
             >
               <LevelStar value={formatNumber(profile.knownLevel)} />
-            </span>
+            </Link>
             <div>
               <ProgressBar
                 value={xp.current}
@@ -162,25 +143,6 @@ export function ProfileScreen() {
             <RankBadge rank={rankForLevel(profile.knownLevel)} size={85} label={false} />
             <span>{t(`ranks.${rankForLevel(profile.knownLevel)}`)}</span>
           </Link>
-          <div className="profile-art__utilities">
-            <Link
-              className="icon-btn"
-              to="/rewards/levels"
-              aria-label={t('rewards.levelRewards')}
-              title={t('rewards.levelRewards')}
-            >
-              <IconGift size={28} />
-            </Link>
-            <button
-              className="icon-btn"
-              type="button"
-              onClick={() => setReplayTutorial(true)}
-              aria-label={t('home.tutorial')}
-              title={t('home.tutorial')}
-            >
-              <IconSchool size={28} />
-            </button>
-          </div>
         </section>
         <section className="profile-art__details" aria-labelledby="profile-statistics-title">
           <h2 id="profile-statistics-title" className="profile-art__section-title">
@@ -227,7 +189,7 @@ export function ProfileScreen() {
                 return (
                   <Link
                     key={kind}
-                    to="/locker"
+                    to={`/locker?tab=${kind}`}
                     title={kind === 'trails' && !id ? t('locker.trailNone') : t(`${kind}.${id}`)}
                   >
                     {kind === 'trails' && !id ? (
@@ -259,23 +221,9 @@ export function ProfileScreen() {
               <IconUsers size={38} />
               <span>{t('referral.invite')}</span>
             </button>
-            <Link className="cartoon-button cartoon-button--gold" to="/locker">
-              <IconGarage size={46} />
-              <span>{t('nav.inventory')}</span>
-            </Link>
           </div>
         </section>
       </div>
-      <ConfirmDialog
-        open={replayTutorial}
-        title={t('settings.replayTutorial')}
-        body={t('tutorial.replayConfirm')}
-        onCancel={() => setReplayTutorial(false)}
-        onConfirm={() => {
-          setReplayTutorial(false);
-          navigate('/tutorial');
-        }}
-      />
       <Dialog open={edit === 'invite'} title={t('referral.invite')} onClose={() => !inviteBusy && setEdit(null)}>
         <p>{t('referral.description')}</p>
         <Button
@@ -417,7 +365,15 @@ export function LockerScreen() {
   const { t } = useTranslation();
   const reaction = useCollectibleReaction();
   const profile = useLocalProfile();
-  const [tab, setTab] = useState<'teams' | 'balls' | 'avatars' | 'formations' | 'trails'>('teams');
+  const [params, setParams] = useSearchParams();
+  const requestedTab = params.get('tab');
+  const tab: 'teams' | 'balls' | 'avatars' | 'formations' | 'trails' =
+    (['teams', 'balls', 'avatars', 'formations', 'trails'] as const).find((value) => value === requestedTab) ?? 'teams';
+  const setTab = (value: string) =>
+    setParams((current) => {
+      current.set('tab', value);
+      return current;
+    });
   useLocalInventory();
   useOnline();
   const current =

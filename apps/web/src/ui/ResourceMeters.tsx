@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { createPortal } from 'react-dom';
 import { Link } from 'react-router';
 import { useLocalInventory } from '../services/localInventory';
 import { useOnline } from '../services/online';
@@ -11,8 +12,8 @@ export function ResourceMeters() {
   const inventory = useLocalInventory();
   const server = useOnline();
   const wallet = server.status === 'online' ? server.profile?.wallet : inventory;
-  return (
-    <div className="stadium-wallet">
+  return createPortal(
+    <div className="stadium-wallet stadium-wallet--shared">
       <Link to="/shop?tab=currency&group=coins" aria-label={t('common.coins')}>
         <CurrencyIcon currency="coins" size={80} />
         <span className="stadium-wallet__amount">
@@ -35,6 +36,7 @@ export function ResourceMeters() {
           </svg>
         </b>
       </Link>
-    </div>
+    </div>,
+    document.body,
   );
 }

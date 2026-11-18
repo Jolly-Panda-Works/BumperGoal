@@ -6,6 +6,8 @@ import { formatNumber } from '../i18n';
 import { useLocalInventory } from '../services/localInventory';
 import { useOnline } from '../services/online';
 import { rakhtkan } from '../services/gameVariant';
+import { PageHeading } from '../ui/PageHeading';
+import { ResourceMeters } from '../ui/ResourceMeters';
 import { Avatar, CurrencyPill } from '../ui/components';
 import { IconHome, IconOffline, IconShop, IconLocker, IconTrophy, IconUser } from '../ui/icons';
 
@@ -54,31 +56,64 @@ export function Shell() {
         ? '/league'
         : location.pathname;
 
+  const pageTitle = location.pathname.startsWith('/rewards/levels')
+    ? 'rewards.levelRewards'
+    : location.pathname.startsWith('/profile/history')
+      ? 'profile.history'
+      : location.pathname.startsWith('/settings')
+        ? 'settings.title'
+        : location.pathname.startsWith('/shop')
+          ? 'nav.shop'
+          : location.pathname.startsWith('/locker')
+            ? 'nav.inventory'
+            : location.pathname.startsWith('/league')
+              ? 'nav.league'
+              : location.pathname.startsWith('/leaderboard')
+                ? 'nav.leaderboard'
+                : location.pathname.startsWith('/rewards')
+                  ? 'rewards.daily'
+                  : location.pathname.startsWith('/play')
+                    ? 'home.chooseMode'
+                    : 'nav.home';
+  const backTo =
+    location.pathname.startsWith('/profile/') ||
+    location.pathname === '/settings' ||
+    location.pathname.startsWith('/rewards/levels')
+      ? '/profile'
+      : '/home';
+
   return (
     <div
-      className={`shell ${location.pathname === '/home' ? `shell--lobby ${!rakhtkan ? 'shell--stadium' : ''}` : !rakhtkan && location.pathname === '/profile' ? 'shell--profile-art' : ''}`}
+      className={`shell ${!rakhtkan ? 'shell--unified-header' : ''} ${location.pathname === '/home' ? `shell--lobby ${!rakhtkan ? 'shell--stadium' : ''}` : !rakhtkan && location.pathname === '/profile' ? 'shell--profile-art' : ''}`}
     >
-      <header className="topbar">
-        <div className="topbar__right">
-          <div className="topbar__wallet">
-            <Link to={rakhtkan ? '/shop' : '/shop?tab=currency&group=coins'} aria-label={t('common.coins')}>
-              <CurrencyPill currency="coins" amount={wallet ? (wallet.coins ?? 0) : null} />
-            </Link>
-            <Link to={rakhtkan ? '/shop' : '/shop?tab=currency&group=gems'} aria-label={t('common.gems')}>
-              <CurrencyPill currency="gems" amount={wallet ? (wallet.gems ?? 0) : null} />
+      {rakhtkan ? (
+        <header className="topbar">
+          <div className="topbar__right">
+            <div className="topbar__wallet">
+              <Link to={rakhtkan ? '/shop' : '/shop?tab=currency&group=coins'} aria-label={t('common.coins')}>
+                <CurrencyPill currency="coins" amount={wallet ? (wallet.coins ?? 0) : null} />
+              </Link>
+              <Link to={rakhtkan ? '/shop' : '/shop?tab=currency&group=gems'} aria-label={t('common.gems')}>
+                <CurrencyPill currency="gems" amount={wallet ? (wallet.gems ?? 0) : null} />
+              </Link>
+            </div>
+            <Link to={rakhtkan ? '/welcome' : '/profile'} className="profile-chip" aria-label={t('nav.profile')}>
+              <Avatar id={profile.avatarId} size={34} />
+              <span className="profile-chip__copy">
+                <span className="profile-chip__name">
+                  <bdi>{profile.displayName}</bdi>
+                </span>
+                <small>{t('common.levelLong', { level: formatNumber(profile.knownLevel) })}</small>
+              </span>
             </Link>
           </div>
-          <Link to={rakhtkan ? '/welcome' : '/profile'} className="profile-chip" aria-label={t('nav.profile')}>
-            <Avatar id={profile.avatarId} size={34} />
-            <span className="profile-chip__copy">
-              <span className="profile-chip__name">
-                <bdi>{profile.displayName}</bdi>
-              </span>
-              <small>{t('common.levelLong', { level: formatNumber(profile.knownLevel) })}</small>
-            </span>
-          </Link>
-        </div>
-      </header>
+        </header>
+      ) : location.pathname !== '/home' && location.pathname !== '/profile' ? (
+        <header className="topbar unified-topbar">
+          <PageHeading title={t(pageTitle)} to={backTo} />
+          <ResourceMeters />
+        </header>
+      ) : null}
       {!online && (
         <div className="offline-banner" role="status">
           <IconOffline size={18} /> {t('common.offline')}
