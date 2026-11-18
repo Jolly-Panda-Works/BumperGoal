@@ -344,9 +344,9 @@
     "voiceChatNote": "Talk with your opponent. Your microphone stays off until you tap it."
   },
   "teams": {
-    "team_volt": "Cicada",
-    "team_coral": "Cruiser",
-    "team_ocean": "Carrier",
+    "team_volt": "Sir Honks-a-Lot",
+    "team_coral": "Donut Patrol",
+    "team_ocean": "Snack Wagon",
     "team_sunset": "Sunset",
     "team_royal": "Royal",
     "team_forest": "Forest",
@@ -435,15 +435,15 @@
     "club_zob_ahan": "Zob Ahan",
     "nation_italy": "Italy",
     "nation_switzerland": "Switzerland",
-    "team_tiny_1": "Turbo Buggy",
-    "team_tiny_2": "Trail Jeep",
-    "team_tiny_3": "Mini Truck",
-    "team_tiny_4": "Arctic Buggy",
-    "team_tiny_5": "Neon Racer",
-    "team_tiny_6": "Rust Rod",
-    "team_tiny_7": "Jungle Van",
-    "team_tiny_8": "Rally GT",
-    "team_tiny_9": "Rocket Truck"
+    "team_tiny_1": "Captain Wobble",
+    "team_tiny_2": "Mud Muffin",
+    "team_tiny_3": "Chonk Express",
+    "team_tiny_4": "Snow Problem",
+    "team_tiny_5": "Zoom Noodle",
+    "team_tiny_6": "Rusty McToot",
+    "team_tiny_7": "Pickle Tank",
+    "team_tiny_8": "Drama Llama",
+    "team_tiny_9": "Professor Vroom"
   },
   "balls": {
     "ball_classic": "Classic",

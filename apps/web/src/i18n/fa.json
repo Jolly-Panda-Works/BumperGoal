@@ -344,9 +344,9 @@
     "voiceChatNote": "با حریف حرف بزنید. میکروفون تا وقتی آن را نزنید خاموش می‌ماند."
   },
   "teams": {
-    "team_volt": "سیکادا",
-    "team_coral": "کروزر",
-    "team_ocean": "کریر",
+    "team_volt": "بوق‌الدوله",
+    "team_coral": "گشتِ دونات",
+    "team_ocean": "فلافل‌اکسپرس",
     "team_sunset": "غروب",
     "team_royal": "سلطنتی",
     "team_forest": "جنگل",
@@ -435,15 +435,15 @@
     "club_zob_ahan": "ذوب‌آهن",
     "nation_italy": "ایتالیا",
     "nation_switzerland": "سوئیس",
-    "team_tiny_1": "باگی توربو",
-    "team_tiny_2": "جیپ تریل",
-    "team_tiny_3": "کامیونک",
-    "team_tiny_4": "باگی یخی",
-    "team_tiny_5": "ریسر نئونی",
-    "team_tiny_6": "هات‌راد",
-    "team_tiny_7": "ون جنگلی",
-    "team_tiny_8": "رالی جی‌تی",
-    "team_tiny_9": "کامیون راکتی"
+    "team_tiny_1": "کاپیتان لق‌لقو",
+    "team_tiny_2": "کیکِ گِلی",
+    "team_tiny_3": "تپلی‌بار",
+    "team_tiny_4": "پشمک یخی",
+    "team_tiny_5": "ماکارونیِ گازدار",
+    "team_tiny_6": "قراضه‌خان",
+    "team_tiny_7": "خیارشورِ زرهی",
+    "team_tiny_8": "جیغ‌جیغو",
+    "team_tiny_9": "پروفسور گازوئیل"
   },
   "balls": {
     "ball_classic": "کلاسیک",

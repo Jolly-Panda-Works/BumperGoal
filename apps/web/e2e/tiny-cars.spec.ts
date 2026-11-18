@@ -16,8 +16,8 @@ test('new racing models play with animated wheels, exhaust and nitro', async ({ 
   await page.getByLabel('Your player name').fill('Racing Driver');
   await page.getByRole('button', { name: 'Start playing' }).click();
   await page.goto('/play/local');
-  await page.locator('.local-team').nth(0).getByRole('radio', { name: 'Rust Rod', exact: true }).click();
-  await page.locator('.local-team').nth(1).getByRole('radio', { name: 'Rocket Truck', exact: true }).click();
+  await page.locator('.local-team').nth(0).getByRole('radio', { name: 'Rusty McToot', exact: true }).click();
+  await page.locator('.local-team').nth(1).getByRole('radio', { name: 'Professor Vroom', exact: true }).click();
   await page.getByRole('button', { name: 'Kick off' }).click();
   await expect.poll(() => models.has('tiny-racer-6.glb') && models.has('tiny-racer-9.glb')).toBe(true);
   const canvas = page.getByLabel('Bumper Goal 3D football arena');
