@@ -2,12 +2,13 @@ import { lazy, Suspense, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router';
 import { assetUrl } from '../game/art';
-import { carModelForTeam } from '@flickkick/config';
+import { carModelForTeam, progressionConfig } from '@flickkick/config';
+import { levelProgress } from '@flickkick/rules';
 import { useLocalProfile } from '../services/localProfile';
 import { useLocalInventory } from '../services/localInventory';
 import { useOnline } from '../services/online';
 import { formatNumber } from '../i18n';
-import { Avatar, BallPreview, CurrencyIcon, Dialog } from '../ui/components';
+import { Avatar, CurrencyIcon, Dialog } from '../ui/components';
 import { IconGear, IconGift, IconShop, IconTrophy, IconGarage } from '../ui/icons';
 const HomeCar = lazy(() => import('../ui/HomeCar'));
 /** Live controls over independent art layers; no text is baked into the scenery. */
@@ -19,6 +20,7 @@ export function HomeScreen() {
   const wallet = server.status === 'online' ? server.profile?.wallet : inventory;
   const [play, setPlay] = useState(false);
   const model = carModelForTeam(profile.teamId);
+  const xp = levelProgress(server.profile?.xp ?? profile.knownXP, progressionConfig);
   const modes = [
     { to: '/play/ai', title: t('home.playAI'), desc: t('home.playAIDesc') },
     { to: '/play/local', title: t('home.local2p'), desc: t('home.local2pDesc') },
@@ -35,9 +37,22 @@ export function HomeScreen() {
             <strong>
               <bdi>{profile.displayName}</bdi>
             </strong>
-            <small>{t('common.levelLong', { level: formatNumber(profile.knownLevel) })}</small>
+            <span
+              className="stadium-profile__xp"
+              role="progressbar"
+              aria-label={t('profile.xp', { current: formatNumber(xp.current), needed: formatNumber(xp.needed) })}
+              aria-valuemin={0}
+              aria-valuemax={xp.needed || 1}
+              aria-valuenow={xp.current}
+            >
+              <i style={{ width: `${Math.min(100, (xp.current / (xp.needed || 1)) * 100)}%` }} />
+            </span>
           </span>
-          <span className="stadium-profile__level" aria-hidden="true">
+          <span
+            className="stadium-profile__level"
+            role="img"
+            aria-label={t('common.levelLong', { level: formatNumber(profile.knownLevel) })}
+          >
             {formatNumber(profile.knownLevel)}
           </span>
         </Link>
@@ -57,14 +72,22 @@ export function HomeScreen() {
             <span className="stadium-wallet__amount">
               <bdi>{formatNumber(wallet?.coins ?? 0)}</bdi>
             </span>
-            <b aria-hidden="true">+</b>
+            <b className="stadium-wallet__plus" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6Z" />
+              </svg>
+            </b>
           </Link>
           <Link to="/shop?tab=currency&group=gems" aria-label={t('common.gems')}>
             <CurrencyIcon currency="gems" size={80} />
             <span className="stadium-wallet__amount">
               <bdi>{formatNumber(wallet?.gems ?? 0)}</bdi>
             </span>
-            <b aria-hidden="true">+</b>
+            <b className="stadium-wallet__plus" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6Z" />
+              </svg>
+            </b>
           </Link>
         </div>
         <div className="stadium-shortcuts">
@@ -85,9 +108,11 @@ export function HomeScreen() {
             </Suspense>
           </div>
           <div className="stadium-hero__ball">
-            <BallPreview ballId={profile.ballId} size={150} />
+            <span className="stadium-ball-fallback" />
+            <Suspense fallback={null}>
+              <HomeCar model={`ball:${profile.ballId}`} />
+            </Suspense>
           </div>
-          <span className="stadium-hero__name">{t(`teams.${profile.teamId}`)}</span>
         </div>
         <Link className="stadium-shop cartoon-button cartoon-button--orange" to="/shop">
           <IconShop size={64} />
