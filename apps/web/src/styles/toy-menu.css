@@ -729,3 +729,49 @@ body .toy-play > span:first-child {
     height: 94px;
   }
 }
+/* Purple plastic controls with orange reward and primary accents. */
+body .toy-control,
+body .toy-profile {
+  background: linear-gradient(180deg, #bd78f5 0%, #9747df 38%, #7624bd 85%, #5f1d9d 100%);
+  border-color: #e2afff;
+  box-shadow:
+    inset 0 3px 0 #f7dfff,
+    inset 0 -5px 0 #4b1484,
+    inset 3px 0 0 #ce91ff,
+    0 5px 0 #3f126d,
+    0 8px 12px #31104f50 !important;
+  text-shadow: 0 2px 1px #3f146c !important;
+}
+body .toy-control::after {
+  border-top-color: #fff0ffb3;
+}
+body .toy-play,
+body .toy-shortcut[href='/rewards'] .toy-shortcut__face,
+body .toy-shop {
+  background: linear-gradient(180deg, #ffc865 0%, #ffaa28 38%, #f58215 85%, #dc6411 100%);
+  border-color: #ffe2a0;
+  box-shadow:
+    inset 0 3px 0 #fff3c5,
+    inset 0 -5px 0 #bd4c0e,
+    inset 3px 0 0 #ffd17b,
+    0 5px 0 #883b13,
+    0 8px 12px #4f241050 !important;
+}
+body .toy-play {
+  color: white;
+}
+body:has(.toy-menu) .stadium-wallet.stadium-wallet--shared .stadium-wallet__plus {
+  background: linear-gradient(#ffc966, #f08318) !important;
+  border-color: #ffe7af !important;
+  box-shadow:
+    0 2px #8d4119,
+    inset 0 1px #fff0cf !important;
+}
+body .toy-profile__level {
+  background: linear-gradient(#ffc966, #f08318);
+  border-color: #ffe7af;
+  color: #653112;
+  box-shadow:
+    0 3px #8d4119,
+    inset 0 2px #fff0cf !important;
+}
