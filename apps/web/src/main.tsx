@@ -34,3 +34,5 @@ import './styles/motion.css';
 import './styles/rakhtkan.css';
 
 import './styles/bumper-ui.css';
+
+import './styles/cartoon-ui.css';

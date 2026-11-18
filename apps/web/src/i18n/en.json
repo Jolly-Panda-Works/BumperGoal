@@ -11,7 +11,7 @@
     "settings": "Settings",
     "main": "Main",
     "league": "League",
-    "inventory": "Assets"
+    "inventory": "Garage"
   },
   "common": {
     "back": "Back",
@@ -80,7 +80,9 @@
     "rewards": "Rewards",
     "wallet": "Wallet",
     "ready": "Pick your match. Make it count.",
-    "shortcuts": "Quick access"
+    "shortcuts": "Quick access",
+    "startMatch": "PLAY",
+    "chooseMode": "Choose your match"
   },
   "online": {
     "title": "Choose an arena",

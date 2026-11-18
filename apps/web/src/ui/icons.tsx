@@ -40,6 +40,31 @@ export const IconHome = gameArt('home');
 
 export const IconShop = gameArt('shop');
 
+/** Garage navigation uses a car bay rather than the old inventory book. */
+export function IconGarage({ size = 64 }: { size?: number }) {
+  return (
+    <svg className="garage-icon" width={size} height={size} viewBox="0 0 80 80" aria-hidden="true">
+      <path d="M6 28 40 8l34 20v44H6Z" fill="#b4d9f7" stroke="#123a69" strokeWidth="4" strokeLinejoin="round" />
+      <path d="m5 29 35-21 35 21" fill="none" stroke="#f0fcff" strokeWidth="5" strokeLinejoin="round" />
+      <path d="M17 32h46v37H17Z" fill="#154a88" stroke="#ecfaff" strokeWidth="3" />
+      <path d="M20 36h40M20 42h40" stroke="#5cb8f3" strokeWidth="3" />
+      <rect x="31" y="18" width="18" height="8" rx="2" fill="#ffbd1a" stroke="#8e4800" strokeWidth="2" />
+      <path
+        d="m22 53 5-12h26l5 12 5 5v12H17V58Z"
+        fill="#ff3838"
+        stroke="#7a142c"
+        strokeWidth="3"
+        strokeLinejoin="round"
+      />
+      <path d="m28 44-3 10h30l-3-10Z" fill="#73edff" stroke="#efffff" strokeWidth="2" />
+      <rect x="21" y="59" width="9" height="5" rx="2" fill="#fff5aa" />
+      <rect x="50" y="59" width="9" height="5" rx="2" fill="#fff5aa" />
+      <path d="M31 64h18M19 69h42" stroke="#d9efff" strokeWidth="4" />
+      <path d="M20 71v5h9v-5M51 71v5h9v-5" fill="#133451" />
+    </svg>
+  );
+}
+
 export const IconShirt = gameArt('teams');
 
 export const IconTrophy = gameArt('rank');

@@ -11,7 +11,7 @@
     "settings": "تنظیمات",
     "main": "منوی اصلی",
     "league": "لیگ",
-    "inventory": "دارایی‌ها"
+    "inventory": "گاراژ"
   },
   "common": {
     "back": "بازگشت",
@@ -80,7 +80,9 @@
     "rewards": "جوایز",
     "wallet": "کیف پول",
     "ready": "حالت بازی را انتخاب کن و گل بزن!",
-    "shortcuts": "دسترسی سریع"
+    "shortcuts": "دسترسی سریع",
+    "startMatch": "شروع مسابقه",
+    "chooseMode": "انتخاب حالت بازی"
   },
   "online": {
     "title": "انتخاب ورزشگاه",
