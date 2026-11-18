@@ -393,7 +393,7 @@ export class ThreeArena {
           if (used.has(key)) continue;
           used.add(key);
           const patch = new THREE.Mesh(
-            new THREE.CircleGeometry(0.071, 5),
+            new THREE.CircleGeometry(physicsConfig.ball.radius * 0.323, 5),
             new THREE.MeshStandardMaterial({ color: 0x18252a, side: THREE.DoubleSide }),
           );
           patch.position.copy(normal.multiplyScalar(physicsConfig.ball.radius + 0.002));
