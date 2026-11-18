@@ -3,7 +3,7 @@
 import { useSyncExternalStore } from 'react';
 import { Store } from './storage';
 
-import { detectLanguage, isLanguage, type Language } from '../i18n/languages';
+import { defaultLanguage, isLanguage, type Language } from '../i18n/languages';
 export type { Language } from '../i18n/languages';
 export type GraphicsQuality = 'low' | 'high';
 
@@ -32,19 +32,11 @@ const prefersReducedMotion = (): boolean => {
   }
 };
 
-const browserLanguage = (): Language => {
-  try {
-    return detectLanguage(navigator.language);
-  } catch {
-    return 'en';
-  }
-};
-
 export const defaultSettings = (): Settings => ({
   musicVolume: 0.5,
   sfxVolume: 0.8,
   muted: false,
-  language: browserLanguage(),
+  language: defaultLanguage,
   graphics: 'high',
   aimSensitivity: 1,
   aimGuide: true,

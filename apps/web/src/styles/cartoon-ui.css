@@ -1053,3 +1053,50 @@ body .btn::after {
     border-radius: 4px;
   }
 }
+/* Language changes affect controls, while arena and corner anchors stay stable. */
+:root {
+  --ui-direction: ltr;
+}
+html[dir='rtl'] {
+  --ui-direction: rtl;
+}
+.stadium-home .cartoon-button,
+.stadium-profile__copy,
+.stadium-modes {
+  direction: var(--ui-direction);
+}
+.stadium-home .cartoon-button > span:not(.game-art-icon) {
+  unicode-bidi: isolate;
+}
+.stadium-profile__copy {
+  text-align: start;
+}
+.stadium-profile__xp {
+  display: flex;
+  direction: var(--ui-direction);
+}
+.stadium-profile > .stadium-profile__level {
+  clip-path: none;
+  background: none;
+  filter: drop-shadow(0 3px 3px #00235788);
+  overflow: visible;
+  isolation: isolate;
+}
+.stadium-profile__level svg {
+  position: absolute;
+  inset: -12%;
+  width: 124%;
+  height: 124%;
+  overflow: visible;
+  z-index: -1;
+}
+.stadium-profile__level b {
+  position: relative;
+  color: #663000;
+  font-size: inherit;
+  font-weight: 900;
+  line-height: 1;
+  padding-top: 3px;
+  text-shadow: 0 2px #fff49b;
+  -webkit-text-stroke: 0.3px #633000;
+}

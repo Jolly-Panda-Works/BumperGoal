@@ -10,6 +10,7 @@ import { useOnline } from '../services/online';
 import { formatNumber } from '../i18n';
 import { Avatar, CurrencyIcon, Dialog } from '../ui/components';
 import { IconGear, IconGift, IconShop, IconTrophy, IconGarage } from '../ui/icons';
+import { LevelStar } from '../ui/LevelStar';
 const HomeCar = lazy(() => import('../ui/HomeCar'));
 /** Live controls over independent art layers; no text is baked into the scenery. */
 export function HomeScreen() {
@@ -53,7 +54,7 @@ export function HomeScreen() {
             role="img"
             aria-label={t('common.levelLong', { level: formatNumber(profile.knownLevel) })}
           >
-            {formatNumber(profile.knownLevel)}
+            <LevelStar value={formatNumber(profile.knownLevel)} />
           </span>
         </Link>
         <Link
