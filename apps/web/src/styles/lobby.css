@@ -3154,7 +3154,7 @@ textarea,
 /* The arena owns the viewport; the score floats above the 3D scene. */
 body:has(.match:not(.match--center)) {
   overflow: hidden;
-  background: #638f43;
+  background: #21a344;
 }
 #root:has(.match:not(.match--center)) {
   inline-size: 100%;
@@ -3170,7 +3170,7 @@ body:has(.match:not(.match--center)) {
   margin: 0;
   padding: 0;
   display: block;
-  background: #638f43;
+  background: #21a344;
 }
 .match:not(.match--center) .match__board {
   position: absolute;
@@ -3184,13 +3184,13 @@ body:has(.match:not(.match--center)) {
   transform: translateX(-50%);
   inline-size: min(100% - 12px, 1000px);
   box-sizing: border-box;
-  border: 2px solid #253f56;
-  border-block-end: 4px solid #193043;
+  border: 2px solid #08274e;
+  border-block-end: 4px solid #092248;
   border-radius: 12px;
   padding: 6px 7px;
-  background: linear-gradient(#567a97, #32536e);
+  background: linear-gradient(#248ee1, #0b4c99);
   box-shadow:
-    inset 0 2px #a1bfd3,
+    inset 0 2px #82d8ff,
     0 4px 0 #142d3766;
 }
 .match:not(.match--center) .hud-player {
@@ -3202,14 +3202,14 @@ body:has(.match:not(.match--center)) {
   background: #f1d27026;
 }
 .match:not(.match--center) .hud-player__name {
-  color: #fff4cb;
+  color: #ffffff;
   text-shadow: 0 2px #263a4d;
 }
 .match:not(.match--center) .hud-player__meta {
-  color: #cedce6;
+  color: #e5f4ff;
 }
 .match:not(.match--center) .hud__score {
-  background: linear-gradient(#fff1bc, #d8b76d);
+  background: linear-gradient(#fff164, #ffbf27);
   border: 2px solid #263e53;
   border-radius: 9px;
   color: #21394c;
@@ -3225,13 +3225,13 @@ body:has(.match:not(.match--center)) {
   border: 2px solid #253b52;
   border-block-end-width: 4px;
   border-radius: 9px;
-  background: linear-gradient(#8fbbdf, #5185b0);
+  background: linear-gradient(#4ac8ff, #147bd7);
   box-shadow: inset 0 2px #beddef;
 }
 .match:not(.match--center) .match-turn-notice {
-  border: 3px solid #775732;
-  background: linear-gradient(#fae9ac, #d7b96e);
-  color: #3a4e42;
+  border: 3px solid #9b5918;
+  background: linear-gradient(#fff16c, #ffc53d);
+  color: #153e68;
   text-shadow: 0 1px #fff3c4;
   box-shadow:
     inset 0 2px #fff9d7,

@@ -51,25 +51,29 @@ export class ThreeArena {
   ) {
     this.orientation = init.bottomSide === 'R' ? -1 : 1;
     this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false, powerPreference: 'high-performance' });
-    this.renderer.setPixelRatio(Math.min(devicePixelRatio, settingsStore.get().graphics === 'low' ? 1 : 2));
+    this.renderer.setPixelRatio(
+      settingsStore.get().graphics === 'low' ? 1 : Math.min(2, Math.max(1.5, devicePixelRatio)),
+    );
     this.renderer.shadowMap.enabled = settingsStore.get().graphics !== 'low';
     this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     this.renderer.outputColorSpace = THREE.SRGBColorSpace;
-    this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    this.renderer.toneMappingExposure = 1.12;
+    // Preserve the saturated cartoon palette instead of compressing it into pale highlights.
+    this.renderer.toneMapping = THREE.NoToneMapping;
+    this.renderer.toneMappingExposure = 1;
     this.renderer.domElement.style.touchAction = 'none';
     this.renderer.domElement.setAttribute('aria-label', 'Bumper Goal 3D football arena');
     parent.appendChild(this.renderer.domElement);
-    this.scene.background = new THREE.Color('#88b66b');
-    this.scene.fog = new THREE.Fog('#88b66b', 45, 95);
-    this.scene.add(new THREE.HemisphereLight(0xe7f5ff, 0x476346, 1.9));
-    const sun = new THREE.DirectionalLight(0xffe9c7, 2.5);
+    this.scene.background = new THREE.Color('#31a54e');
+    this.scene.fog = new THREE.Fog('#31a54e', 80, 150);
+    this.scene.add(new THREE.HemisphereLight(0xe6f7ff, 0x284b65, 0.9));
+    const sun = new THREE.DirectionalLight(0xffffff, 1.6);
     sun.position.set(-7, 15, 8);
     sun.castShadow = true;
     sun.shadow.mapSize.set(2048, 2048);
     Object.assign(sun.shadow.camera, { left: -11, right: 11, top: 12, bottom: -12, near: 1, far: 45 });
     sun.shadow.bias = -0.0005;
-    sun.shadow.normalBias = 0.03;
+    sun.shadow.normalBias = 0.025;
+    sun.shadow.radius = 1.5;
     this.scene.add(sun);
     this.tracksCanvas.width = 512;
     this.tracksCanvas.height = 1024;
@@ -152,11 +156,11 @@ export class ThreeArena {
     canvas.width = 768;
     canvas.height = 1280;
     const ctx = canvas.getContext('2d')!;
-    ctx.fillStyle = '#5e822c';
+    ctx.fillStyle = '#169938';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     for (let row = 0; row < 12; row++)
       for (let column = 0; column < 6; column++) {
-        ctx.fillStyle = (row + column) % 2 ? '#5e822c' : '#6b9034';
+        ctx.fillStyle = (row + column) % 2 ? '#169938' : '#2bb445';
         ctx.fillRect(
           (column * canvas.width) / 6,
           (row * canvas.height) / 12,
@@ -165,17 +169,17 @@ export class ThreeArena {
         );
       }
     let seed = 42;
-    for (let i = 0; i < 75000; i++) {
+    for (let i = 0; i < 18000; i++) {
       seed = (Math.imul(seed, 1664525) + 1013904223) | 0;
       const x = (seed >>> 8) % canvas.width;
       seed = (Math.imul(seed, 1664525) + 1013904223) | 0;
       const y = (seed >>> 8) % canvas.height;
-      ctx.fillStyle = i % 2 ? '#d1d97912' : '#153d2518';
+      ctx.fillStyle = i % 2 ? '#b9f5a90b' : '#124e2e10';
       ctx.fillRect(x, y, 1, 3);
     }
     const texture = new THREE.CanvasTexture(canvas);
     texture.colorSpace = THREE.SRGBColorSpace;
-    texture.anisotropy = 8;
+    texture.anisotropy = Math.min(16, this.renderer.capabilities.getMaxAnisotropy());
     return texture;
   }
 
@@ -184,8 +188,8 @@ export class ThreeArena {
     const length = halfLength * 2;
     const goalLine = halfLength - 0.07;
     this.scene.add(cartoonSurroundings());
-    this.box(11.4, 0.65, length + 4, 0x586b74, 0, -0.46, 0);
-    this.box(10.7, 0.18, length + 3.3, 0xc4b587, 0, -0.14, 0);
+    this.box(11.4, 0.65, length + 4, 0x305c88, 0, -0.46, 0);
+    this.box(10.7, 0.18, length + 3.3, 0xebcb78, 0, -0.14, 0);
     const turf = new THREE.Mesh(
       new THREE.PlaneGeometry(9, length),
       new THREE.MeshToonMaterial({ map: this.grassTexture() }),
@@ -209,7 +213,7 @@ export class ThreeArena {
         new THREE.Vector3(x1, 0.018, z1),
       ]);
     rect(-4.42, -goalLine, 4.42, goalLine);
-    this.box(8.84, 0.012, 0.045, 0xe9f2d4, 0, 0.02, 0);
+    this.box(8.84, 0.012, 0.045, 0xffffff, 0, 0.02, 0);
     this.line(
       Array.from(
         { length: 97 },
@@ -221,11 +225,20 @@ export class ThreeArena {
       rect(-1.4, sign * goalLine, 1.4, sign * (halfLength - 0.9));
       this.goal(sign);
       // Low perimeter curbs keep the near goal and cars unobstructed.
-      for (const x of [-3.3, 3.3]) this.box(2.35, 0.18, 0.13, 0xd9c98c, x, 0.1, sign * (halfLength + 0.08));
-      for (const side of [-1, 1]) {
-        this.box(0.16, 0.25, length + 0.35, 0xd9c98c, side * 4.65, 0.1, 0);
-        this.box(0.18, 0.06, length + 0.5, sign === 1 ? 0xc04e48 : 0x487fbd, side * 4.65, 0.25, 0);
-      }
+      for (const x of [-3.3, 3.3]) this.box(2.35, 0.18, 0.13, 0xffe6a0, x, 0.1, sign * (halfLength + 0.08));
+    }
+    for (const side of [-1, 1]) {
+      this.box(0.16, 0.25, length + 0.35, 0xffe6a0, side * 4.65, 0.1, 0);
+      for (const sign of [-1, 1])
+        this.box(
+          0.18,
+          0.06,
+          halfLength + 0.25,
+          sign === 1 ? 0xff3c48 : 0x168fe8,
+          side * 4.65,
+          0.25,
+          (sign * halfLength) / 2,
+        );
     }
     this.stadium();
   }
@@ -234,7 +247,7 @@ export class ThreeArena {
     const frame = new THREE.Group();
     this.scene.add(frame);
     const z = sign * physicsConfig.arena.halfWidth;
-    const postMaterial = new THREE.MeshStandardMaterial({ color: 0xfaf5df, roughness: 0.3, metalness: 0.3 });
+    const postMaterial = new THREE.MeshStandardMaterial({ color: 0xf5fbff, roughness: 0.3, metalness: 0.3 });
     const beam = (a: THREE.Vector3, b: THREE.Vector3) => {
       const mesh = new THREE.Mesh(new THREE.CylinderGeometry(0.065, 0.065, a.distanceTo(b), 12), postMaterial);
       mesh.position.copy(a).add(b).multiplyScalar(0.5);
@@ -250,13 +263,13 @@ export class ThreeArena {
         const dz = (step * 0.95) / 6;
         this.line(
           [new THREE.Vector3(x, 0, z + sign * dz), new THREE.Vector3(x, 1.15 - dz * 0.3, z + sign * dz)],
-          0xe9f1eb,
-          0.38,
+          0xd6edff,
+          0.6,
           frame,
         );
       }
       for (let y = 0.15; y < 1; y += 0.15)
-        this.line([new THREE.Vector3(x, y, z), new THREE.Vector3(x, y * 0.74, z + sign * 0.95)], 0xe9f1eb, 0.38, frame);
+        this.line([new THREE.Vector3(x, y, z), new THREE.Vector3(x, y * 0.74, z + sign * 0.95)], 0xd6edff, 0.38, frame);
     }
     beam(new THREE.Vector3(-1.3, 1.15, z), new THREE.Vector3(1.3, 1.15, z));
     beam(new THREE.Vector3(-1.3, 0.85, z + sign * 0.95), new THREE.Vector3(1.3, 0.85, z + sign * 0.95));
@@ -267,7 +280,7 @@ export class ThreeArena {
           new THREE.Vector3(x, 0.85, z + sign * 0.95),
           new THREE.Vector3(x, 1.15, z),
         ],
-        0xe9f1eb,
+        0xd6edff,
         0.45,
         frame,
       );
@@ -275,7 +288,7 @@ export class ThreeArena {
     for (let y = 0.15; y < 0.9; y += 0.15)
       this.line(
         [new THREE.Vector3(-1.3, y, z + sign * 0.95), new THREE.Vector3(1.3, y, z + sign * 0.95)],
-        0xe9f1eb,
+        0xd6edff,
         0.4,
         frame,
       );
@@ -297,7 +310,7 @@ export class ThreeArena {
           0.28,
           0.24 + row * 0.22,
           physicsConfig.arena.halfWidth * 2 - 0.2,
-          row % 2 ? 0x819398 : 0x667b82,
+          row % 2 ? 0x3a98d5 : 0x245b96,
           x,
           row * 0.11,
           0,
@@ -319,9 +332,9 @@ export class ThreeArena {
     canvas.width = 1024;
     canvas.height = 180;
     const ctx = canvas.getContext('2d')!;
-    ctx.fillStyle = '#365d7b';
+    ctx.fillStyle = '#087ac5';
     ctx.fillRect(0, 0, 1024, 180);
-    ctx.fillStyle = '#f9dc80';
+    ctx.fillStyle = '#ffe744';
     ctx.font = '900 90px sans-serif';
     ctx.textAlign = 'center';
     ctx.fillText('BUMPER GOAL', 512, 119);
@@ -333,7 +346,7 @@ export class ThreeArena {
     );
     sign.position.set(0, 1.7, -physicsConfig.arena.halfWidth - 1.11);
     this.scene.add(sign);
-    this.box(4.4, 0.9, 0.15, 0xc9bb88, 0, 1.7, -physicsConfig.arena.halfWidth - 1.22);
+    this.box(4.4, 0.9, 0.15, 0xffcc49, 0, 1.7, -physicsConfig.arena.halfWidth - 1.22);
   }
 
   private makeBodies() {
@@ -410,6 +423,17 @@ export class ThreeArena {
                 const converted = materials.map((material) => {
                   const original = material as THREE.MeshStandardMaterial;
                   const toon = new THREE.MeshToonMaterial({ map: original.map, color: original.color });
+                  toon.onBeforeCompile = (shader) => {
+                    shader.fragmentShader = shader.fragmentShader.replace(
+                      '#include <map_fragment>',
+                      `
+                      #include <map_fragment>
+                      float paintLuma = dot(diffuseColor.rgb, vec3(0.2126, 0.7152, 0.0722));
+                      diffuseColor.rgb = max(vec3(0.0), mix(vec3(paintLuma), diffuseColor.rgb, 1.35) * 1.22);
+                      if (diffuseColor.r > diffuseColor.g * 1.8 && diffuseColor.r > diffuseColor.b * 1.5) diffuseColor.rgb *= 1.6;
+                    `,
+                    );
+                  };
                   original.dispose();
                   return toon;
                 });
@@ -583,7 +607,7 @@ export class ThreeArena {
       body.last.copy(next);
     }
     this.drawTracks();
-    (this.scene.background as THREE.Color).setHex(this.clock < this.goalFlashUntil ? 0xcce998 : 0x88b66b);
+    (this.scene.background as THREE.Color).setHex(this.clock < this.goalFlashUntil ? 0xcce998 : 0x31a54e);
     this.renderer.render(this.scene, this.camera);
   };
 
