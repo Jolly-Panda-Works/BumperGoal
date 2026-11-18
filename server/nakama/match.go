@@ -202,7 +202,7 @@ func playerInfo(ctx context.Context, nk runtime.NakamaModule, userID string) rul
 		p.Level = gd().Progression.LevelFromXP(prog.XP)
 	}
 	if lo, err := readObject[Loadout](ctx, nk, userID, keyLoadout); err == nil && lo.TeamID != "" {
-		p.TeamID = lo.TeamID
+		p.TeamID = gd().Cosmetics.ResolveTeamID(lo.TeamID)
 	}
 	return p
 }

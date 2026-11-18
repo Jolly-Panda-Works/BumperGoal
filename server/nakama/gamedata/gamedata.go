@@ -85,6 +85,7 @@ type TeamAttributes struct {
 }
 
 type Cosmetic struct {
+	CarModel   string          `json:"carModel,omitempty"`
 	Attributes *TeamAttributes `json:"attributes,omitempty"`
 	Positions  [][2]float64    `json:"positions,omitempty"`
 	Image      string          `json:"image,omitempty"` // admin-uploaded disc art (data URL)
@@ -278,4 +279,26 @@ func (c Cosmetics) TeamTurnMs(id string, base int64) int64 {
 		return base
 	}
 	return int64(math.Round(float64(base) * (.6 + float64(a.Time)/15)))
+}
+
+//go:embed team-aliases.json
+var teamAliasesJSON []byte
+var TeamAliases = func() map[string]string {
+	var aliases map[string]string
+	_ = json.Unmarshal(teamAliasesJSON, &aliases)
+	return aliases
+}()
+
+func LegacyTeamID(id string) string {
+	if mapped, ok := TeamAliases[id]; ok {
+		return mapped
+	}
+	return id
+}
+func (c Cosmetics) ResolveTeamID(id string) string {
+	id = LegacyTeamID(id)
+	if c.Exists("teams", id) {
+		return id
+	}
+	return c.Default("teams")
 }

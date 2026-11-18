@@ -1,3 +1,4 @@
+import { resolveTeamId } from '@flickkick/config';
 // Board palette: markings, aim and highlight colours, plus the procedural
 // placeholders the scene draws when a texture from ./art is missing.
 import { cosmetics, type BallDef, type TeamDef } from '@flickkick/config';
@@ -21,7 +22,7 @@ export const BOARD = {
 export const hex = (color: string): number => Number.parseInt(color.replace('#', ''), 16);
 
 export function teamDef(id: string): TeamDef {
-  return cosmetics.teams.find((t) => t.id === id) ?? cosmetics.teams[0]!;
+  return cosmetics.teams.find((t) => t.id === resolveTeamId(id)) ?? cosmetics.teams[0]!;
 }
 
 export function ballDef(id: string): BallDef {

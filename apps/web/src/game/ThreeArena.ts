@@ -9,7 +9,7 @@ import { preferredArenaLayout } from './arenaLayout';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import type { Entity } from 'koota';
-import { physicsConfig, teamPhysics } from '@flickkick/config';
+import { physicsConfig, teamPhysics, carModelForTeam } from '@flickkick/config';
 import { audio } from '../services/audio';
 import { settingsStore } from '../services/settings';
 import { bodyEntities, clearAiming, runFrame, type Impact } from './ecs/systems';
@@ -472,7 +472,7 @@ export class ThreeArena {
         this.box(0.72, 0.22, 0.58, 0x233b48, 0, 0.45, -0.05, fallback);
         modelRoot.add(fallback);
         new GLTFLoader().load(
-          assetUrl(`cars/${team === 0 ? 'cicada' : 'cruiser'}.glb`),
+          assetUrl(`cars/${carModelForTeam(this.init.controller.playerOf(entity.get(Team)!.side).teamId)}.glb`),
           (gltf) => {
             if (this.disposed) {
               this.disposeTree(gltf.scene);

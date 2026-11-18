@@ -4,6 +4,7 @@ import (
 	"context"
 	"database/sql"
 	"encoding/json"
+	"flickkick/server/gamedata"
 	"github.com/heroiclabs/nakama-common/runtime"
 )
 
@@ -23,8 +24,16 @@ func ownsItem(ctx context.Context, nk runtime.NakamaModule, uid, kind, id string
 	if gd().Cosmetics.IsFree(kind, id) {
 		return true
 	}
-	objects, err := nk.StorageRead(ctx, []*runtime.StorageRead{{Collection: collectionLedger, Key: ledgerPrefix[kind] + id, UserID: uid}})
-	return err == nil && len(objects) == 1
+	reads := []*runtime.StorageRead{{Collection: collectionLedger, Key: ledgerPrefix[kind] + id, UserID: uid}}
+	if kind == "teams" {
+		for old, current := range gamedata.TeamAliases {
+			if current == id {
+				reads = append(reads, &runtime.StorageRead{Collection: collectionLedger, Key: ledgerPrefix[kind] + old, UserID: uid})
+			}
+		}
+	}
+	objects, err := nk.StorageRead(ctx, reads)
+	return err == nil && len(objects) > 0
 }
 
 func ownedItems(ctx context.Context, nk runtime.NakamaModule, uid, kind string) []string {
@@ -40,14 +49,34 @@ func ownedItems(ctx context.Context, nk runtime.NakamaModule, uid, kind string) 
 	if len(reads) == 0 {
 		return owned
 	}
+	if kind == "teams" {
+		for old, current := range gamedata.TeamAliases {
+			if !gd().Cosmetics.IsFree("teams", current) {
+				reads = append(reads, &runtime.StorageRead{Collection: collectionLedger, Key: ledgerPrefix[kind] + old, UserID: uid})
+			}
+		}
+	}
 	objects, err := nk.StorageRead(ctx, reads)
 	if err == nil {
 		for _, obj := range objects {
 			var item struct {
 				ID string `json:"id"`
 			}
-			if json.Unmarshal([]byte(obj.Value), &item) == nil && gd().Cosmetics.Exists(kind, item.ID) {
-				owned = append(owned, item.ID)
+			if json.Unmarshal([]byte(obj.Value), &item) == nil {
+				if kind == "teams" {
+					item.ID = gamedata.LegacyTeamID(item.ID)
+				}
+				if gd().Cosmetics.Exists(kind, item.ID) {
+					found := false
+					for _, id := range owned {
+						if id == item.ID {
+							found = true
+						}
+					}
+					if !found {
+						owned = append(owned, item.ID)
+					}
+				}
 			}
 		}
 	}

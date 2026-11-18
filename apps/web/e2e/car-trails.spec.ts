@@ -6,18 +6,26 @@ test('equipped trail renders behind moving cars', async ({ page }) => {
   await page.getByRole('button', { name: 'Start playing' }).click();
   await page.evaluate(() => {
     const profile = JSON.parse(localStorage.getItem('flickkick.profile.v1')!);
-    localStorage.setItem('flickkick.profile.v1', JSON.stringify({ ...profile, trailId: 'trail_rainbow' }));
+    localStorage.setItem(
+      'flickkick.profile.v1',
+      JSON.stringify({ ...profile, trailId: 'trail_rainbow', teamId: 'team_ocean' }),
+    );
     localStorage.setItem(
       'flickkick.inventory.v1',
-      JSON.stringify({ coins: 0, gems: 0, owned: ['trail_rainbow'], packs: [] }),
+      JSON.stringify({ coins: 0, gems: 0, owned: ['trail_rainbow', 'team_ocean'], packs: [] }),
     );
   });
   const errors: string[] = [];
   page.on('pageerror', (e) => errors.push(e.message));
+  const models = new Set<string>();
+  page.on('response', (response) => {
+    if (response.ok() && response.url().endsWith('.glb')) models.add(response.url().split('/').at(-1)!);
+  });
   await page.goto('/play/local');
   await page.getByRole('button', { name: 'Kick off' }).click();
   const canvas = page.getByLabel('Bumper Goal 3D football arena');
   await expect(canvas).toBeVisible();
+  await expect.poll(() => models.has('carrier.glb')).toBe(true);
   for (let attempt = 0; attempt < 2; attempt++) {
     const state = await page.evaluate(() => (window as any).__fkMatch.state());
     const car = state.bodies[state.turn.side === 'L' ? 3 : 8];

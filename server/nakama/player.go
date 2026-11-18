@@ -173,6 +173,7 @@ func loadProfile(ctx context.Context, nk runtime.NakamaModule, userID string) (*
 	if err != nil {
 		return nil, runtime.NewError("profile not initialised", codeNotFound)
 	}
+	loadout.TeamID = gd().Cosmetics.ResolveTeamID(loadout.TeamID)
 	if !gd().Cosmetics.Exists("formations", loadout.FormationID) {
 		loadout.FormationID = gd().Cosmetics.Default("formations")
 	}

@@ -1,7 +1,7 @@
 // Offline profile for local play (ARCHITECTURE §7). It never grants online
 // rewards: local results only feed practice statistics and local history.
 import { useSyncExternalStore } from 'react';
-import { cosmetics } from '@flickkick/config';
+import { cosmetics, resolveTeamId } from '@flickkick/config';
 import type { EndReason, MatchMode } from '@flickkick/rules';
 import type { MatchStatistics } from '../game/matchStatistics';
 import type { Side } from '@flickkick/rules';
@@ -95,12 +95,16 @@ export const profileStore = new Store<LocalProfile>('flickkick.profile.v1', defa
   return {
     ...d,
     ...raw,
+    teamId: resolveTeamId(raw.teamId ?? d.teamId),
     pendingLevelUps: Array.isArray(raw.pendingLevelUps)
       ? raw.pendingLevelUps.filter((n) => Number.isInteger(n) && n > 1 && n <= 50)
       : [],
     practice: { ...d.practice, ...(raw.practice ?? {}) },
     history: Array.isArray(raw.history) ? raw.history.slice(0, HISTORY_LIMIT) : [],
-    pending: raw.pending && typeof raw.pending === 'object' ? raw.pending : {},
+    pending:
+      raw.pending && typeof raw.pending === 'object'
+        ? { ...raw.pending, ...(raw.pending.teamId ? { teamId: resolveTeamId(raw.pending.teamId) } : {}) }
+        : {},
   };
 });
 

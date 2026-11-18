@@ -31,3 +31,24 @@ func TestPaidItemOwnershipPerKind(t *testing.T) {
 		}
 	}
 }
+
+func TestRetiredTeamPurchaseKeepsCarrierOwnership(t *testing.T) {
+	useDefaultData(t)
+	store := &identityStorage{values: map[string]string{identityKey(collectionLedger, "team:team_forest", "owner"): `{"id":"team_forest"}`}}
+	if !ownsItem(context.Background(), store, "owner", "teams", "team_ocean") {
+		t.Fatal("legacy purchase lost")
+	}
+	if ownsItem(context.Background(), store, "other", "teams", "team_ocean") {
+		t.Fatal("legacy purchase leaked to another user")
+	}
+	owned := ownedItems(context.Background(), store, "owner", "teams")
+	found := false
+	for _, id := range owned {
+		if id == "team_ocean" {
+			found = true
+		}
+	}
+	if !found {
+		t.Fatal("carrier missing from migrated inventory")
+	}
+}

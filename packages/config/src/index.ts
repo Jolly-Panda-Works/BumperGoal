@@ -1,5 +1,6 @@
 // Typed access to FlickKick's data-driven configuration (packages/config/data).
 // The Go server reads the same JSON files; never hardcode these values elsewhere.
+import teamAliasesJson from '../data/team-aliases.json';
 import aiProfilesJson from '../data/ai-profiles.json';
 import arenasJson from '../data/arenas.json';
 import cosmeticsJson from '../data/cosmetics.json';
@@ -121,6 +122,7 @@ export interface TeamAttributes {
   aim: number;
 }
 export interface TeamDef {
+  carModel: 'cicada' | 'cruiser' | 'carrier';
   attributes: TeamAttributes;
   id: string;
   group: TeamGroup;
@@ -313,4 +315,16 @@ export function teamTurnTime(id: string, baseMs: number): number {
 }
 export function teamAimRange(id: string): number {
   return aimRange(teamAttributes(id).aim);
+}
+
+/** Legacy team purchases keep the corresponding real car model. */
+export function legacyTeamId(id: string): string {
+  return (teamAliasesJson as Record<string, string>)[id] ?? id;
+}
+export function resolveTeamId(id: string): string {
+  const mapped = legacyTeamId(id);
+  return cosmetics.teams.some((t) => t.id === mapped) ? mapped : cosmetics.teams[0]!.id;
+}
+export function carModelForTeam(id: string): TeamDef['carModel'] {
+  return cosmetics.teams.find((t) => t.id === resolveTeamId(id))!.carModel;
 }

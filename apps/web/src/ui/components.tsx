@@ -1,3 +1,4 @@
+import { TeamCarPreview } from './TeamCarPreview';
 import { showMessage, type MessageTone } from './messages';
 import { createPortal, flushSync } from 'react-dom';
 import {
@@ -12,7 +13,7 @@ import {
 } from 'react';
 import { useTranslation } from 'react-i18next';
 import { arenasConfig, cosmetics } from '@flickkick/config';
-import { avatarUrl, ballUrl, discUrl, uiUrl } from '../game/art';
+import { avatarUrl, ballUrl, uiUrl } from '../game/art';
 import { formatNumber } from '../i18n';
 import { connect, useOnline } from '../services/online';
 import { useSettings } from '../services/settings';
@@ -288,21 +289,7 @@ function PlaceholderAvatar({ id, size }: { id: string; size: number }) {
 }
 
 export function TeamSwatch({ teamId, size = 32 }: { teamId: string; size?: number }) {
-  const team = cosmetics.teams.find((t) => t.id === teamId) ?? cosmetics.teams[0]!;
-  const placeholder = (
-    <span
-      className="team-swatch"
-      style={{
-        inlineSize: size,
-        blockSize: size,
-        background: team.secondary,
-        boxShadow: `inset 0 0 0 ${size * 0.12}px ${team.secondary}`,
-      }}
-    >
-      <span style={{ background: team.primary }} />
-    </span>
-  );
-  return <ArtImage className="team-disc" src={discUrl(team.id)} size={size} fallback={placeholder} />;
+  return <TeamCarPreview teamId={teamId} size={size} />;
 }
 
 export function BallPreview({ ballId, size = 48 }: { ballId: string; size?: number }) {

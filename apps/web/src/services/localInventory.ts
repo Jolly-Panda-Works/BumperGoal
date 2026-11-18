@@ -1,5 +1,5 @@
 import { useSyncExternalStore } from 'react';
-import { cosmetics, economyConfig } from '@flickkick/config';
+import { cosmetics, economyConfig, legacyTeamId } from '@flickkick/config';
 import { Store } from './storage';
 import { getOnline, type ServerProfile } from './online';
 import type { LocalMatchRecord } from './localProfile';
@@ -37,7 +37,9 @@ export const localInventory = new Store<LocalInventory>(
     ranked: raw.ranked,
     coins: Math.max(0, Number(raw.coins) || 0),
     gems: Math.max(0, Number(raw.gems) || 0),
-    owned: Array.isArray(raw.owned) ? raw.owned.filter((id) => typeof id === 'string') : [],
+    owned: Array.isArray(raw.owned)
+      ? [...new Set(raw.owned.filter((id) => typeof id === 'string').map(legacyTeamId))]
+      : [],
     lastDaily: typeof raw.lastDaily === 'string' ? raw.lastDaily : undefined,
     dailyIndex: Number.isInteger(raw.dailyIndex) ? raw.dailyIndex : 0,
     packs: Array.isArray(raw.packs) ? raw.packs.filter((id) => typeof id === 'string') : [],
