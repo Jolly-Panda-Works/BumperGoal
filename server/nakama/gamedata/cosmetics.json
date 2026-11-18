@@ -1,0 +1,2220 @@
+{
+  "teams": [
+    {
+      "id": "team_volt",
+      "primary": "#C6FF3D",
+      "secondary": "#0E1630",
+      "emblem": "bolt",
+      "price": null,
+      "default": true,
+      "group": "original",
+      "attributes": {
+        "force": 8,
+        "time": 6,
+        "aim": 4
+      }
+    },
+    {
+      "id": "team_coral",
+      "primary": "#FF5A5F",
+      "secondary": "#FFFFFF",
+      "emblem": "star",
+      "price": null,
+      "default": true,
+      "group": "original",
+      "attributes": {
+        "force": 6,
+        "time": 7,
+        "aim": 5
+      }
+    },
+    {
+      "id": "team_ocean",
+      "primary": "#2D9CDB",
+      "secondary": "#FFFFFF",
+      "emblem": "wave",
+      "price": {
+        "coins": 400
+      },
+      "group": "original",
+      "attributes": {
+        "force": 5,
+        "time": 5,
+        "aim": 8
+      }
+    },
+    {
+      "id": "team_sunset",
+      "primary": "#FF9F1C",
+      "secondary": "#3A0CA3",
+      "emblem": "sun",
+      "price": {
+        "coins": 900
+      },
+      "group": "original",
+      "attributes": {
+        "force": 7,
+        "time": 4,
+        "aim": 7
+      }
+    },
+    {
+      "id": "team_royal",
+      "primary": "#7B2FF7",
+      "secondary": "#FFD166",
+      "emblem": "crown",
+      "price": {
+        "gems": 25
+      },
+      "group": "original",
+      "attributes": {
+        "force": 4,
+        "time": 8,
+        "aim": 6
+      }
+    },
+    {
+      "id": "team_forest",
+      "primary": "#2A9D8F",
+      "secondary": "#E9F5DB",
+      "emblem": "leaf",
+      "price": {
+        "coins": 1500
+      },
+      "group": "original",
+      "attributes": {
+        "force": 6,
+        "time": 6,
+        "aim": 6
+      }
+    },
+    {
+      "id": "nation_argentina",
+      "group": "nation",
+      "primary": "#74ACDF",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 400
+      },
+      "attributes": {
+        "force": 7,
+        "time": 6,
+        "aim": 7
+      }
+    },
+    {
+      "id": "nation_belgium",
+      "group": "nation",
+      "primary": "#ED2939",
+      "secondary": "#FAE042",
+      "emblem": "art",
+      "price": {
+        "coins": 400
+      },
+      "attributes": {
+        "force": 5,
+        "time": 7,
+        "aim": 5
+      }
+    },
+    {
+      "id": "nation_brazil",
+      "group": "nation",
+      "primary": "#009C3B",
+      "secondary": "#FFDF00",
+      "emblem": "art",
+      "price": {
+        "coins": 400
+      },
+      "attributes": {
+        "force": 4,
+        "time": 4,
+        "aim": 9
+      }
+    },
+    {
+      "id": "nation_colombia",
+      "group": "nation",
+      "primary": "#FCD116",
+      "secondary": "#003893",
+      "emblem": "art",
+      "price": {
+        "coins": 400
+      },
+      "attributes": {
+        "force": 6,
+        "time": 8,
+        "aim": 4
+      }
+    },
+    {
+      "id": "nation_croatia",
+      "group": "nation",
+      "primary": "#FF0000",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 400
+      },
+      "attributes": {
+        "force": 9,
+        "time": 4,
+        "aim": 4
+      }
+    },
+    {
+      "id": "nation_england",
+      "group": "nation",
+      "primary": "#CE1124",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 400
+      },
+      "attributes": {
+        "force": 6,
+        "time": 8,
+        "aim": 6
+      }
+    },
+    {
+      "id": "nation_france",
+      "group": "nation",
+      "primary": "#002395",
+      "secondary": "#ED2939",
+      "emblem": "art",
+      "price": {
+        "coins": 400
+      },
+      "attributes": {
+        "force": 7,
+        "time": 8,
+        "aim": 5
+      }
+    },
+    {
+      "id": "nation_germany",
+      "group": "nation",
+      "primary": "#DD0000",
+      "secondary": "#FFCE00",
+      "emblem": "art",
+      "price": {
+        "coins": 400
+      },
+      "attributes": {
+        "force": 5,
+        "time": 9,
+        "aim": 6
+      }
+    },
+    {
+      "id": "nation_iran",
+      "group": "nation",
+      "primary": "#239F40",
+      "secondary": "#DA0000",
+      "emblem": "art",
+      "price": {
+        "coins": 400
+      },
+      "attributes": {
+        "force": 7,
+        "time": 6,
+        "aim": 4
+      }
+    },
+    {
+      "id": "nation_japan",
+      "group": "nation",
+      "primary": "#BC002D",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 400
+      },
+      "attributes": {
+        "force": 7,
+        "time": 7,
+        "aim": 4
+      }
+    },
+    {
+      "id": "nation_mexico",
+      "group": "nation",
+      "primary": "#006847",
+      "secondary": "#CE1126",
+      "emblem": "art",
+      "price": {
+        "coins": 400
+      },
+      "attributes": {
+        "force": 6,
+        "time": 9,
+        "aim": 3
+      }
+    },
+    {
+      "id": "nation_morocco",
+      "group": "nation",
+      "primary": "#C1272D",
+      "secondary": "#006233",
+      "emblem": "art",
+      "price": {
+        "coins": 400
+      },
+      "attributes": {
+        "force": 4,
+        "time": 9,
+        "aim": 6
+      }
+    },
+    {
+      "id": "nation_netherlands",
+      "group": "nation",
+      "primary": "#FF7F00",
+      "secondary": "#21468B",
+      "emblem": "art",
+      "price": {
+        "coins": 400
+      },
+      "attributes": {
+        "force": 7,
+        "time": 8,
+        "aim": 3
+      }
+    },
+    {
+      "id": "nation_portugal",
+      "group": "nation",
+      "primary": "#DA291C",
+      "secondary": "#006600",
+      "emblem": "art",
+      "price": {
+        "coins": 400
+      },
+      "attributes": {
+        "force": 9,
+        "time": 3,
+        "aim": 8
+      }
+    },
+    {
+      "id": "nation_spain",
+      "group": "nation",
+      "primary": "#AA151B",
+      "secondary": "#F1BF00",
+      "emblem": "art",
+      "price": {
+        "coins": 400
+      },
+      "attributes": {
+        "force": 8,
+        "time": 5,
+        "aim": 4
+      }
+    },
+    {
+      "id": "nation_usa",
+      "group": "nation",
+      "primary": "#3C3B6E",
+      "secondary": "#B22234",
+      "emblem": "art",
+      "price": {
+        "coins": 400
+      },
+      "attributes": {
+        "force": 4,
+        "time": 7,
+        "aim": 8
+      }
+    },
+    {
+      "id": "club_afc_bournemouth",
+      "group": "club",
+      "primary": "#DA291C",
+      "secondary": "#000000",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 9,
+        "time": 5,
+        "aim": 5
+      }
+    },
+    {
+      "id": "club_arsenal",
+      "group": "club",
+      "primary": "#EF0107",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 5,
+        "time": 5,
+        "aim": 9
+      }
+    },
+    {
+      "id": "club_as_roma",
+      "group": "club",
+      "primary": "#8E1F2F",
+      "secondary": "#F0BC42",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 6,
+        "time": 3,
+        "aim": 8
+      }
+    },
+    {
+      "id": "club_aston_villa",
+      "group": "club",
+      "primary": "#670E36",
+      "secondary": "#95BFE5",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 4,
+        "time": 5,
+        "aim": 8
+      }
+    },
+    {
+      "id": "club_atletico_madrid",
+      "group": "club",
+      "primary": "#CB3524",
+      "secondary": "#272E61",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 4,
+        "time": 6,
+        "aim": 7
+      }
+    },
+    {
+      "id": "club_barcelona",
+      "group": "club",
+      "primary": "#A50044",
+      "secondary": "#004D98",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 6,
+        "time": 8,
+        "aim": 5
+      }
+    },
+    {
+      "id": "club_bayer_leverkusen",
+      "group": "club",
+      "primary": "#E32221",
+      "secondary": "#000000",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 6,
+        "time": 9,
+        "aim": 5
+      }
+    },
+    {
+      "id": "club_bayern_munich",
+      "group": "club",
+      "primary": "#DC052D",
+      "secondary": "#0066B2",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 8,
+        "time": 4,
+        "aim": 5
+      }
+    },
+    {
+      "id": "club_benfica",
+      "group": "club",
+      "primary": "#E83030",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 7,
+        "time": 9,
+        "aim": 3
+      }
+    },
+    {
+      "id": "club_borussia_dortmund",
+      "group": "club",
+      "primary": "#FDE100",
+      "secondary": "#000000",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 5,
+        "time": 6,
+        "aim": 7
+      }
+    },
+    {
+      "id": "club_brighton_hove_albion",
+      "group": "club",
+      "primary": "#0057B8",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 4,
+        "time": 5,
+        "aim": 9
+      }
+    },
+    {
+      "id": "club_club_brugge",
+      "group": "club",
+      "primary": "#0072CE",
+      "secondary": "#000000",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 7,
+        "time": 7,
+        "aim": 6
+      }
+    },
+    {
+      "id": "club_como_1907",
+      "group": "club",
+      "primary": "#003DA5",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 8,
+        "time": 6,
+        "aim": 6
+      }
+    },
+    {
+      "id": "club_flamengo",
+      "group": "club",
+      "primary": "#C3281E",
+      "secondary": "#000000",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 9,
+        "time": 7,
+        "aim": 4
+      }
+    },
+    {
+      "id": "club_inter_milan",
+      "group": "club",
+      "primary": "#0068A8",
+      "secondary": "#000000",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 5,
+        "time": 4,
+        "aim": 8
+      }
+    },
+    {
+      "id": "club_liverpool",
+      "group": "club",
+      "primary": "#C8102E",
+      "secondary": "#F6EB61",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 6,
+        "time": 8,
+        "aim": 3
+      }
+    },
+    {
+      "id": "club_manchester_city",
+      "group": "club",
+      "primary": "#6CABDD",
+      "secondary": "#1C2C5B",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 5,
+        "time": 8,
+        "aim": 7
+      }
+    },
+    {
+      "id": "club_palmeiras",
+      "group": "club",
+      "primary": "#006437",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 7,
+        "time": 4,
+        "aim": 6
+      }
+    },
+    {
+      "id": "club_paris_saint_germain",
+      "group": "club",
+      "primary": "#004170",
+      "secondary": "#DA291C",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 7,
+        "time": 5,
+        "aim": 5
+      }
+    },
+    {
+      "id": "club_psv_eindhoven",
+      "group": "club",
+      "primary": "#ED1C24",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 7,
+        "time": 9,
+        "aim": 4
+      }
+    },
+    {
+      "id": "club_real_betis",
+      "group": "club",
+      "primary": "#00954C",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 6,
+        "time": 9,
+        "aim": 4
+      }
+    },
+    {
+      "id": "club_real_madrid",
+      "group": "club",
+      "primary": "#FEBE10",
+      "secondary": "#00529F",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 8,
+        "time": 8,
+        "aim": 3
+      }
+    },
+    {
+      "id": "club_sporting_cp",
+      "group": "club",
+      "primary": "#008057",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 7,
+        "time": 8,
+        "aim": 4
+      }
+    },
+    {
+      "id": "club_aboomoslem_mashhad",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 7,
+        "time": 3,
+        "aim": 8
+      }
+    },
+    {
+      "id": "club_ac_milan",
+      "group": "club",
+      "primary": "#FB090B",
+      "secondary": "#000000",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 4,
+        "time": 8,
+        "aim": 5
+      }
+    },
+    {
+      "id": "club_al_hilal",
+      "group": "club",
+      "primary": "#0057B8",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 7,
+        "time": 4,
+        "aim": 9
+      }
+    },
+    {
+      "id": "club_aluminium_arak",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 8,
+        "time": 6,
+        "aim": 3
+      }
+    },
+    {
+      "id": "club_bargh_shiraz",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 8,
+        "time": 7,
+        "aim": 5
+      }
+    },
+    {
+      "id": "club_brentford",
+      "group": "club",
+      "primary": "#E30613",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 5,
+        "time": 9,
+        "aim": 3
+      }
+    },
+    {
+      "id": "club_chadormalu_ardakan",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 8,
+        "time": 4,
+        "aim": 7
+      }
+    },
+    {
+      "id": "club_damash_gilan",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 5,
+        "time": 9,
+        "aim": 4
+      }
+    },
+    {
+      "id": "club_esteghlal_khuzestan",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 4,
+        "time": 6,
+        "aim": 9
+      }
+    },
+    {
+      "id": "club_esteghlal_mollasani",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 5,
+        "time": 8,
+        "aim": 5
+      }
+    },
+    {
+      "id": "club_esteghlal",
+      "group": "club",
+      "primary": "#0066CC",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 6,
+        "time": 4,
+        "aim": 7
+      }
+    },
+    {
+      "id": "club_fajr_sepasi",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 3,
+        "time": 6,
+        "aim": 8
+      }
+    },
+    {
+      "id": "club_fc_porto",
+      "group": "club",
+      "primary": "#00428C",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 6,
+        "time": 6,
+        "aim": 8
+      }
+    },
+    {
+      "id": "club_foolad_khuzestan",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 5,
+        "time": 6,
+        "aim": 8
+      }
+    },
+    {
+      "id": "club_giti_pasand",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 7,
+        "time": 3,
+        "aim": 7
+      }
+    },
+    {
+      "id": "club_gol_gohar_sirjan",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 8,
+        "time": 7,
+        "aim": 3
+      }
+    },
+    {
+      "id": "club_havadar",
+      "group": "club",
+      "primary": "#683E91",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 6,
+        "time": 5,
+        "aim": 8
+      }
+    },
+    {
+      "id": "club_juventus",
+      "group": "club",
+      "primary": "#000000",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 9,
+        "time": 6,
+        "aim": 4
+      }
+    },
+    {
+      "id": "club_kheybar_khorramabad",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 5,
+        "time": 5,
+        "aim": 7
+      }
+    },
+    {
+      "id": "club_lazio",
+      "group": "club",
+      "primary": "#87D8F7",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 4,
+        "time": 7,
+        "aim": 7
+      }
+    },
+    {
+      "id": "club_machine_sazi_tabriz",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 7,
+        "time": 6,
+        "aim": 5
+      }
+    },
+    {
+      "id": "club_malavan",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 8,
+        "time": 7,
+        "aim": 4
+      }
+    },
+    {
+      "id": "club_manchester_united",
+      "group": "club",
+      "primary": "#DA291C",
+      "secondary": "#000000",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 3,
+        "time": 9,
+        "aim": 5
+      }
+    },
+    {
+      "id": "club_mes_kerman",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 9,
+        "time": 4,
+        "aim": 7
+      }
+    },
+    {
+      "id": "club_mes_rafsanjan",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 9,
+        "time": 5,
+        "aim": 3
+      }
+    },
+    {
+      "id": "club_mes_shahr_babak",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 4,
+        "time": 8,
+        "aim": 7
+      }
+    },
+    {
+      "id": "club_naft_gachsaran",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 5,
+        "time": 3,
+        "aim": 9
+      }
+    },
+    {
+      "id": "club_naft_masjed_soleyman",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 5,
+        "time": 4,
+        "aim": 9
+      }
+    },
+    {
+      "id": "club_nassaji_mazandaran",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 6,
+        "time": 5,
+        "aim": 6
+      }
+    },
+    {
+      "id": "club_pars_jonoubi_jam",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 5,
+        "time": 6,
+        "aim": 6
+      }
+    },
+    {
+      "id": "club_paykan",
+      "group": "club",
+      "primary": "#005CA9",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 3,
+        "time": 9,
+        "aim": 7
+      }
+    },
+    {
+      "id": "club_persepolis",
+      "group": "club",
+      "primary": "#DA0000",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 4,
+        "time": 7,
+        "aim": 9
+      }
+    },
+    {
+      "id": "club_qashqai_shiraz",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 9,
+        "time": 7,
+        "aim": 3
+      }
+    },
+    {
+      "id": "club_rah_ahan",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 4,
+        "time": 9,
+        "aim": 7
+      }
+    },
+    {
+      "id": "club_saipa",
+      "group": "club",
+      "primary": "#F58220",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 3,
+        "time": 7,
+        "aim": 7
+      }
+    },
+    {
+      "id": "club_sanat_naft_abadan",
+      "group": "club",
+      "primary": "#FFD700",
+      "secondary": "#003DA5",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 7,
+        "time": 5,
+        "aim": 7
+      }
+    },
+    {
+      "id": "club_sepahan",
+      "group": "club",
+      "primary": "#FFD700",
+      "secondary": "#000000",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 7,
+        "time": 5,
+        "aim": 8
+      }
+    },
+    {
+      "id": "club_shahr_khodro_mashhad",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 8,
+        "time": 3,
+        "aim": 6
+      }
+    },
+    {
+      "id": "club_shahrdari_astara",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 6,
+        "time": 7,
+        "aim": 7
+      }
+    },
+    {
+      "id": "club_shahrdari_hamedan",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 3,
+        "time": 9,
+        "aim": 6
+      }
+    },
+    {
+      "id": "club_shahrdari_tabriz",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 8,
+        "time": 3,
+        "aim": 7
+      }
+    },
+    {
+      "id": "club_shams_azar_qazvin",
+      "group": "club",
+      "primary": "#006847",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 9,
+        "time": 4,
+        "aim": 6
+      }
+    },
+    {
+      "id": "club_tractor",
+      "group": "club",
+      "primary": "#D71920",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 6,
+        "time": 7,
+        "aim": 6
+      }
+    },
+    {
+      "id": "club_zob_ahan",
+      "group": "club",
+      "primary": "#00843D",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 800
+      },
+      "attributes": {
+        "force": 7,
+        "time": 4,
+        "aim": 8
+      }
+    },
+    {
+      "id": "nation_italy",
+      "group": "nation",
+      "primary": "#008C45",
+      "secondary": "#CD212A",
+      "emblem": "art",
+      "price": {
+        "coins": 400
+      },
+      "attributes": {
+        "force": 8,
+        "time": 4,
+        "aim": 8
+      }
+    },
+    {
+      "id": "nation_switzerland",
+      "group": "nation",
+      "primary": "#DA291C",
+      "secondary": "#FFFFFF",
+      "emblem": "art",
+      "price": {
+        "coins": 400
+      },
+      "attributes": {
+        "force": 4,
+        "time": 8,
+        "aim": 8
+      }
+    }
+  ],
+  "balls": [
+    {
+      "id": "ball_classic",
+      "primary": "#FFFFFF",
+      "secondary": "#1B1B1B",
+      "price": null,
+      "default": true
+    },
+    {
+      "id": "ball_neon",
+      "primary": "#C6FF3D",
+      "secondary": "#0E1630",
+      "price": {
+        "coins": 300
+      }
+    },
+    {
+      "id": "ball_gold",
+      "primary": "#FFD166",
+      "secondary": "#8A5A00",
+      "price": {
+        "gems": 15
+      }
+    }
+  ],
+  "avatars": [
+    {
+      "id": "avatar_fox",
+      "price": null,
+      "default": true
+    },
+    {
+      "id": "avatar_owl",
+      "price": null,
+      "default": true
+    },
+    {
+      "id": "avatar_bear",
+      "price": {
+        "coins": 250
+      }
+    },
+    {
+      "id": "avatar_tiger",
+      "price": {
+        "gems": 10
+      }
+    },
+    {
+      "id": "avatar_animal_badger",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_beaver",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_buffalo",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_chimpanzee",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_crocodile",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_deer",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_eagle",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_elephant",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_giraffe",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_goat",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_gorilla",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_hedgehog",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_hippopotamus",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_horse",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_koala",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_lemur",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_lion",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_moose",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_otter",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_panda",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_penguin",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_rabbit",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_raccoon",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_ram",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_red_panda",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_rhinoceros",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_snow_leopard",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_squirrel",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_wolf",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_animal_zebra",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_01",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_02",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_03",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_04",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_05",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_06",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_07",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_08",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_09",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_10",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_11",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_12",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_13",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_14",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_15",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_16",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_17",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_18",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_19",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_20",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_21",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_22",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_23",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_24",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_25",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_26",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_27",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_28",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_29",
+      "price": {
+        "coins": 600
+      }
+    },
+    {
+      "id": "avatar_human_30",
+      "price": {
+        "coins": 600
+      }
+    }
+  ],
+  "currencyPacks": [
+    {
+      "id": "pack_coins_1",
+      "grant": {
+        "coins": 1000
+      },
+      "priceLabel": "TEST"
+    },
+    {
+      "id": "pack_coins_2",
+      "grant": {
+        "coins": 6000
+      },
+      "priceLabel": "TEST"
+    },
+    {
+      "id": "pack_coins_3",
+      "grant": {
+        "coins": 15000
+      },
+      "priceLabel": "TEST"
+    },
+    {
+      "id": "pack_coins_4",
+      "grant": {
+        "coins": 35000
+      },
+      "priceLabel": "TEST"
+    },
+    {
+      "id": "pack_coins_5",
+      "grant": {
+        "coins": 80000
+      },
+      "priceLabel": "TEST"
+    },
+    {
+      "id": "pack_coins_6",
+      "grant": {
+        "coins": 180000
+      },
+      "priceLabel": "TEST"
+    },
+    {
+      "id": "pack_gems_1",
+      "grant": {
+        "gems": 50
+      },
+      "priceLabel": "TEST"
+    },
+    {
+      "id": "pack_gems_2",
+      "grant": {
+        "gems": 150
+      },
+      "priceLabel": "TEST"
+    },
+    {
+      "id": "pack_gems_3",
+      "grant": {
+        "gems": 400
+      },
+      "priceLabel": "TEST"
+    },
+    {
+      "id": "pack_gems_4",
+      "grant": {
+        "gems": 900
+      },
+      "priceLabel": "TEST"
+    },
+    {
+      "id": "pack_gems_5",
+      "grant": {
+        "gems": 2000
+      },
+      "priceLabel": "TEST"
+    },
+    {
+      "id": "pack_gems_6",
+      "grant": {
+        "gems": 4500
+      },
+      "priceLabel": "TEST"
+    }
+  ],
+  "formations": [
+    {
+      "id": "formation_balanced",
+      "positions": [
+        [-6.2, 0],
+        [-4.4, 1.9],
+        [-4.4, -1.9],
+        [-2.2, 0.9],
+        [-2.2, -0.9]
+      ],
+      "price": null,
+      "default": true
+    },
+    {
+      "id": "formation_diamond",
+      "positions": [
+        [-6.2, 0],
+        [-4.3, 0],
+        [-3.1, 2.2],
+        [-3.1, -2.2],
+        [-1.4, 0]
+      ],
+      "price": null,
+      "default": false
+    },
+    {
+      "id": "formation_wall",
+      "positions": [
+        [-6.4, 0],
+        [-5, 2.5],
+        [-5, -2.5],
+        [-3, 1.4],
+        [-3, -1.4]
+      ],
+      "price": null,
+      "default": false
+    },
+    {
+      "id": "formation_claw",
+      "positions": [
+        [-6, 0],
+        [-4.5, 1.2],
+        [-4.5, -1.2],
+        [-1.5, 2.4],
+        [-1.5, -2.4]
+      ],
+      "price": {
+        "coins": 400
+      },
+      "default": false
+    },
+    {
+      "id": "formation_javelin",
+      "positions": [
+        [-6, 0],
+        [-5, 2.3],
+        [-5, -2.3],
+        [-3, 0],
+        [-1.2, 0]
+      ],
+      "price": {
+        "coins": 550
+      },
+      "default": false
+    },
+    {
+      "id": "formation_scout",
+      "positions": [
+        [-6.1, 0],
+        [-5.3, 2.7],
+        [-5.3, -2.7],
+        [-4, 1.2],
+        [-1.2, -2.2]
+      ],
+      "price": {
+        "coins": 700
+      },
+      "default": false
+    },
+    {
+      "id": "formation_arrow",
+      "positions": [
+        [-6, 0],
+        [-4, 1.4],
+        [-4, -1.4],
+        [-2, 2.8],
+        [-2, -2.8]
+      ],
+      "price": {
+        "coins": 850
+      },
+      "default": false
+    },
+    {
+      "id": "formation_wings",
+      "positions": [
+        [-6, 0],
+        [-4, 3.1],
+        [-4, -3.1],
+        [-1.4, 3.1],
+        [-1.4, -3.1]
+      ],
+      "price": {
+        "coins": 1000
+      },
+      "default": false
+    },
+    {
+      "id": "formation_fortress",
+      "positions": [
+        [-6.5, 0],
+        [-5.8, 2.8],
+        [-5.8, -2.8],
+        [-4, 1.2],
+        [-4, -1.2]
+      ],
+      "price": {
+        "coins": 1150
+      },
+      "default": false
+    },
+    {
+      "id": "formation_spearhead",
+      "positions": [
+        [-6.2, 0],
+        [-3.8, 0],
+        [-1.4, 0],
+        [-2.4, 2],
+        [-2.4, -2]
+      ],
+      "price": {
+        "coins": 1300
+      },
+      "default": false
+    },
+    {
+      "id": "formation_falcon",
+      "positions": [
+        [-6.2, 0],
+        [-4.8, -2.8],
+        [-2.8, -1.4],
+        [-1.3, 1.4],
+        [-3, 3]
+      ],
+      "price": {
+        "coins": 1450
+      },
+      "default": false
+    },
+    {
+      "id": "formation_anchor",
+      "positions": [
+        [-6.3, 0],
+        [-4.8, 0],
+        [-3.3, 0],
+        [-2, 2.8],
+        [-2, -2.8]
+      ],
+      "price": {
+        "coins": 1600
+      },
+      "default": false
+    },
+    {
+      "id": "formation_storm",
+      "positions": [
+        [-5.7, 0],
+        [-3, 3],
+        [-3, -3],
+        [-1.2, 1.2],
+        [-1.2, -1.2]
+      ],
+      "price": {
+        "coins": 1750
+      },
+      "default": false
+    },
+    {
+      "id": "formation_crescent",
+      "positions": [
+        [-5.4, 0],
+        [-4.8, 2],
+        [-4.8, -2],
+        [-3, 3.2],
+        [-3, -3.2]
+      ],
+      "price": {
+        "coins": 1900
+      },
+      "default": false
+    },
+    {
+      "id": "formation_trident",
+      "positions": [
+        [-6.2, 0],
+        [-3.8, 0],
+        [-1.2, 0],
+        [-1.2, 2.5],
+        [-1.2, -2.5]
+      ],
+      "price": {
+        "coins": 2050
+      },
+      "default": false
+    },
+    {
+      "id": "formation_shield",
+      "positions": [
+        [-6.1, 0],
+        [-4.5, 2.8],
+        [-4.5, -2.8],
+        [-4.5, 0],
+        [-2, 0]
+      ],
+      "price": {
+        "coins": 2200
+      },
+      "default": false
+    },
+    {
+      "id": "formation_blitz",
+      "positions": [
+        [-6.1, 0],
+        [-1.4, -3.1],
+        [-1.4, -1],
+        [-1.4, 1],
+        [-1.4, 3.1]
+      ],
+      "price": {
+        "coins": 2350
+      },
+      "default": false
+    },
+    {
+      "id": "formation_viper",
+      "positions": [
+        [-6.1, 2.8],
+        [-4.9, 1.4],
+        [-3.7, 0],
+        [-2.5, -1.4],
+        [-1.3, -2.8]
+      ],
+      "price": {
+        "coins": 2500
+      },
+      "default": false
+    },
+    {
+      "id": "formation_orbit",
+      "positions": [
+        [-6.2, 0],
+        [-4.2, 2.7],
+        [-4.2, -2.7],
+        [-2.4, 1.4],
+        [-2.4, -1.4]
+      ],
+      "price": {
+        "coins": 2650
+      },
+      "default": false
+    },
+    {
+      "id": "formation_crown",
+      "positions": [
+        [-6.2, 0],
+        [-2.8, 3.1],
+        [-1.2, 1.3],
+        [-1.2, -1.3],
+        [-2.8, -3.1]
+      ],
+      "price": {
+        "coins": 2800
+      },
+      "default": false
+    }
+  ],
+  "trails": [
+    {
+      "id": "trail_gold_rush",
+      "colors": ["#FFD166", "#FFF3B0"],
+      "pattern": "ribbon",
+      "price": {
+        "coins": 500
+      }
+    },
+    {
+      "id": "trail_neon_surge",
+      "colors": ["#C6FF3D", "#62FFB2"],
+      "pattern": "twin",
+      "price": {
+        "coins": 750
+      }
+    },
+    {
+      "id": "trail_arctic",
+      "colors": ["#79E7FF", "#FFFFFF"],
+      "pattern": "dash",
+      "price": {
+        "coins": 1000
+      }
+    },
+    {
+      "id": "trail_inferno",
+      "colors": ["#FF672B", "#FFD166"],
+      "pattern": "spark",
+      "price": {
+        "coins": 1250
+      }
+    },
+    {
+      "id": "trail_cobalt",
+      "colors": ["#227DFF", "#7DCEFF"],
+      "pattern": "ribbon",
+      "price": {
+        "coins": 1500
+      }
+    },
+    {
+      "id": "trail_plasma",
+      "colors": ["#AD5CFF", "#FF85E1"],
+      "pattern": "twin",
+      "price": {
+        "coins": 1750
+      }
+    },
+    {
+      "id": "trail_emerald",
+      "colors": ["#20D6A0", "#BBFFE3"],
+      "pattern": "dash",
+      "price": {
+        "coins": 2000
+      }
+    },
+    {
+      "id": "trail_comet",
+      "colors": ["#FFFFFF", "#7CD7FF"],
+      "pattern": "spark",
+      "price": {
+        "gems": 15
+      }
+    },
+    {
+      "id": "trail_rainbow",
+      "colors": ["#FF5277", "#FFD166", "#C6FF3D", "#57D9FF", "#B87FFF"],
+      "pattern": "ribbon",
+      "price": {
+        "gems": 25
+      }
+    },
+    {
+      "id": "trail_crimson",
+      "colors": ["#FF3154", "#FFB4C2"],
+      "pattern": "twin",
+      "price": {
+        "gems": 35
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+# Nakama configuration shared by all environments. Secrets are passed as
+# command-line flags from environment variables (server/deploy/.env).
+name: flickkick
+logger:
+  level: INFO
+  format: json
+  stdout: true
+session:
+  token_expiry_sec: 7200
+  refresh_token_expiry_sec: 2592000
+socket:
+  max_message_size_bytes: 8192
+  # Large enough for admin_config_set with uploaded team images (admin.go adminMaxPayload).
+  max_request_size_bytes: 524288
+runtime:
+  path: /nakama/data/modules
+match:
+  input_queue_size: 128
+  call_queue_size: 128
+  deferred_queue_size: 128
+matchmaker:
+  max_tickets: 1
+  interval_sec: 1
+  max_intervals: 15

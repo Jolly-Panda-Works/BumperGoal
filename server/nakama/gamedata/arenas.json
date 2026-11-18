@@ -1,0 +1,10 @@
+{
+  "houseCut": 0.05,
+  "arenas": [
+    { "id": "park", "entryFee": 50, "minLevel": 1, "xpMultiplier": 1.0, "theme": "park" },
+    { "id": "city", "entryFee": 200, "minLevel": 3, "xpMultiplier": 1.2, "theme": "city" },
+    { "id": "coast", "entryFee": 500, "minLevel": 6, "xpMultiplier": 1.4, "theme": "coast" },
+    { "id": "capital", "entryFee": 1500, "minLevel": 10, "xpMultiplier": 1.7, "theme": "capital" },
+    { "id": "legends", "entryFee": 5000, "minLevel": 16, "xpMultiplier": 2.0, "theme": "legends" }
+  ]
+}

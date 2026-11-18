@@ -1,0 +1,41 @@
+# Override for Dokploy/Traefik. Route WEB_DOMAIN and API_DOMAIN to web:80.
+# Compose files: docker-compose.yml + docker-compose.dokploy.yml
+# PostgreSQL is a separate Dokploy database service: set DB_HOST to its internal host.
+services:
+  web:
+    build:
+      target: dokploy
+    ports: !reset []
+    # Dokploy attaches its shared network here; keep the private one too.
+    networks:
+      - default
+  postgres:
+    profiles: [bundled-db]
+  nakama:
+    depends_on: !reset {}
+    environment:
+      DB_HOST: ${DB_HOST:?set DB_HOST to the Dokploy PostgreSQL internal host}
+    # Console is accessible via a private tunnel/network, never public ingress.
+    ports: !reset []
+    # Caddy uses this alias, never the bare name "nakama": on Dokploy's shared
+    # network another stack's "nakama" answers to that name too.
+    networks:
+      default:
+        aliases:
+          - flickkick-nakama
+      dokploy-network: {}
+  backup:
+    depends_on: !reset {}
+    environment:
+      DB_HOST: ${DB_HOST:?set DB_HOST to the Dokploy PostgreSQL internal host}
+    # Dokploy replaces the code directory on deploy, so no repository-relative path.
+    volumes:
+      - backups:/backups
+    networks:
+      - default
+      - dokploy-network
+networks:
+  dokploy-network:
+    external: true
+volumes:
+  backups:

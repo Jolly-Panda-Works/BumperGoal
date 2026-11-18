@@ -1,0 +1,24 @@
+# Keep build contexts small and secret-free.
+.git
+**/node_modules
+**/dist
+**/dist-e2e
+test-results
+playwright-report
+coverage
+.claude
+# Local secrets and dev config must never enter an image (the web build gets
+# its public settings from build args instead).
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.prod.example
+server/deploy/backups
+
+# Exported runtime art lives in apps/web/public; source masters are not build inputs.
+art-source
+.codex
+.agents
+docs
+backups
+.pnpm-store

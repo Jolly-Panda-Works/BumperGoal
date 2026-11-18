@@ -1,0 +1,21 @@
+{
+  "tool": "built-in image_gen",
+  "assets": [
+    {
+      "name": "classic",
+      "panel": "Panels: white #FFFFFF hexagons and near-black #1B1B1B pentagons, thin dark grey seams.",
+      "prompt": "Equirectangular texture map (2:1 aspect, 2048x1024) that wraps around a sphere, for a soccer ball in an original mobile tabletop soccer game. Flat albedo only: no lighting, no shading, no shadows, no specular highlights, no reflections, no 3D perspective. The left and right edges must tile seamlessly. Panel pattern of hexagons and pentagons as it appears on a truncated-icosahedron ball, unwrapped in equirectangular projection (shapes stretch near the top and bottom edges). Clean vector-like edges, slightly rounded panel seams, no text, no logos, no watermark.\nPanels: white #FFFFFF hexagons and near-black #1B1B1B pentagons, thin dark grey seams.\nNegative prompt: 3D render, sphere, ball shape, perspective, lighting, shadow, highlight, gloss, reflection, background scene, text, logo, watermark, border, frame."
+    },
+    {
+      "name": "neon",
+      "panel": "Panels: neon lime #C6FF3D hexagons and deep navy #0E1630 pentagons, thin glowing lime seams, subtle sporty energy, still flat colors.",
+      "prompt": "Equirectangular texture map (2:1 aspect, 2048x1024) that wraps around a sphere, for a soccer ball in an original mobile tabletop soccer game. Flat albedo only: no lighting, no shading, no shadows, no specular highlights, no reflections, no 3D perspective. The left and right edges must tile seamlessly. Panel pattern of hexagons and pentagons as it appears on a truncated-icosahedron ball, unwrapped in equirectangular projection (shapes stretch near the top and bottom edges). Clean vector-like edges, slightly rounded panel seams, no text, no logos, no watermark.\nPanels: neon lime #C6FF3D hexagons and deep navy #0E1630 pentagons, thin glowing lime seams, subtle sporty energy, still flat colors.\nNegative prompt: 3D render, sphere, ball shape, perspective, lighting, shadow, highlight, gloss, reflection, background scene, text, logo, watermark, border, frame."
+    },
+    {
+      "name": "gold",
+      "panel": "Panels: warm gold #FFD166 hexagons and dark bronze #8A5A00 pentagons, thin darker gold seams, subtle brushed-metal grain inside panels, but no lighting or reflections.",
+      "prompt": "Equirectangular texture map (2:1 aspect, 2048x1024) that wraps around a sphere, for a soccer ball in an original mobile tabletop soccer game. Flat albedo only: no lighting, no shading, no shadows, no specular highlights, no reflections, no 3D perspective. The left and right edges must tile seamlessly. Panel pattern of hexagons and pentagons as it appears on a truncated-icosahedron ball, unwrapped in equirectangular projection (shapes stretch near the top and bottom edges). Clean vector-like edges, slightly rounded panel seams, no text, no logos, no watermark.\nPanels: warm gold #FFD166 hexagons and dark bronze #8A5A00 pentagons, thin darker gold seams, subtle brushed-metal grain inside panels, but no lighting or reflections.\nNegative prompt: 3D render, sphere, ball shape, perspective, lighting, shadow, highlight, gloss, reflection, background scene, text, logo, watermark, border, frame."
+    }
+  ],
+  "status": "Generated; seamless wrap and exact truncated-icosahedron topology require sphere validation."
+}

@@ -1,0 +1,155 @@
+/* Animate only opacity and transforms; no layout work on animation frames. */
+.dialog-backdrop.is-opening {
+  animation: popup-backdrop-in 180ms ease-out both;
+}
+.dialog-backdrop.is-opening .dialog {
+  animation: popup-in 200ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+.dialog-backdrop.is-closing {
+  animation: popup-backdrop-out 160ms ease-in both;
+}
+.dialog-backdrop.is-closing .dialog {
+  animation: popup-out 160ms ease-in both;
+  pointer-events: none;
+}
+@keyframes popup-backdrop-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes popup-backdrop-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes popup-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes popup-out {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+}
+
+/* Keep the outgoing snapshot opaque underneath the incoming screen. */
+::view-transition-image-pair(root) {
+  isolation: isolate;
+}
+::view-transition-old(root) {
+  animation: none;
+  opacity: 1;
+  mix-blend-mode: normal;
+}
+::view-transition-new(root) {
+  animation: page-in 180ms ease-out both;
+  mix-blend-mode: normal;
+}
+@keyframes page-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Snapshot captures must never contain a half-transparent panel entry animation. */
+.shell__main,
+.panel-screen {
+  animation: none;
+}
+.reduced-motion .dialog-backdrop,
+.reduced-motion .dialog-backdrop .dialog,
+.reduced-motion::view-transition-old(root),
+.reduced-motion::view-transition-new(root) {
+  animation: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .dialog-backdrop,
+  .dialog-backdrop .dialog,
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}
+
+/* The selected match travels to its detail position as one persistent card. */
+::view-transition-group(*) {
+  animation-duration: 300ms;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+::view-transition-group(root) {
+  animation-duration: 180ms;
+}
+::view-transition-new(match-comparison) {
+  animation: match-comparison-in 240ms 100ms ease-out both;
+}
+@keyframes match-comparison-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.panel-screen__body .match-summary {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: center;
+  inline-size: 100%;
+  min-block-size: 140px;
+  padding: 14px 12px;
+  gap: 14px;
+}
+.reduced-motion::view-transition-group(*),
+.reduced-motion::view-transition-new(match-comparison) {
+  animation: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-new(match-comparison) {
+    animation: none;
+  }
+}
+
+.dialog-backdrop.message-popup {
+  z-index: 2000;
+}
+.message-popup .dialog {
+  border-block-start: 4px solid #54b8ff;
+}
+.message-popup--error .dialog {
+  border-block-start-color: #ff657b;
+}
+.message-popup--warning .dialog {
+  border-block-start-color: #ffd166;
+}
+.message-popup--success .dialog {
+  border-block-start-color: #b4ef35;
+}
+.message-popup__text {
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+  line-height: 1.8;
+  margin: 0;
+}

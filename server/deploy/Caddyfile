@@ -1,0 +1,53 @@
+# FlickKick edge: HTTPS (automatic certificates), static web client, and the
+# Nakama API/WebSocket on its own subdomain. Configured by environment:
+#   WEB_DOMAIN   e.g. play.example.com
+#   API_DOMAIN   e.g. api.play.example.com
+#   ACME_EMAIL   contact for Let's Encrypt
+{
+	email {$ACME_EMAIL}
+	servers {
+		protocols h1 h2 h3
+	}
+}
+
+{$WEB_DOMAIN} {
+	encode zstd gzip
+	root * /srv
+
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "DENY"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Permissions-Policy "camera=(), microphone=(self), geolocation=(), payment=()"
+		# wasm-unsafe-eval: Rapier (WebAssembly). Inline styles: React style props.
+		Content-Security-Policy "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self' blob:; connect-src 'self' https://{$API_DOMAIN} wss://{$API_DOMAIN} {$VOICE_CONNECT_SRC}; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+		-Server
+	}
+
+	# Hashed build assets never change; the HTML entry point must always revalidate.
+	@hashed path_regexp hashed ^/assets/[^/]+-[A-Za-z0-9_-]{8,}\.(js|css|woff2?|wasm)$
+	header @hashed Cache-Control "public, max-age=31536000, immutable"
+	# Exported art and audio keep their names across releases, so they only get a week.
+	@art {
+		path /assets/*
+		not path_regexp ^/assets/[^/]+-[A-Za-z0-9_-]{8,}\.(js|css|woff2?|wasm)$
+	}
+	header @art Cache-Control "public, max-age=604800"
+	@entry path / /index.html
+	header @entry Cache-Control "no-cache"
+
+	# Single-page app: unknown paths fall back to index.html.
+	try_files {path} /index.html
+	file_server
+}
+
+{$API_DOMAIN} {
+	encode zstd gzip
+	header -Server
+	# Nakama API (HTTP) and realtime socket (WebSocket upgrade) on one port.
+	reverse_proxy nakama:7350 {
+		health_uri /healthcheck
+		health_interval 15s
+	}
+}

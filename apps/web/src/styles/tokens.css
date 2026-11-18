@@ -1,0 +1,65 @@
+/* FlickKick design tokens. Provisional art direction (PRODUCT_SPEC §1). */
+:root {
+  color-scheme: dark;
+
+  --c-bg: #0e1630;
+  --c-bg-deep: #0a1024;
+  --c-surface: #18234a;
+  --c-surface-2: #22305e;
+  --c-surface-3: #2c3c72;
+  --c-border: #33447d;
+  --c-text: #f4f7ff;
+  --c-muted: #a9b4d6;
+  --c-lime: #c6ff3d;
+  --c-lime-ink: #1a2400;
+  --c-coral: #ff5a5f;
+  --c-sky: #4cc9f0;
+  --c-gold: #ffc83d;
+  --c-success: #3ddc97;
+  --c-danger: #ff5a5f;
+  --c-focus: #c6ff3d;
+
+  --font: 'Rubik', 'Vazirmatn', system-ui, sans-serif;
+  --font-fa: 'Vazirmatn', 'Rubik', system-ui, sans-serif;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.6rem;
+  --fs-2xl: 2.2rem;
+
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-pill: 999px;
+
+  --shadow-1: 0 2px 0 rgba(0, 0, 0, 0.25), 0 6px 18px rgba(0, 0, 0, 0.25);
+  --shadow-press: 0 1px 0 rgba(0, 0, 0, 0.3);
+  --dur: 160ms;
+
+  --topbar-h: 60px;
+  --navbar-h: 64px;
+  --rail-w: 92px;
+}
+
+:root.high-contrast {
+  --c-bg: #000814;
+  --c-surface: #0b1530;
+  --c-surface-2: #13224a;
+  --c-border: #f4f7ff;
+  --c-text: #ffffff;
+  --c-muted: #e3e8ff;
+}
+
+:root.reduced-motion {
+  --dur: 0ms;
+}

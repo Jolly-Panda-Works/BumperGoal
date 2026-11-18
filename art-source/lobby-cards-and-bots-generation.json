@@ -1,0 +1,17 @@
+{
+  "generated": "2026-11-01",
+  "generator": "image_gen",
+  "assets": {
+    "modeCards": {
+      "masters": ["fk_lobby_card_green.png", "fk_lobby_card_blue.png", "fk_lobby_card_gold.png"],
+      "runtime": "apps/web/public/assets/lobby/card_{color}.webp",
+      "export": "400x600, contain, transparent padding, original proportions"
+    },
+    "bots": {
+      "master": "art-source/masters/fk_bot_difficulties.png",
+      "runtime": "apps/web/public/assets/lobby/bot_{rookie,amateur,pro,elite}.webp",
+      "export": "mechanical 2x2 quadrant extraction, 256x256 WebP",
+      "brief": "Four distinct original sculpted 3D robot football coaches: mint rookie, blue amateur, silver pro and gold elite; navy/lime uniforms, matching lighting, no text."
+    }
+  }
+}

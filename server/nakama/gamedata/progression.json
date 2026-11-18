@@ -1,0 +1,6 @@
+{
+  "maxLevel": 50,
+  "levelCurve": { "base": 100, "exponent": 1.5 },
+  "xp": { "win": 100, "loss": 30, "perGoal": 20 },
+  "levelReward": { "coinsPerLevel": 100, "gemsEveryNLevels": 5, "gemsAmount": 5 }
+}

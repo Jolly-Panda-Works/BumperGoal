@@ -1,0 +1,50 @@
+{
+  "name": "flickkick",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "node": ">=22.22.0"
+  },
+  "scripts": {
+    "dev:screens": "node apps/web/node_modules/vite/bin/vite.js apps/web --mode screens --host 127.0.0.1 --port 5174 --open /dev",
+    "dev": "pnpm --filter @flickkick/web dev",
+    "build": "pnpm -r build",
+    "build:physics": "node physics/build.mjs",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm build",
+    "sync:gamedata": "node -e \"const fs=require('fs');for(const f of fs.readdirSync('packages/config/data'))fs.copyFileSync('packages/config/data/'+f,'server/nakama/gamedata/'+f)\"",
+    "server:up": "docker compose -f server/deploy/docker-compose.yml --env-file server/deploy/.env up -d --build",
+    "server:down": "docker compose -f server/deploy/docker-compose.yml --env-file server/deploy/.env down",
+    "server:logs": "docker compose -f server/deploy/docker-compose.yml --env-file server/deploy/.env logs -f nakama",
+    "test:friends:local": "playwright test --config playwright.local-friends.config.ts",
+    "test:e2e": "playwright test",
+    "test:integration": "vitest run -c server/integration/vitest.config.ts",
+    "test:server": "docker run --rm -v \"$PWD:/repo\" -w /repo/server/nakama --entrypoint go heroiclabs/nakama-pluginbuilder:3.41.0 test -short ./...",
+    "art:doc": "node tools/art-doc.mjs && prettier --write docs/ART_ASSET_REQUIREMENTS.md",
+    "art:check": "node tools/art-doc.mjs --check",
+    "audio:export": "node tools/export-audio.mjs",
+    "icons:export": "node tools/export-icons.mjs",
+    "art:export": "node tools/export-art.mjs && prettier --write apps/web/src/game/artManifest.json"
+  },
+  "devDependencies": {
+    "@dimforge/rapier2d-deterministic": "0.21.0",
+    "@dimforge/rapier2d-deterministic-compat": "0.21.0",
+    "@eslint/js": "^10.0.1",
+    "@heroiclabs/nakama-js": "2.8.0",
+    "@playwright/test": "1.64.1",
+    "@types/node": "^26.6.5",
+    "eslint": "^10.13.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.10",
+    "sharp": "0.34.4",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.72.1",
+    "vitest": "^5.0.5"
+  }
+}

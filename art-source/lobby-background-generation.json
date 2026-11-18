@@ -1,0 +1,7 @@
+{
+  "tool": "built-in image_gen",
+  "purpose": "FlickKick lobby background",
+  "master": "art-source/masters/fk_lobby_background.png",
+  "runtime": "apps/web/public/assets/lobby/background.webp",
+  "prompt": "Use case: stylized-concept. Asset type: full-bleed 16:9 landscape background art for the original FlickKick mobile tabletop soccer game's lobby, WITHOUT interface elements. Reference image provided is for art direction and scene composition only. Create premium stylized 3D toy-like tabletop soccer: glossy green felt pitch in gentle perspective, chunky polished red soccer disc with a white star at upper-middle left, chunky polished royal-blue star disc at upper-right, beautiful black-and-white soccer ball upper-middle right. Navy blue indoor stadium beyond the table, out-of-focus gold overhead lights, electric blue edge lighting and restrained warm gold reflections. Camera looks across the tabletop from slightly above. Main subjects occupy the upper half, especially upper right, leaving upper-left space for the game's actual logo. Crucial UI-safe composition: lower 45 percent must be dark navy, softly blurred and uncluttered with no distinct objects, to put real clickable menu buttons over it. Sophisticated sculpted broad bevels and clean saturated materials, polished mobile game art matching the reference. No UI, no buttons, no text, no logo, no letters, no numbers, no watermark, no additional objects."
+}

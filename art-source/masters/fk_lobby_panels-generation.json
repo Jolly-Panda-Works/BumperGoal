@@ -1,0 +1,37 @@
+{
+  "generator": "built-in image_gen",
+  "useCase": "stylized-concept",
+  "prompt": "ONE reusable button background panel for FlickKick mobile tabletop soccer lobby. Premium polished 3D Android sports-game menu art. Single broad rounded rectangular front-facing orthographic panel, wide 1.8:1 face with chunky smoothly sculpted broad bevel. Colours green emerald/mint/forest, royal blue/cyan/navy, and golden yellow/orange amber. Face almost entirely empty for real UI text, faint translucent football pitch line motifs only at extreme edges, restrained upper-left gloss, deep lower lip. Actual transparent background, no outside shadow, text, icons, balls, people, logos, watermark, extra panels or scene.",
+  "assets": [
+    {
+      "color": "green",
+      "input": "art-source/masters/fk_lobby_panel_green.png",
+      "output": "apps/web/public/assets/lobby/panel_green.webp",
+      "width": 1681,
+      "height": 936,
+      "hasAlpha": true,
+      "alphaMin": 0,
+      "alphaMax": 255
+    },
+    {
+      "color": "blue",
+      "input": "art-source/masters/fk_lobby_panel_blue.png",
+      "output": "apps/web/public/assets/lobby/panel_blue.webp",
+      "width": 1681,
+      "height": 936,
+      "hasAlpha": true,
+      "alphaMin": 0,
+      "alphaMax": 255
+    },
+    {
+      "color": "gold",
+      "input": "art-source/masters/fk_lobby_panel_gold.png",
+      "output": "apps/web/public/assets/lobby/panel_gold.webp",
+      "width": 1681,
+      "height": 936,
+      "hasAlpha": true,
+      "alphaMin": 0,
+      "alphaMax": 255
+    }
+  ]
+}

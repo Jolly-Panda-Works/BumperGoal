@@ -1,0 +1,38 @@
+{
+  "name": "@flickkick/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "build:e2e": "vite build --mode e2e --outDir dist-e2e",
+    "preview:e2e": "vite preview --outDir dist-e2e --port 4173 --strictPort"
+  },
+  "dependencies": {
+    "@comms/sdk": "file:./vendor/comms-sdk-0.3.0.tgz",
+    "@flickkick/config": "workspace:*",
+    "@flickkick/rules": "workspace:*",
+    "@flickkick/sim": "workspace:*",
+    "@fontsource/rubik": "^5.3.0",
+    "@fontsource/vazirmatn": "^5.3.0",
+    "@heroiclabs/nakama-js": "2.8.0",
+    "i18next": "^26.5.11",
+    "koota": "0.6.6",
+    "livekit-client": "2.23.0",
+    "phaser": "3.90.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-i18next": "^17.1.9",
+    "react-router": "^8.5.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "vite": "^8.3.5"
+  }
+}

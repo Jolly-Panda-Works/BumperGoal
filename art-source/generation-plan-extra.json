@@ -1,0 +1,92 @@
+[
+  {
+    "id": "HUD-BANNER",
+    "name": "fk_hud_banner_goal",
+    "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE blank horizontal energetic lime bevelled ribbon frame with subtle gold lightning caps. Ratio5:1. Large completely EMPTY central flat panel for live localized text, symmetrical ends, stretchable centre, transparent exterior. No lettering, no symbols in centre, no words or watermark.",
+    "alpha": true,
+    "w": 480,
+    "h": 96,
+    "folder": "hud"
+  },
+  {
+    "id": "HUD-BANNER",
+    "name": "fk_hud_banner_info",
+    "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE blank horizontal calm navy bevelled ribbon frame with sky-blue small endcaps. Ratio5:1. Large completely EMPTY central flat panel for live localized text, symmetrical ends, stretchable centre, transparent exterior. No lettering, no symbols in centre, no words or watermark.",
+    "alpha": true,
+    "w": 480,
+    "h": 96,
+    "folder": "hud"
+  },
+  {
+    "id": "HUD-VS",
+    "name": "fk_hud_vs",
+    "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE symmetrical clash emblem: lime angular wedge at left, coral angular wedge at right meeting at a small golden central lightning shape. Wide ratio3:2, strong sports matchup energy. NO letters VS, no words or text, isolated transparent.",
+    "alpha": true,
+    "w": 96,
+    "h": 64,
+    "folder": "hud"
+  },
+  {
+    "id": "HUD-UNKNOWN",
+    "name": "fk_hud_unknown",
+    "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE mysterious friendly opponent placeholder head silhouette, simplified navy athletic bust with sky-blue rim highlight, faceless smooth head, tiny glowing three-dot motif on face instead of question mark. Centred square, transparent, no letters, no frame, no text.",
+    "alpha": true,
+    "w": 72,
+    "h": 72,
+    "folder": "hud"
+  },
+  {
+    "id": "HUD-LEVELUP",
+    "name": "fk_hud_levelup_badge",
+    "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE gold and lime sculpted level-up shield badge with modest laurel wings, LARGE completely blank navy central round area to place a live level number. No digits, no words, no text. Frontal symmetrical, transparent, safe padding.",
+    "alpha": true,
+    "w": 120,
+    "h": 120,
+    "folder": "hud"
+  },
+  {
+    "id": "HUD-RESULT",
+    "name": "fk_hud_result_victory",
+    "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE horizontal sports result header decoration: golden laurel wings framing a blank navy ribbon centre with lime highlight, triumphant upward shape. Ratio4:1, central half empty for live localized text. No words, no letters or numbers, transparent background.",
+    "alpha": true,
+    "w": 560,
+    "h": 140,
+    "folder": "hud"
+  },
+  {
+    "id": "HUD-RESULT",
+    "name": "fk_hud_result_defeat",
+    "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE horizontal sports result header decoration: muted blue-grey laurel branches framing a blank navy ribbon centre with subtle coral edge, gentle dignified mood. Ratio4:1, central half empty for live localized text. No words, no letters or numbers, transparent background.",
+    "alpha": true,
+    "w": 560,
+    "h": 140,
+    "folder": "hud"
+  },
+  {
+    "id": "HUD-COACH",
+    "name": "fk_hud_coach_step1-press",
+    "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE tutorial illustration, A neutral stylized pointer finger pressing the CENTRE of one lime lightning disc; a small thin bright ring marks the contact point. Strict overhead diagram-like composition but sculpted cartoon materials. Use a small quiet grass patch under pieces only, transparent exterior. Ratio3:2, clear action readable small, no extra discs, no wording, letters or watermark.",
+    "alpha": true,
+    "w": 240,
+    "h": 160,
+    "folder": "illustrations"
+  },
+  {
+    "id": "HUD-COACH",
+    "name": "fk_hud_coach_step2-drag",
+    "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE tutorial illustration, A neutral stylized pointer finger still touching a lime lightning disc, pulled backwards away from a soccer ball; an elastic aiming arrow points FROM disc TOWARD ball. Strict overhead diagram-like composition but sculpted cartoon materials. Use a small quiet grass patch under pieces only, transparent exterior. Ratio3:2, clear action readable small, no extra discs, no wording, letters or watermark.",
+    "alpha": true,
+    "w": 240,
+    "h": 160,
+    "folder": "illustrations"
+  },
+  {
+    "id": "HUD-COACH",
+    "name": "fk_hud_coach_step3-release",
+    "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE tutorial illustration, A neutral stylized pointer finger lifted clearly above the lime disc, with the lime disc moving toward a smaller soccer ball; two short motion streaks show release. Strict overhead diagram-like composition but sculpted cartoon materials. Use a small quiet grass patch under pieces only, transparent exterior. Ratio3:2, clear action readable small, no extra discs, no wording, letters or watermark.",
+    "alpha": true,
+    "w": 240,
+    "h": 160,
+    "folder": "illustrations"
+  }
+]

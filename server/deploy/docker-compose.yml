@@ -1,0 +1,76 @@
+# Local / single-host stack: PostgreSQL + Nakama with the FlickKick plugin.
+#   cp server/deploy/.env.example server/deploy/.env   (then set real secrets)
+#   docker compose -f server/deploy/docker-compose.yml --env-file server/deploy/.env up -d --build
+name: flickkick
+
+services:
+  postgres:
+    image: postgres:16.10-alpine
+    environment:
+      POSTGRES_DB: nakama
+      POSTGRES_USER: nakama
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD', 'pg_isready', '-U', 'nakama', '-d', 'nakama']
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+  nakama:
+    build:
+      context: ../..
+      dockerfile: server/nakama/Dockerfile
+    depends_on:
+      postgres:
+        condition: service_healthy
+    entrypoint:
+      - /bin/sh
+      - -ec
+      - |
+        /nakama/nakama migrate up --database.address "nakama:$${POSTGRES_PASSWORD}@postgres:5432/nakama"
+        exec /nakama/nakama --config /nakama/data/flickkick.yml \
+          --database.address "nakama:$${POSTGRES_PASSWORD}@postgres:5432/nakama" \
+          --socket.server_key "$${NAKAMA_SERVER_KEY}" \
+          --session.encryption_key "$${NAKAMA_SESSION_KEY}" \
+          --session.refresh_encryption_key "$${NAKAMA_REFRESH_KEY}" \
+          --runtime.http_key "$${NAKAMA_HTTP_KEY}" \
+          --console.username admin \
+          --console.password "$${NAKAMA_CONSOLE_PASSWORD}" \
+          --runtime.env "MM_BOT_TIMEOUT_MS=$${MM_BOT_TIMEOUT_MS}" \
+          --runtime.env "AI_SERVER_MAX_SIMULATIONS=$${AI_SERVER_MAX_SIMULATIONS}" \
+          --runtime.env "ADMIN_USERNAME=$${ADMIN_USERNAME}" \
+          --runtime.env "ADMIN_PASSWORD=$${ADMIN_PASSWORD}" \
+          --runtime.env "COMMS_URL=$${COMMS_URL}" \
+          --runtime.env "COMMS_SERVER_KEY=$${COMMS_SERVER_KEY}" \
+          --runtime.env "COMMS_WEBHOOK_SECRET=$${COMMS_WEBHOOK_SECRET}"
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}
+      NAKAMA_SERVER_KEY: ${NAKAMA_SERVER_KEY:?set NAKAMA_SERVER_KEY}
+      NAKAMA_SESSION_KEY: ${NAKAMA_SESSION_KEY:?set NAKAMA_SESSION_KEY}
+      NAKAMA_REFRESH_KEY: ${NAKAMA_REFRESH_KEY:?set NAKAMA_REFRESH_KEY}
+      NAKAMA_HTTP_KEY: ${NAKAMA_HTTP_KEY:?set NAKAMA_HTTP_KEY}
+      NAKAMA_CONSOLE_PASSWORD: ${NAKAMA_CONSOLE_PASSWORD:?set NAKAMA_CONSOLE_PASSWORD}
+      MM_BOT_TIMEOUT_MS: ${MM_BOT_TIMEOUT_MS:-10000}
+      AI_SERVER_MAX_SIMULATIONS: ${AI_SERVER_MAX_SIMULATIONS:-12}
+      # Balance panel at /admin; empty disables it (see docs/DEPLOYMENT.md).
+      ADMIN_USERNAME: ${ADMIN_USERNAME:-}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}
+      # Voice chat through comms game rooms; empty disables it (see docs/VOICE_CHAT.md).
+      COMMS_URL: ${COMMS_URL:-}
+      COMMS_SERVER_KEY: ${COMMS_SERVER_KEY:-}
+      COMMS_WEBHOOK_SECRET: ${COMMS_WEBHOOK_SECRET:-}
+    ports:
+      - '${NAKAMA_BIND:-127.0.0.1}:7350:7350' # client API + realtime socket
+      - '${NAKAMA_BIND:-127.0.0.1}:7351:7351' # admin console
+    healthcheck:
+      test: ['CMD', '/nakama/nakama', 'healthcheck']
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+volumes:
+  pgdata:

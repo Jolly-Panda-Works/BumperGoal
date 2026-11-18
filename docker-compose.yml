@@ -1,0 +1,28 @@
+# Production entry point. Reuse the maintained FlickKick stack without copying it.
+# docker compose --env-file server/deploy/.env.prod up -d --build
+name: flickkick-prod
+services:
+  postgres:
+    extends:
+      file: server/deploy/docker-compose.prod.yml
+      service: postgres
+  nakama:
+    extends:
+      file: server/deploy/docker-compose.prod.yml
+      service: nakama
+    build:
+      context: .
+  web:
+    extends:
+      file: server/deploy/docker-compose.prod.yml
+      service: web
+    build:
+      context: .
+  backup:
+    extends:
+      file: server/deploy/docker-compose.prod.yml
+      service: backup
+volumes:
+  pgdata:
+  caddy_data:
+  caddy_config:

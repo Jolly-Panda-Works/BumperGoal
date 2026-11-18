@@ -1,0 +1,17 @@
+{
+  "name": "@flickkick/sim",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@dimforge/rapier2d-deterministic-compat": "0.21.0",
+    "@flickkick/config": "workspace:*"
+  }
+}

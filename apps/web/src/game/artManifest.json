@@ -1,0 +1,1168 @@
+{
+  "version": 1,
+  "scale": 2,
+  "themes": {
+    "park": {
+      "bg": {
+        "file": "board/park/bg.webp",
+        "w": 1672,
+        "h": 940
+      },
+      "turf": {
+        "file": "board/park/turf.webp",
+        "w": 1620,
+        "h": 972
+      },
+      "frame": {
+        "file": "board/park/frame.webp",
+        "w": 819,
+        "h": 502,
+        "insets": {
+          "left": 69,
+          "top": 69,
+          "right": 69,
+          "bottom": 81
+        }
+      }
+    },
+    "city": {
+      "bg": {
+        "file": "board/city/bg.webp",
+        "w": 1672,
+        "h": 940
+      },
+      "turf": {
+        "file": "board/city/turf.webp",
+        "w": 1620,
+        "h": 972
+      },
+      "frame": {
+        "file": "board/city/frame.webp",
+        "w": 871,
+        "h": 534,
+        "insets": {
+          "left": 68,
+          "top": 68,
+          "right": 68,
+          "bottom": 83
+        }
+      }
+    },
+    "coast": {
+      "bg": {
+        "file": "board/coast/bg.webp",
+        "w": 1672,
+        "h": 940
+      },
+      "turf": {
+        "file": "board/coast/turf.webp",
+        "w": 1620,
+        "h": 972
+      },
+      "frame": {
+        "file": "board/coast/frame.webp",
+        "w": 973,
+        "h": 597,
+        "insets": {
+          "left": 69,
+          "top": 69,
+          "right": 67,
+          "bottom": 83
+        }
+      }
+    },
+    "capital": {
+      "bg": {
+        "file": "board/capital/bg.webp",
+        "w": 1672,
+        "h": 940
+      },
+      "turf": {
+        "file": "board/capital/turf.webp",
+        "w": 1620,
+        "h": 972
+      },
+      "frame": {
+        "file": "board/capital/frame.webp",
+        "w": 646,
+        "h": 396,
+        "insets": {
+          "left": 71,
+          "top": 71,
+          "right": 72,
+          "bottom": 74
+        }
+      }
+    },
+    "legends": {
+      "bg": {
+        "file": "board/legends/bg.webp",
+        "w": 1672,
+        "h": 940
+      },
+      "turf": {
+        "file": "board/legends/turf.webp",
+        "w": 1620,
+        "h": 972
+      },
+      "frame": {
+        "file": "board/legends/frame.webp",
+        "w": 883,
+        "h": 542,
+        "insets": {
+          "left": 65,
+          "top": 74,
+          "right": 64,
+          "bottom": 85
+        }
+      }
+    }
+  },
+  "goal": {
+    "file": "board/goal.webp",
+    "w": 187,
+    "h": 368,
+    "mouthX": 0.749,
+    "opensTo": "right"
+  },
+  "discs": {
+    "team_volt": {
+      "file": "pieces/disc_team_volt.webp",
+      "w": 112,
+      "h": 112
+    },
+    "team_coral": {
+      "file": "pieces/disc_team_coral.webp",
+      "w": 112,
+      "h": 112
+    },
+    "team_ocean": {
+      "file": "pieces/disc_team_ocean.webp",
+      "w": 112,
+      "h": 112
+    },
+    "team_sunset": {
+      "file": "pieces/disc_team_sunset.webp",
+      "w": 112,
+      "h": 112
+    },
+    "team_royal": {
+      "file": "pieces/disc_team_royal.webp",
+      "w": 112,
+      "h": 112
+    },
+    "team_forest": {
+      "file": "pieces/disc_team_forest.webp",
+      "w": 112,
+      "h": 112
+    },
+    "nation_argentina": {
+      "file": "pieces/disc_nation_argentina.webp",
+      "w": 112,
+      "h": 112
+    },
+    "nation_belgium": {
+      "file": "pieces/disc_nation_belgium.webp",
+      "w": 112,
+      "h": 112
+    },
+    "nation_brazil": {
+      "file": "pieces/disc_nation_brazil.webp",
+      "w": 112,
+      "h": 112
+    },
+    "nation_colombia": {
+      "file": "pieces/disc_nation_colombia.webp",
+      "w": 112,
+      "h": 112
+    },
+    "nation_croatia": {
+      "file": "pieces/disc_nation_croatia.webp",
+      "w": 112,
+      "h": 112
+    },
+    "nation_england": {
+      "file": "pieces/disc_nation_england.webp",
+      "w": 112,
+      "h": 112
+    },
+    "nation_france": {
+      "file": "pieces/disc_nation_france.webp",
+      "w": 112,
+      "h": 112
+    },
+    "nation_germany": {
+      "file": "pieces/disc_nation_germany.webp",
+      "w": 112,
+      "h": 112
+    },
+    "nation_iran": {
+      "file": "pieces/disc_nation_iran.webp",
+      "w": 112,
+      "h": 112
+    },
+    "nation_japan": {
+      "file": "pieces/disc_nation_japan.webp",
+      "w": 112,
+      "h": 112
+    },
+    "nation_mexico": {
+      "file": "pieces/disc_nation_mexico.webp",
+      "w": 112,
+      "h": 112
+    },
+    "nation_morocco": {
+      "file": "pieces/disc_nation_morocco.webp",
+      "w": 112,
+      "h": 112
+    },
+    "nation_netherlands": {
+      "file": "pieces/disc_nation_netherlands.webp",
+      "w": 112,
+      "h": 112
+    },
+    "nation_portugal": {
+      "file": "pieces/disc_nation_portugal.webp",
+      "w": 112,
+      "h": 112
+    },
+    "nation_spain": {
+      "file": "pieces/disc_nation_spain.webp",
+      "w": 112,
+      "h": 112
+    },
+    "nation_usa": {
+      "file": "pieces/disc_nation_usa.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_afc_bournemouth": {
+      "file": "pieces/disc_club_afc_bournemouth.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_arsenal": {
+      "file": "pieces/disc_club_arsenal.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_as_roma": {
+      "file": "pieces/disc_club_as_roma.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_aston_villa": {
+      "file": "pieces/disc_club_aston_villa.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_atletico_madrid": {
+      "file": "pieces/disc_club_atletico_madrid.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_barcelona": {
+      "file": "pieces/disc_club_barcelona.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_bayer_leverkusen": {
+      "file": "pieces/disc_club_bayer_leverkusen.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_bayern_munich": {
+      "file": "pieces/disc_club_bayern_munich.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_benfica": {
+      "file": "pieces/disc_club_benfica.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_borussia_dortmund": {
+      "file": "pieces/disc_club_borussia_dortmund.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_brighton_hove_albion": {
+      "file": "pieces/disc_club_brighton_hove_albion.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_club_brugge": {
+      "file": "pieces/disc_club_club_brugge.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_como_1907": {
+      "file": "pieces/disc_club_como_1907.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_flamengo": {
+      "file": "pieces/disc_club_flamengo.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_inter_milan": {
+      "file": "pieces/disc_club_inter_milan.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_liverpool": {
+      "file": "pieces/disc_club_liverpool.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_manchester_city": {
+      "file": "pieces/disc_club_manchester_city.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_palmeiras": {
+      "file": "pieces/disc_club_palmeiras.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_paris_saint_germain": {
+      "file": "pieces/disc_club_paris_saint_germain.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_psv_eindhoven": {
+      "file": "pieces/disc_club_psv_eindhoven.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_real_betis": {
+      "file": "pieces/disc_club_real_betis.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_real_madrid": {
+      "file": "pieces/disc_club_real_madrid.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_sporting_cp": {
+      "file": "pieces/disc_club_sporting_cp.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_aboomoslem_mashhad": {
+      "file": "pieces/disc_club_aboomoslem_mashhad.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_ac_milan": {
+      "file": "pieces/disc_club_ac_milan.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_al_hilal": {
+      "file": "pieces/disc_club_al_hilal.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_aluminium_arak": {
+      "file": "pieces/disc_club_aluminium_arak.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_bargh_shiraz": {
+      "file": "pieces/disc_club_bargh_shiraz.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_brentford": {
+      "file": "pieces/disc_club_brentford.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_chadormalu_ardakan": {
+      "file": "pieces/disc_club_chadormalu_ardakan.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_damash_gilan": {
+      "file": "pieces/disc_club_damash_gilan.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_esteghlal_khuzestan": {
+      "file": "pieces/disc_club_esteghlal_khuzestan.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_esteghlal_mollasani": {
+      "file": "pieces/disc_club_esteghlal_mollasani.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_esteghlal": {
+      "file": "pieces/disc_club_esteghlal.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_fajr_sepasi": {
+      "file": "pieces/disc_club_fajr_sepasi.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_fc_porto": {
+      "file": "pieces/disc_club_fc_porto.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_foolad_khuzestan": {
+      "file": "pieces/disc_club_foolad_khuzestan.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_giti_pasand": {
+      "file": "pieces/disc_club_giti_pasand.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_gol_gohar_sirjan": {
+      "file": "pieces/disc_club_gol_gohar_sirjan.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_havadar": {
+      "file": "pieces/disc_club_havadar.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_juventus": {
+      "file": "pieces/disc_club_juventus.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_kheybar_khorramabad": {
+      "file": "pieces/disc_club_kheybar_khorramabad.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_lazio": {
+      "file": "pieces/disc_club_lazio.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_machine_sazi_tabriz": {
+      "file": "pieces/disc_club_machine_sazi_tabriz.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_malavan": {
+      "file": "pieces/disc_club_malavan.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_manchester_united": {
+      "file": "pieces/disc_club_manchester_united.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_mes_kerman": {
+      "file": "pieces/disc_club_mes_kerman.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_mes_rafsanjan": {
+      "file": "pieces/disc_club_mes_rafsanjan.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_mes_shahr_babak": {
+      "file": "pieces/disc_club_mes_shahr_babak.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_naft_gachsaran": {
+      "file": "pieces/disc_club_naft_gachsaran.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_naft_masjed_soleyman": {
+      "file": "pieces/disc_club_naft_masjed_soleyman.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_nassaji_mazandaran": {
+      "file": "pieces/disc_club_nassaji_mazandaran.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_pars_jonoubi_jam": {
+      "file": "pieces/disc_club_pars_jonoubi_jam.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_paykan": {
+      "file": "pieces/disc_club_paykan.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_persepolis": {
+      "file": "pieces/disc_club_persepolis.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_qashqai_shiraz": {
+      "file": "pieces/disc_club_qashqai_shiraz.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_rah_ahan": {
+      "file": "pieces/disc_club_rah_ahan.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_saipa": {
+      "file": "pieces/disc_club_saipa.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_sanat_naft_abadan": {
+      "file": "pieces/disc_club_sanat_naft_abadan.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_sepahan": {
+      "file": "pieces/disc_club_sepahan.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_shahr_khodro_mashhad": {
+      "file": "pieces/disc_club_shahr_khodro_mashhad.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_shahrdari_astara": {
+      "file": "pieces/disc_club_shahrdari_astara.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_shahrdari_hamedan": {
+      "file": "pieces/disc_club_shahrdari_hamedan.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_shahrdari_tabriz": {
+      "file": "pieces/disc_club_shahrdari_tabriz.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_shams_azar_qazvin": {
+      "file": "pieces/disc_club_shams_azar_qazvin.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_tractor": {
+      "file": "pieces/disc_club_tractor.webp",
+      "w": 112,
+      "h": 112
+    },
+    "club_zob_ahan": {
+      "file": "pieces/disc_club_zob_ahan.webp",
+      "w": 112,
+      "h": 112
+    },
+    "nation_italy": {
+      "file": "pieces/disc_nation_italy.webp",
+      "w": 112,
+      "h": 112
+    },
+    "nation_switzerland": {
+      "file": "pieces/disc_nation_switzerland.webp",
+      "w": 112,
+      "h": 112
+    }
+  },
+  "balls": {
+    "ball_classic": {
+      "file": "pieces/ball_classic.webp",
+      "w": 60,
+      "h": 60
+    },
+    "ball_neon": {
+      "file": "pieces/ball_neon.webp",
+      "w": 60,
+      "h": 60
+    },
+    "ball_gold": {
+      "file": "pieces/ball_gold.webp",
+      "w": 60,
+      "h": 60
+    }
+  },
+  "avatars": {
+    "avatar_fox": {
+      "file": "avatars/fox.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_owl": {
+      "file": "avatars/owl.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_bear": {
+      "file": "avatars/bear.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_tiger": {
+      "file": "avatars/tiger.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_badger": {
+      "file": "avatars/animal_badger.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_beaver": {
+      "file": "avatars/animal_beaver.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_buffalo": {
+      "file": "avatars/animal_buffalo.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_chimpanzee": {
+      "file": "avatars/animal_chimpanzee.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_crocodile": {
+      "file": "avatars/animal_crocodile.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_deer": {
+      "file": "avatars/animal_deer.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_eagle": {
+      "file": "avatars/animal_eagle.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_elephant": {
+      "file": "avatars/animal_elephant.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_giraffe": {
+      "file": "avatars/animal_giraffe.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_goat": {
+      "file": "avatars/animal_goat.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_gorilla": {
+      "file": "avatars/animal_gorilla.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_hedgehog": {
+      "file": "avatars/animal_hedgehog.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_hippopotamus": {
+      "file": "avatars/animal_hippopotamus.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_horse": {
+      "file": "avatars/animal_horse.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_koala": {
+      "file": "avatars/animal_koala.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_lemur": {
+      "file": "avatars/animal_lemur.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_lion": {
+      "file": "avatars/animal_lion.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_moose": {
+      "file": "avatars/animal_moose.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_otter": {
+      "file": "avatars/animal_otter.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_panda": {
+      "file": "avatars/animal_panda.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_penguin": {
+      "file": "avatars/animal_penguin.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_rabbit": {
+      "file": "avatars/animal_rabbit.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_raccoon": {
+      "file": "avatars/animal_raccoon.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_ram": {
+      "file": "avatars/animal_ram.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_red_panda": {
+      "file": "avatars/animal_red_panda.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_rhinoceros": {
+      "file": "avatars/animal_rhinoceros.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_snow_leopard": {
+      "file": "avatars/animal_snow_leopard.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_squirrel": {
+      "file": "avatars/animal_squirrel.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_wolf": {
+      "file": "avatars/animal_wolf.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_animal_zebra": {
+      "file": "avatars/animal_zebra.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_01": {
+      "file": "avatars/human_01.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_02": {
+      "file": "avatars/human_02.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_03": {
+      "file": "avatars/human_03.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_04": {
+      "file": "avatars/human_04.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_05": {
+      "file": "avatars/human_05.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_06": {
+      "file": "avatars/human_06.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_07": {
+      "file": "avatars/human_07.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_08": {
+      "file": "avatars/human_08.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_09": {
+      "file": "avatars/human_09.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_10": {
+      "file": "avatars/human_10.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_11": {
+      "file": "avatars/human_11.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_12": {
+      "file": "avatars/human_12.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_13": {
+      "file": "avatars/human_13.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_14": {
+      "file": "avatars/human_14.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_15": {
+      "file": "avatars/human_15.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_16": {
+      "file": "avatars/human_16.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_17": {
+      "file": "avatars/human_17.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_18": {
+      "file": "avatars/human_18.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_19": {
+      "file": "avatars/human_19.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_20": {
+      "file": "avatars/human_20.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_21": {
+      "file": "avatars/human_21.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_22": {
+      "file": "avatars/human_22.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_23": {
+      "file": "avatars/human_23.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_24": {
+      "file": "avatars/human_24.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_25": {
+      "file": "avatars/human_25.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_26": {
+      "file": "avatars/human_26.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_27": {
+      "file": "avatars/human_27.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_28": {
+      "file": "avatars/human_28.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_29": {
+      "file": "avatars/human_29.webp",
+      "w": 256,
+      "h": 256
+    },
+    "avatar_human_30": {
+      "file": "avatars/human_30.webp",
+      "w": 256,
+      "h": 256
+    },
+    "bot": {
+      "file": "avatars/bot.webp",
+      "w": 256,
+      "h": 256
+    },
+    "unknown": {
+      "file": "avatars/unknown.webp",
+      "w": 256,
+      "h": 256
+    }
+  },
+  "ui": {
+    "coin": {
+      "file": "ui/coin.webp",
+      "w": 64,
+      "h": 64
+    },
+    "gem": {
+      "file": "ui/gem.webp",
+      "w": 64,
+      "h": 64
+    },
+    "mode_online": {
+      "file": "ui/mode_online.webp",
+      "w": 320,
+      "h": 240
+    },
+    "mode_ai": {
+      "file": "ui/mode_ai.webp",
+      "w": 320,
+      "h": 240
+    },
+    "mode_local": {
+      "file": "ui/mode_local.webp",
+      "w": 320,
+      "h": 240
+    },
+    "state_empty-history": {
+      "file": "ui/state_empty-history.webp",
+      "w": 320,
+      "h": 256
+    },
+    "state_empty-wallet": {
+      "file": "ui/state_empty-wallet.webp",
+      "w": 320,
+      "h": 256
+    },
+    "state_not-found": {
+      "file": "ui/state_not-found.webp",
+      "w": 320,
+      "h": 256
+    },
+    "state_offline-server": {
+      "file": "ui/state_offline-server.webp",
+      "w": 320,
+      "h": 256
+    },
+    "state_error": {
+      "file": "ui/state_error.webp",
+      "w": 320,
+      "h": 256
+    },
+    "arena_park": {
+      "file": "ui/arena_park.webp",
+      "w": 640,
+      "h": 240
+    },
+    "arena_city": {
+      "file": "ui/arena_city.webp",
+      "w": 640,
+      "h": 240
+    },
+    "arena_coast": {
+      "file": "ui/arena_coast.webp",
+      "w": 640,
+      "h": 240
+    },
+    "arena_capital": {
+      "file": "ui/arena_capital.webp",
+      "w": 640,
+      "h": 240
+    },
+    "arena_legends": {
+      "file": "ui/arena_legends.webp",
+      "w": 640,
+      "h": 240
+    },
+    "pack_coins_s": {
+      "file": "thumbs/pack_coins_s.webp",
+      "w": 192,
+      "h": 192
+    },
+    "pack_coins_m": {
+      "file": "thumbs/pack_coins_m.webp",
+      "w": 192,
+      "h": 192
+    },
+    "pack_gems_s": {
+      "file": "thumbs/pack_gems_s.webp",
+      "w": 192,
+      "h": 192
+    },
+    "starter_offer": {
+      "file": "thumbs/starter_offer.webp",
+      "w": 192,
+      "h": 192
+    },
+    "reward_coins-small": {
+      "file": "thumbs/reward_coins-small.webp",
+      "w": 128,
+      "h": 128
+    },
+    "reward_coins-medium": {
+      "file": "thumbs/reward_coins-medium.webp",
+      "w": 128,
+      "h": 128
+    },
+    "reward_coins-large": {
+      "file": "thumbs/reward_coins-large.webp",
+      "w": 128,
+      "h": 128
+    },
+    "reward_gems": {
+      "file": "thumbs/reward_gems.webp",
+      "w": 128,
+      "h": 128
+    },
+    "rank_bronze": {
+      "file": "thumbs/rank_bronze.webp",
+      "w": 128,
+      "h": 128
+    },
+    "rank_silver": {
+      "file": "thumbs/rank_silver.webp",
+      "w": 128,
+      "h": 128
+    },
+    "rank_gold": {
+      "file": "thumbs/rank_gold.webp",
+      "w": 128,
+      "h": 128
+    },
+    "rank_platinum": {
+      "file": "thumbs/rank_platinum.webp",
+      "w": 128,
+      "h": 128
+    },
+    "rank_legend": {
+      "file": "thumbs/rank_legend.webp",
+      "w": 128,
+      "h": 128
+    },
+    "banner_goal": {
+      "file": "ui/banner_goal.webp",
+      "w": 720,
+      "h": 240
+    },
+    "banner_info": {
+      "file": "ui/banner_info.webp",
+      "w": 640,
+      "h": 200
+    },
+    "coach_1": {
+      "file": "ui/coach_1.webp",
+      "w": 480,
+      "h": 320
+    },
+    "coach_2": {
+      "file": "ui/coach_2.webp",
+      "w": 480,
+      "h": 320
+    },
+    "coach_3": {
+      "file": "ui/coach_3.webp",
+      "w": 480,
+      "h": 320
+    },
+    "levelup": {
+      "file": "ui/levelup.webp",
+      "w": 240,
+      "h": 220
+    },
+    "result_victory": {
+      "file": "ui/result_victory.webp",
+      "w": 720,
+      "h": 240
+    },
+    "result_defeat": {
+      "file": "ui/result_defeat.webp",
+      "w": 720,
+      "h": 240
+    },
+    "vs": {
+      "file": "ui/vs.webp",
+      "w": 360,
+      "h": 240
+    },
+    "wordmark": {
+      "file": "ui/wordmark.webp",
+      "w": 480,
+      "h": 160
+    },
+    "promo_landscape": {
+      "file": "ui/promo_landscape.webp",
+      "w": 1280,
+      "h": 720
+    },
+    "promo_portrait": {
+      "file": "ui/promo_portrait.webp",
+      "w": 720,
+      "h": 1280
+    },
+    "promo_square": {
+      "file": "ui/promo_square.webp",
+      "w": 960,
+      "h": 960
+    },
+    "promo_wide": {
+      "file": "ui/promo_wide.webp",
+      "w": 1440,
+      "h": 480
+    }
+  },
+  "ballRolls": {
+    "ball_classic": {
+      "file": "pieces/ball_roll_classic.webp",
+      "frame": 64,
+      "frames": 24
+    },
+    "ball_neon": {
+      "file": "pieces/ball_roll_neon.webp",
+      "frame": 64,
+      "frames": 24
+    },
+    "ball_gold": {
+      "file": "pieces/ball_roll_gold.webp",
+      "frame": 64,
+      "frames": 24
+    }
+  },
+  "ballShade": {
+    "file": "pieces/ball_shade.webp",
+    "w": 64,
+    "h": 64
+  }
+}

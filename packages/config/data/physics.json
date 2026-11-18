@@ -1,0 +1,17 @@
+{
+  "arena": {
+    "halfWidth": 7.5,
+    "halfHeight": 4.5,
+    "goalHalfWidth": 1.3,
+    "goalDepth": 1.0,
+    "cornerChamfer": 0.5,
+    "wallRestitution": 0.8,
+    "stopSpeed": 0.05
+  },
+  "disc": { "radius": 0.42, "density": 1.0, "linearDamping": 1.4, "restitution": 0.85 },
+  "ball": { "radius": 0.22, "density": 0.6, "linearDamping": 1.0, "restitution": 0.9 },
+  "maxStepsPerShot": 1200,
+  "maxImpulse": 9.0,
+  "minImpulse": 0.25,
+  "boundsMargin": 2.0
+}

@@ -1,0 +1,84 @@
+{
+  "repetitions": 10,
+  "scenarios": [
+    {
+      "name": "disc_disc",
+      "bodies": [
+        ["d", -3, 0],
+        ["d", 0, 0.1]
+      ],
+      "shots": [[0, 6, 0]]
+    },
+    {
+      "name": "disc_ball",
+      "bodies": [
+        ["d", -2, 0],
+        ["b", 0, 0]
+      ],
+      "shots": [[0, 5.5, 0.4]]
+    },
+    {
+      "name": "wall_bounce",
+      "bodies": [["d", 0, 0]],
+      "shots": [[0, 2.7, 5.9]]
+    },
+    {
+      "name": "goal_entry",
+      "bodies": [
+        ["d", 3, 0],
+        ["b", 5, 0.2]
+      ],
+      "shots": [[0, 6, 0.5]]
+    },
+    {
+      "name": "low_speed",
+      "bodies": [
+        ["d", 0, 0],
+        ["d", 0.95, 0]
+      ],
+      "shots": [[0, 0.09, 0]]
+    },
+    {
+      "name": "simultaneous_contact",
+      "bodies": [
+        ["d", -2, 0],
+        ["d", 0.5, 0.43],
+        ["d", 0.5, -0.43]
+      ],
+      "shots": [[0, 7, 0]]
+    },
+    {
+      "name": "resting_threshold",
+      "bodies": [
+        ["d", -1, 0],
+        ["d", 1, 0]
+      ],
+      "shots": [[0, 1.04, 0]]
+    },
+    {
+      "name": "formation_multi_shot",
+      "bodies": [
+        ["d", -6.2, 0],
+        ["d", -4.4, 1.9],
+        ["d", -4.4, -1.9],
+        ["d", -2.2, 0.9],
+        ["d", -2.2, -0.9],
+        ["d", 6.2, 0],
+        ["d", 4.4, 1.9],
+        ["d", 4.4, -1.9],
+        ["d", 2.2, 0.9],
+        ["d", 2.2, -0.9],
+        ["b", 0, 0]
+      ],
+      "shots": [
+        [3, 6.5, -1.1],
+        [8, -7.5, 0.6],
+        [4, 8, 1.3],
+        [9, -5, -2.2],
+        [1, 6.8, -3.1],
+        [6, -9, -2.4]
+      ]
+    }
+  ],
+  "_comment": "Shared determinism vectors. Physics parameters come from packages/config/data/physics.json. Expected results: vectors.json (regenerate with UPDATE_VECTORS=1 pnpm --filter @flickkick/sim test). The Go/wazero test in server/nakama/sim must produce identical hashes."
+}

@@ -1,0 +1,60 @@
+{
+  "profiles": [
+    {
+      "id": "rookie",
+      "minLevel": 1,
+      "maxSimulations": 12,
+      "powerSteps": [0.55, 0.85],
+      "angleOffsetsDeg": [0],
+      "bankShots": false,
+      "lookAhead": false,
+      "aimErrorDeg": 9,
+      "powerError": 0.18,
+      "defensiveWeight": 0.1,
+      "riskTolerance": 0.8,
+      "thinkTimeMs": 1200
+    },
+    {
+      "id": "amateur",
+      "minLevel": 4,
+      "maxSimulations": 30,
+      "powerSteps": [0.45, 0.7, 0.95],
+      "angleOffsetsDeg": [0, -4, 4],
+      "bankShots": false,
+      "lookAhead": false,
+      "aimErrorDeg": 5,
+      "powerError": 0.1,
+      "defensiveWeight": 0.4,
+      "riskTolerance": 0.6,
+      "thinkTimeMs": 1500
+    },
+    {
+      "id": "pro",
+      "minLevel": 9,
+      "maxSimulations": 70,
+      "powerSteps": [0.4, 0.6, 0.8, 1.0],
+      "angleOffsetsDeg": [0, -3, 3, -7, 7],
+      "bankShots": true,
+      "lookAhead": false,
+      "aimErrorDeg": 2.5,
+      "powerError": 0.06,
+      "defensiveWeight": 0.7,
+      "riskTolerance": 0.4,
+      "thinkTimeMs": 1800
+    },
+    {
+      "id": "elite",
+      "minLevel": 16,
+      "maxSimulations": 140,
+      "powerSteps": [0.35, 0.55, 0.75, 0.9, 1.0],
+      "angleOffsetsDeg": [0, -2, 2, -5, 5, -9, 9],
+      "bankShots": true,
+      "lookAhead": true,
+      "aimErrorDeg": 1,
+      "powerError": 0.03,
+      "defensiveWeight": 1.0,
+      "riskTolerance": 0.25,
+      "thinkTimeMs": 2000
+    }
+  ]
+}

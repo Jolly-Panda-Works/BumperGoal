@@ -1,0 +1,64 @@
+{
+  "currencies": [
+    {
+      "id": "coins",
+      "kind": "soft"
+    },
+    {
+      "id": "gems",
+      "kind": "premium"
+    }
+  ],
+  "startingBalance": {
+    "coins": 500,
+    "gems": 10
+  },
+  "tutorialReward": {
+    "coins": 100
+  },
+  "dailyRewards": [
+    {
+      "coins": 50
+    },
+    {
+      "coins": 75
+    },
+    {
+      "coins": 100
+    },
+    {
+      "coins": 150
+    },
+    {
+      "coins": 200
+    },
+    {
+      "coins": 250
+    },
+    {
+      "gems": 5
+    }
+  ],
+  "rewardedAd": {
+    "coins": 40,
+    "dailyCap": 3
+  },
+  "features": {
+    "payments": {
+      "enabled": false,
+      "provider": "sandbox"
+    },
+    "ads": {
+      "rewarded": true,
+      "interstitial": false,
+      "provider": "sandbox"
+    },
+    "lootBoxes": false,
+    "vip": false,
+    "seasonPass": false,
+    "clubTeams": {
+      "enabled": true,
+      "note": "Club discs show real club crests: get licences, or set false, before a public release."
+    }
+  }
+}

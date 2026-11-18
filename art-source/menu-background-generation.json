@@ -1,0 +1,6 @@
+{
+  "tool": "built-in image_gen",
+  "master": "art-source/masters/fk_menu_background.png",
+  "runtime": "apps/web/public/assets/lobby/menu_background.webp",
+  "prompt": "Use case: stylized-concept. Asset type: 16:9 full bleed background for secondary menu screens of original FlickKick premium mobile tabletop soccer game. Create a polished stylized 3D navy indoor stadium interior, softly defocused and calm. A subtle out-of-focus green tabletop runs along the very bottom. Cool electric-blue rim light at left and restrained warm golden rim light at right, a few soft atmospheric bokeh lights near upper edges. Crucial: central 75 percent is very dark navy #0e1630 with extremely low detail and restrained contrast so real Shop, Profile, Rankings and Settings UI cards and text remain perfectly readable over it. Same premium toy-like materials, broad clean forms and cinematic blue/gold lighting as soccer tabletop lobby art. Landscape16:9. No balls, no discs, no characters, no objects in center, no audience faces, no text, no logos, no buttons, no interface, no numbers, no watermark."
+}

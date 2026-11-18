@@ -1,0 +1,7 @@
+{
+  "generator": "built-in image_gen",
+  "useCase": "stylized-concept",
+  "prompt": "ONE reusable empty horizontal sports-shop shelf row. Front-facing orthographic. Navy recessed backing, warm polished dark walnut lower shelf plank with gold trim, upper blue edge light. Seamless horizontal edges, no uprights, dividers, roof, products, text or UI. Wide 4:1 target. Shelf lower14%, clear upper86%.",
+  "master": "art-source/masters/fk_shop_shelf.png",
+  "runtime": "apps/web/public/assets/lobby/shop_shelf.webp"
+}

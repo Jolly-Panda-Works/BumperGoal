@@ -1,0 +1,486 @@
+{
+  "generator": "image_gen",
+  "style": "Original stylized 3D sports portrait; navy and lime jersey; navy background",
+  "assets": [
+    {
+      "id": "animal_badger",
+      "kind": "animal",
+      "master": "fk_avatar_animal_badger.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_badger.png"
+    },
+    {
+      "id": "animal_beaver",
+      "kind": "animal",
+      "master": "fk_avatar_animal_beaver.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_beaver.png"
+    },
+    {
+      "id": "animal_buffalo",
+      "kind": "animal",
+      "master": "fk_avatar_animal_buffalo.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_buffalo.png"
+    },
+    {
+      "id": "animal_chimpanzee",
+      "kind": "animal",
+      "master": "fk_avatar_animal_chimpanzee.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_chimpanzee.png"
+    },
+    {
+      "id": "animal_crocodile",
+      "kind": "animal",
+      "master": "fk_avatar_animal_crocodile.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_crocodile.png"
+    },
+    {
+      "id": "animal_deer",
+      "kind": "animal",
+      "master": "fk_avatar_animal_deer.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_deer.png"
+    },
+    {
+      "id": "animal_eagle",
+      "kind": "animal",
+      "master": "fk_avatar_animal_eagle.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_eagle.png"
+    },
+    {
+      "id": "animal_elephant",
+      "kind": "animal",
+      "master": "fk_avatar_animal_elephant.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_elephant.png"
+    },
+    {
+      "id": "animal_giraffe",
+      "kind": "animal",
+      "master": "fk_avatar_animal_giraffe.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_giraffe.png"
+    },
+    {
+      "id": "animal_goat",
+      "kind": "animal",
+      "master": "fk_avatar_animal_goat.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_goat.png"
+    },
+    {
+      "id": "animal_gorilla",
+      "kind": "animal",
+      "master": "fk_avatar_animal_gorilla.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_gorilla.png"
+    },
+    {
+      "id": "animal_hedgehog",
+      "kind": "animal",
+      "master": "fk_avatar_animal_hedgehog.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_hedgehog.png"
+    },
+    {
+      "id": "animal_hippopotamus",
+      "kind": "animal",
+      "master": "fk_avatar_animal_hippopotamus.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_hippopotamus.png"
+    },
+    {
+      "id": "animal_horse",
+      "kind": "animal",
+      "master": "fk_avatar_animal_horse.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_horse.png"
+    },
+    {
+      "id": "animal_koala",
+      "kind": "animal",
+      "master": "fk_avatar_animal_koala.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_koala.png"
+    },
+    {
+      "id": "animal_lemur",
+      "kind": "animal",
+      "master": "fk_avatar_animal_lemur.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_lemur.png"
+    },
+    {
+      "id": "animal_lion",
+      "kind": "animal",
+      "master": "fk_avatar_animal_lion.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_lion.png"
+    },
+    {
+      "id": "animal_moose",
+      "kind": "animal",
+      "master": "fk_avatar_animal_moose.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_moose.png"
+    },
+    {
+      "id": "animal_otter",
+      "kind": "animal",
+      "master": "fk_avatar_animal_otter.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_otter.png"
+    },
+    {
+      "id": "animal_panda",
+      "kind": "animal",
+      "master": "fk_avatar_animal_panda.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_panda.png"
+    },
+    {
+      "id": "animal_penguin",
+      "kind": "animal",
+      "master": "fk_avatar_animal_penguin.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_penguin.png"
+    },
+    {
+      "id": "animal_rabbit",
+      "kind": "animal",
+      "master": "fk_avatar_animal_rabbit.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_rabbit.png"
+    },
+    {
+      "id": "animal_raccoon",
+      "kind": "animal",
+      "master": "fk_avatar_animal_raccoon.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_raccoon.png"
+    },
+    {
+      "id": "animal_ram",
+      "kind": "animal",
+      "master": "fk_avatar_animal_ram.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_ram.png"
+    },
+    {
+      "id": "animal_red_panda",
+      "kind": "animal",
+      "master": "fk_avatar_animal_red_panda.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_red_panda.png"
+    },
+    {
+      "id": "animal_rhinoceros",
+      "kind": "animal",
+      "master": "fk_avatar_animal_rhinoceros.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_rhinoceros.png"
+    },
+    {
+      "id": "animal_snow_leopard",
+      "kind": "animal",
+      "master": "fk_avatar_animal_snow_leopard.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_snow_leopard.png"
+    },
+    {
+      "id": "animal_squirrel",
+      "kind": "animal",
+      "master": "fk_avatar_animal_squirrel.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_squirrel.png"
+    },
+    {
+      "id": "animal_wolf",
+      "kind": "animal",
+      "master": "fk_avatar_animal_wolf.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_wolf.png"
+    },
+    {
+      "id": "animal_zebra",
+      "kind": "animal",
+      "master": "fk_avatar_animal_zebra.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_animal_zebra.png"
+    },
+    {
+      "id": "human_01",
+      "kind": "human",
+      "master": "fk_avatar_human_01.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_01.png"
+    },
+    {
+      "id": "human_02",
+      "kind": "human",
+      "master": "fk_avatar_human_02.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_02.png"
+    },
+    {
+      "id": "human_03",
+      "kind": "human",
+      "master": "fk_avatar_human_03.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_03.png"
+    },
+    {
+      "id": "human_04",
+      "kind": "human",
+      "master": "fk_avatar_human_04.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_04.png"
+    },
+    {
+      "id": "human_05",
+      "kind": "human",
+      "master": "fk_avatar_human_05.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_05.png"
+    },
+    {
+      "id": "human_06",
+      "kind": "human",
+      "master": "fk_avatar_human_06.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_06.png"
+    },
+    {
+      "id": "human_07",
+      "kind": "human",
+      "master": "fk_avatar_human_07.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_07.png"
+    },
+    {
+      "id": "human_08",
+      "kind": "human",
+      "master": "fk_avatar_human_08.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_08.png"
+    },
+    {
+      "id": "human_09",
+      "kind": "human",
+      "master": "fk_avatar_human_09.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_09.png"
+    },
+    {
+      "id": "human_10",
+      "kind": "human",
+      "master": "fk_avatar_human_10.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_10.png"
+    },
+    {
+      "id": "human_11",
+      "kind": "human",
+      "master": "fk_avatar_human_11.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_11.png"
+    },
+    {
+      "id": "human_12",
+      "kind": "human",
+      "master": "fk_avatar_human_12.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_12.png"
+    },
+    {
+      "id": "human_13",
+      "kind": "human",
+      "master": "fk_avatar_human_13.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_13.png"
+    },
+    {
+      "id": "human_14",
+      "kind": "human",
+      "master": "fk_avatar_human_14.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_14.png"
+    },
+    {
+      "id": "human_15",
+      "kind": "human",
+      "master": "fk_avatar_human_15.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_15.png"
+    },
+    {
+      "id": "human_16",
+      "kind": "human",
+      "master": "fk_avatar_human_16.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_16.png"
+    },
+    {
+      "id": "human_17",
+      "kind": "human",
+      "master": "fk_avatar_human_17.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_17.png"
+    },
+    {
+      "id": "human_18",
+      "kind": "human",
+      "master": "fk_avatar_human_18.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_18.png"
+    },
+    {
+      "id": "human_19",
+      "kind": "human",
+      "master": "fk_avatar_human_19.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_19.png"
+    },
+    {
+      "id": "human_20",
+      "kind": "human",
+      "master": "fk_avatar_human_20.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_20.png"
+    },
+    {
+      "id": "human_21",
+      "kind": "human",
+      "master": "fk_avatar_human_21.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_21.png"
+    },
+    {
+      "id": "human_22",
+      "kind": "human",
+      "master": "fk_avatar_human_22.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_22.png"
+    },
+    {
+      "id": "human_23",
+      "kind": "human",
+      "master": "fk_avatar_human_23.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_23.png"
+    },
+    {
+      "id": "human_24",
+      "kind": "human",
+      "master": "fk_avatar_human_24.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_24.png"
+    },
+    {
+      "id": "human_25",
+      "kind": "human",
+      "master": "fk_avatar_human_25.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_25.png"
+    },
+    {
+      "id": "human_26",
+      "kind": "human",
+      "master": "fk_avatar_human_26.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_26.png"
+    },
+    {
+      "id": "human_27",
+      "kind": "human",
+      "master": "fk_avatar_human_27.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_27.png"
+    },
+    {
+      "id": "human_28",
+      "kind": "human",
+      "master": "fk_avatar_human_28.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_28.png"
+    },
+    {
+      "id": "human_29",
+      "kind": "human",
+      "master": "fk_avatar_human_29.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_29.png"
+    },
+    {
+      "id": "human_30",
+      "kind": "human",
+      "master": "fk_avatar_human_30.png",
+      "width": 1254,
+      "height": 1254,
+      "url": "/assets/avatars/roster/fk_avatar_human_30.png"
+    }
+  ]
+}

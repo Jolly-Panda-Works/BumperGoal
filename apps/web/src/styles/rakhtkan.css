@@ -1,0 +1,52 @@
+.navbar--rakhtkan {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.navbar--rakhtkan::before {
+  display: none;
+}
+.navbar--rakhtkan .navbar__item.is-active {
+  background: #163650;
+}
+.rakhtkan-home .lobby__modes {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: auto;
+}
+.friend-invitation {
+  display: grid;
+  gap: 14px;
+  text-align: center;
+  inline-size: 100%;
+}
+.friend-invitation form {
+  display: grid;
+  gap: 14px;
+}
+.friend-code {
+  font-size: clamp(1.25rem, 6vw, 2rem);
+  letter-spacing: 0.12em;
+  color: #c6ff3d;
+  user-select: all;
+}
+.friends-screen .panel-screen__body > .field {
+  inline-size: 100%;
+}
+
+.rakhtkan-home {
+  grid-template-rows: minmax(0, 1fr) auto;
+}
+.rakhtkan-shop .shop-heading .tabs--icons {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.shop-product__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-block-size: 36px;
+}
+.shop-product--team > .shop-product__actions {
+  grid-column: 2;
+  grid-row: 3;
+  justify-self: end;
+}

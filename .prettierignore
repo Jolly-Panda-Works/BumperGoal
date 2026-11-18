@@ -1,0 +1,7 @@
+physics/vendor
+poc/**/result-*.json
+pnpm-lock.yaml
+**/dist
+*.wasm
+**/dist-e2e
+test-results

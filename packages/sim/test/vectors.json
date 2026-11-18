@@ -1,0 +1,113 @@
+{
+  "rapier": "0.21.0",
+  "physics": {
+    "arena": {
+      "halfWidth": 7.5,
+      "halfHeight": 4.5,
+      "goalHalfWidth": 1.3,
+      "goalDepth": 1,
+      "cornerChamfer": 0.5,
+      "wallRestitution": 0.8,
+      "stopSpeed": 0.05
+    },
+    "disc": {
+      "radius": 0.42,
+      "density": 1,
+      "linearDamping": 1.4,
+      "restitution": 0.85
+    },
+    "ball": {
+      "radius": 0.22,
+      "density": 0.6,
+      "linearDamping": 1,
+      "restitution": 0.9
+    },
+    "maxStepsPerShot": 1200,
+    "maxImpulse": 9,
+    "minImpulse": 0.25,
+    "boundsMargin": 2
+  },
+  "results": {
+    "disc_disc": [
+      {
+        "outcome": "settled",
+        "ticks": 230,
+        "hash": "9624d3fc"
+      }
+    ],
+    "disc_ball": [
+      {
+        "outcome": "settled",
+        "ticks": 338,
+        "hash": "afd79947"
+      }
+    ],
+    "wall_bounce": [
+      {
+        "outcome": "settled",
+        "ticks": 230,
+        "hash": "e964de86"
+      }
+    ],
+    "goal_entry": [
+      {
+        "outcome": "goal_right",
+        "ticks": 22,
+        "hash": "ed161778"
+      }
+    ],
+    "low_speed": [
+      {
+        "outcome": "settled",
+        "ticks": 52,
+        "hash": "d2a245b1"
+      }
+    ],
+    "simultaneous_contact": [
+      {
+        "outcome": "settled",
+        "ticks": 225,
+        "hash": "ebff3588"
+      }
+    ],
+    "resting_threshold": [
+      {
+        "outcome": "settled",
+        "ticks": 154,
+        "hash": "3fa1ba47"
+      }
+    ],
+    "formation_multi_shot": [
+      {
+        "outcome": "settled",
+        "ticks": 315,
+        "hash": "5d417efa"
+      },
+      {
+        "outcome": "settled",
+        "ticks": 231,
+        "hash": "df9dc9b1"
+      },
+      {
+        "outcome": "settled",
+        "ticks": 235,
+        "hash": "ad14b8c8"
+      },
+      {
+        "outcome": "settled",
+        "ticks": 228,
+        "hash": "0ded9ef6"
+      },
+      {
+        "outcome": "settled",
+        "ticks": 243,
+        "hash": "10a11aa1"
+      },
+      {
+        "outcome": "settled",
+        "ticks": 247,
+        "hash": "0795cb1c"
+      }
+    ]
+  }
+}

@@ -1,0 +1,431 @@
+{
+  "tool": "built-in image_gen",
+  "assets": [
+    {
+      "name": "Spain",
+      "file": "fk_disc_spain.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: National flag: red yellow double-height red horizontal, no arms. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Argentina",
+      "file": "fk_disc_argentina.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: National flag: light blue white light blue horizontal, golden sun with face and wavy rays centred. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "France",
+      "file": "fk_disc_france_v2.png",
+      "prompt": "ONE original FlickKick soccer tabletop disc. Strict directly overhead orthographic perfect circle. Thick polished gold #E0B04A ring with thin white inner line, small upper-left highlight, chunky toy-like bevel. Face national flag: ONLY three equal VERTICAL bands blue #002395 white red #ED2939. Absolutely NO emblem or fleur-de-lis. Flag upright, clean flat shapes. Transparent background, no shadow, no ground, no words or letters. Circle centred fills92% square. No extra symbols."
+    },
+    {
+      "name": "England",
+      "file": "fk_disc_england.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: National flag: white with upright red St George cross. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Portugal",
+      "file": "fk_disc_portugal.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: National flag: green left two-fifths red right three-fifths, small golden armillary sphere and white-red shield on dividing line. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Brazil",
+      "file": "fk_disc_brazil.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: National flag: green yellow diamond blue globe plain white curved band and stars no letters. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Morocco",
+      "file": "fk_disc_morocco.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: National flag: red with green interlaced five-point star outline. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Belgium",
+      "file": "fk_disc_belgium.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: National flag: black yellow red vertical. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Netherlands",
+      "file": "fk_disc_netherlands.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: National flag: red white blue horizontal. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Mexico",
+      "file": "fk_disc_mexico.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: National flag: green white red vertical, simplified golden eagle on cactus centred. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Colombia",
+      "file": "fk_disc_colombia_v2.png",
+      "prompt": "ONE original FlickKick soccer tabletop disc. Strict directly overhead orthographic perfect circle. Thick polished gold #E0B04A ring with thin white inner line, small upper-left highlight, chunky toy-like bevel. Face national flag: ONLY horizontal yellow #FCD116 TOP HALF, blue #003893 middle quarter, red #CE1126 bottom quarter. Absolutely NO coat of arms or symbol. Flag upright, clean flat shapes. Transparent background, no shadow, no ground, no words or letters. Circle centred fills92% square. No extra symbols."
+    },
+    {
+      "name": "Switzerland",
+      "file": "fk_disc_switzerland_v2.png",
+      "prompt": "ONE original FlickKick soccer tabletop disc. Strict directly overhead orthographic perfect circle. Thick polished gold #E0B04A ring with thin white inner line, small upper-left highlight, chunky toy-like bevel. Face national flag: Solid red #DA291C with a WHITE equal-armed cross centred, arms SHORT and NOT touching edges. Red margin surrounds cross on all four sides. Flag upright, clean flat shapes. Transparent background, no shadow, no ground, no words or letters. Circle centred fills92% square. No extra symbols."
+    },
+    {
+      "name": "Croatia",
+      "file": "fk_disc_croatia.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: National flag: red white blue horizontal, red-white checkerboard shield centred. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Italy",
+      "file": "fk_disc_italy_v2.png",
+      "prompt": "ONE original FlickKick soccer tabletop disc. Strict directly overhead orthographic perfect circle. Thick polished gold #E0B04A ring with thin white inner line, small upper-left highlight, chunky toy-like bevel. Face national flag: ONLY three equal VERTICAL bands green #008C45 white red #CD212A. Absolutely NO coat of arms, eagle, cactus or symbol. Flag upright, clean flat shapes. Transparent background, no shadow, no ground, no words or letters. Circle centred fills92% square. No extra symbols."
+    },
+    {
+      "name": "USA",
+      "file": "fk_disc_usa.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: National flag: red white stripes blue upper-left canton white stars. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Japan",
+      "file": "fk_disc_japan.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: National flag: white red central circle. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Iran",
+      "file": "fk_disc_iran.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: National flag: green white red horizontal, central red national emblem and thin white geometric decorative stripe edges without letters. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Bayern Munich",
+      "file": "fk_disc_bayern_munich.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: Club Bayern Munich. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Arsenal",
+      "file": "fk_disc_arsenal.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: Club Arsenal. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Paris Saint-Germain",
+      "file": "fk_disc_paris_saint_germain.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: Club Paris Saint-Germain. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Barcelona",
+      "file": "fk_disc_barcelona.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: Club Barcelona. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Real Madrid",
+      "file": "fk_disc_real_madrid.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: Club Real Madrid. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Manchester City",
+      "file": "fk_disc_manchester_city.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: Club Manchester City. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Germany",
+      "file": "fk_disc_germany.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: National flag: black red gold horizontal. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Aston Villa",
+      "file": "fk_disc_aston_villa.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: Club Aston Villa. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Flamengo",
+      "file": "fk_disc_flamengo.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: Club Flamengo. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Inter Milan",
+      "file": "fk_disc_inter_milan.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: Club Inter Milan. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "AS Roma",
+      "file": "fk_disc_as_roma.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: Club AS Roma. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Como 1907",
+      "file": "fk_disc_como_1907.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: Club Como 1907. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Benfica",
+      "file": "fk_disc_benfica.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: Club Benfica. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Brighton & Hove Albion",
+      "file": "fk_disc_brighton_hove_albion.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: Club Brighton & Hove Albion. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Liverpool",
+      "file": "fk_disc_liverpool.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: Club Liverpool. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Borussia Dortmund",
+      "file": "fk_disc_borussia_dortmund.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: Club Borussia Dortmund. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Atletico Madrid",
+      "file": "fk_disc_atletico_madrid.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: Club Atletico Madrid. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "AFC Bournemouth",
+      "file": "fk_disc_afc_bournemouth.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: Club AFC Bournemouth. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Sporting CP",
+      "file": "fk_disc_sporting_cp.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: Club Sporting CP. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "PSV Eindhoven",
+      "file": "fk_disc_psv_eindhoven.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: Club PSV Eindhoven. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Real Betis",
+      "file": "fk_disc_real_betis.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: Club Real Betis. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Club Brugge",
+      "file": "fk_disc_club_brugge.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: Club Club Brugge. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Bayer Leverkusen",
+      "file": "fk_disc_bayer_leverkusen.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: Club Bayer Leverkusen. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "Palmeiras",
+      "file": "fk_disc_palmeiras.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE single perfect circular disc, strictly orthographic directly overhead, no side wall, no ellipse. Premium chunky sculpted toy materials, saturated colours, readable at56px. Thick polished warm gold #E0B04A outer ring with thin white inner line, identical construction across all teams. Upper-left small restrained specular on bevelled ring only. Flat crisp face design upright: Club Palmeiras. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Centre main symbol. Disc fills92% square with even padding. True transparent background. No cast shadow, ground, fabric folds, extra objects, text, letters, numbers, watermark. Single isolated disc, no sheet."
+    },
+    {
+      "name": "AC Milan",
+      "file": "fk_disc_ac_milan.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club AC Milan. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Lazio",
+      "file": "fk_disc_lazio.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Lazio. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "FC Porto",
+      "file": "fk_disc_fc_porto.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club FC Porto. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Juventus",
+      "file": "fk_disc_juventus.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Juventus. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Brentford",
+      "file": "fk_disc_brentford.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Brentford. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Manchester United",
+      "file": "fk_disc_manchester_united.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Manchester United. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Al-Hilal",
+      "file": "fk_disc_al_hilal.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Al-Hilal. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Esteghlal",
+      "file": "fk_disc_esteghlal.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Esteghlal. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Persepolis",
+      "file": "fk_disc_persepolis.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Persepolis. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Paykan",
+      "file": "fk_disc_paykan.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Paykan. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Havadar",
+      "file": "fk_disc_havadar.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Havadar. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Saipa",
+      "file": "fk_disc_saipa.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Saipa. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Giti Pasand",
+      "file": "fk_disc_giti_pasand.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Giti Pasand. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Tractor",
+      "file": "fk_disc_tractor.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Tractor. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Machine Sazi Tabriz",
+      "file": "fk_disc_machine_sazi_tabriz.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Machine Sazi Tabriz. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Shahrdari Tabriz",
+      "file": "fk_disc_shahrdari_tabriz.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Shahrdari Tabriz. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Foolad Khuzestan",
+      "file": "fk_disc_foolad_khuzestan.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Foolad Khuzestan. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Esteghlal Khuzestan",
+      "file": "fk_disc_esteghlal_khuzestan.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Esteghlal Khuzestan. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Sanat Naft Abadan",
+      "file": "fk_disc_sanat_naft_abadan.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Sanat Naft Abadan. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Naft Masjed Soleyman",
+      "file": "fk_disc_naft_masjed_soleyman.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Naft Masjed Soleyman. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Rah Ahan",
+      "file": "fk_disc_rah_ahan.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Rah Ahan. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Zob Ahan",
+      "file": "fk_disc_zob_ahan.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Zob Ahan. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Sepahan",
+      "file": "fk_disc_sepahan.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Sepahan. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Esteghlal Mollasani",
+      "file": "fk_disc_esteghlal_mollasani.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Esteghlal Mollasani. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Mes Shahr Babak",
+      "file": "fk_disc_mes_shahr_babak.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Mes Shahr Babak. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Chadormalu Ardakan",
+      "file": "fk_disc_chadormalu_ardakan.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Chadormalu Ardakan. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Fajr Sepasi",
+      "file": "fk_disc_fajr_sepasi.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Fajr Sepasi. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Bargh Shiraz",
+      "file": "fk_disc_bargh_shiraz.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Bargh Shiraz. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Gol Gohar Sirjan",
+      "file": "fk_disc_gol_gohar_sirjan.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Gol Gohar Sirjan. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Shahrdari Astara",
+      "file": "fk_disc_shahrdari_astara.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Shahrdari Astara. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Damash Gilan",
+      "file": "fk_disc_damash_gilan.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Damash Gilan. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Nassaji Mazandaran",
+      "file": "fk_disc_nassaji_mazandaran.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Nassaji Mazandaran. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Malavan",
+      "file": "fk_disc_malavan.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Malavan. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Mes Kerman",
+      "file": "fk_disc_mes_kerman.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Mes Kerman. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Mes Rafsanjan",
+      "file": "fk_disc_mes_rafsanjan.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Mes Rafsanjan. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Qashqai Shiraz",
+      "file": "fk_disc_qashqai_shiraz.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Qashqai Shiraz. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Shahr Khodro Mashhad",
+      "file": "fk_disc_shahr_khodro_mashhad.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Shahr Khodro Mashhad. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Aboomoslem Mashhad",
+      "file": "fk_disc_aboomoslem_mashhad.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Aboomoslem Mashhad. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Shahrdari Hamedan",
+      "file": "fk_disc_shahrdari_hamedan.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Shahrdari Hamedan. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Pars Jonoubi Jam",
+      "file": "fk_disc_pars_jonoubi_jam.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Pars Jonoubi Jam. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Shams Azar Qazvin",
+      "file": "fk_disc_shams_azar_qazvin.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Shams Azar Qazvin. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Aluminium Arak",
+      "file": "fk_disc_aluminium_arak.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Aluminium Arak. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Kheybar Khorramabad",
+      "file": "fk_disc_kheybar_khorramabad.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Kheybar Khorramabad. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    },
+    {
+      "name": "Naft Gachsaran",
+      "file": "fk_disc_naft_gachsaran.png",
+      "prompt": "Original FlickKick tabletop soccer game asset. ONE perfect circular disc, strict directly overhead orthographic, no sidewall no ellipse. Premium chunky sculpted toy materials, polished broad bevel. Thick warm gold #E0B04A outer ring with thin white inner line. Small upper-left specular. Face upright: Club Naft Gachsaran. Use recognizable traditional club colours and a simplified central pictorial club emblem, omit all lettering and numbers.. Main emblem centred. Disc fills92% square. True transparent background, no ground, no cast shadow, no extra objects, no text, letters, numbers, watermark. Simplified pictorial insignia only, no monograms."
+    }
+  ],
+  "note": "Use country v2 files where present. Club emblems are generated simplified interpretations, not verified official logos."
+}

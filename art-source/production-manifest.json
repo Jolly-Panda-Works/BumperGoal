@@ -1,0 +1,769 @@
+{
+  "date": "2026-10-28",
+  "tool": "built-in image_gen",
+  "seed": null,
+  "modelVersion": null,
+  "note": "Model version and seed not exposed by built-in tool. User approved sculpted 3D rendering over proposed flat-vector direction. Board camera stays orthographic. Masters preserved unmodified. Export resizing is mechanical production preparation.",
+  "assets": [
+    {
+      "id": "PCS-DISC",
+      "name": "fk_piece_disc_team_coral",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-156becfb-d661-4c8b-b8c2-4f53a31ef90d.png",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. Asset PCS-DISC team_coral: ONE perfect circular tabletop counter strictly orthographic directly overhead, no side wall or perspective ellipse. Thick clean white outer ring, coral #ff5a5f face, single raised white five-pointed star emblem in centre, restrained upper-left specular, smooth bevel. Match lime/navy Volt sample construction. Disc fills 92% square, even padding. True transparent background, no cast shadow, no extra objects, no letters, no watermark.",
+      "alpha": true,
+      "w": 56,
+      "h": 56,
+      "folder": "pieces"
+    },
+    {
+      "id": "PCS-DISC",
+      "name": "fk_piece_disc_team_ocean",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE perfect circular tabletop soccer disc, strictly orthographic directly overhead. No visible side wall or perspective ellipse. Face #2D9CDB, thick outer ring #FFFFFF, centre emblem #FFFFFF: one bold cresting wave. Smooth broad bevel and small upper-left highlight. Uniform circular silhouette, full object fits square with 2% padding, transparent background, no cast shadow, no text. Match approved Volt disc.",
+      "alpha": true,
+      "w": 56,
+      "h": 56,
+      "folder": "pieces",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-de5f8d80-66a1-4959-93d9-f2b517fa3057.png"
+    },
+    {
+      "id": "PCS-DISC",
+      "name": "fk_piece_disc_team_sunset",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE perfect circular tabletop soccer disc, strictly orthographic directly overhead. No visible side wall or perspective ellipse. Face #FF9F1C, thick outer ring #3A0CA3, centre emblem #3A0CA3: one sun with thick rays. Smooth broad bevel and small upper-left highlight. Uniform circular silhouette, full object fits square with 2% padding, transparent background, no cast shadow, no text. Match approved Volt disc.",
+      "alpha": true,
+      "w": 56,
+      "h": 56,
+      "folder": "pieces",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-6d7d4240-3f97-490f-b9ed-364cf51b4065.png"
+    },
+    {
+      "id": "PCS-DISC",
+      "name": "fk_piece_disc_team_royal",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE perfect circular tabletop soccer disc, strictly orthographic directly overhead. No visible side wall or perspective ellipse. Face #7B2FF7, thick outer ring #FFD166, centre emblem #FFD166: one broad three-point crown. Smooth broad bevel and small upper-left highlight. Uniform circular silhouette, full object fits square with 2% padding, transparent background, no cast shadow, no text. Match approved Volt disc.",
+      "alpha": true,
+      "w": 56,
+      "h": 56,
+      "folder": "pieces",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-832e1ed2-9392-45ef-9f56-fd5d16cd2618.png"
+    },
+    {
+      "id": "PCS-DISC",
+      "name": "fk_piece_disc_team_forest",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE perfect circular tabletop soccer disc, strictly orthographic directly overhead. No visible side wall or perspective ellipse. Face #2A9D8F, thick outer ring #E9F5DB, centre emblem #E9F5DB: one simple leaf. Smooth broad bevel and small upper-left highlight. Uniform circular silhouette, full object fits square with 2% padding, transparent background, no cast shadow, no text. Match approved Volt disc.",
+      "alpha": true,
+      "w": 56,
+      "h": 56,
+      "folder": "pieces",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-047bd6bb-f992-4b8b-a456-fca4ebdecfa0.png"
+    },
+    {
+      "id": "PCS-BALL",
+      "name": "fk_piece_ball_ball_classic",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE white soccer ball with large dark navy pentagonal panels, strictly top-down orthographic spherical ball. Bold clean panel seams, sculpted softly inflated panels, upper-left specular, simple readable at 29px. Perfect circle fills 94% square with equal padding, transparent, no cast shadow, no other objects, no text.",
+      "alpha": true,
+      "w": 30,
+      "h": 30,
+      "folder": "pieces",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-f90149b2-1002-4630-8444-9fa7c3df4449.png"
+    },
+    {
+      "id": "PCS-BALL",
+      "name": "fk_piece_ball_ball_neon",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE lime #c6ff3d soccer ball with dark navy polygon panels, strictly top-down orthographic spherical ball. Bold clean panel seams, sculpted softly inflated panels, upper-left specular, simple readable at 29px. Perfect circle fills 94% square with equal padding, transparent, no cast shadow, no other objects, no text.",
+      "alpha": true,
+      "w": 30,
+      "h": 30,
+      "folder": "pieces",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-539817c3-247d-4218-a70b-5e6761dd64d6.png"
+    },
+    {
+      "id": "PCS-BALL",
+      "name": "fk_piece_ball_ball_gold",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE golden #FFD166 soccer ball with bronze #8A5A00 polygon panels, strictly top-down orthographic spherical ball. Bold clean panel seams, sculpted softly inflated panels, upper-left specular, simple readable at 29px. Perfect circle fills 94% square with equal padding, transparent, no cast shadow, no other objects, no text.",
+      "alpha": true,
+      "w": 30,
+      "h": 30,
+      "folder": "pieces",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-9eba3a99-de20-4b5e-9226-f9e295020068.png"
+    },
+    {
+      "id": "UI-AVATAR",
+      "name": "fk_avatar_owl",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE head-and-shoulders square avatar portrait: friendly athletic owl, broad cream face disks, purple-brown feathers, enormous amber eyes and chunky brows, small golden beak. Expressive oversized head, confident friendly sporting personality. Navy athletic jersey with lime collar. Near frontal composition, entire ears/head with safe margin, shoulders at bottom, calm navy gradient full-bleed background, subtle blue rim light. Match approved fox visual style. No frame, letters, logos, weapon or watermark. Readable at 34px.",
+      "alpha": false,
+      "w": 256,
+      "h": 256,
+      "folder": "avatars",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-37c1ec28-0633-49ea-9558-2b4ee14fd211.png"
+    },
+    {
+      "id": "UI-AVATAR",
+      "name": "fk_avatar_bear",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE head-and-shoulders square avatar portrait: friendly athletic brown bear, round ears, broad muzzle, warm cream cheeks, confident gentle grin. Expressive oversized head, confident friendly sporting personality. Navy athletic jersey with lime collar. Near frontal composition, entire ears/head with safe margin, shoulders at bottom, calm navy gradient full-bleed background, subtle blue rim light. Match approved fox visual style. No frame, letters, logos, weapon or watermark. Readable at 34px.",
+      "alpha": false,
+      "w": 256,
+      "h": 256,
+      "folder": "avatars",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-814218ee-d810-46c6-b2c9-d48997c613aa.png"
+    },
+    {
+      "id": "UI-AVATAR",
+      "name": "fk_avatar_tiger",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE head-and-shoulders square avatar portrait: friendly athletic golden-orange tiger, cream muzzle, strong clean dark stripes, rounded ears and bright expressive eyes. Expressive oversized head, confident friendly sporting personality. Navy athletic jersey with lime collar. Near frontal composition, entire ears/head with safe margin, shoulders at bottom, calm navy gradient full-bleed background, subtle blue rim light. Match approved fox visual style. No frame, letters, logos, weapon or watermark. Readable at 34px.",
+      "alpha": false,
+      "w": 256,
+      "h": 256,
+      "folder": "avatars",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-7933e850-e6f5-454f-8f8c-53989cba082a.png"
+    },
+    {
+      "id": "UI-AVATAR",
+      "name": "fk_avatar_bot",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE head-and-shoulders square avatar portrait: clearly ROBOTIC friendly FlickBot, rounded navy metal head, sky-blue luminous eyes in a dark glass face panel, small antenna and visible mechanical ears, lime accents, no animal features. Expressive oversized head, confident friendly sporting personality. Navy athletic jersey with lime collar. Near frontal composition, entire ears/head with safe margin, shoulders at bottom, calm navy gradient full-bleed background, subtle blue rim light. Match approved fox visual style. No frame, letters, logos, weapon or watermark. Readable at 34px.",
+      "alpha": false,
+      "w": 256,
+      "h": 256,
+      "folder": "avatars",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-1f24d731-11c2-44e0-8c7a-9419db8ba9d8.png"
+    },
+    {
+      "id": "BRD-PITCH",
+      "name": "fk_board_turf_park",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE seamless-looking rectangular soccer turf MATERIAL image, landscape aspect5:3, strict overhead orthographic, edge-to-edge FLAT texture with NO perspective, NO border and NO field markings. Lush friendly emerald park grass. Alternating broad vertical mowing stripes #1f7a3e and #26914a, very restrained clean hand-painted texture, uniform soft upper-left illumination. Readable calm surface. No objects, shadows, words, frames, centre circle or lines; precise markings will be added by engine.",
+      "alpha": false,
+      "w": 990,
+      "h": 594,
+      "folder": "board/park",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-dea72b9d-a05f-4b6f-8bf5-e0525b3147f6.png"
+    },
+    {
+      "id": "BRD-FRAME",
+      "name": "fk_board_frame_park",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE strictly top-down rectangular tabletop soccer pitch rim, landscape aspect1026:630, hollow transparent rectangular centre. Outer corners softly rounded, uniform narrow rim thickness18 relative to width1026. Navy sculpted molded rim, lime accent edging. Chunky stylized bevel, upper-left light. No perspective, no grass, no goals, no decorative protrusions, no text. Entire empty centre and exterior truly transparent.",
+      "alpha": true,
+      "w": 1026,
+      "h": 630,
+      "folder": "board/park",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-9881c1c5-9b33-4739-9fa5-cbb698896cf3.png"
+    },
+    {
+      "id": "UI-ARENA",
+      "name": "fk_arena_park",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE wide panoramic arena selection card illustration, ratio8:3, small charming community park, chunky leafy trees, wood benches, compact navy grandstands and warm lamps. Beautiful miniature soccer stadium with emerald field, toy-like architectural forms and cinematic evening floodlights. Three-quarter elevated perspective permitted for THIS menu illustration only. Whole stadium central, calm navy edges, no characters, UI, text, logos or watermarks. Matches park arena theme.",
+      "alpha": false,
+      "w": 320,
+      "h": 120,
+      "folder": "arenas",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-9a6bdb0b-318f-4d0d-b582-fcdcb5995f3b.png"
+    },
+    {
+      "id": "BRD-BG",
+      "name": "fk_board_bg_city",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE landscape 16:9 stadium BACKGROUND LAYER for city: urban rooftop stadium, blue steel barriers, squat ventilation boxes, distant geometric city rooftops, cyan lights. STRICT TOP-DOWN orthographic overhead, no perspective. Canvas intended 1280x720. Keep central rectangle from x70 to1210 y45 to675 EMPTY uniform dark navy #0b1226, since separate playable pitch will cover it. All environmental detail confined to very narrow outer perimeter; stands at top and bottom, theme accents corners. Outside edges fade to exact #0b1226. No pitch, no lines, no goals, no players, no ball, no UI, no text. Night floodlights.",
+      "alpha": false,
+      "w": 1280,
+      "h": 720,
+      "folder": "board/city",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-91b7de4c-ff57-457e-8341-1b25dcfa7e9b.png"
+    },
+    {
+      "id": "BRD-PITCH",
+      "name": "fk_board_turf_city",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE seamless-looking rectangular soccer turf MATERIAL image, landscape aspect5:3, strict overhead orthographic, edge-to-edge FLAT texture with NO perspective, NO border and NO field markings. Vivid artificial rooftop green turf. Alternating broad vertical mowing stripes #1f7a3e and #26914a, very restrained clean hand-painted texture, uniform soft upper-left illumination. Readable calm surface. No objects, shadows, words, frames, centre circle or lines; precise markings will be added by engine.",
+      "alpha": false,
+      "w": 990,
+      "h": 594,
+      "folder": "board/city",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-89acef05-d602-4365-b6a9-d7e5e2f1f9e7.png"
+    },
+    {
+      "id": "BRD-FRAME",
+      "name": "fk_board_frame_city",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE strictly top-down rectangular tabletop soccer pitch rim, landscape aspect1026:630, hollow transparent rectangular centre. Outer corners softly rounded, uniform narrow rim thickness18 relative to width1026. Navy brushed steel rim with cyan edge inlay. Chunky stylized bevel, upper-left light. No perspective, no grass, no goals, no decorative protrusions, no text. Entire empty centre and exterior truly transparent.",
+      "alpha": true,
+      "w": 1026,
+      "h": 630,
+      "folder": "board/city",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-6a5c2389-29ec-4a10-972c-e1b5ace6539e.png"
+    },
+    {
+      "id": "UI-ARENA",
+      "name": "fk_arena_city",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE wide panoramic arena selection card illustration, ratio8:3, urban rooftop stadium, blue steel barriers, squat ventilation boxes, distant geometric city rooftops, cyan lights. Beautiful miniature soccer stadium with emerald field, toy-like architectural forms and cinematic evening floodlights. Three-quarter elevated perspective permitted for THIS menu illustration only. Whole stadium central, calm navy edges, no characters, UI, text, logos or watermarks. Matches city arena theme.",
+      "alpha": false,
+      "w": 320,
+      "h": 120,
+      "folder": "arenas",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-7c1e3be7-414c-47ab-8e17-c512adf99847.png"
+    },
+    {
+      "id": "BRD-BG",
+      "name": "fk_board_bg_coast",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE landscape 16:9 stadium BACKGROUND LAYER for coast: tropical seaside stadium, chunky palms, sandy edges, turquoise sea glimpses, coral railings. STRICT TOP-DOWN orthographic overhead, no perspective. Canvas intended 1280x720. Keep central rectangle from x70 to1210 y45 to675 EMPTY uniform dark navy #0b1226, since separate playable pitch will cover it. All environmental detail confined to very narrow outer perimeter; stands at top and bottom, theme accents corners. Outside edges fade to exact #0b1226. No pitch, no lines, no goals, no players, no ball, no UI, no text. Night floodlights.",
+      "alpha": false,
+      "w": 1280,
+      "h": 720,
+      "folder": "board/coast",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-27541d86-033c-4e75-b355-5842e35c4e23.png"
+    },
+    {
+      "id": "BRD-PITCH",
+      "name": "fk_board_turf_coast",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE seamless-looking rectangular soccer turf MATERIAL image, landscape aspect5:3, strict overhead orthographic, edge-to-edge FLAT texture with NO perspective, NO border and NO field markings. Fresh emerald turf with warm sunlit hints. Alternating broad vertical mowing stripes #1f7a3e and #26914a, very restrained clean hand-painted texture, uniform soft upper-left illumination. Readable calm surface. No objects, shadows, words, frames, centre circle or lines; precise markings will be added by engine.",
+      "alpha": false,
+      "w": 990,
+      "h": 594,
+      "folder": "board/coast",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-88daebba-9242-4e79-8855-e25aaa4816e4.png"
+    },
+    {
+      "id": "BRD-FRAME",
+      "name": "fk_board_frame_coast",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE strictly top-down rectangular tabletop soccer pitch rim, landscape aspect1026:630, hollow transparent rectangular centre. Outer corners softly rounded, uniform narrow rim thickness18 relative to width1026. Navy and pale sandstone rim with turquoise edge accents. Chunky stylized bevel, upper-left light. No perspective, no grass, no goals, no decorative protrusions, no text. Entire empty centre and exterior truly transparent.",
+      "alpha": true,
+      "w": 1026,
+      "h": 630,
+      "folder": "board/coast",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-df26f88e-fbc8-44fb-9bd0-c9b653a86f9b.png"
+    },
+    {
+      "id": "UI-ARENA",
+      "name": "fk_arena_coast",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE wide panoramic arena selection card illustration, ratio8:3, tropical seaside stadium, chunky palms, sandy edges, turquoise sea glimpses, coral railings. Beautiful miniature soccer stadium with emerald field, toy-like architectural forms and cinematic evening floodlights. Three-quarter elevated perspective permitted for THIS menu illustration only. Whole stadium central, calm navy edges, no characters, UI, text, logos or watermarks. Matches coast arena theme.",
+      "alpha": false,
+      "w": 320,
+      "h": 120,
+      "folder": "arenas",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-305780bc-f930-4f87-a206-b6eb0cf32b4f.png"
+    },
+    {
+      "id": "BRD-BG",
+      "name": "fk_board_bg_capital",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE landscape 16:9 stadium BACKGROUND LAYER for capital: luxurious professional football stadium, premium navy-and-gold seating, monumental symmetric grandstands and bright floodlights. STRICT TOP-DOWN orthographic overhead, no perspective. Canvas intended 1280x720. Keep central rectangle from x70 to1210 y45 to675 EMPTY uniform dark navy #0b1226, since separate playable pitch will cover it. All environmental detail confined to very narrow outer perimeter; stands at top and bottom, theme accents corners. Outside edges fade to exact #0b1226. No pitch, no lines, no goals, no players, no ball, no UI, no text. Night floodlights.",
+      "alpha": false,
+      "w": 1280,
+      "h": 720,
+      "folder": "board/capital",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-625c581d-fcae-465f-9248-9faa0b997f1c.png"
+    },
+    {
+      "id": "BRD-PITCH",
+      "name": "fk_board_turf_capital",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE seamless-looking rectangular soccer turf MATERIAL image, landscape aspect5:3, strict overhead orthographic, edge-to-edge FLAT texture with NO perspective, NO border and NO field markings. Premium perfectly groomed rich green turf. Alternating broad vertical mowing stripes #1f7a3e and #26914a, very restrained clean hand-painted texture, uniform soft upper-left illumination. Readable calm surface. No objects, shadows, words, frames, centre circle or lines; precise markings will be added by engine.",
+      "alpha": false,
+      "w": 990,
+      "h": 594,
+      "folder": "board/capital",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-bfcaaf29-0dbd-44d1-a5b9-21a8c09345aa.png"
+    },
+    {
+      "id": "BRD-FRAME",
+      "name": "fk_board_frame_capital",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE strictly top-down rectangular tabletop soccer pitch rim, landscape aspect1026:630, hollow transparent rectangular centre. Outer corners softly rounded, uniform narrow rim thickness18 relative to width1026. Premium navy lacquered rim with broad gold bevel. Chunky stylized bevel, upper-left light. No perspective, no grass, no goals, no decorative protrusions, no text. Entire empty centre and exterior truly transparent.",
+      "alpha": true,
+      "w": 1026,
+      "h": 630,
+      "folder": "board/capital",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-6a33d51e-5b22-4e6e-a480-9eb0295e3bc7.png"
+    },
+    {
+      "id": "UI-ARENA",
+      "name": "fk_arena_capital",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE wide panoramic arena selection card illustration, ratio8:3, luxurious professional football stadium, premium navy-and-gold seating, monumental symmetric grandstands and bright floodlights. Beautiful miniature soccer stadium with emerald field, toy-like architectural forms and cinematic evening floodlights. Three-quarter elevated perspective permitted for THIS menu illustration only. Whole stadium central, calm navy edges, no characters, UI, text, logos or watermarks. Matches capital arena theme.",
+      "alpha": false,
+      "w": 320,
+      "h": 120,
+      "folder": "arenas",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-d89e1c30-4277-4228-a6b5-1b4948ba7669.png"
+    },
+    {
+      "id": "BRD-BG",
+      "name": "fk_board_bg_legends",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE landscape 16:9 stadium BACKGROUND LAYER for legends: spectacular elite night arena, obsidian navy architecture, gold sculpted trim, restrained violet and golden lights. STRICT TOP-DOWN orthographic overhead, no perspective. Canvas intended 1280x720. Keep central rectangle from x70 to1210 y45 to675 EMPTY uniform dark navy #0b1226, since separate playable pitch will cover it. All environmental detail confined to very narrow outer perimeter; stands at top and bottom, theme accents corners. Outside edges fade to exact #0b1226. No pitch, no lines, no goals, no players, no ball, no UI, no text. Night floodlights.",
+      "alpha": false,
+      "w": 1280,
+      "h": 720,
+      "folder": "board/legends",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-4e1d12bd-1659-4587-974c-4a0a13e303c8.png"
+    },
+    {
+      "id": "BRD-PITCH",
+      "name": "fk_board_turf_legends",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE seamless-looking rectangular soccer turf MATERIAL image, landscape aspect5:3, strict overhead orthographic, edge-to-edge FLAT texture with NO perspective, NO border and NO field markings. Deep elegant emerald night turf. Alternating broad vertical mowing stripes #1f7a3e and #26914a, very restrained clean hand-painted texture, uniform soft upper-left illumination. Readable calm surface. No objects, shadows, words, frames, centre circle or lines; precise markings will be added by engine.",
+      "alpha": false,
+      "w": 990,
+      "h": 594,
+      "folder": "board/legends",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-ca5f5b49-31be-412c-aec0-e20768fd405c.png"
+    },
+    {
+      "id": "BRD-FRAME",
+      "name": "fk_board_frame_legends",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE strictly top-down rectangular tabletop soccer pitch rim, landscape aspect1026:630, hollow transparent rectangular centre. Outer corners softly rounded, uniform narrow rim thickness18 relative to width1026. Dark obsidian rim with luminous gold inlay and restrained violet accents. Chunky stylized bevel, upper-left light. No perspective, no grass, no goals, no decorative protrusions, no text. Entire empty centre and exterior truly transparent.",
+      "alpha": true,
+      "w": 1026,
+      "h": 630,
+      "folder": "board/legends",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-c15c5ee7-991b-48f3-a62c-b96ce7d2bea2.png"
+    },
+    {
+      "id": "UI-ARENA",
+      "name": "fk_arena_legends",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE wide panoramic arena selection card illustration, ratio8:3, spectacular elite night arena, obsidian navy architecture, gold sculpted trim, restrained violet and golden lights. Beautiful miniature soccer stadium with emerald field, toy-like architectural forms and cinematic evening floodlights. Three-quarter elevated perspective permitted for THIS menu illustration only. Whole stadium central, calm navy edges, no characters, UI, text, logos or watermarks. Matches legends arena theme.",
+      "alpha": false,
+      "w": 320,
+      "h": 120,
+      "folder": "arenas",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-99338e7b-30f4-4955-a804-d7d2351824fa.png"
+    },
+    {
+      "id": "BRD-BG",
+      "name": "fk_board_bg_park",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE landscape 16:9 stadium BACKGROUND LAYER for park: small charming community park, chunky leafy trees, wood benches, compact navy grandstands and warm lamps. STRICT TOP-DOWN orthographic overhead, no perspective. Canvas intended 1280x720. Keep central rectangle from x70 to1210 y45 to675 EMPTY uniform dark navy #0b1226, since separate playable pitch will cover it. All environmental detail confined to very narrow outer perimeter; stands at top and bottom, theme accents corners. Outside edges fade to exact #0b1226. No pitch, no lines, no goals, no players, no ball, no UI, no text. Night floodlights.",
+      "alpha": false,
+      "w": 1280,
+      "h": 720,
+      "folder": "board/park",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-c757fa71-e0a7-4553-a728-84033caa8542.png"
+    },
+    {
+      "id": "UI-CURRENCY",
+      "name": "fk_currency_coin",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE thick warm gold currency coin, slightly tilted 3D view, original simple embossed lightning symbol, sculpted rim, strong shiny readable silhouette. Centred isolated, fills84% square, transparent background, no shadow, no text, no pedestal.",
+      "alpha": true,
+      "w": 64,
+      "h": 64,
+      "folder": "currency",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-ee8bada9-8658-4b3a-ad2d-6da0936395d4.png"
+    },
+    {
+      "id": "UI-CURRENCY",
+      "name": "fk_currency_gem",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE large sky-blue faceted hexagonal gemstone, sculpted crystal facets, bright pale highlight upper-left, strong diamond silhouette. Centred isolated, fills84% square, transparent background, no shadow, no text, no pedestal.",
+      "alpha": true,
+      "w": 64,
+      "h": 64,
+      "folder": "currency",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-2ff897df-b545-4c1a-89bd-89fea86cee2e.png"
+    },
+    {
+      "id": "UI-MODE",
+      "name": "fk_mode_online",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE menu illustration: Two sporty tabletop discs, lime lightning and coral star, linked by a luminous blue stylized globe behind them. Compact balanced composition, ratio4:3. No scenery outside group, transparent, bold silhouettes, no labels or text.",
+      "alpha": true,
+      "w": 160,
+      "h": 120,
+      "folder": "illustrations",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-109c0d74-5ae1-43bc-9517-99d142ff3485.png"
+    },
+    {
+      "id": "UI-MODE",
+      "name": "fk_mode_ai",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE menu illustration: Friendly rounded navy-and-sky-blue FlickBot robot head leaning beside a lime lightning soccer counter. Compact balanced composition, ratio4:3. No scenery outside group, transparent, bold silhouettes, no labels or text.",
+      "alpha": true,
+      "w": 160,
+      "h": 120,
+      "folder": "illustrations",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-60857eff-24dc-48ff-8746-77af283cb3b2.png"
+    },
+    {
+      "id": "UI-MODE",
+      "name": "fk_mode_local",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE menu illustration: Two neutral stylized hands approaching a small tabletop soccer pitch from opposite sides, lime and coral discs. Compact balanced composition, ratio4:3. No scenery outside group, transparent, bold silhouettes, no labels or text.",
+      "alpha": true,
+      "w": 160,
+      "h": 120,
+      "folder": "illustrations",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-a7a93f27-e632-439a-8621-243051501fba.png"
+    },
+    {
+      "id": "UI-STATE",
+      "name": "fk_state_empty-history",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE friendly low-detail empty/error state illustration: A small empty match-history scroll with simple blank lines beside a resting soccer ball, friendly quiet mood. Ratio5:4, centred isolated transparent background, readable shapes, no wording, watermark or frame.",
+      "alpha": true,
+      "w": 160,
+      "h": 128,
+      "folder": "illustrations",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-f616c1ed-ff42-4173-9f5b-bcba34e9a275.png"
+    },
+    {
+      "id": "UI-STATE",
+      "name": "fk_state_empty-wallet",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE friendly low-detail empty/error state illustration: An open empty navy sports wallet, one tiny gold sparkle, friendly non-distressing mood. Ratio5:4, centred isolated transparent background, readable shapes, no wording, watermark or frame.",
+      "alpha": true,
+      "w": 160,
+      "h": 128,
+      "folder": "illustrations",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-60d157c0-af12-4ae2-abd3-7e151696b261.png"
+    },
+    {
+      "id": "UI-STATE",
+      "name": "fk_state_not-found",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE friendly low-detail empty/error state illustration: A friendly orange athletic fox peering through a large magnifying glass at a tiny soccer ball. Ratio5:4, centred isolated transparent background, readable shapes, no wording, watermark or frame.",
+      "alpha": true,
+      "w": 160,
+      "h": 128,
+      "folder": "illustrations",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-a2aa5826-5b16-455e-a547-173180c11b02.png"
+    },
+    {
+      "id": "UI-STATE",
+      "name": "fk_state_offline-server",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE friendly low-detail empty/error state illustration: A cute rounded navy server robot with sleepy sky-blue eyes, unplugged cable visibly disconnected beside it. Ratio5:4, centred isolated transparent background, readable shapes, no wording, watermark or frame.",
+      "alpha": true,
+      "w": 160,
+      "h": 128,
+      "folder": "illustrations",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-824f0fee-9619-4ddd-962f-524385bee1ef.png"
+    },
+    {
+      "id": "UI-STATE",
+      "name": "fk_state_error",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE friendly low-detail empty/error state illustration: A friendly sporty orange fox with puzzled expression holding a small orange warning triangle with an exclamation symbol. Ratio5:4, centred isolated transparent background, readable shapes, no wording, watermark or frame.",
+      "alpha": true,
+      "w": 160,
+      "h": 128,
+      "folder": "illustrations",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-c8270c21-ff2c-48fb-ac2a-402983528e37.png"
+    },
+    {
+      "id": "THB-PACK",
+      "name": "fk_thumb_pack_coins_s",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE shop item artwork: Small navy drawstring pouch overflowing with thick gold lightning coins. Three-quarter view, unified upper-left light, centre with 8% padding, true transparency, no ground plane, cast shadow, price, text, watermark or frame.",
+      "alpha": true,
+      "w": 96,
+      "h": 96,
+      "folder": "thumbs",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-5862086d-470e-4d50-baa9-3c1afaacd1f2.png"
+    },
+    {
+      "id": "THB-PACK",
+      "name": "fk_thumb_pack_coins_m",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE shop item artwork: Chunky open navy-and-gold wooden treasure chest filled with thick gold lightning coins. Three-quarter view, unified upper-left light, centre with 8% padding, true transparency, no ground plane, cast shadow, price, text, watermark or frame.",
+      "alpha": true,
+      "w": 96,
+      "h": 96,
+      "folder": "thumbs",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-27536f5f-063a-466a-9ea1-f04aae676fc6.png"
+    },
+    {
+      "id": "THB-PACK",
+      "name": "fk_thumb_pack_gems_s",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE shop item artwork: A handful-sized neat cluster of sky-blue faceted hexagonal gemstones. Three-quarter view, unified upper-left light, centre with 8% padding, true transparency, no ground plane, cast shadow, price, text, watermark or frame.",
+      "alpha": true,
+      "w": 96,
+      "h": 96,
+      "folder": "thumbs",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-8bb7a7be-e9c9-46db-ab56-067acc259078.png"
+    },
+    {
+      "id": "THB-PACK",
+      "name": "fk_thumb_starter_offer",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE shop item artwork: Compact bundle of a navy coin pouch, a small open gold-trimmed chest, sky-blue gems and one lime soccer disc. Three-quarter view, unified upper-left light, centre with 8% padding, true transparency, no ground plane, cast shadow, price, text, watermark or frame.",
+      "alpha": true,
+      "w": 96,
+      "h": 96,
+      "folder": "thumbs",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-a9e3dcb5-7cd0-4d77-9f78-78b488174374.png"
+    },
+    {
+      "id": "THB-REWARD",
+      "name": "fk_thumb_reward_coins-small",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE reward thumbnail: Three chunky gold lightning coins, one standing and two flat. Three-quarter view, consistent top-left light, centred with8% padding, no extra container or decoration, transparent background, no cast shadow or text.",
+      "alpha": true,
+      "w": 64,
+      "h": 64,
+      "folder": "thumbs",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-676ead02-c926-41a3-8b6e-d60906545ea3.png"
+    },
+    {
+      "id": "THB-REWARD",
+      "name": "fk_thumb_reward_coins-medium",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE reward thumbnail: A neat small stack and scatter of eight chunky gold lightning coins. Three-quarter view, consistent top-left light, centred with8% padding, no extra container or decoration, transparent background, no cast shadow or text.",
+      "alpha": true,
+      "w": 64,
+      "h": 64,
+      "folder": "thumbs",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-92eea3e8-5d78-43df-89ac-0a4859b87add.png"
+    },
+    {
+      "id": "THB-REWARD",
+      "name": "fk_thumb_reward_coins-large",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE reward thumbnail: A generous tidy pile of chunky gold lightning coins, visibly larger than medium reward. Three-quarter view, consistent top-left light, centred with8% padding, no extra container or decoration, transparent background, no cast shadow or text.",
+      "alpha": true,
+      "w": 64,
+      "h": 64,
+      "folder": "thumbs",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-d9d0cbce-7531-4a95-98fb-14d8efc5f8fe.png"
+    },
+    {
+      "id": "THB-REWARD",
+      "name": "fk_thumb_reward_gems",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE reward thumbnail: A tidy pile of five sky-blue faceted hexagonal gemstones. Three-quarter view, consistent top-left light, centred with8% padding, no extra container or decoration, transparent background, no cast shadow or text.",
+      "alpha": true,
+      "w": 64,
+      "h": 64,
+      "folder": "thumbs",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-5adf52d5-6de2-43a1-aa83-4027cd589ed9.png"
+    },
+    {
+      "id": "THB-RANK",
+      "name": "fk_thumb_rank_silver",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE rank badge: silver shield with two small side wings and football pentagon insignia. Strong simple silhouettes; distinguish by shape not only colour. Frontal symmetric sculpted emblem, entire badge within84% square, transparent, no numbers, words, text, shadows or watermark.",
+      "alpha": true,
+      "w": 64,
+      "h": 64,
+      "folder": "thumbs",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-fbdc9abb-2e00-42a3-8c92-d1c5fc6b4151.png"
+    },
+    {
+      "id": "THB-RANK",
+      "name": "fk_thumb_rank_bronze",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE rank badge: warm bronze shield with single football pentagon insignia. Strong simple silhouettes; distinguish by shape not only colour. Frontal symmetric sculpted emblem, entire badge within84% square, transparent, no numbers, words, text, shadows or watermark.",
+      "alpha": true,
+      "w": 64,
+      "h": 64,
+      "folder": "thumbs",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-57679fdd-adab-4130-90e4-6f13967fce08.png"
+    },
+    {
+      "id": "THB-RANK",
+      "name": "fk_thumb_rank_gold",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE rank badge: gold shield with strong laurel branches and football pentagon insignia. Strong simple silhouettes; distinguish by shape not only colour. Frontal symmetric sculpted emblem, entire badge within84% square, transparent, no numbers, words, text, shadows or watermark.",
+      "alpha": true,
+      "w": 64,
+      "h": 64,
+      "folder": "thumbs",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-32fddf9b-0259-4488-a8f6-0b86d884327a.png"
+    },
+    {
+      "id": "THB-RANK",
+      "name": "fk_thumb_rank_platinum",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE rank badge: platinum and sky-blue shield with faceted crystal side wings and football pentagon insignia. Strong simple silhouettes; distinguish by shape not only colour. Frontal symmetric sculpted emblem, entire badge within84% square, transparent, no numbers, words, text, shadows or watermark.",
+      "alpha": true,
+      "w": 64,
+      "h": 64,
+      "folder": "thumbs",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-0b6c29f7-1901-43b2-a2b4-3be40664077d.png"
+    },
+    {
+      "id": "BRD-GOAL",
+      "name": "fk_board_goal_default",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE top-down tabletop soccer goal pocket, tall portrait ratio80:184. Opening faces RIGHT, left closed rounded back rail and two short horizontal white posts extending right, navy pocket floor with clear white square net grid. Strict orthographic directly overhead, no perspective. Chunky polished white posts, subtle blue shadows within pocket only. Transparent exterior. No grass, ball, text.",
+      "alpha": true,
+      "w": 80,
+      "h": 184,
+      "folder": "board",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-8f794cbf-612c-4e9d-b23e-2c8ea11ebffa.png"
+    },
+    {
+      "id": "THB-RANK",
+      "name": "fk_thumb_rank_legend",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE rank badge: majestic navy-and-gold shield with broad three-point crown, gold laurel wings and a sky-blue football pentagon insignia. Strong simple silhouettes; distinguish by shape not only colour. Frontal symmetric sculpted emblem, entire badge within84% square, transparent, no numbers, words, text, shadows or watermark.",
+      "alpha": true,
+      "w": 64,
+      "h": 64,
+      "folder": "thumbs",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-9bb8b53e-a58f-4146-870a-e270e50b23fe.png"
+    },
+    {
+      "id": "HUD-BANNER",
+      "name": "fk_hud_banner_info",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE blank horizontal calm navy bevelled ribbon frame with sky-blue small endcaps. Ratio5:1. Large completely EMPTY central flat panel for live localized text, symmetrical ends, stretchable centre, transparent exterior. No lettering, no symbols in centre, no words or watermark.",
+      "alpha": true,
+      "w": 480,
+      "h": 96,
+      "folder": "hud",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-dbbd23da-49fc-4f6f-9569-91888c381117.png"
+    },
+    {
+      "id": "HUD-VS",
+      "name": "fk_hud_vs",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE symmetrical clash emblem: lime angular wedge at left, coral angular wedge at right meeting at a small golden central lightning shape. Wide ratio3:2, strong sports matchup energy. NO letters VS, no words or text, isolated transparent.",
+      "alpha": true,
+      "w": 96,
+      "h": 64,
+      "folder": "hud",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-fbb47aea-b901-4331-8154-b9e714552817.png"
+    },
+    {
+      "id": "HUD-UNKNOWN",
+      "name": "fk_hud_unknown",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE mysterious friendly opponent placeholder head silhouette, simplified navy athletic bust with sky-blue rim highlight, faceless smooth head, tiny glowing three-dot motif on face instead of question mark. Centred square, transparent, no letters, no frame, no text.",
+      "alpha": true,
+      "w": 72,
+      "h": 72,
+      "folder": "hud",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-1ddc1114-4453-4311-9b5b-76086c5c53fb.png"
+    },
+    {
+      "id": "HUD-LEVELUP",
+      "name": "fk_hud_levelup_badge",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE gold and lime sculpted level-up shield badge with modest laurel wings, LARGE completely blank navy central round area to place a live level number. No digits, no words, no text. Frontal symmetrical, transparent, safe padding.",
+      "alpha": true,
+      "w": 120,
+      "h": 120,
+      "folder": "hud",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-1d62db6f-22b7-4c76-9895-c45b1a013283.png"
+    },
+    {
+      "id": "HUD-RESULT",
+      "name": "fk_hud_result_victory",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE horizontal sports result header decoration: golden laurel wings framing a blank navy ribbon centre with lime highlight, triumphant upward shape. Ratio4:1, central half empty for live localized text. No words, no letters or numbers, transparent background.",
+      "alpha": true,
+      "w": 560,
+      "h": 140,
+      "folder": "hud",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-3b4c8010-3d8b-44c0-901d-581c795d2191.png"
+    },
+    {
+      "id": "HUD-RESULT",
+      "name": "fk_hud_result_defeat",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE horizontal sports result header decoration: muted blue-grey laurel branches framing a blank navy ribbon centre with subtle coral edge, gentle dignified mood. Ratio4:1, central half empty for live localized text. No words, no letters or numbers, transparent background.",
+      "alpha": true,
+      "w": 560,
+      "h": 140,
+      "folder": "hud",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-58524deb-41c5-4f62-a357-c0b3acd55e4a.png"
+    },
+    {
+      "id": "HUD-COACH",
+      "name": "fk_hud_coach_step1-press",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE tutorial illustration, A neutral stylized pointer finger pressing the CENTRE of one lime lightning disc; a small thin bright ring marks the contact point. Strict overhead diagram-like composition but sculpted cartoon materials. Use a small quiet grass patch under pieces only, transparent exterior. Ratio3:2, clear action readable small, no extra discs, no wording, letters or watermark.",
+      "alpha": true,
+      "w": 240,
+      "h": 160,
+      "folder": "illustrations",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-15fae219-3289-46b9-bfb9-c19a20513e6d.png"
+    },
+    {
+      "id": "HUD-COACH",
+      "name": "fk_hud_coach_step2-drag",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE tutorial illustration, A neutral stylized pointer finger still touching a lime lightning disc, pulled backwards away from a soccer ball; an elastic aiming arrow points FROM disc TOWARD ball. Strict overhead diagram-like composition but sculpted cartoon materials. Use a small quiet grass patch under pieces only, transparent exterior. Ratio3:2, clear action readable small, no extra discs, no wording, letters or watermark.",
+      "alpha": true,
+      "w": 240,
+      "h": 160,
+      "folder": "illustrations",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-31276c4c-ce56-44d6-bfbd-36b21b5241a5.png"
+    },
+    {
+      "id": "HUD-BANNER",
+      "name": "fk_hud_banner_goal",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE blank horizontal energetic lime bevelled ribbon frame with subtle gold lightning caps. Ratio5:1. Large completely EMPTY central flat panel for live localized text, symmetrical ends, stretchable centre, transparent exterior. No lettering, no symbols in centre, no words or watermark.",
+      "alpha": true,
+      "w": 480,
+      "h": 96,
+      "folder": "hud",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-a07f05c1-a922-47c4-89e1-3e7593194abc.png"
+    },
+    {
+      "id": "HUD-COACH",
+      "name": "fk_hud_coach_step3-release",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE tutorial illustration, A neutral stylized pointer finger lifted clearly above the lime disc, with the lime disc moving toward a smaller soccer ball; two short motion streaks show release. Strict overhead diagram-like composition but sculpted cartoon materials. Use a small quiet grass patch under pieces only, transparent exterior. Ratio3:2, clear action readable small, no extra discs, no wording, letters or watermark.",
+      "alpha": true,
+      "w": 240,
+      "h": 160,
+      "folder": "illustrations",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-eb78cccf-a60b-4037-b0f1-2f2bd5373ef2.png"
+    },
+    {
+      "id": "UI-LOGO",
+      "name": "fk_logo_wordmark",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE original horizontal game logo, ratio4:1, EXACT Latin word 'FlickKick', readable bold rounded athletic custom lettering, 'Flick' ivory and 'Kick' lime, deep navy sculpted outline, modest bevel, tiny original lightning/ball accent integrated into letter K. No crown, shield, extra words, slogan or watermark. Transparent exterior, entire word centred with safe margins, legible at24px height.",
+      "alpha": true,
+      "w": 260,
+      "h": 64,
+      "folder": "logo",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-4e737625-cd57-4fd3-8976-a05ce42bc0b7.png"
+    },
+    {
+      "id": "UI-LOGO",
+      "name": "fk_logo_mark",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE original compact square FlickKick app mark: small white-and-navy soccer ball nested within a bold lime lightning swoosh, strong unified simple silhouette, premium sculpted bevel. NO letters, crown, shield, border, text or watermark. Entire symbol inside central70% square with generous padding. Solid navy #0e1630 background full bleed.",
+      "alpha": false,
+      "w": 512,
+      "h": 512,
+      "folder": "logo",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-140e1383-e715-4ede-8819-048898a67e73.png"
+    },
+    {
+      "id": "MKT-OG",
+      "name": "fk_og_en",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE social share image ratio1200:630. EXACT headline 'FlickKick' in large bold ivory and lime athletic lettering, no other words. Energetic original tabletop soccer scene: lime lightning disc and coral star disc clashing around a smaller white/navy soccer ball on emerald turf, chunky stylized miniature floodlit park stadium in background. Headline top-centre in quiet navy negative space, objects centre-bottom. No existing-game branding, no UI screenshots or scores, no watermark.",
+      "alpha": false,
+      "w": 1200,
+      "h": 630,
+      "folder": "marketing",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-c2f05893-11b0-42de-8b56-a44c30d02c4f.png"
+    },
+    {
+      "id": "MKT-OG",
+      "name": "fk_og_fa",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE social share image ratio1200:630. EXACT headline 'فلیک کیک' in large clear readable Persian lettering correctly joined and reading right-to-left, no other words. Energetic original tabletop soccer scene: lime lightning disc and coral star disc clashing around a smaller white/navy soccer ball on emerald turf, chunky stylized miniature floodlit park stadium in background. Headline top-centre in quiet navy negative space, objects centre-bottom. No existing-game branding, no UI screenshots or scores, no watermark.",
+      "alpha": false,
+      "w": 1200,
+      "h": 630,
+      "folder": "marketing",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-adfd5fc5-9284-4932-85cb-7d700474a57a.png"
+    },
+    {
+      "id": "MKT-PROMO",
+      "name": "fk_promo_landscape",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE promotional game key art, exact composition aspect 1920:1080, landscape/portrait as specified. Original sporty orange fox mascot in navy jersey with lime collar, friendly FlickBot with blue screen eyes, lime lightning disc, coral star disc and a smaller soccer ball in an exciting emerald tabletop football stadium. Heroic friendly competitive energy, strong silhouette, warm floodlights, navy negative space at left third for later typesetting. No text, no words, no logos, no scores, no screenshot claims or watermark. Characters belong to FlickKick, no medieval weapons or armor.",
+      "alpha": false,
+      "w": 1920,
+      "h": 1080,
+      "folder": "marketing",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-8a32c91e-1bea-441b-9065-1a73378d270f.png"
+    },
+    {
+      "id": "MKT-PROMO",
+      "name": "fk_promo_square",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE promotional game key art, exact composition aspect 1080:1080, landscape/portrait as specified. Original sporty orange fox mascot in navy jersey with lime collar, friendly FlickBot with blue screen eyes, lime lightning disc, coral star disc and a smaller soccer ball in an exciting emerald tabletop football stadium. Heroic friendly competitive energy, strong silhouette, warm floodlights, navy negative space at left third for later typesetting. No text, no words, no logos, no scores, no screenshot claims or watermark. Characters belong to FlickKick, no medieval weapons or armor.",
+      "alpha": false,
+      "w": 1080,
+      "h": 1080,
+      "folder": "marketing",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-76016d5a-4901-428c-94d9-fd626eff2b9a.png"
+    },
+    {
+      "id": "MKT-PROMO",
+      "name": "fk_promo_portrait",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE promotional game key art, exact composition aspect 1080:1920, landscape/portrait as specified. Original sporty orange fox mascot in navy jersey with lime collar, friendly FlickBot with blue screen eyes, lime lightning disc, coral star disc and a smaller soccer ball in an exciting emerald tabletop football stadium. Heroic friendly competitive energy, strong silhouette, warm floodlights, navy negative space at top third for later typesetting. No text, no words, no logos, no scores, no screenshot claims or watermark. Characters belong to FlickKick, no medieval weapons or armor.",
+      "alpha": false,
+      "w": 1080,
+      "h": 1920,
+      "folder": "marketing",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-558e915c-4248-49c7-9125-5593d1ee1758.png"
+    },
+    {
+      "id": "MKT-PROMO",
+      "name": "fk_promo_wide",
+      "prompt": "Use case: stylized-concept. Original FlickKick tabletop soccer game asset. Match the approved premium stylized 3D mobile strategy aesthetic: chunky sculpted forms, clean hand-painted toy-like materials, polished broad bevels, saturated colours, strong silhouettes readable on phones, upper-left key light, navy #0e1630, lime #c6ff3d, coral #ff5a5f, sky #4cc9f0, warm gold. Similar rendering language to Clash Royale / Clash of Clans but original sports designs, no copied characters or branding. ONE promotional game key art, exact composition aspect 1200:300, landscape/portrait as specified. Original sporty orange fox mascot in navy jersey with lime collar, friendly FlickBot with blue screen eyes, lime lightning disc, coral star disc and a smaller soccer ball in an exciting emerald tabletop football stadium. Heroic friendly competitive energy, strong silhouette, warm floodlights, navy negative space at left third for later typesetting. No text, no words, no logos, no scores, no screenshot claims or watermark. Characters belong to FlickKick, no medieval weapons or armor.",
+      "alpha": false,
+      "w": 1200,
+      "h": 300,
+      "folder": "marketing",
+      "source": "C:\\Users\\Ania\\.codex\\generated_images\\01a18303-f890-74e3-b361-5cb9070d22f5\\exec-083557e2-dc49-4176-a7ea-af9effc3cea2.png"
+    },
+    {
+      "id": "PCS-DISC",
+      "name": "fk_piece_disc_team_volt",
+      "source": "art-source/style-samples/fk_sample_volt_v1.png",
+      "alpha": true,
+      "w": 56,
+      "h": 56,
+      "folder": "pieces",
+      "prompt": "Approved style sample; see style-samples/prompts.json"
+    },
+    {
+      "id": "UI-AVATAR",
+      "name": "fk_avatar_fox",
+      "source": "art-source/style-samples/fk_sample_fox_v1.png",
+      "alpha": false,
+      "w": 256,
+      "h": 256,
+      "folder": "avatars",
+      "prompt": "Approved style sample; see style-samples/prompts.json"
+    }
+  ]
+}

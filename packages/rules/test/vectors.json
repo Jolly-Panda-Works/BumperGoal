@@ -1,0 +1,6552 @@
+{
+  "rules": {
+    "discsPerTeam": 5,
+    "goalsToWin": 2,
+    "turnTimeMs": 15000,
+    "timeoutForfeitCount": 3,
+    "maxShots": 60,
+    "formation": [
+      [-6.2, 0],
+      [-4.4, 1.9],
+      [-4.4, -1.9],
+      [-2.2, 0.9],
+      [-2.2, -0.9]
+    ]
+  },
+  "scripts": [
+    {
+      "seed": 11,
+      "actions": [
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": -4.537418842315674,
+          "iy": 3.8248708248138428
+        },
+        {
+          "type": "shot",
+          "discIndex": 1,
+          "ix": 5.9159464836120605,
+          "iy": -1.5502206087112427
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": -6.891263484954834,
+          "iy": -2.9894657135009766
+        },
+        {
+          "type": "shot",
+          "discIndex": 3,
+          "ix": -4.476810455322266,
+          "iy": 3.362884283065796
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": -3.6955387592315674,
+          "iy": 6.187366008758545
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": -0.7023253440856934,
+          "iy": 8.557779312133789
+        },
+        {
+          "type": "shot",
+          "discIndex": 6,
+          "ix": -4.282055854797363,
+          "iy": 1.3170641660690308
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": 1.8620028495788574,
+          "iy": 3.67073130607605
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": -5.290582656860352,
+          "iy": 2.59694766998291
+        },
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": 5.650399684906006,
+          "iy": -0.31782254576683044
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": -8.127492904663086,
+          "iy": -1.655571460723877
+        },
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": 8.258320808410645,
+          "iy": -2.85593843460083
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": 5.613455295562744,
+          "iy": -1.423075795173645
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": 1.554089903831482,
+          "iy": -4.129904747009277
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": 5.4458909034729,
+          "iy": -2.300800085067749
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": 8.561603546142578,
+          "iy": -1.1932159662246704
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": 5.191919326782227,
+          "iy": -6.329123497009277
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": -3.24989914894104,
+          "iy": 8.128299713134766
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": 6.0444865226745605,
+          "iy": 6.364095211029053
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": -2.956068992614746,
+          "iy": -4.239672660827637
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": -8.079411506652832,
+          "iy": -0.4614967703819275
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": 2.1044390201568604,
+          "iy": 6.7205400466918945
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": -0.17979088425636292,
+          "iy": -7.568348407745361
+        },
+        {
+          "type": "shot",
+          "discIndex": 3,
+          "ix": 7.091485500335693,
+          "iy": 1.05455482006073
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": 6.1486310958862305,
+          "iy": 0.4615126848220825
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": 5.330128192901611,
+          "iy": -3.284731388092041
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": 3.24117374420166,
+          "iy": 4.7559814453125
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": -8.15827465057373,
+          "iy": 3.2231719493865967
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": 5.469279766082764,
+          "iy": -2.0050675868988037
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": -3.0998072624206543,
+          "iy": -2.01922607421875
+        },
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": 4.458777904510498,
+          "iy": -3.1299431324005127
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": 4.995936870574951,
+          "iy": -2.429373264312744
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": 8.020251274108887,
+          "iy": 2.531244993209839
+        },
+        {
+          "type": "shot",
+          "discIndex": 1,
+          "ix": 5.345485210418701,
+          "iy": -3.496434450149536
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": 4.925361633300781,
+          "iy": 1.164152979850769
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": 3.595475912094116,
+          "iy": 6.755243301391602
+        },
+        {
+          "type": "shot",
+          "discIndex": 1,
+          "ix": -5.630590915679932,
+          "iy": -0.5260709524154663
+        },
+        {
+          "type": "shot",
+          "discIndex": 8,
+          "ix": -2.335313320159912,
+          "iy": -3.097775936126709
+        },
+        {
+          "type": "shot",
+          "discIndex": 3,
+          "ix": -6.605981826782227,
+          "iy": -3.8420941829681396
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": -5.976858139038086,
+          "iy": -2.8360326290130615
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": 6.503472805023193,
+          "iy": -5.788207054138184
+        },
+        {
+          "type": "shot",
+          "discIndex": 6,
+          "ix": -6.406537055969238,
+          "iy": -4.087104320526123
+        },
+        {
+          "type": "shot",
+          "discIndex": 1,
+          "ix": 2.395540714263916,
+          "iy": -4.5951409339904785
+        },
+        {
+          "type": "shot",
+          "discIndex": 8,
+          "ix": -4.5785393714904785,
+          "iy": -2.809044599533081
+        },
+        {
+          "type": "shot",
+          "discIndex": 3,
+          "ix": -6.298735618591309,
+          "iy": 1.509289026260376
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": 6.351767539978027,
+          "iy": 2.795553684234619
+        },
+        {
+          "type": "shot",
+          "discIndex": 1,
+          "ix": 4.364963531494141,
+          "iy": 1.5266730785369873
+        },
+        {
+          "type": "shot",
+          "discIndex": 6,
+          "ix": 5.186925411224365,
+          "iy": 2.1050119400024414
+        }
+      ],
+      "snapshots": [
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 1,
+            "side": "L",
+            "seq": 2
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 1,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "9b2be62a",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 2,
+            "side": "R",
+            "seq": 3
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 2,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "a3892ef4",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 3,
+            "side": "L",
+            "seq": 4
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 3,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "37c3cca9",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 4,
+            "side": "R",
+            "seq": 5
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 4,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "742bed23",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 5,
+            "side": "L",
+            "seq": 6
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 5,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "59caaffa",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 6,
+            "side": "R",
+            "seq": 7
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 6,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "42af4459",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 7,
+            "side": "L",
+            "seq": 8
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 7,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "040d31ff",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 8,
+            "side": "R",
+            "seq": 9
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 8,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "6815879c",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 9,
+            "side": "L",
+            "seq": 10
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 9,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "3e066f70",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 10,
+            "side": "R",
+            "seq": 11
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 10,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "a5b37ad6",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 11,
+            "side": "L",
+            "seq": 12
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 11,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "5936faf5",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 12,
+            "side": "R",
+            "seq": 13
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 12,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "81e3d6ec",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 13,
+            "side": "L",
+            "seq": 14
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 12,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "81e3d6ec",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 14,
+            "side": "R",
+            "seq": 15
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 13,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "53e38917",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 15,
+            "side": "L",
+            "seq": 16
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 14,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "07747666",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 16,
+            "side": "R",
+            "seq": 17
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 15,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "49e9d49c",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 17,
+            "side": "L",
+            "seq": 18
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 15,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "49e9d49c",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 18,
+            "side": "R",
+            "seq": 19
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 15,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "49e9d49c",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 19,
+            "side": "L",
+            "seq": 20
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 15,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "49e9d49c",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 20,
+            "side": "R",
+            "seq": 21
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 16,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "45fab788",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 21,
+            "side": "L",
+            "seq": 22
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 17,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "d722dcb8",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 22,
+            "side": "R",
+            "seq": 23
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 18,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "24fdcfb5",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 23,
+            "side": "L",
+            "seq": 24
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 19,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "aed023bd",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 24,
+            "side": "R",
+            "seq": 25
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 20,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "434aaea4",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 25,
+            "side": "L",
+            "seq": 26
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 21,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "28a1e8c6",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 26,
+            "side": "R",
+            "seq": 27
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 22,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "8bd0281c",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 27,
+            "side": "L",
+            "seq": 28
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 23,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "cc4ce541",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 28,
+            "side": "R",
+            "seq": 29
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 24,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "dfaa07f4",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 29,
+            "side": "L",
+            "seq": 30
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 25,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "31917664",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 30,
+            "side": "R",
+            "seq": 31
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 26,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "2f735483",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 31,
+            "side": "R",
+            "seq": 32
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 27,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "127c3368",
+          "events": ["shot", "goal", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 32,
+            "side": "L",
+            "seq": 33
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 27,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "127c3368",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 33,
+            "side": "R",
+            "seq": 34
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 27,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "127c3368",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 34,
+            "side": "L",
+            "seq": 35
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 28,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "330437ae",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 35,
+            "side": "R",
+            "seq": 36
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 29,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "b160f812",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 36,
+            "side": "L",
+            "seq": 37
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 30,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "53195203",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 37,
+            "side": "R",
+            "seq": 38
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 31,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "24b17002",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 38,
+            "side": "L",
+            "seq": 39
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 32,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "adad548a",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 39,
+            "side": "R",
+            "seq": 40
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 32,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "adad548a",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 40,
+            "side": "L",
+            "seq": 41
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 33,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "0286625b",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 41,
+            "side": "R",
+            "seq": 42
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 34,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "95534aeb",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 42,
+            "side": "L",
+            "seq": 43
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 35,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "228b0e4d",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 43,
+            "side": "R",
+            "seq": 44
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 35,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "228b0e4d",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 44,
+            "side": "L",
+            "seq": 45
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 36,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "bf4f9ffe",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 45,
+            "side": "R",
+            "seq": 46
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 37,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "97bacdd4",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 46,
+            "side": "L",
+            "seq": 47
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 38,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "e9ae6938",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 47,
+            "side": "R",
+            "seq": 48
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 39,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "6616d134",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 48,
+            "side": "L",
+            "seq": 49
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 40,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "6dfff4d4",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 49,
+            "side": "R",
+            "seq": 50
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 41,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "d758cce0",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 50,
+            "side": "L",
+            "seq": 51
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 42,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "f7f9e8a6",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 51,
+            "side": "R",
+            "seq": 52
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 43,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "a8cef173",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 52,
+            "side": "L",
+            "seq": 53
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 44,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "1f07d924",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 53,
+            "side": "R",
+            "seq": 54
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 45,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "29e38573",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 54,
+            "side": "L",
+            "seq": 55
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 46,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "0a9fcde9",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 55,
+            "side": "R",
+            "seq": 56
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 47,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "0c990349",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "ENDED",
+          "turn": {
+            "index": 55,
+            "side": "R",
+            "seq": 56
+          },
+          "score": {
+            "L": 2,
+            "R": 0
+          },
+          "shotCount": 48,
+          "suddenDeath": false,
+          "result": {
+            "winner": "L",
+            "reason": "goals"
+          },
+          "stateHash": "6b9977e7",
+          "events": ["shot", "goal", "ended"]
+        }
+      ]
+    },
+    {
+      "seed": 23,
+      "actions": [
+        {
+          "type": "shot",
+          "discIndex": 1,
+          "ix": 7.407855987548828,
+          "iy": -4.325440406799316
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": 4.343474388122559,
+          "iy": 2.0689523220062256
+        },
+        {
+          "type": "shot",
+          "discIndex": 3,
+          "ix": -6.191165924072266,
+          "iy": 1.8089416027069092
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": -6.358272075653076,
+          "iy": 0.6356063485145569
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": 5.987373352050781,
+          "iy": 4.6880202293396
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": -4.23337459564209,
+          "iy": 3.918342351913452
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": -5.497226715087891,
+          "iy": 1.4816738367080688
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": -2.268056631088257,
+          "iy": 7.058515548706055
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": -6.1974711418151855,
+          "iy": -3.8726296424865723
+        },
+        {
+          "type": "shot",
+          "discIndex": 8,
+          "ix": -4.560816287994385,
+          "iy": -1.1202471256256104
+        },
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": -3.3404293060302734,
+          "iy": 2.7926225662231445
+        },
+        {
+          "type": "shot",
+          "discIndex": 6,
+          "ix": -4.053231239318848,
+          "iy": 1.0532994270324707
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": 1.3890759944915771,
+          "iy": 4.424523830413818
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": -1.1627964973449707,
+          "iy": 7.517873764038086
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": 0.18914170563220978,
+          "iy": 4.184046268463135
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": -6.583192825317383,
+          "iy": 2.7447803020477295
+        },
+        {
+          "type": "shot",
+          "discIndex": 1,
+          "ix": -4.9681315422058105,
+          "iy": 5.558500289916992
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": -7.552150249481201,
+          "iy": 0.644293487071991
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": -0.8539339303970337,
+          "iy": 5.527297496795654
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": -6.010212421417236,
+          "iy": 2.6042187213897705
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": -5.071507930755615,
+          "iy": 0.591435968875885
+        },
+        {
+          "type": "shot",
+          "discIndex": 1,
+          "ix": 5.52739143371582,
+          "iy": -1.3620816469192505
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 6,
+          "ix": -4.837409019470215,
+          "iy": -3.1732282638549805
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": 6.287746906280518,
+          "iy": -0.8266686797142029
+        },
+        {
+          "type": "shot",
+          "discIndex": 6,
+          "ix": -5.339951992034912,
+          "iy": 3.3120505809783936
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": 6.010399341583252,
+          "iy": 0.46787920594215393
+        },
+        {
+          "type": "shot",
+          "discIndex": 8,
+          "ix": 4.289768218994141,
+          "iy": 0.9800859093666077
+        },
+        {
+          "type": "shot",
+          "discIndex": 3,
+          "ix": -0.8035152554512024,
+          "iy": 6.504673957824707
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": -5.974246025085449,
+          "iy": 4.496298789978027
+        },
+        {
+          "type": "shot",
+          "discIndex": 1,
+          "ix": -1.4564740657806396,
+          "iy": 5.263976097106934
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": 4.606803894042969,
+          "iy": 1.5141199827194214
+        },
+        {
+          "type": "shot",
+          "discIndex": 6,
+          "ix": 2.306353807449341,
+          "iy": -3.0809226036071777
+        },
+        {
+          "type": "shot",
+          "discIndex": 3,
+          "ix": -2.9525585174560547,
+          "iy": -6.7127275466918945
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": 8.134705543518066,
+          "iy": 2.3331918716430664
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": -0.09003214538097382,
+          "iy": 5.657195568084717
+        },
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": 3.058328628540039,
+          "iy": 2.4476711750030518
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": 8.03194808959961,
+          "iy": -1.1839871406555176
+        },
+        {
+          "type": "shot",
+          "discIndex": 1,
+          "ix": 4.680455207824707,
+          "iy": -1.9865500926971436
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": 3.4446334838867188,
+          "iy": -1.6616414785385132
+        },
+        {
+          "type": "shot",
+          "discIndex": 3,
+          "ix": -0.5081468224525452,
+          "iy": -3.7199461460113525
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": -4.698774337768555,
+          "iy": 4.837427616119385
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": -0.3325726389884949,
+          "iy": 4.302702903747559
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": 4.594672679901123,
+          "iy": 4.635202407836914
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": 0.5726346373558044,
+          "iy": 3.962810754776001
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": 2.0814249515533447,
+          "iy": 4.33597993850708
+        },
+        {
+          "type": "shot",
+          "discIndex": 1,
+          "ix": 4.648773193359375,
+          "iy": 4.348643779754639
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": 4.380795955657959,
+          "iy": 1.1403151750564575
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 6,
+          "ix": 4.175144672393799,
+          "iy": 1.3977864980697632
+        },
+        {
+          "type": "shot",
+          "discIndex": 1,
+          "ix": 5.25508975982666,
+          "iy": 6.361310005187988
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": 6.249976634979248,
+          "iy": -5.453307151794434
+        },
+        {
+          "type": "shot",
+          "discIndex": 8,
+          "ix": -7.5850372314453125,
+          "iy": -2.8256051540374756
+        },
+        {
+          "type": "shot",
+          "discIndex": 1,
+          "ix": 7.196745872497559,
+          "iy": -4.792935371398926
+        },
+        {
+          "type": "shot",
+          "discIndex": 6,
+          "ix": 0.3319402039051056,
+          "iy": -6.861368656158447
+        },
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": 3.789400339126587,
+          "iy": 0.08157791197299957
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": -1.1670469045639038,
+          "iy": -7.658273220062256
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": 4.373696327209473,
+          "iy": -2.2492005825042725
+        }
+      ],
+      "snapshots": [
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 1,
+            "side": "R",
+            "seq": 2
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 1,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "669e4786",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 2,
+            "side": "L",
+            "seq": 3
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 2,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "72b9f011",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 3,
+            "side": "R",
+            "seq": 4
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 3,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "d70bcd26",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 4,
+            "side": "L",
+            "seq": 5
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 4,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "5796bc07",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 5,
+            "side": "R",
+            "seq": 6
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 5,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "bd809d4b",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 6,
+            "side": "L",
+            "seq": 7
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 6,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "ba0f292b",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 7,
+            "side": "R",
+            "seq": 8
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 6,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "ba0f292b",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 8,
+            "side": "L",
+            "seq": 9
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 7,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "cd38e2cd",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 9,
+            "side": "R",
+            "seq": 10
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 7,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "cd38e2cd",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 10,
+            "side": "L",
+            "seq": 11
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 8,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "50dafc72",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 11,
+            "side": "R",
+            "seq": 12
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 9,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "aa568c13",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 12,
+            "side": "L",
+            "seq": 13
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 10,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "bbfcd3d2",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 13,
+            "side": "R",
+            "seq": 14
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 11,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "a30f5a2a",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 14,
+            "side": "L",
+            "seq": 15
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 12,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "7fc7682c",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 15,
+            "side": "R",
+            "seq": 16
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 13,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "f32da2c0",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 16,
+            "side": "L",
+            "seq": 17
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 14,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "e86c160a",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 17,
+            "side": "R",
+            "seq": 18
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 15,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "f7e3eb80",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 18,
+            "side": "L",
+            "seq": 19
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 16,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "98656053",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 19,
+            "side": "R",
+            "seq": 20
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 17,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "bf7b691a",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 20,
+            "side": "L",
+            "seq": 21
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 18,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "6cea0380",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 21,
+            "side": "R",
+            "seq": 22
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 19,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "c9c1e167",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 22,
+            "side": "L",
+            "seq": 23
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 20,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "0f3f81ed",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 23,
+            "side": "R",
+            "seq": 24
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 20,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "0f3f81ed",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 24,
+            "side": "L",
+            "seq": 25
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 21,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "127c3368",
+          "events": ["shot", "goal", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 25,
+            "side": "R",
+            "seq": 26
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 22,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "f7da3434",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 26,
+            "side": "L",
+            "seq": 27
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 22,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "f7da3434",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 27,
+            "side": "R",
+            "seq": 28
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 22,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "f7da3434",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 28,
+            "side": "L",
+            "seq": 29
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 23,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "4d575a35",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 29,
+            "side": "R",
+            "seq": 30
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 24,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "f0b2f324",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 30,
+            "side": "L",
+            "seq": 31
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 25,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "1abdf529",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 31,
+            "side": "R",
+            "seq": 32
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 26,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "52857870",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 32,
+            "side": "L",
+            "seq": 33
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 27,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "235322e6",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 33,
+            "side": "R",
+            "seq": 34
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 28,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "06ed6cfe",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 34,
+            "side": "L",
+            "seq": 35
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 29,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "f7037966",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 35,
+            "side": "R",
+            "seq": 36
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 30,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "6130c12d",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 36,
+            "side": "L",
+            "seq": 37
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 30,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "6130c12d",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 37,
+            "side": "R",
+            "seq": 38
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 31,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "50d918e5",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 38,
+            "side": "L",
+            "seq": 39
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 32,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "cb8f2194",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 39,
+            "side": "R",
+            "seq": 40
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 33,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "03da68ad",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 40,
+            "side": "L",
+            "seq": 41
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 34,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "936d1523",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 41,
+            "side": "R",
+            "seq": 42
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 34,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "936d1523",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 42,
+            "side": "L",
+            "seq": 43
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 35,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "42fd47ca",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 43,
+            "side": "R",
+            "seq": 44
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 36,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "3654f800",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 44,
+            "side": "L",
+            "seq": 45
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 37,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "c0cbe9e3",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 45,
+            "side": "R",
+            "seq": 46
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 38,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "f8169722",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 46,
+            "side": "L",
+            "seq": 47
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 39,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "86bbede0",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 47,
+            "side": "R",
+            "seq": 48
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 40,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "231fd9ab",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 48,
+            "side": "L",
+            "seq": 49
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 41,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "28d3b521",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 49,
+            "side": "R",
+            "seq": 50
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 42,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "bd8b6177",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 50,
+            "side": "L",
+            "seq": 51
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 43,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "9984e104",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 51,
+            "side": "R",
+            "seq": 52
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 44,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "29ba764a",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 52,
+            "side": "L",
+            "seq": 53
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 45,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "2d4db46e",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 53,
+            "side": "R",
+            "seq": 54
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 46,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "51cd23d9",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 54,
+            "side": "L",
+            "seq": 55
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 47,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "524340e9",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 55,
+            "side": "R",
+            "seq": 56
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 47,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "524340e9",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 56,
+            "side": "L",
+            "seq": 57
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 47,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "524340e9",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 57,
+            "side": "R",
+            "seq": 58
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 47,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "524340e9",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 58,
+            "side": "L",
+            "seq": 59
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 48,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "8b53334e",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 59,
+            "side": "R",
+            "seq": 60
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 49,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "e4a55576",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 60,
+            "side": "R",
+            "seq": 61
+          },
+          "score": {
+            "L": 1,
+            "R": 1
+          },
+          "shotCount": 50,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "127c3368",
+          "events": ["shot", "goal", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 61,
+            "side": "L",
+            "seq": 62
+          },
+          "score": {
+            "L": 1,
+            "R": 1
+          },
+          "shotCount": 51,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "76d7bf5a",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 62,
+            "side": "R",
+            "seq": 63
+          },
+          "score": {
+            "L": 1,
+            "R": 1
+          },
+          "shotCount": 52,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "1bada7ab",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 63,
+            "side": "L",
+            "seq": 64
+          },
+          "score": {
+            "L": 1,
+            "R": 1
+          },
+          "shotCount": 53,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "16aa8efa",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 64,
+            "side": "R",
+            "seq": 65
+          },
+          "score": {
+            "L": 1,
+            "R": 1
+          },
+          "shotCount": 54,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "5433b427",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 65,
+            "side": "L",
+            "seq": 66
+          },
+          "score": {
+            "L": 1,
+            "R": 1
+          },
+          "shotCount": 55,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "4f23ed64",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 66,
+            "side": "R",
+            "seq": 67
+          },
+          "score": {
+            "L": 1,
+            "R": 1
+          },
+          "shotCount": 55,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "4f23ed64",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "ENDED",
+          "turn": {
+            "index": 66,
+            "side": "R",
+            "seq": 67
+          },
+          "score": {
+            "L": 2,
+            "R": 1
+          },
+          "shotCount": 56,
+          "suddenDeath": false,
+          "result": {
+            "winner": "L",
+            "reason": "goals"
+          },
+          "stateHash": "184865ca",
+          "events": ["shot", "goal", "ended"]
+        }
+      ]
+    },
+    {
+      "seed": 37,
+      "actions": [
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": -6.236150741577148,
+          "iy": 0.12923118472099304
+        },
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": 5.609564304351807,
+          "iy": 6.878482818603516
+        },
+        {
+          "type": "shot",
+          "discIndex": 8,
+          "ix": -6.595097064971924,
+          "iy": 0.2158641815185547
+        },
+        {
+          "type": "shot",
+          "discIndex": 3,
+          "ix": 6.331063270568848,
+          "iy": -1.6538747549057007
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": -2.9913299083709717,
+          "iy": 2.799473285675049
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": 3.564821720123291,
+          "iy": 0.9609521627426147
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": -7.408439636230469,
+          "iy": 2.020214557647705
+        },
+        {
+          "type": "shot",
+          "discIndex": 3,
+          "ix": -5.120852947235107,
+          "iy": 3.254079580307007
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": -3.3243024349212646,
+          "iy": 2.141550064086914
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": -8.433167457580566,
+          "iy": -1.01924729347229
+        },
+        {
+          "type": "shot",
+          "discIndex": 8,
+          "ix": -5.303071022033691,
+          "iy": 5.702354907989502
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": -2.2395987510681152,
+          "iy": 7.048240661621094
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": -1.0031070709228516,
+          "iy": -6.656304359436035
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 6,
+          "ix": -5.146289825439453,
+          "iy": -4.387919902801514
+        },
+        {
+          "type": "shot",
+          "discIndex": 1,
+          "ix": 1.2997239828109741,
+          "iy": -5.814670085906982
+        },
+        {
+          "type": "shot",
+          "discIndex": 8,
+          "ix": -6.612380027770996,
+          "iy": -1.4877444505691528
+        },
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": -3.3175418376922607,
+          "iy": -6.7648091316223145
+        },
+        {
+          "type": "shot",
+          "discIndex": 6,
+          "ix": -6.713752746582031,
+          "iy": -1.7062335014343262
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": 2.970747232437134,
+          "iy": -2.5652291774749756
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": -2.8023838996887207,
+          "iy": -4.270233631134033
+        },
+        {
+          "type": "shot",
+          "discIndex": 3,
+          "ix": 0.17373955249786377,
+          "iy": -3.806319236755371
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": -4.810604572296143,
+          "iy": -6.33773946762085
+        },
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": 6.4788713455200195,
+          "iy": -4.192124366760254
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": -8.637760162353516,
+          "iy": 1.2530282735824585
+        },
+        {
+          "type": "shot",
+          "discIndex": 3,
+          "ix": 1.008476734161377,
+          "iy": -6.818497657775879
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": 2.81888747215271,
+          "iy": -7.395910739898682
+        },
+        {
+          "type": "shot",
+          "discIndex": 3,
+          "ix": -6.340823650360107,
+          "iy": -0.8595302104949951
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": 5.151604175567627,
+          "iy": 0.18920747935771942
+        },
+        {
+          "type": "shot",
+          "discIndex": 8,
+          "ix": -4.008701324462891,
+          "iy": -0.10250457376241684
+        },
+        {
+          "type": "shot",
+          "discIndex": 1,
+          "ix": 2.764796495437622,
+          "iy": -3.405167818069458
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": -5.645220756530762,
+          "iy": -1.4629889726638794
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": -5.884359836578369,
+          "iy": 6.365779876708984
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": -5.260136127471924,
+          "iy": 2.5744621753692627
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": -4.703938961029053,
+          "iy": 7.260370254516602
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": 4.935827255249023,
+          "iy": -0.8874217867851257
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 6,
+          "ix": -2.143523931503296,
+          "iy": -7.015353202819824
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": 3.829163074493408,
+          "iy": -7.173208713531494
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": 5.939716339111328,
+          "iy": -0.2740215063095093
+        },
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": 7.678575038909912,
+          "iy": -2.7887237071990967
+        },
+        {
+          "type": "shot",
+          "discIndex": 6,
+          "ix": 5.933877468109131,
+          "iy": -2.7089684009552
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": 7.061251163482666,
+          "iy": -0.35741427540779114
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": 2.7679545879364014,
+          "iy": 4.18937873840332
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": 4.177666187286377,
+          "iy": 3.8247909545898438
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": 0.9962632060050964,
+          "iy": 8.552438735961914
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": -2.4494099617004395,
+          "iy": -4.635940074920654
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": 1.1674760580062866,
+          "iy": 8.187285423278809
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": -0.05157151073217392,
+          "iy": 5.160480976104736
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": 6.708953380584717,
+          "iy": 2.227388858795166
+        },
+        {
+          "type": "shot",
+          "discIndex": 6,
+          "ix": -4.407266139984131,
+          "iy": -1.8025263547897339
+        },
+        {
+          "type": "shot",
+          "discIndex": 1,
+          "ix": -0.024007022380828857,
+          "iy": -4.385486125946045
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": -3.6946358680725098,
+          "iy": -2.6758968830108643
+        },
+        {
+          "type": "shot",
+          "discIndex": 1,
+          "ix": -5.588792324066162,
+          "iy": -5.606263637542725
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": 6.42101526260376,
+          "iy": 3.2402896881103516
+        }
+      ],
+      "snapshots": [
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 1,
+            "side": "L",
+            "seq": 2
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 1,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "e794c588",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 2,
+            "side": "R",
+            "seq": 3
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 2,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "cafd73da",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 3,
+            "side": "L",
+            "seq": 4
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 3,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "5cb0207d",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 4,
+            "side": "R",
+            "seq": 5
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 4,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "0d52fdd5",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 5,
+            "side": "L",
+            "seq": 6
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 5,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "f94b0183",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 6,
+            "side": "R",
+            "seq": 7
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 6,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "0c2fa251",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 7,
+            "side": "L",
+            "seq": 8
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 7,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "8456748a",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 8,
+            "side": "R",
+            "seq": 9
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 8,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "0160d467",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 9,
+            "side": "L",
+            "seq": 10
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 9,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "e98c60ca",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 10,
+            "side": "R",
+            "seq": 11
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 10,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "91f4fe38",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 11,
+            "side": "L",
+            "seq": 12
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 11,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "a8795c69",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 12,
+            "side": "R",
+            "seq": 13
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 12,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "bad56de1",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 13,
+            "side": "L",
+            "seq": 14
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 13,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "bc54ddf2",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 14,
+            "side": "R",
+            "seq": 15
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 13,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "bc54ddf2",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 15,
+            "side": "L",
+            "seq": 16
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 14,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "d032da7f",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 16,
+            "side": "R",
+            "seq": 17
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 15,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "1c00fb24",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 17,
+            "side": "L",
+            "seq": 18
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 16,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "4b8d2cd7",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 18,
+            "side": "R",
+            "seq": 19
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 17,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "a28cb72d",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 19,
+            "side": "L",
+            "seq": 20
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 18,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "97c4e058",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 20,
+            "side": "R",
+            "seq": 21
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 19,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "35779a8d",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 21,
+            "side": "L",
+            "seq": 22
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 20,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "315773e3",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 22,
+            "side": "R",
+            "seq": 23
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 21,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "67ffc3bb",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 23,
+            "side": "L",
+            "seq": 24
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 22,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "e78ca699",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 24,
+            "side": "R",
+            "seq": 25
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 23,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "d7e4e2d4",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 25,
+            "side": "L",
+            "seq": 26
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 24,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "6e716ec0",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 26,
+            "side": "R",
+            "seq": 27
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 25,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "4612e28b",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 27,
+            "side": "L",
+            "seq": 28
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 26,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "3a608ed4",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 28,
+            "side": "L",
+            "seq": 29
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 27,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "127c3368",
+          "events": ["shot", "goal", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 29,
+            "side": "R",
+            "seq": 30
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 28,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "a09a0cc2",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 30,
+            "side": "L",
+            "seq": 31
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 29,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "9fd4e1cd",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 31,
+            "side": "R",
+            "seq": 32
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 30,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "a792d637",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 32,
+            "side": "L",
+            "seq": 33
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 31,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "173f95b0",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 33,
+            "side": "R",
+            "seq": 34
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 32,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "ee687054",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 34,
+            "side": "L",
+            "seq": 35
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 33,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "a6f99150",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 35,
+            "side": "R",
+            "seq": 36
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 34,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "ce3ff563",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 36,
+            "side": "L",
+            "seq": 37
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 35,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "cab396aa",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 37,
+            "side": "R",
+            "seq": 38
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 35,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "cab396aa",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 38,
+            "side": "L",
+            "seq": 39
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 36,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "95ca55df",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 39,
+            "side": "R",
+            "seq": 40
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 37,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "564aad62",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 40,
+            "side": "L",
+            "seq": 41
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 38,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "99000641",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 41,
+            "side": "R",
+            "seq": 42
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 39,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "7b2a4022",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 42,
+            "side": "L",
+            "seq": 43
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 40,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "3ba73dce",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 43,
+            "side": "R",
+            "seq": 44
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 41,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "65e60204",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 44,
+            "side": "L",
+            "seq": 45
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 42,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "b49fecc6",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 45,
+            "side": "R",
+            "seq": 46
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 43,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "be6320bc",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 46,
+            "side": "L",
+            "seq": 47
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 44,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "af5bf049",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 47,
+            "side": "R",
+            "seq": 48
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 45,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "ba7b38ae",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 48,
+            "side": "L",
+            "seq": 49
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 46,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "99f5f125",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 49,
+            "side": "R",
+            "seq": 50
+          },
+          "score": {
+            "L": 0,
+            "R": 1
+          },
+          "shotCount": 47,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "a0a102c5",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 50,
+            "side": "R",
+            "seq": 51
+          },
+          "score": {
+            "L": 1,
+            "R": 1
+          },
+          "shotCount": 48,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "127c3368",
+          "events": ["shot", "goal", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 51,
+            "side": "L",
+            "seq": 52
+          },
+          "score": {
+            "L": 1,
+            "R": 1
+          },
+          "shotCount": 49,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "f03558df",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 52,
+            "side": "R",
+            "seq": 53
+          },
+          "score": {
+            "L": 1,
+            "R": 1
+          },
+          "shotCount": 50,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "9b04eca6",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 53,
+            "side": "L",
+            "seq": 54
+          },
+          "score": {
+            "L": 1,
+            "R": 1
+          },
+          "shotCount": 51,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "4089e4e7",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 54,
+            "side": "R",
+            "seq": 55
+          },
+          "score": {
+            "L": 1,
+            "R": 1
+          },
+          "shotCount": 52,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "8632e2ac",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 55,
+            "side": "L",
+            "seq": 56
+          },
+          "score": {
+            "L": 1,
+            "R": 1
+          },
+          "shotCount": 52,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "8632e2ac",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "ENDED",
+          "turn": {
+            "index": 55,
+            "side": "L",
+            "seq": 56
+          },
+          "score": {
+            "L": 2,
+            "R": 1
+          },
+          "shotCount": 53,
+          "suddenDeath": false,
+          "result": {
+            "winner": "L",
+            "reason": "goals"
+          },
+          "stateHash": "0673afa5",
+          "events": ["shot", "goal", "ended"]
+        }
+      ]
+    },
+    {
+      "seed": 41,
+      "actions": [
+        {
+          "type": "shot",
+          "discIndex": 8,
+          "ix": -7.049933910369873,
+          "iy": -3.5140373706817627
+        },
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": -3.915912628173828,
+          "iy": 0.30931556224823
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": -1.3114268779754639,
+          "iy": -5.701871395111084
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": -4.730046272277832,
+          "iy": -1.1708605289459229
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 8,
+          "ix": -4.2510552406311035,
+          "iy": -1.5139201879501343
+        },
+        {
+          "type": "shot",
+          "discIndex": 3,
+          "ix": -2.8429431915283203,
+          "iy": -7.427720546722412
+        },
+        {
+          "type": "shot",
+          "discIndex": 6,
+          "ix": -6.701396942138672,
+          "iy": -3.8820009231567383
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": -2.688732624053955,
+          "iy": -2.6035029888153076
+        },
+        {
+          "type": "shot",
+          "discIndex": 6,
+          "ix": -0.18742139637470245,
+          "iy": -4.2129807472229
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": 7.170027256011963,
+          "iy": -1.2217445373535156
+        },
+        {
+          "type": "shot",
+          "discIndex": 6,
+          "ix": -1.2903378009796143,
+          "iy": 6.506901264190674
+        },
+        {
+          "type": "shot",
+          "discIndex": 1,
+          "ix": 7.382857322692871,
+          "iy": -4.075944900512695
+        },
+        {
+          "type": "shot",
+          "discIndex": 6,
+          "ix": 6.513531684875488,
+          "iy": -4.525702476501465
+        },
+        {
+          "type": "shot",
+          "discIndex": 1,
+          "ix": 8.25192642211914,
+          "iy": 0.972382664680481
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": -6.368025302886963,
+          "iy": -4.351702690124512
+        },
+        {
+          "type": "shot",
+          "discIndex": 3,
+          "ix": 3.104654312133789,
+          "iy": 3.6169679164886475
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": -4.864447116851807,
+          "iy": 3.8805091381073
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": -4.650252342224121,
+          "iy": 5.499962329864502
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": 2.7704992294311523,
+          "iy": 4.511005878448486
+        },
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": 5.1149139404296875,
+          "iy": 3.7304060459136963
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": -2.5932834148406982,
+          "iy": 4.455569267272949
+        },
+        {
+          "type": "shot",
+          "discIndex": 1,
+          "ix": -7.290378570556641,
+          "iy": 4.8592848777771
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": 3.7202281951904297,
+          "iy": 0.7450215220451355
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": 8.306161880493164,
+          "iy": -2.8949270248413086
+        },
+        {
+          "type": "shot",
+          "discIndex": 6,
+          "ix": 3.7229297161102295,
+          "iy": 6.7111687660217285
+        },
+        {
+          "type": "shot",
+          "discIndex": 3,
+          "ix": 4.957854270935059,
+          "iy": 3.522216320037842
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": -3.1319220066070557,
+          "iy": 4.6184892654418945
+        },
+        {
+          "type": "shot",
+          "discIndex": 1,
+          "ix": 0.6953595280647278,
+          "iy": -3.702566623687744
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": 0.18554416298866272,
+          "iy": -7.158940315246582
+        },
+        {
+          "type": "shot",
+          "discIndex": 1,
+          "ix": 3.034575939178467,
+          "iy": -4.987157344818115
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": 5.173234462738037,
+          "iy": -1.9157181978225708
+        },
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": 5.164089202880859,
+          "iy": -2.8250234127044678
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": 6.628978252410889,
+          "iy": -0.173699751496315
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": 8.001778602600098,
+          "iy": 0.6163233518600464
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": 3.4946584701538086,
+          "iy": -7.490389823913574
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": -5.104589939117432,
+          "iy": 2.7026102542877197
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": -5.419551372528076,
+          "iy": -3.131284713745117
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": 2.247910261154175,
+          "iy": -7.863821983337402
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": -4.488593101501465,
+          "iy": 2.2110238075256348
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": -5.511641025543213,
+          "iy": -0.581817090511322
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": -7.492748260498047,
+          "iy": -1.9170197248458862
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": -5.260459899902344,
+          "iy": 2.2042195796966553
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": 6.664674282073975,
+          "iy": 0.8592610955238342
+        },
+        {
+          "type": "timeout"
+        }
+      ],
+      "snapshots": [
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 1,
+            "side": "L",
+            "seq": 2
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 1,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "7c4d2682",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 2,
+            "side": "R",
+            "seq": 3
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 2,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "ccf5bee0",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 3,
+            "side": "L",
+            "seq": 4
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 2,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "ccf5bee0",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 4,
+            "side": "R",
+            "seq": 5
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 3,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "3b059aa9",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 5,
+            "side": "L",
+            "seq": 6
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 4,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "f74f5b66",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 6,
+            "side": "R",
+            "seq": 7
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 4,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "f74f5b66",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 7,
+            "side": "L",
+            "seq": 8
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 5,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "e6b11747",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 8,
+            "side": "R",
+            "seq": 9
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 6,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "c109c96d",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 9,
+            "side": "L",
+            "seq": 10
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 7,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "61a10a41",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 10,
+            "side": "R",
+            "seq": 11
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 8,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "a552623b",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 11,
+            "side": "L",
+            "seq": 12
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 9,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "6cd0337a",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 12,
+            "side": "R",
+            "seq": 13
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 10,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "05e907f6",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 13,
+            "side": "L",
+            "seq": 14
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 11,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "f2e4744f",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 14,
+            "side": "R",
+            "seq": 15
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 12,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "844a2cf2",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 15,
+            "side": "L",
+            "seq": 16
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 13,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "687045bf",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 16,
+            "side": "R",
+            "seq": 17
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 14,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "289acecc",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 17,
+            "side": "L",
+            "seq": 18
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 15,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "69cd228e",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 18,
+            "side": "R",
+            "seq": 19
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 16,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "ab3105f2",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 19,
+            "side": "L",
+            "seq": 20
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 17,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "3ea4d653",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 20,
+            "side": "R",
+            "seq": 21
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 18,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "f63cae0b",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 21,
+            "side": "L",
+            "seq": 22
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 19,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "674ef502",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 22,
+            "side": "R",
+            "seq": 23
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 20,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "4dcf273c",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 23,
+            "side": "L",
+            "seq": 24
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 21,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "f78fec10",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 24,
+            "side": "R",
+            "seq": 25
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 22,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "5be4667a",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 25,
+            "side": "L",
+            "seq": 26
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 23,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "04d28070",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 26,
+            "side": "R",
+            "seq": 27
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 24,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "b8732fdb",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 27,
+            "side": "L",
+            "seq": 28
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 25,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "9a1ece3a",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 28,
+            "side": "R",
+            "seq": 29
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 26,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "fc19596e",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 29,
+            "side": "L",
+            "seq": 30
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 27,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "5e787b02",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 30,
+            "side": "R",
+            "seq": 31
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 28,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "c9e06daa",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 31,
+            "side": "L",
+            "seq": 32
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 29,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "06048912",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 32,
+            "side": "R",
+            "seq": 33
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 30,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "19860be6",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 33,
+            "side": "L",
+            "seq": 34
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 31,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "71dc8445",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 34,
+            "side": "R",
+            "seq": 35
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 32,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "f32c1a04",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 35,
+            "side": "L",
+            "seq": 36
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 33,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "b5e1eb6a",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 36,
+            "side": "R",
+            "seq": 37
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 34,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "af0f18d2",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 37,
+            "side": "L",
+            "seq": 38
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 35,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "8232fe49",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 38,
+            "side": "R",
+            "seq": 39
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 36,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "f8639627",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 39,
+            "side": "L",
+            "seq": 40
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 37,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "bb4e018f",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 40,
+            "side": "R",
+            "seq": 41
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 38,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "c86b2c89",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 41,
+            "side": "L",
+            "seq": 42
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 38,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "c86b2c89",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 42,
+            "side": "R",
+            "seq": 43
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 39,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "b908646f",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 43,
+            "side": "L",
+            "seq": 44
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 39,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "b908646f",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 44,
+            "side": "R",
+            "seq": 45
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 40,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "f37b7b51",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 45,
+            "side": "L",
+            "seq": 46
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 41,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "655e1337",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 46,
+            "side": "R",
+            "seq": 47
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 41,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "655e1337",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 47,
+            "side": "L",
+            "seq": 48
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 42,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "8574a791",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 48,
+            "side": "R",
+            "seq": 49
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 42,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "8574a791",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 49,
+            "side": "L",
+            "seq": 50
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 43,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "9374cfd1",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "ENDED",
+          "turn": {
+            "index": 49,
+            "side": "L",
+            "seq": 50
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 43,
+          "suddenDeath": false,
+          "result": {
+            "winner": "R",
+            "reason": "forfeit_timeouts"
+          },
+          "stateHash": "9374cfd1",
+          "events": ["timeout", "ended"]
+        }
+      ]
+    },
+    {
+      "seed": 59,
+      "actions": [
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": 7.998824119567871,
+          "iy": 1.1475876569747925
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": -3.8464531898498535,
+          "iy": 2.2464241981506348
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": -2.9487133026123047,
+          "iy": 6.97064208984375
+        },
+        {
+          "type": "shot",
+          "discIndex": 1,
+          "ix": 5.104333877563477,
+          "iy": 3.2568135261535645
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": -6.155383586883545,
+          "iy": 4.892256736755371
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": -1.4009108543395996,
+          "iy": 4.201570510864258
+        },
+        {
+          "type": "shot",
+          "discIndex": 6,
+          "ix": -3.9009809494018555,
+          "iy": -0.6837001442909241
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": -3.4881598949432373,
+          "iy": -5.76780366897583
+        },
+        {
+          "type": "shot",
+          "discIndex": 6,
+          "ix": -4.980191707611084,
+          "iy": -1.606916069984436
+        },
+        {
+          "type": "shot",
+          "discIndex": 3,
+          "ix": -4.188331604003906,
+          "iy": -4.409325122833252
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": -5.091922760009766,
+          "iy": -5.893895149230957
+        },
+        {
+          "type": "shot",
+          "discIndex": 3,
+          "ix": -2.467787027359009,
+          "iy": -5.280668258666992
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": -4.438713073730469,
+          "iy": -1.0224792957305908
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": -5.648280143737793,
+          "iy": -0.9030554890632629
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": -4.707914352416992,
+          "iy": 0.4116334915161133
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 3,
+          "ix": -4.9826154708862305,
+          "iy": 6.956177711486816
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": -1.5217335224151611,
+          "iy": -4.4995574951171875
+        },
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": -4.719419956207275,
+          "iy": -1.8134675025939941
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": 4.798530101776123,
+          "iy": -3.7614762783050537
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": 1.4427788257598877,
+          "iy": 4.276033401489258
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": 8.786684036254883,
+          "iy": 0.25689876079559326
+        },
+        {
+          "type": "shot",
+          "discIndex": 1,
+          "ix": 5.484461307525635,
+          "iy": -5.659039497375488
+        },
+        {
+          "type": "shot",
+          "discIndex": 8,
+          "ix": 3.997681140899658,
+          "iy": -3.2193892002105713
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": 3.084451675415039,
+          "iy": 2.222849130630493
+        },
+        {
+          "type": "shot",
+          "discIndex": 8,
+          "ix": 2.8762943744659424,
+          "iy": 7.176984786987305
+        },
+        {
+          "type": "shot",
+          "discIndex": 3,
+          "ix": 3.4799747467041016,
+          "iy": 2.3840854167938232
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": -5.148859977722168,
+          "iy": 1.1381361484527588
+        },
+        {
+          "type": "shot",
+          "discIndex": 1,
+          "ix": -5.959395408630371,
+          "iy": 6.227772235870361
+        },
+        {
+          "type": "shot",
+          "discIndex": 8,
+          "ix": -7.823718070983887,
+          "iy": 1.132768988609314
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": -1.1979491710662842,
+          "iy": -4.421506404876709
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": -5.0607757568359375,
+          "iy": -7.4325408935546875
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": 5.595812797546387,
+          "iy": 1.2939212322235107
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": 5.101914882659912,
+          "iy": 0.48487725853919983
+        },
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": 6.870840072631836,
+          "iy": 0.2063363939523697
+        },
+        {
+          "type": "shot",
+          "discIndex": 6,
+          "ix": -0.14842316508293152,
+          "iy": -7.251439571380615
+        },
+        {
+          "type": "shot",
+          "discIndex": 3,
+          "ix": 8.324234008789062,
+          "iy": 0.3714261054992676
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": 7.351400852203369,
+          "iy": 1.5165166854858398
+        },
+        {
+          "type": "shot",
+          "discIndex": 8,
+          "ix": -3.519019842147827,
+          "iy": -0.9193704128265381
+        },
+        {
+          "type": "shot",
+          "discIndex": 1,
+          "ix": -0.9410756230354309,
+          "iy": -6.682213306427002
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": -7.093865871429443,
+          "iy": -1.3337483406066895
+        },
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": -4.2913432121276855,
+          "iy": -5.676183700561523
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": 2.557556629180908,
+          "iy": -4.1282548904418945
+        },
+        {
+          "type": "shot",
+          "discIndex": 3,
+          "ix": 4.031915664672852,
+          "iy": -2.893674612045288
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": 7.070960998535156,
+          "iy": -0.6159837245941162
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": 0.0835227444767952,
+          "iy": -7.132286071777344
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": -0.8640161156654358,
+          "iy": -3.9811933040618896
+        },
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": 3.474760055541992,
+          "iy": -7.529749870300293
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": 7.357264995574951,
+          "iy": -0.14258018136024475
+        }
+      ],
+      "snapshots": [
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 1,
+            "side": "R",
+            "seq": 2
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 1,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "4b91b393",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 2,
+            "side": "L",
+            "seq": 3
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 2,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "c249795d",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 3,
+            "side": "R",
+            "seq": 4
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 2,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "c249795d",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 4,
+            "side": "L",
+            "seq": 5
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 3,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "7be49b5d",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 5,
+            "side": "R",
+            "seq": 6
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 4,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "c783b469",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 6,
+            "side": "L",
+            "seq": 7
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 5,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "03f4b9f1",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 7,
+            "side": "R",
+            "seq": 8
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 6,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "8edf3ff6",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 8,
+            "side": "L",
+            "seq": 9
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 7,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "e415b8d3",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 9,
+            "side": "R",
+            "seq": 10
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 8,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "8a1998e0",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 10,
+            "side": "L",
+            "seq": 11
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 9,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "4ce5c362",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 11,
+            "side": "R",
+            "seq": 12
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 10,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "7427f413",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 12,
+            "side": "L",
+            "seq": 13
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 11,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "fc842fb9",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 13,
+            "side": "R",
+            "seq": 14
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 12,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "0f60869f",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 14,
+            "side": "L",
+            "seq": 15
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 13,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "1e034553",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 15,
+            "side": "R",
+            "seq": 16
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 14,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "762a7cb4",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 16,
+            "side": "L",
+            "seq": 17
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 15,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "1027369a",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 17,
+            "side": "R",
+            "seq": 18
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 15,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "1027369a",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 18,
+            "side": "L",
+            "seq": 19
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 15,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "1027369a",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 19,
+            "side": "R",
+            "seq": 20
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 16,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "af25a444",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 20,
+            "side": "L",
+            "seq": 21
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 17,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "997b0298",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 21,
+            "side": "R",
+            "seq": 22
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 18,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "b94a7e0c",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 22,
+            "side": "L",
+            "seq": 23
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 19,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "4ed02615",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 23,
+            "side": "R",
+            "seq": 24
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 19,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "4ed02615",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 24,
+            "side": "L",
+            "seq": 25
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 19,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "4ed02615",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 25,
+            "side": "R",
+            "seq": 26
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 20,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "a8d03d93",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 26,
+            "side": "L",
+            "seq": 27
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 21,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "64069e04",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 27,
+            "side": "R",
+            "seq": 28
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 22,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "c54b6db8",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 28,
+            "side": "L",
+            "seq": 29
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 23,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "bc0ccd2b",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 29,
+            "side": "R",
+            "seq": 30
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 24,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "39df3a8e",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 30,
+            "side": "L",
+            "seq": 31
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 25,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "c9dc4a2a",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 31,
+            "side": "R",
+            "seq": 32
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 26,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "9586df44",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 32,
+            "side": "L",
+            "seq": 33
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 27,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "701ede3f",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 33,
+            "side": "R",
+            "seq": 34
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 28,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "eb0f96fd",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 34,
+            "side": "L",
+            "seq": 35
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 29,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "d3d7a51c",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 35,
+            "side": "R",
+            "seq": 36
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 29,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "d3d7a51c",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 36,
+            "side": "L",
+            "seq": 37
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 29,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "d3d7a51c",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 37,
+            "side": "R",
+            "seq": 38
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 30,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "f1d0127d",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 38,
+            "side": "L",
+            "seq": 39
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 31,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "1624e541",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 39,
+            "side": "R",
+            "seq": 40
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 32,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "b8689491",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 40,
+            "side": "L",
+            "seq": 41
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 33,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "d8dcd15e",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 41,
+            "side": "R",
+            "seq": 42
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 34,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "0d6d6692",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 42,
+            "side": "L",
+            "seq": 43
+          },
+          "score": {
+            "L": 0,
+            "R": 0
+          },
+          "shotCount": 35,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "b86010b0",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 43,
+            "side": "R",
+            "seq": 44
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 36,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "127c3368",
+          "events": ["shot", "goal", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 44,
+            "side": "L",
+            "seq": 45
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 36,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "127c3368",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 45,
+            "side": "R",
+            "seq": 46
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 37,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "008eb17f",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 46,
+            "side": "L",
+            "seq": 47
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 38,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "845012a0",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 47,
+            "side": "R",
+            "seq": 48
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 39,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "e126895c",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 48,
+            "side": "L",
+            "seq": 49
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 40,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "8ad76b41",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 49,
+            "side": "R",
+            "seq": 50
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 41,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "7d705538",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 50,
+            "side": "L",
+            "seq": 51
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 42,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "c1b4ced7",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 51,
+            "side": "R",
+            "seq": 52
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 43,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "a23c6a9d",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 52,
+            "side": "L",
+            "seq": 53
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 43,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "a23c6a9d",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 53,
+            "side": "R",
+            "seq": 54
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 44,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "98fe8bd7",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 54,
+            "side": "L",
+            "seq": 55
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 44,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "98fe8bd7",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 55,
+            "side": "R",
+            "seq": 56
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 45,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "1ec5d144",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 56,
+            "side": "L",
+            "seq": 57
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 46,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "d0dfdbf9",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 57,
+            "side": "R",
+            "seq": 58
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 47,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "46cb7151",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "ENDED",
+          "turn": {
+            "index": 57,
+            "side": "R",
+            "seq": 58
+          },
+          "score": {
+            "L": 2,
+            "R": 0
+          },
+          "shotCount": 48,
+          "suddenDeath": false,
+          "result": {
+            "winner": "L",
+            "reason": "goals"
+          },
+          "stateHash": "dca731f9",
+          "events": ["shot", "goal", "ended"]
+        }
+      ]
+    }
+  ]
+}
