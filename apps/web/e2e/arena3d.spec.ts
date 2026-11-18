@@ -55,6 +55,11 @@ for (const viewport of [
         { timeout: 25000 },
       )
       .toBeGreaterThan(state.turn.seq);
+    await expect
+      .poll(async () =>
+        Number(await page.getByLabel('Bumper Goal 3D football arena').getAttribute('data-impact-count')),
+      )
+      .toBeGreaterThan(0);
     expect([...models].sort()).toEqual(['cicada.glb', 'cruiser.glb']);
     expect(errors).toEqual([]);
   });

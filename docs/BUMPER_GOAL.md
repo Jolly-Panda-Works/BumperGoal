@@ -8,6 +8,12 @@ The React game host mounts a full-viewport Three.js WebGL 2 scene with a fixed o
 
 The original deterministic 2D physics and server protocol remain unchanged. Pointer rays intersect the pitch plane before conversion into shot coordinates, so slingshot aiming matches the perspective view. Colored rings show the active team. Speed- and acceleration-sensitive twin tire tracks fade over 12 seconds. After a non-final goal, the kickoff restores every car position and heading, resets ball rotation and aiming, and clears tire tracks after the goal pause. Existing circular collision shapes are retained. The goals sit at ±8.7 units, 1.2 units farther back at each end; the 17.4-unit pitch provides extra space behind the original car formations. The physics geometry, server configuration and shared determinism vectors use these same dimensions.
 
+## Collision feedback
+
+Recorded impacts produce contact-point bursts: gold sparks for car collisions, cyan flashes for the ball, and orange sparks/dust for walls. Cars get a short chassis recoil and suspension compression; stronger hits add a brief camera impulse, layered impact sound and supported device vibration. Camera displacement is restored after rendering, so aiming and authoritative physics remain unchanged.
+
+Effects are pooled (at most ten bursts on high graphics, four on low), short-lived, and cleared at kickoff. Reduced-motion settings disable particles, chassis recoil and camera shake; sound and vibration retain their own settings.
+
 ## Complete game sections
 
 The full game is enabled by default. Main navigation exposes Home, Shop, League, Assets and Profile. League shows real level progress, arena unlocks, entry fees and prizes, plus links to rankings, level rewards and match history. Global competition uses the existing game server; local development retains the existing bot league simulation.
