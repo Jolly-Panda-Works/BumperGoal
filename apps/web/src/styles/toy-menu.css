@@ -10,7 +10,7 @@ body .toy-menu {
   isolation: isolate;
   container-type: size;
   direction: ltr;
-  background: url('/assets/home/toy-stadium.webp') center / cover no-repeat;
+  background: url('/assets/home/toy-stadium-white.webp') center / cover no-repeat;
   --toy-safe-left: max(18px, env(safe-area-inset-left));
   --toy-safe-right: max(18px, env(safe-area-inset-right));
   --toy-safe-top: max(12px, env(safe-area-inset-top));
@@ -813,4 +813,43 @@ body:has(.toy-menu) .stadium-wallet.stadium-wallet--shared .stadium-wallet__plus
   box-shadow:
     0 2px #7c2d0b,
     inset 0 1px #ffe3a7 !important;
+}
+/* Blue supporting controls against the white-and-gold stadium. */
+body .toy-control:not(.toy-play),
+body .toy-profile,
+body .toy-shortcut[href='/rewards'] .toy-shortcut__face,
+body .toy-shop {
+  background: linear-gradient(180deg, #4dd9ff 0%, #15a9ee 35%, #0878d6 80%, #075ab9 100%);
+  border-color: #91ecff;
+  box-shadow:
+    inset 0 3px 0 #dcfbff,
+    inset 0 -5px 0 #054b9d,
+    inset 3px 0 0 #71d8ff,
+    0 5px 0 #073e7a,
+    0 8px 12px #10374f50 !important;
+  text-shadow: 0 2px 1px #123e78 !important;
+}
+body .toy-control:not(.toy-play)::after {
+  border-top-color: #e7ffffb3;
+}
+body:has(.toy-menu) .stadium-wallet.stadium-wallet--shared .stadium-wallet__plus {
+  background: linear-gradient(#4dd9ff, #0878d6) !important;
+  border-color: #91ecff !important;
+  box-shadow:
+    0 2px #073e7a,
+    inset 0 1px #dcfbff !important;
+}
+/* Green play control with the original golden rim. */
+body .toy-play {
+  background: linear-gradient(180deg, #b1ed37 0%, #6cdb1d 38%, #2fb728 82%, #229c25 100%);
+  border: 4px solid #ffdc45;
+  box-shadow:
+    inset 0 3px 0 #f4ffa4,
+    inset 0 -6px 0 #1b8522,
+    inset 3px 0 0 #b7f35d,
+    0 5px 0 #aa6d0b,
+    0 8px 12px #123a4f55 !important;
+}
+body .toy-play::after {
+  border-top-color: #f5ffd6c9;
 }
