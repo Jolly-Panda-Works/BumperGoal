@@ -84,7 +84,7 @@ export function Shell() {
 
   return (
     <div
-      className={`shell ${!rakhtkan ? 'shell--unified-header' : ''} ${location.pathname === '/home' ? `shell--lobby ${!rakhtkan ? 'shell--stadium' : ''}` : !rakhtkan && location.pathname === '/profile' ? 'shell--profile-art' : ''}`}
+      className={`shell ${!rakhtkan ? `shell--unified-header ${['/shop', '/locker'].includes(location.pathname) ? 'shell--catalog-art' : ''}` : ''} ${location.pathname === '/home' ? `shell--lobby ${!rakhtkan ? 'shell--stadium' : ''}` : !rakhtkan && location.pathname === '/profile' ? 'shell--profile-art' : ''}`}
     >
       {rakhtkan ? (
         <header className="topbar">

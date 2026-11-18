@@ -1,3 +1,4 @@
+import { ShieldAvatar } from '../ui/ShieldAvatar';
 import { lazy, Suspense, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router';
@@ -5,7 +6,7 @@ import { assetUrl } from '../game/art';
 import { carModelForTeam } from '@flickkick/config';
 import { useLocalProfile } from '../services/localProfile';
 import { formatNumber } from '../i18n';
-import { Avatar, Dialog } from '../ui/components';
+import { Dialog } from '../ui/components';
 import { IconGear, IconGift, IconShop, IconTrophy, IconGarage } from '../ui/icons';
 import { ResourceMeters } from '../ui/ResourceMeters';
 const HomeCar = lazy(() => import('../ui/HomeCar'));
@@ -25,7 +26,7 @@ export function HomeScreen() {
       <div className="stadium-home__stage">
         <Link to="/profile" className="stadium-profile stadium-profile--nameplate" aria-label={t('nav.profile')}>
           <span className="stadium-profile__portrait">
-            <Avatar id={profile.avatarId} size={100} />
+            <ShieldAvatar id={profile.avatarId} />
             <span
               className="stadium-profile__level"
               role="img"

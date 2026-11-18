@@ -254,7 +254,7 @@
   "shop": {
     "title": "Shop",
     "tabs": {
-      "teams": "Teams",
+      "teams": "Cars",
       "balls": "Balls",
       "avatars": "Avatars",
       "currency": "Packs",
@@ -721,5 +721,10 @@
     "play": "Enter arena",
     "locked": "Locked",
     "history": "Match history"
+  },
+  "catalog": {
+    "previous": "Previous page",
+    "next": "Next page",
+    "pagination": "Catalog pages"
   }
 }

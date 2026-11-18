@@ -67,6 +67,27 @@ export function IconGarage({ size = 64 }: { size?: number }) {
 
 export const IconShirt = gameArt('teams');
 
+export function IconCar({ size = 48 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 80 80" aria-hidden="true">
+      <path d="M16 62v11h13V62m22 0v11h13V62" fill="#173047" stroke="#061c30" strokeWidth="3" />
+      <path
+        d="m15 39 8-22q2-6 10-6h15q8 0 10 6l8 22 5 8v19H9V47Z"
+        fill="#ed3035"
+        stroke="#6c1730"
+        strokeWidth="3"
+        strokeLinejoin="round"
+      />
+      <path d="m26 18-7 23h42l-7-23Z" fill="#7be9ff" stroke="#f0ffff" strokeWidth="3" strokeLinejoin="round" />
+      <path d="M15 44h50v17H15Z" fill="#ff4e43" />
+      <rect x="14" y="48" width="14" height="8" rx="4" fill="#fff6c2" />
+      <rect x="52" y="48" width="14" height="8" rx="4" fill="#fff6c2" />
+      <path d="M29 57h22M12 64h56" stroke="#d8f7ff" strokeWidth="5" strokeLinecap="round" />
+      <path d="M27 14h26" stroke="#ffb1a5" strokeWidth="3" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 export const IconTrophy = gameArt('rank');
 
 export const IconUser = gameArt('avatars');

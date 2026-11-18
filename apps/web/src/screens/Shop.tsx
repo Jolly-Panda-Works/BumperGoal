@@ -1,3 +1,4 @@
+import { CatalogPager } from '../ui/CatalogPager';
 import { rakhtkan } from '../services/gameVariant';
 import { activateEquipment, equipmentState } from '../services/equipment';
 import { useLocalProfile } from '../services/localProfile';
@@ -6,10 +7,10 @@ import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { Link, useSearchParams } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import { cosmetics } from '@flickkick/config';
-import { IconShirt, IconUser, IconPacks, IconBall, IconFormation, IconTrail } from '../ui/icons';
+import { IconCar, IconPacks, IconBall, IconFormation, IconTrail } from '../ui/icons';
 import { CurrencyPackArt } from '../ui/CurrencyPackArt';
 import { claimLocalPack, ownsLocal, purchaseLocal, useLocalInventory } from '../services/localInventory';
-import { Badge, Button, Card, Dialog, PriceTag, ScreenHeader, Tabs } from '../ui/components';
+import { Avatar, Badge, Button, Card, Dialog, PriceTag, ScreenHeader, Tabs } from '../ui/components';
 import { TeamAttributes } from '../ui/TeamAttributes';
 import { ItemPreview } from './Profile';
 import { useSettings } from '../services/settings';
@@ -106,6 +107,12 @@ export function ShopScreen() {
   }, [params]);
   const groups = tab === 'currency' ? ['coins', 'gems'] : [];
   const label = (id: string) => t(id === 'coins' || id === 'gems' ? `common.${id}` : `shop.groups.${id}`);
+  const [catalogPage, setCatalogPage] = useState({ key: '', index: 0 });
+  const pageKey = `${tab}-${group}`;
+  const page = catalogPage.key === pageKey ? catalogPage.index : 0;
+  const packItems = cosmetics.currencyPacks.filter((pack) =>
+    group === 'gems' ? !!pack.grant.gems : !!pack.grant.coins,
+  );
   const items =
     tab === 'currency'
       ? []
@@ -118,9 +125,12 @@ export function ShopScreen() {
             .flat()
             .filter((item): item is (typeof cosmetics.avatars)[number] => !!item)
         : cosmetics[tab];
+  const pages = Math.max(1, Math.ceil((tab === 'currency' ? packItems.length : items.length) / 4));
+  const currentPage = Math.min(page, pages - 1);
+  const visibleItems = rakhtkan ? items : items.slice(currentPage * 4, currentPage * 4 + 4);
   return (
     <div
-      className={`screen shop-screen ${rakhtkan ? 'rakhtkan-shop' : ''} ${tab === 'currency' ? 'shop-screen--packs' : ''}`}
+      className={`screen shop-screen ${!rakhtkan ? 'catalog-art' : ''} ${rakhtkan ? 'rakhtkan-shop' : ''} ${tab === 'currency' ? 'shop-screen--packs' : ''}`}
     >
       <div className="shop-heading">
         <div className="section-heading">
@@ -148,9 +158,9 @@ export function ShopScreen() {
               id,
               label: t(`shop.tabs.${id}`),
               icon: {
-                teams: <IconShirt />,
+                teams: <IconCar />,
                 balls: <IconBall />,
-                avatars: <IconUser />,
+                avatars: <Avatar id="avatar_fox" size={48} />,
                 formations: <IconFormation />,
                 trails: <IconTrail />,
                 currency: <IconPacks />,
@@ -184,27 +194,25 @@ export function ShopScreen() {
         }}
       >
         {tab === 'currency'
-          ? cosmetics.currencyPacks
-              .filter((pack) => (group === 'gems' ? !!pack.grant.gems : !!pack.grant.coins))
-              .map((pack) => (
-                <Card
-                  className={`shop-product shop-product--pack ${inventory.packs.includes(pack.id) ? 'is-owned' : ''}`}
-                  key={pack.id}
+          ? packItems.slice(currentPage * 4, currentPage * 4 + 4).map((pack) => (
+              <Card
+                className={`shop-product shop-product--pack ${inventory.packs.includes(pack.id) ? 'is-owned' : ''}`}
+                key={pack.id}
+              >
+                {reaction.render(pack.id)}
+                <CurrencyPackArt id={pack.id} />
+                <strong>{t(`packs.${pack.id}`)}</strong>
+                <PriceTag price={pack.grant} />
+                <Button
+                  size="sm"
+                  disabled={!!pack.oneTime && inventory.packs.includes(pack.id)}
+                  onClick={() => setPurchase({ kind: 'currency', id: pack.id })}
                 >
-                  {reaction.render(pack.id)}
-                  <CurrencyPackArt id={pack.id} />
-                  <strong>{t(`packs.${pack.id}`)}</strong>
-                  <PriceTag price={pack.grant} />
-                  <Button
-                    size="sm"
-                    disabled={!!pack.oneTime && inventory.packs.includes(pack.id)}
-                    onClick={() => setPurchase({ kind: 'currency', id: pack.id })}
-                  >
-                    {t('shop.getPack')}
-                  </Button>
-                </Card>
-              ))
-          : items.map((item) => (
+                  {t('shop.getPack')}
+                </Button>
+              </Card>
+            ))
+          : visibleItems.map((item) => (
               <Card
                 className={`shop-product ${tab === 'teams' ? 'shop-product--team' : ''} ${ownsLocal(tab, item.id) ? 'is-owned' : ''} ${rakhtkan && equipmentState(tab, item.id) === 'active' ? 'is-equipped' : ''}`}
                 data-item-state={equipmentState(tab, item.id)}
@@ -244,6 +252,9 @@ export function ShopScreen() {
             ))}
       </div>
       {tab !== 'currency' && items.length === 0 && <p role="status">{t('shop.noResults')}</p>}
+      {!rakhtkan && (
+        <CatalogPager page={currentPage} pages={pages} onChange={(index) => setCatalogPage({ key: pageKey, index })} />
+      )}
       <Dialog
         open={!!purchase && !!selected}
         title={t(purchase?.kind === 'currency' ? 'shop.confirmPack' : 'shop.confirmPurchase')}

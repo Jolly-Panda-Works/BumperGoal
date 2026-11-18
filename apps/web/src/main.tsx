@@ -35,3 +35,5 @@ import './styles/cartoon-ui.css';
 import './styles/profile-art.css';
 
 import './styles/shared-header.css';
+
+import './styles/catalog-art.css';
