@@ -3,9 +3,14 @@ import { cosmetics, physicsConfig, rulesConfig } from '@flickkick/config';
 import { kickoffBodies } from '@flickkick/rules';
 import { localInventory, ownsLocal, purchaseLocal } from '../src/services/localInventory';
 it('offers three free and seventeen distinct purchasable legal formations', () => {
+  expect(rulesConfig.discsPerTeam).toBe(3);
   expect(cosmetics.formations.filter((f) => f.price === null)).toHaveLength(3);
   expect(cosmetics.formations.filter((f) => f.price !== null)).toHaveLength(17);
-  expect(new Set(cosmetics.formations.map((f) => JSON.stringify(f.positions))).size).toBe(20);
+  expect(
+    new Set(
+      cosmetics.formations.map((f) => JSON.stringify([...f.positions].sort((a, b) => a[0] - b[0] || a[1] - b[1]))),
+    ).size,
+  ).toBe(20);
   for (const f of cosmetics.formations) {
     expect(f.positions).toHaveLength(rulesConfig.discsPerTeam);
     for (const [i, [x, y]] of f.positions.entries()) {
@@ -23,7 +28,7 @@ it('keeps opposing layouts independent and charges a formation only once', () =>
   const f = cosmetics.formations[3]!;
   const bodies = kickoffBodies({ ...rulesConfig, formation: f.positions, opponentFormation: rulesConfig.formation });
   expect(bodies[1]!.x).toBeCloseTo(f.positions[1]![0]);
-  expect(bodies[6]!.x).toBeCloseTo(-rulesConfig.formation[1]![0]);
+  expect(bodies[rulesConfig.discsPerTeam + 1]!.x).toBeCloseTo(-rulesConfig.formation[1]![0]);
   localInventory.set({ coins: 500, gems: 10, owned: [], packs: [] });
   expect(ownsLocal('formations', cosmetics.formations[0]!.id)).toBe(true);
   expect(purchaseLocal('formations', f.id)).toBe(true);

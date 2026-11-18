@@ -28,9 +28,15 @@ test('equipped trail renders behind moving cars', async ({ page }) => {
   await expect.poll(() => models.has('carrier.glb')).toBe(true);
   for (let attempt = 0; attempt < 2; attempt++) {
     const state = await page.evaluate(() => (window as any).__fkMatch.state());
-    const car = state.bodies[state.turn.side === 'L' ? 3 : 8];
+    const car = state.bodies[state.turn.side === 'L' ? 1 : 4];
     const start = await boardToPage(page, car.x, car.y);
-    const end = await boardToPage(page, car.x + (state.turn.side === 'L' ? -2.3 : 2.3), car.y);
+    const ball = state.bodies.at(-1)!;
+    const distance = Math.hypot(ball.x - car.x, ball.y - car.y);
+    const end = await boardToPage(
+      page,
+      car.x - ((ball.x - car.x) / distance) * 2.3,
+      car.y - ((ball.y - car.y) / distance) * 2.3,
+    );
     await waitForArenaInput(page, start);
     await page.mouse.move(start.x, start.y);
     await page.mouse.down();

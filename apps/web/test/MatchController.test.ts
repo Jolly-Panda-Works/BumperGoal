@@ -97,7 +97,7 @@ describe('MatchController', () => {
     });
     c.start();
     const side = c.current.turn.side;
-    const disc = side === 'L' ? 0 : 5;
+    const disc = side === 'L' ? 0 : rulesConfig.discsPerTeam;
     let played = 0;
     c.bus.on('playShot', () => played++);
     expect(c.requestShot(disc, 0, 0.6)).toBeNull();
@@ -129,7 +129,7 @@ describe('MatchController', () => {
       clock: new FakeClock(),
     });
     c.start();
-    const other = c.current.turn.side === 'L' ? 5 : 0;
+    const other = c.current.turn.side === 'L' ? rulesConfig.discsPerTeam : 0;
     expect(c.requestShot(other, 0, 0.5)).toBe('not_your_disc');
   });
 

@@ -19,7 +19,7 @@ func TestFormationOwnershipAndIndependentKickoff(t *testing.T) {
 	r.Formation = gd().Cosmetics.Formations[3].Positions
 	r.OpponentFormation = gd().Cosmetics.Formations[1].Positions
 	bodies := rules.KickoffBodies(r)
-	if bodies[1].X != float32(r.Formation[1][0]) || bodies[6].X != -float32(r.OpponentFormation[1][0]) {
+	if bodies[1].X != float32(r.Formation[1][0]) || bodies[r.DiscsPerTeam+1].X != -float32(r.OpponentFormation[1][0]) {
 		t.Fatal("opponent formation was overwritten")
 	}
 }

@@ -583,9 +583,9 @@
     "unavailable": "Match details are unavailable. Reconnect and try again."
   },
   "formations": {
-    "formation_balanced": "Balanced",
-    "formation_diamond": "Diamond",
-    "formation_wall": "Wall",
+    "formation_balanced": "Balanced Triangle",
+    "formation_diamond": "Wide Triangle",
+    "formation_wall": "Back Three",
     "formation_claw": "Claw",
     "formation_javelin": "Javelin",
     "formation_scout": "Scout",

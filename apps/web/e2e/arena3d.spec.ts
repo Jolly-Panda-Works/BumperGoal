@@ -27,7 +27,7 @@ for (const viewport of [
       viewport.width >= 700 ? 'landscape' : 'portrait',
     );
     await expect.poll(() => models.size).toBe(2);
-    await expect(page.getByLabel('Bumper Goal 3D football arena')).toHaveAttribute('data-models-ready', '10');
+    await expect(page.getByLabel('Bumper Goal 3D football arena')).toHaveAttribute('data-models-ready', '6');
     const canvas = await page.getByLabel('Bumper Goal 3D football arena').boundingBox();
     expect(canvas).toMatchObject({ x: 0, y: 0, width: viewport.width, height: viewport.height });
     await expect(page.locator('.hud')).toBeInViewport();
@@ -38,10 +38,16 @@ for (const viewport of [
         }
       ).__fkMatch.state(),
     );
-    const car = state.bodies[state.turn.side === 'L' ? 3 : 8]!;
+    const car = state.bodies[state.turn.side === 'L' ? 1 : 4]!;
     const start = await boardToPage(page, car.x, car.y);
     const pull = viewport.width >= 700 ? 2.8 : 2.3;
-    const end = await boardToPage(page, car.x + (state.turn.side === 'L' ? -pull : pull), car.y);
+    const ball = state.bodies.at(-1)!;
+    const distance = Math.hypot(ball.x - car.x, ball.y - car.y);
+    const end = await boardToPage(
+      page,
+      car.x - ((ball.x - car.x) / distance) * pull,
+      car.y - ((ball.y - car.y) / distance) * pull,
+    );
     await waitForArenaInput(page, start);
     await page.mouse.move(start.x, start.y);
     await page.mouse.down();

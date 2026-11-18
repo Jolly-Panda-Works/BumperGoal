@@ -33,7 +33,7 @@ it('changes force limits, time budgets and guide range independently', () => {
     rngSeed: 1,
   });
   state.turn.side = 'R';
-  const shot = { seq: state.turn.seq, discIndex: 5, ...impulseFromAim(0, 1, bp) };
+  const shot = { seq: state.turn.seq, discIndex: rulesConfig.discsPerTeam, ...impulseFromAim(0, 1, bp) };
   expect(validateShot(state, 'R', shot, bp).ok).toBe(true);
   expect(validateShot(state, 'R', { ...shot, ix: physicsConfig.maxImpulse }, bp)).toEqual({
     ok: false,

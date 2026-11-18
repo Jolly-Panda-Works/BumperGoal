@@ -109,8 +109,8 @@ describe('AI decisions', () => {
       const s = match(5, 'R');
       // R attacks the left goal (x < 0). Ball near the goal, an R disc lined up behind it.
       const bodies = s.bodies.map((b) => ({ ...b }));
-      bodies[10] = { kind: 'ball', x: -5.2, y: 0.1 };
-      bodies[5] = { kind: 'disc', x: -3.2, y: 0.1 };
+      bodies[s.bodies.length - 1] = { kind: 'ball', x: -5.2, y: 0.1 };
+      bodies[s.discsPerTeam] = { kind: 'disc', x: -3.2, y: 0.1 };
       bodies[0] = { kind: 'disc', x: -6.2, y: 3.5 }; // keeper out of position
       const state = { ...s, bodies: toF32Bodies(bodies) };
       const d = decideShot(state, 'R', { ...profile, aimErrorDeg: 0, powerError: 0 }, sim, 1);

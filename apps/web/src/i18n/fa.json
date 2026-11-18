@@ -583,9 +583,9 @@
     "unavailable": "جزئیات مسابقه در دسترس نیست. اتصال را برقرار و دوباره تلاش کن."
   },
   "formations": {
-    "formation_balanced": "متعادل",
-    "formation_diamond": "الماس",
-    "formation_wall": "دیوار",
+    "formation_balanced": "مثلث متعادل",
+    "formation_diamond": "مثلث باز",
+    "formation_wall": "خط دفاع",
     "formation_claw": "چنگال",
     "formation_javelin": "نیزه",
     "formation_scout": "پیشاهنگ",

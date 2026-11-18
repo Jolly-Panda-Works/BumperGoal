@@ -21,12 +21,18 @@ test('new racing models play with animated wheels, exhaust and nitro', async ({ 
   await page.getByRole('button', { name: 'Kick off' }).click();
   await expect.poll(() => models.has('tiny-racer-6.glb') && models.has('tiny-racer-9.glb')).toBe(true);
   const canvas = page.getByLabel('Bumper Goal 3D football arena');
-  await expect(canvas).toHaveAttribute('data-models-ready', '10');
+  await expect(canvas).toHaveAttribute('data-models-ready', '6');
   expect(errors).toEqual([]);
   const state = await page.evaluate(() => (window as any).__fkMatch.state());
-  const car = state.bodies[state.turn.side === 'L' ? 3 : 8];
+  const car = state.bodies[state.turn.side === 'L' ? 1 : 4];
+  const ball = state.bodies.at(-1)!;
+  const distance = Math.hypot(ball.x - car.x, ball.y - car.y);
   const start = await boardToPage(page, car.x, car.y),
-    end = await boardToPage(page, car.x + (state.turn.side === 'L' ? -2.8 : 2.8), car.y);
+    end = await boardToPage(
+      page,
+      car.x - ((ball.x - car.x) / distance) * 2.8,
+      car.y - ((ball.y - car.y) / distance) * 2.8,
+    );
   await waitForArenaInput(page, start);
   await page.mouse.move(start.x, start.y);
   await page.mouse.down();

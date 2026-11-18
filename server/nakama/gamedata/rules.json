@@ -1,14 +1,12 @@
 {
-  "discsPerTeam": 5,
+  "discsPerTeam": 3,
   "goalsToWin": 2,
   "turnTimeMs": 15000,
   "timeoutForfeitCount": 3,
   "maxShots": 60,
   "formation": [
     [-6.2, 0],
-    [-4.4, 1.9],
-    [-4.4, -1.9],
-    [-2.2, 0.9],
-    [-2.2, -0.9]
+    [-2.4, -1.4],
+    [-2.4, 1.4]
   ]
 }

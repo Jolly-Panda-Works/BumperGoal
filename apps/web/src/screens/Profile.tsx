@@ -6,7 +6,7 @@ import { PanelScreen } from '../ui/components';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router';
-import { cosmetics, progressionConfig } from '@flickkick/config';
+import { cosmetics, progressionConfig, physicsConfig } from '@flickkick/config';
 import { levelProgress } from '@flickkick/rules';
 import { formatNumber } from '../i18n';
 import { isValidDisplayName, profileStore, useLocalProfile } from '../services/localProfile';
@@ -574,8 +574,15 @@ function FormationPreview({ id }: { id: string }) {
       />
       {formation?.positions.map(([x, y], i) => (
         <g key={i}>
-          <circle cx={60 + y * 13} cy={10 - x * 18} r="8" fill="#051d3b" />
-          <circle cx={60 + y * 13} cy={9 - x * 18} r="6.5" fill="#c6ff3d" stroke="#ecffad" strokeWidth="1.5" />
+          <circle cx={60 + y * 13} cy={12 - (x / physicsConfig.arena.halfWidth) * 118} r="8" fill="#051d3b" />
+          <circle
+            cx={60 + y * 13}
+            cy={11 - (x / physicsConfig.arena.halfWidth) * 118}
+            r="6.5"
+            fill="#c6ff3d"
+            stroke="#ecffad"
+            strokeWidth="1.5"
+          />
         </g>
       ))}
     </svg>

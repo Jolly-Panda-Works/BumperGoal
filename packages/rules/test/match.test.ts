@@ -58,8 +58,8 @@ describe('createMatch', () => {
   it('assigns disc ownership by index', () => {
     const s = newMatch();
     expect(discOwner(s, 0)).toBe('L');
-    expect(discOwner(s, 5)).toBe('R');
-    expect(discOwner(s, 10)).toBeNull(); // ball
+    expect(discOwner(s, rulesConfig.discsPerTeam)).toBe('R');
+    expect(discOwner(s, rulesConfig.discsPerTeam * 2)).toBeNull(); // ball
     expect(discOwner(s, -1)).toBeNull();
     expect(discOwner(s, 1.5)).toBeNull();
   });
@@ -82,10 +82,20 @@ describe('validateShot', () => {
       () => validateShot(s, side, { ...validShot(s), discIndex: 99 }, physicsConfig),
       'invalid_disc',
     ],
-    ['ball as disc', () => validateShot(s, side, { ...validShot(s), discIndex: 10 }, physicsConfig), 'invalid_disc'],
+    [
+      'ball as disc',
+      () => validateShot(s, side, { ...validShot(s), discIndex: rulesConfig.discsPerTeam * 2 }, physicsConfig),
+      'invalid_disc',
+    ],
     [
       'opponent disc',
-      () => validateShot(s, side, { ...validShot(s), discIndex: side === 'L' ? 5 : 0 }, physicsConfig),
+      () =>
+        validateShot(
+          s,
+          side,
+          { ...validShot(s), discIndex: side === 'L' ? rulesConfig.discsPerTeam : 0 },
+          physicsConfig,
+        ),
       'not_your_disc',
     ],
     ['NaN', () => validateShot(s, side, { ...validShot(s), ix: Number.NaN }, physicsConfig), 'non_finite'],
@@ -106,7 +116,11 @@ describe('validateShot', () => {
 
   it('impulseFromAim clamps power into the valid range', () => {
     for (const power of [-1, 0, 0.001, 0.5, 1, 7]) {
-      const shot = { seq: s.turn.seq, discIndex: side === 'L' ? 0 : 5, ...impulseFromAim(1.1, power, physicsConfig) };
+      const shot = {
+        seq: s.turn.seq,
+        discIndex: side === 'L' ? 0 : rulesConfig.discsPerTeam,
+        ...impulseFromAim(1.1, power, physicsConfig),
+      };
       expect(validateShot(s, side, shot, physicsConfig).ok).toBe(true);
     }
   });
