@@ -1,4 +1,5 @@
 import { ImpactEffects } from './ImpactEffects';
+import { CarTrails } from './CarTrails';
 import { collisionContact } from './collisionContact';
 import { kickoffCarHeading, resetKickoffViews } from './kickoffPresentation';
 import { isPhone } from '../services/device';
@@ -63,6 +64,7 @@ export class ThreeArena {
   private lastHeavyImpact = -1000;
   private impactCount = 0;
   private impactEffects: ImpactEffects;
+  private carTrails: CarTrails;
   private cameraRest = new THREE.Vector3();
   private lastTracks = -1000;
   private goalFlashUntil = 0;
@@ -99,6 +101,7 @@ export class ThreeArena {
     sun.shadow.radius = 1.5;
     this.scene.add(sun);
     this.impactEffects = new ImpactEffects(this.scene);
+    this.carTrails = new CarTrails(this.scene);
     this.renderer.domElement.dataset.impactCount = '0';
     this.tracksCanvas.width = 512;
     this.tracksCanvas.height = 1024;
@@ -125,6 +128,7 @@ export class ThreeArena {
       init.controller.bus.on('playShot', () => {
         if (this.pendingKickoffAt !== null) this.resetForKickoff();
         this.cancelAim();
+        this.carTrails.resetMotion();
         audio.play('kick');
         audio.playMusic('match', 0.4);
         audio.vibrate(20);
@@ -605,6 +609,7 @@ export class ThreeArena {
     resetKickoffViews(this.bodies, this.init.controller.current, this.orientation);
     this.tireMarks.clear();
     this.impactEffects.clear();
+    this.carTrails.clear();
     this.lastTracks = -Infinity;
     this.pendingKickoffAt = null;
     this.init.controller.world.set(HoldTrait, { until: 0 });
@@ -667,7 +672,10 @@ export class ThreeArena {
       if (this.init.controller.current.phase === 'AWAIT_SHOT') this.resetForKickoff();
       else this.pendingKickoffAt = null;
     }
-    if (!playing) this.tireMarks.resetMotion();
+    if (!playing) {
+      this.tireMarks.resetMotion();
+      this.carTrails.resetMotion();
+    }
     if (this.drag && (!this.init.controller.canAim() || playing)) this.cancelAim();
     for (const body of this.bodies) {
       const pos = body.entity.get(Position)!;
@@ -681,6 +689,15 @@ export class ThreeArena {
             movement.length() / physicsConfig.ball.radius,
           );
       } else {
+        if (playing && !settingsStore.get().reducedMotion)
+          this.carTrails.sample(
+            body.entity.get(BodyRef)!.index,
+            next,
+            movement,
+            delta,
+            this.clock,
+            this.init.trailIds?.[body.entity.get(Team)!.side],
+          );
         if (body.headingRoot)
           body.headingRoot.rotation.y =
             Math.PI - (body.entity.get(Heading)?.angle ?? 0) + (this.orientation === -1 ? Math.PI : 0);
@@ -699,6 +716,8 @@ export class ThreeArena {
       body.last.copy(next);
     }
     const settings = settingsStore.get();
+    this.carTrails.update(this.clock, settings.reducedMotion);
+    this.renderer.domElement.dataset.trailCount = String(this.carTrails.emittedCount);
     this.impactEffects.update(this.clock, this.camera, settings.reducedMotion);
     for (const body of this.bodies)
       if (body.chassis) {
@@ -778,6 +797,7 @@ export class ThreeArena {
       if (object instanceof THREE.Light && 'shadow' in object) (object as THREE.DirectionalLight).shadow?.dispose();
     });
     this.impactEffects.dispose();
+    this.carTrails.dispose();
     this.disposeTree(this.scene);
     this.renderer.dispose();
     this.renderer.forceContextLoss();
