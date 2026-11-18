@@ -242,3 +242,27 @@ body .profile-art__avatar .profile-art__avatar-edit svg {
 body :is(.shell, .dialog-backdrop, .toast-host) * {
   filter: none !important;
 }
+/* Price and action share one full-width purchase target. */
+.shell--catalog-art .catalog-art .shop-product > .btn.shop-buy-button {
+  grid-column: 1 / -1;
+  border-radius: 15px;
+}
+.shell--catalog-art .catalog-art .shop-buy-button > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 12px;
+  width: 100%;
+}
+.shell--catalog-art .catalog-art .shop-buy-button .price {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  direction: ltr;
+}

@@ -184,13 +184,14 @@ export function ShopScreen() {
                   {reaction.render(pack.id)}
                   <CurrencyPackArt id={pack.id} />
                   <strong>{t(`packs.${pack.id}`)}</strong>
-                  <PriceTag price={pack.grant} />
                   <Button
+                    className="shop-buy-button"
                     size="sm"
                     disabled={!!pack.oneTime && inventory.packs.includes(pack.id)}
                     onClick={() => setPurchase({ kind: 'currency', id: pack.id })}
                   >
-                    {t('shop.getPack')}
+                    <PriceTag price={pack.grant} />
+                    <span>{t('shop.getPack')}</span>
                   </Button>
                 </Card>
               ))
@@ -205,7 +206,7 @@ export function ShopScreen() {
                   <ItemPreview kind={tab} id={item.id} />
                   <strong>{t(`${tab}.${item.id}`)}</strong>
                   {tab === 'teams' && <TeamAttributes id={item.id} />}
-                  <PriceTag price={item.price} />
+                  {(rakhtkan || ownsLocal(tab, item.id)) && <PriceTag price={item.price} />}
                   <ShopActions>
                     {rakhtkan && equipmentState(tab, item.id) === 'active' ? (
                       <Badge tone="success">{t('locker.equipped')}</Badge>
@@ -223,10 +224,12 @@ export function ShopScreen() {
                         {rakhtkan && <Badge>{t('shop.locked')}</Badge>}
                         <Button
                           size="sm"
+                          className={!rakhtkan ? 'shop-buy-button' : ''}
                           disabled={buying !== null}
                           onClick={() => setPurchase({ kind: tab, id: item.id })}
                         >
-                          {t('shop.buy')}
+                          {!rakhtkan && <PriceTag price={item.price} />}
+                          <span>{t('shop.buy')}</span>
                         </Button>
                       </>
                     )}
