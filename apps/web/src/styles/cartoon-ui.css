@@ -1192,3 +1192,33 @@ html[dir='rtl'] {
   text-shadow: 0 1px #fff6a7;
   line-height: 1;
 }
+/* Compact name frame shares the Settings control height without shrinking the portrait. */
+.stadium-home__stage {
+  --home-identity-height: clamp(40px, 4.8cqw, 76px);
+}
+.stadium-profile--nameplate {
+  height: var(--home-identity-height);
+  min-height: 0;
+}
+.stadium-home .stadium-settings {
+  height: var(--home-identity-height);
+}
+.stadium-profile--nameplate .stadium-profile__portrait {
+  height: calc((12cqh - 6px) * 1.27);
+  top: -9px;
+}
+.stadium-profile--nameplate .stadium-profile__portrait > .stadium-profile__level {
+  right: -22%;
+}
+@media (max-aspect-ratio: 1/1) {
+  .stadium-home__stage {
+    --home-identity-height: clamp(32px, 10cqw, 76px);
+  }
+  .stadium-profile--nameplate {
+    top: 3.5%;
+  }
+  .stadium-profile--nameplate .stadium-profile__portrait {
+    height: calc((9cqh - 6px) * 1.16);
+    top: -3px;
+  }
+}
