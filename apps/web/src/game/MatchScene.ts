@@ -783,12 +783,11 @@ export class MatchScene extends Phaser.Scene {
       this.fx.focusLines(goal, 700, 0.6);
       this.confetti(scorer);
     }
-    const fa = i18n.language === 'fa';
     const label = i18n.t(ownGoal ? 'match.ownGoal' : 'match.goal');
     this.fx.goalSlam(
       label,
       hex(team.primary),
-      fa ? 'Vazirmatn, Rubik, sans-serif' : 'Rubik, Vazirmatn, sans-serif',
+      'Mikhak, sans-serif',
       'banner-goal',
       this.setup.bottomSide === 'R' ? -90 : 90,
     );

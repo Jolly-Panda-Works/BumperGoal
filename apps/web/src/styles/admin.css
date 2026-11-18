@@ -18,7 +18,7 @@
   z-index: 50;
   background: var(--a-bg);
   color: var(--a-text);
-  font-family: 'Rubik', 'Vazirmatn', system-ui, sans-serif;
+  font-family: 'Mikhak', system-ui, sans-serif;
   font-size: 14px;
   line-height: 1.4;
 }
@@ -1558,8 +1558,7 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
   color: var(--a-text);
   font:
-    400 12px/1.45 'Rubik',
-    'Vazirmatn',
+    400 12px/1.45 'Mikhak',
     system-ui,
     sans-serif;
   white-space: normal;

@@ -1,9 +1,4 @@
-import '@fontsource/rubik/400.css';
-import '@fontsource/rubik/600.css';
-import '@fontsource/rubik/800.css';
-import '@fontsource/vazirmatn/400.css';
-import '@fontsource/vazirmatn/600.css';
-import '@fontsource/vazirmatn/800.css';
+import './styles/fonts.css';
 import './styles/tokens.css';
 import './styles/app.css';
 import './i18n';
