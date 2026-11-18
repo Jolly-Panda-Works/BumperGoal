@@ -1,5 +1,6 @@
 import { ImpactEffects } from './ImpactEffects';
 import { CarTrails } from './CarTrails';
+import { CarDriveEffects, fullPowerNitro, wheelPivots, type CarDriveRig } from './CarDriveEffects';
 import { AimArrow } from './AimArrow';
 import { collisionContact } from './collisionContact';
 import { kickoffCarHeading, resetKickoffViews } from './kickoffPresentation';
@@ -8,7 +9,7 @@ import { preferredArenaLayout } from './arenaLayout';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import type { Entity } from 'koota';
-import { physicsConfig } from '@flickkick/config';
+import { physicsConfig, teamPhysics } from '@flickkick/config';
 import { audio } from '../services/audio';
 import { settingsStore } from '../services/settings';
 import { bodyEntities, clearAiming, runFrame, type Impact } from './ecs/systems';
@@ -39,6 +40,7 @@ interface Body3D {
   ring?: THREE.Mesh;
   chassis?: THREE.Group;
   headingRoot?: THREE.Group;
+  driveRig?: CarDriveRig;
   last: THREE.Vector3;
 }
 
@@ -66,6 +68,8 @@ export class ThreeArena {
   private impactCount = 0;
   private impactEffects: ImpactEffects;
   private carTrails: CarTrails;
+  private driveEffects: CarDriveEffects;
+  private nitroIndex = -1;
   private cameraRest = new THREE.Vector3();
   private lastTracks = -1000;
   private goalFlashUntil = 0;
@@ -104,6 +108,7 @@ export class ThreeArena {
     this.scene.add(sun);
     this.impactEffects = new ImpactEffects(this.scene);
     this.carTrails = new CarTrails(this.scene);
+    this.driveEffects = new CarDriveEffects(this.scene);
     this.renderer.domElement.dataset.impactCount = '0';
     this.tracksCanvas.width = 512;
     this.tracksCanvas.height = 1024;
@@ -127,10 +132,17 @@ export class ThreeArena {
     canvas.addEventListener('pointercancel', this.pointerCancel);
     canvas.addEventListener('lostpointercapture', this.pointerCancel);
     this.off.push(
-      init.controller.bus.on('playShot', () => {
+      init.controller.bus.on('playShot', (playback) => {
         if (this.pendingKickoffAt !== null) this.resetForKickoff();
         this.cancelAim();
         this.carTrails.resetMotion();
+        const physics =
+          init.controller.current.mode === 'tutorial'
+            ? physicsConfig
+            : teamPhysics(init.controller.playerOf(playback.side).teamId, physicsConfig);
+        this.nitroIndex = fullPowerNitro(playback.shot.ix, playback.shot.iy, physics.maxImpulse)
+          ? playback.shot.discIndex
+          : -1;
         audio.play('kick');
         audio.playMusic('match', 0.4);
         audio.vibrate(20);
@@ -396,6 +408,7 @@ export class ThreeArena {
       let ring: THREE.Mesh | undefined;
       let chassis: THREE.Group | undefined;
       let headingRoot: THREE.Group | undefined;
+      let driveRig: CarDriveRig | undefined;
       if (isBall) {
         const material = new THREE.MeshStandardMaterial({ color: 0xfcfaf0, roughness: 0.65 });
         const ball = new THREE.Mesh(new THREE.SphereGeometry(physicsConfig.ball.radius, 24, 16), material);
@@ -440,6 +453,7 @@ export class ThreeArena {
         headingRoot = new THREE.Group();
         object.add(headingRoot);
         headingRoot.rotation.y = kickoffCarHeading(entity.get(Team)!.side, this.orientation);
+        driveRig = this.driveEffects.rig(headingRoot);
         chassis = new THREE.Group();
         headingRoot.add(chassis);
         const modelRoot = chassis;
@@ -494,13 +508,14 @@ export class ThreeArena {
             const bounds = new THREE.Box3().setFromObject(gltf.scene).getSize(new THREE.Vector3());
             gltf.scene.scale.x = ((physicsConfig.disc.halfWidth ?? 0.45) * 2) / bounds.x;
             gltf.scene.scale.z = ((physicsConfig.disc.halfLength ?? 0.71) * 2) / bounds.z;
+            driveRig!.wheels = wheelPivots(gltf.scene);
             modelRoot.add(gltf.scene);
           },
           undefined,
           (error) => console.warn('Car model unavailable; keeping the 3D fallback.', error),
         );
       }
-      this.bodies.push({ entity, object, ring, chassis, headingRoot, last: object.position.clone() });
+      this.bodies.push({ entity, object, ring, chassis, headingRoot, driveRig, last: object.position.clone() });
     }
   }
 
@@ -614,6 +629,13 @@ export class ThreeArena {
     this.tireMarks.clear();
     this.impactEffects.clear();
     this.carTrails.clear();
+    this.driveEffects.clear();
+    this.nitroIndex = -1;
+    for (const body of this.bodies)
+      if (body.driveRig) {
+        body.driveRig.flame.visible = false;
+        for (const wheel of body.driveRig.wheels) wheel.pivot.rotation.x = 0;
+      }
     this.lastTracks = -Infinity;
     this.pendingKickoffAt = null;
     this.init.controller.world.set(HoldTrait, { until: 0 });
@@ -720,9 +742,25 @@ export class ThreeArena {
           this.tireMarks.sample(body.entity.get(BodyRef)!.index, next.x * 66, next.z * 66, this.clock, 0.27 * 66);
       }
       body.object.position.copy(next);
+      if (body.driveRig)
+        this.driveEffects.sample(
+          body.entity.get(BodyRef)!.index,
+          body.driveRig,
+          movement,
+          delta,
+          this.clock,
+          playing,
+          body.entity.get(BodyRef)!.index === this.nitroIndex,
+          settingsStore.get().reducedMotion,
+          settingsStore.get().graphics === 'low',
+        );
       body.last.copy(next);
     }
     const settings = settingsStore.get();
+    this.driveEffects.update(this.clock, delta, settings.reducedMotion);
+    this.renderer.domElement.dataset.smokeCount = String(this.driveEffects.smokeCount);
+    this.renderer.domElement.dataset.nitroCount = String(this.driveEffects.nitroCount);
+    this.renderer.domElement.dataset.wheelTurns = String(this.driveEffects.wheelTurns);
     this.carTrails.update(this.clock, settings.reducedMotion);
     this.renderer.domElement.dataset.trailCount = String(this.carTrails.emittedCount);
     this.impactEffects.update(this.clock, this.camera, settings.reducedMotion);
@@ -805,6 +843,7 @@ export class ThreeArena {
     });
     this.impactEffects.dispose();
     this.carTrails.dispose();
+    this.driveEffects.dispose();
     this.disposeTree(this.scene);
     this.renderer.dispose();
     this.renderer.forceContextLoss();

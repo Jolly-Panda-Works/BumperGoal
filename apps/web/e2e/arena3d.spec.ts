@@ -36,7 +36,8 @@ for (const viewport of [
     );
     const car = state.bodies[state.turn.side === 'L' ? 3 : 8]!;
     const start = await boardToPage(page, car.x, car.y);
-    const end = await boardToPage(page, car.x + (state.turn.side === 'L' ? -2.3 : 2.3), car.y);
+    const pull = viewport.width >= 700 ? 2.8 : 2.3;
+    const end = await boardToPage(page, car.x + (state.turn.side === 'L' ? -pull : pull), car.y);
     await page.mouse.move(start.x, start.y);
     await page.mouse.down();
     await page.mouse.move(end.x, end.y, { steps: 10 });
@@ -61,6 +62,11 @@ for (const viewport of [
       )
       .toBeGreaterThan(0);
     expect([...models].sort()).toEqual(['cicada.glb', 'cruiser.glb']);
+    const arena = page.getByLabel('Bumper Goal 3D football arena');
+    expect(Number(await arena.getAttribute('data-smoke-count'))).toBeGreaterThan(0);
+    expect(Number(await arena.getAttribute('data-wheel-turns'))).toBeGreaterThan(0);
+    if (viewport.width >= 700) expect(Number(await arena.getAttribute('data-nitro-count'))).toBeGreaterThan(0);
+    else expect(Number(await arena.getAttribute('data-nitro-count'))).toBe(0);
     expect(errors).toEqual([]);
   });
 }
