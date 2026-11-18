@@ -614,7 +614,9 @@
     "seconds": "{{value}}s",
     "forceHint": "Maximum shot power. Fixed for this team.",
     "timeHint": "Time available for each turn. Fixed for this team.",
-    "aimHint": "Length of the aiming guide. Fixed for this team."
+    "aimHint": "Length of the aiming guide. Fixed for this team.",
+    "weight": "Weight",
+    "weightHint": "Heavier cars accelerate less and resist being pushed."
   },
   "referral": {
     "invite": "Invite friends",

@@ -11,7 +11,8 @@
       "attributes": {
         "force": 8,
         "time": 6,
-        "aim": 4
+        "aim": 4,
+        "weight": 5
       }
     },
     {
@@ -25,7 +26,8 @@
       "attributes": {
         "force": 6,
         "time": 7,
-        "aim": 5
+        "aim": 5,
+        "weight": 7
       }
     },
     {
@@ -40,7 +42,8 @@
       "attributes": {
         "force": 5,
         "time": 5,
-        "aim": 8
+        "aim": 8,
+        "weight": 9
       }
     },
     {
@@ -55,7 +58,8 @@
       "attributes": {
         "force": 7,
         "time": 4,
-        "aim": 7
+        "aim": 7,
+        "weight": 5
       }
     },
     {
@@ -70,7 +74,8 @@
       "attributes": {
         "force": 4,
         "time": 8,
-        "aim": 6
+        "aim": 6,
+        "weight": 7
       }
     },
     {
@@ -85,7 +90,8 @@
       "attributes": {
         "force": 6,
         "time": 6,
-        "aim": 6
+        "aim": 6,
+        "weight": 9
       }
     },
     {
@@ -100,7 +106,8 @@
       "attributes": {
         "force": 7,
         "time": 6,
-        "aim": 7
+        "aim": 7,
+        "weight": 5
       }
     },
     {
@@ -115,7 +122,8 @@
       "attributes": {
         "force": 5,
         "time": 7,
-        "aim": 5
+        "aim": 5,
+        "weight": 7
       }
     },
     {
@@ -130,7 +138,8 @@
       "attributes": {
         "force": 4,
         "time": 4,
-        "aim": 9
+        "aim": 9,
+        "weight": 9
       }
     },
     {
@@ -145,7 +154,8 @@
       "attributes": {
         "force": 6,
         "time": 8,
-        "aim": 4
+        "aim": 4,
+        "weight": 5
       }
     },
     {
@@ -160,7 +170,8 @@
       "attributes": {
         "force": 9,
         "time": 4,
-        "aim": 4
+        "aim": 4,
+        "weight": 7
       }
     },
     {
@@ -175,7 +186,8 @@
       "attributes": {
         "force": 6,
         "time": 8,
-        "aim": 6
+        "aim": 6,
+        "weight": 9
       }
     },
     {
@@ -190,7 +202,8 @@
       "attributes": {
         "force": 7,
         "time": 8,
-        "aim": 5
+        "aim": 5,
+        "weight": 5
       }
     },
     {
@@ -205,7 +218,8 @@
       "attributes": {
         "force": 5,
         "time": 9,
-        "aim": 6
+        "aim": 6,
+        "weight": 7
       }
     },
     {
@@ -220,7 +234,8 @@
       "attributes": {
         "force": 7,
         "time": 6,
-        "aim": 4
+        "aim": 4,
+        "weight": 9
       }
     },
     {
@@ -235,7 +250,8 @@
       "attributes": {
         "force": 7,
         "time": 7,
-        "aim": 4
+        "aim": 4,
+        "weight": 5
       }
     },
     {
@@ -250,7 +266,8 @@
       "attributes": {
         "force": 6,
         "time": 9,
-        "aim": 3
+        "aim": 3,
+        "weight": 7
       }
     },
     {
@@ -265,7 +282,8 @@
       "attributes": {
         "force": 4,
         "time": 9,
-        "aim": 6
+        "aim": 6,
+        "weight": 9
       }
     },
     {
@@ -280,7 +298,8 @@
       "attributes": {
         "force": 7,
         "time": 8,
-        "aim": 3
+        "aim": 3,
+        "weight": 5
       }
     },
     {
@@ -295,7 +314,8 @@
       "attributes": {
         "force": 9,
         "time": 3,
-        "aim": 8
+        "aim": 8,
+        "weight": 7
       }
     },
     {
@@ -310,7 +330,8 @@
       "attributes": {
         "force": 8,
         "time": 5,
-        "aim": 4
+        "aim": 4,
+        "weight": 9
       }
     },
     {
@@ -325,7 +346,8 @@
       "attributes": {
         "force": 4,
         "time": 7,
-        "aim": 8
+        "aim": 8,
+        "weight": 5
       }
     },
     {
@@ -340,7 +362,8 @@
       "attributes": {
         "force": 9,
         "time": 5,
-        "aim": 5
+        "aim": 5,
+        "weight": 7
       }
     },
     {
@@ -355,7 +378,8 @@
       "attributes": {
         "force": 5,
         "time": 5,
-        "aim": 9
+        "aim": 9,
+        "weight": 9
       }
     },
     {
@@ -370,7 +394,8 @@
       "attributes": {
         "force": 6,
         "time": 3,
-        "aim": 8
+        "aim": 8,
+        "weight": 5
       }
     },
     {
@@ -385,7 +410,8 @@
       "attributes": {
         "force": 4,
         "time": 5,
-        "aim": 8
+        "aim": 8,
+        "weight": 7
       }
     },
     {
@@ -400,7 +426,8 @@
       "attributes": {
         "force": 4,
         "time": 6,
-        "aim": 7
+        "aim": 7,
+        "weight": 9
       }
     },
     {
@@ -415,7 +442,8 @@
       "attributes": {
         "force": 6,
         "time": 8,
-        "aim": 5
+        "aim": 5,
+        "weight": 5
       }
     },
     {
@@ -430,7 +458,8 @@
       "attributes": {
         "force": 6,
         "time": 9,
-        "aim": 5
+        "aim": 5,
+        "weight": 7
       }
     },
     {
@@ -445,7 +474,8 @@
       "attributes": {
         "force": 8,
         "time": 4,
-        "aim": 5
+        "aim": 5,
+        "weight": 9
       }
     },
     {
@@ -460,7 +490,8 @@
       "attributes": {
         "force": 7,
         "time": 9,
-        "aim": 3
+        "aim": 3,
+        "weight": 5
       }
     },
     {
@@ -475,7 +506,8 @@
       "attributes": {
         "force": 5,
         "time": 6,
-        "aim": 7
+        "aim": 7,
+        "weight": 7
       }
     },
     {
@@ -490,7 +522,8 @@
       "attributes": {
         "force": 4,
         "time": 5,
-        "aim": 9
+        "aim": 9,
+        "weight": 9
       }
     },
     {
@@ -505,7 +538,8 @@
       "attributes": {
         "force": 7,
         "time": 7,
-        "aim": 6
+        "aim": 6,
+        "weight": 5
       }
     },
     {
@@ -520,7 +554,8 @@
       "attributes": {
         "force": 8,
         "time": 6,
-        "aim": 6
+        "aim": 6,
+        "weight": 7
       }
     },
     {
@@ -535,7 +570,8 @@
       "attributes": {
         "force": 9,
         "time": 7,
-        "aim": 4
+        "aim": 4,
+        "weight": 9
       }
     },
     {
@@ -550,7 +586,8 @@
       "attributes": {
         "force": 5,
         "time": 4,
-        "aim": 8
+        "aim": 8,
+        "weight": 5
       }
     },
     {
@@ -565,7 +602,8 @@
       "attributes": {
         "force": 6,
         "time": 8,
-        "aim": 3
+        "aim": 3,
+        "weight": 7
       }
     },
     {
@@ -580,7 +618,8 @@
       "attributes": {
         "force": 5,
         "time": 8,
-        "aim": 7
+        "aim": 7,
+        "weight": 9
       }
     },
     {
@@ -595,7 +634,8 @@
       "attributes": {
         "force": 7,
         "time": 4,
-        "aim": 6
+        "aim": 6,
+        "weight": 5
       }
     },
     {
@@ -610,7 +650,8 @@
       "attributes": {
         "force": 7,
         "time": 5,
-        "aim": 5
+        "aim": 5,
+        "weight": 7
       }
     },
     {
@@ -625,7 +666,8 @@
       "attributes": {
         "force": 7,
         "time": 9,
-        "aim": 4
+        "aim": 4,
+        "weight": 9
       }
     },
     {
@@ -640,7 +682,8 @@
       "attributes": {
         "force": 6,
         "time": 9,
-        "aim": 4
+        "aim": 4,
+        "weight": 5
       }
     },
     {
@@ -655,7 +698,8 @@
       "attributes": {
         "force": 8,
         "time": 8,
-        "aim": 3
+        "aim": 3,
+        "weight": 7
       }
     },
     {
@@ -670,7 +714,8 @@
       "attributes": {
         "force": 7,
         "time": 8,
-        "aim": 4
+        "aim": 4,
+        "weight": 9
       }
     },
     {
@@ -685,7 +730,8 @@
       "attributes": {
         "force": 7,
         "time": 3,
-        "aim": 8
+        "aim": 8,
+        "weight": 5
       }
     },
     {
@@ -700,7 +746,8 @@
       "attributes": {
         "force": 4,
         "time": 8,
-        "aim": 5
+        "aim": 5,
+        "weight": 7
       }
     },
     {
@@ -715,7 +762,8 @@
       "attributes": {
         "force": 7,
         "time": 4,
-        "aim": 9
+        "aim": 9,
+        "weight": 9
       }
     },
     {
@@ -730,7 +778,8 @@
       "attributes": {
         "force": 8,
         "time": 6,
-        "aim": 3
+        "aim": 3,
+        "weight": 5
       }
     },
     {
@@ -745,7 +794,8 @@
       "attributes": {
         "force": 8,
         "time": 7,
-        "aim": 5
+        "aim": 5,
+        "weight": 7
       }
     },
     {
@@ -760,7 +810,8 @@
       "attributes": {
         "force": 5,
         "time": 9,
-        "aim": 3
+        "aim": 3,
+        "weight": 9
       }
     },
     {
@@ -775,7 +826,8 @@
       "attributes": {
         "force": 8,
         "time": 4,
-        "aim": 7
+        "aim": 7,
+        "weight": 5
       }
     },
     {
@@ -790,7 +842,8 @@
       "attributes": {
         "force": 5,
         "time": 9,
-        "aim": 4
+        "aim": 4,
+        "weight": 7
       }
     },
     {
@@ -805,7 +858,8 @@
       "attributes": {
         "force": 4,
         "time": 6,
-        "aim": 9
+        "aim": 9,
+        "weight": 9
       }
     },
     {
@@ -820,7 +874,8 @@
       "attributes": {
         "force": 5,
         "time": 8,
-        "aim": 5
+        "aim": 5,
+        "weight": 5
       }
     },
     {
@@ -835,7 +890,8 @@
       "attributes": {
         "force": 6,
         "time": 4,
-        "aim": 7
+        "aim": 7,
+        "weight": 7
       }
     },
     {
@@ -850,7 +906,8 @@
       "attributes": {
         "force": 3,
         "time": 6,
-        "aim": 8
+        "aim": 8,
+        "weight": 9
       }
     },
     {
@@ -865,7 +922,8 @@
       "attributes": {
         "force": 6,
         "time": 6,
-        "aim": 8
+        "aim": 8,
+        "weight": 5
       }
     },
     {
@@ -880,7 +938,8 @@
       "attributes": {
         "force": 5,
         "time": 6,
-        "aim": 8
+        "aim": 8,
+        "weight": 7
       }
     },
     {
@@ -895,7 +954,8 @@
       "attributes": {
         "force": 7,
         "time": 3,
-        "aim": 7
+        "aim": 7,
+        "weight": 9
       }
     },
     {
@@ -910,7 +970,8 @@
       "attributes": {
         "force": 8,
         "time": 7,
-        "aim": 3
+        "aim": 3,
+        "weight": 5
       }
     },
     {
@@ -925,7 +986,8 @@
       "attributes": {
         "force": 6,
         "time": 5,
-        "aim": 8
+        "aim": 8,
+        "weight": 7
       }
     },
     {
@@ -940,7 +1002,8 @@
       "attributes": {
         "force": 9,
         "time": 6,
-        "aim": 4
+        "aim": 4,
+        "weight": 9
       }
     },
     {
@@ -955,7 +1018,8 @@
       "attributes": {
         "force": 5,
         "time": 5,
-        "aim": 7
+        "aim": 7,
+        "weight": 5
       }
     },
     {
@@ -970,7 +1034,8 @@
       "attributes": {
         "force": 4,
         "time": 7,
-        "aim": 7
+        "aim": 7,
+        "weight": 7
       }
     },
     {
@@ -985,7 +1050,8 @@
       "attributes": {
         "force": 7,
         "time": 6,
-        "aim": 5
+        "aim": 5,
+        "weight": 9
       }
     },
     {
@@ -1000,7 +1066,8 @@
       "attributes": {
         "force": 8,
         "time": 7,
-        "aim": 4
+        "aim": 4,
+        "weight": 5
       }
     },
     {
@@ -1015,7 +1082,8 @@
       "attributes": {
         "force": 3,
         "time": 9,
-        "aim": 5
+        "aim": 5,
+        "weight": 7
       }
     },
     {
@@ -1030,7 +1098,8 @@
       "attributes": {
         "force": 9,
         "time": 4,
-        "aim": 7
+        "aim": 7,
+        "weight": 9
       }
     },
     {
@@ -1045,7 +1114,8 @@
       "attributes": {
         "force": 9,
         "time": 5,
-        "aim": 3
+        "aim": 3,
+        "weight": 5
       }
     },
     {
@@ -1060,7 +1130,8 @@
       "attributes": {
         "force": 4,
         "time": 8,
-        "aim": 7
+        "aim": 7,
+        "weight": 7
       }
     },
     {
@@ -1075,7 +1146,8 @@
       "attributes": {
         "force": 5,
         "time": 3,
-        "aim": 9
+        "aim": 9,
+        "weight": 9
       }
     },
     {
@@ -1090,7 +1162,8 @@
       "attributes": {
         "force": 5,
         "time": 4,
-        "aim": 9
+        "aim": 9,
+        "weight": 5
       }
     },
     {
@@ -1105,7 +1178,8 @@
       "attributes": {
         "force": 6,
         "time": 5,
-        "aim": 6
+        "aim": 6,
+        "weight": 7
       }
     },
     {
@@ -1120,7 +1194,8 @@
       "attributes": {
         "force": 5,
         "time": 6,
-        "aim": 6
+        "aim": 6,
+        "weight": 9
       }
     },
     {
@@ -1135,7 +1210,8 @@
       "attributes": {
         "force": 3,
         "time": 9,
-        "aim": 7
+        "aim": 7,
+        "weight": 5
       }
     },
     {
@@ -1150,7 +1226,8 @@
       "attributes": {
         "force": 4,
         "time": 7,
-        "aim": 9
+        "aim": 9,
+        "weight": 7
       }
     },
     {
@@ -1165,7 +1242,8 @@
       "attributes": {
         "force": 9,
         "time": 7,
-        "aim": 3
+        "aim": 3,
+        "weight": 9
       }
     },
     {
@@ -1180,7 +1258,8 @@
       "attributes": {
         "force": 4,
         "time": 9,
-        "aim": 7
+        "aim": 7,
+        "weight": 5
       }
     },
     {
@@ -1195,7 +1274,8 @@
       "attributes": {
         "force": 3,
         "time": 7,
-        "aim": 7
+        "aim": 7,
+        "weight": 7
       }
     },
     {
@@ -1210,7 +1290,8 @@
       "attributes": {
         "force": 7,
         "time": 5,
-        "aim": 7
+        "aim": 7,
+        "weight": 9
       }
     },
     {
@@ -1225,7 +1306,8 @@
       "attributes": {
         "force": 7,
         "time": 5,
-        "aim": 8
+        "aim": 8,
+        "weight": 5
       }
     },
     {
@@ -1240,7 +1322,8 @@
       "attributes": {
         "force": 8,
         "time": 3,
-        "aim": 6
+        "aim": 6,
+        "weight": 7
       }
     },
     {
@@ -1255,7 +1338,8 @@
       "attributes": {
         "force": 6,
         "time": 7,
-        "aim": 7
+        "aim": 7,
+        "weight": 9
       }
     },
     {
@@ -1270,7 +1354,8 @@
       "attributes": {
         "force": 3,
         "time": 9,
-        "aim": 6
+        "aim": 6,
+        "weight": 5
       }
     },
     {
@@ -1285,7 +1370,8 @@
       "attributes": {
         "force": 8,
         "time": 3,
-        "aim": 7
+        "aim": 7,
+        "weight": 7
       }
     },
     {
@@ -1300,7 +1386,8 @@
       "attributes": {
         "force": 9,
         "time": 4,
-        "aim": 6
+        "aim": 6,
+        "weight": 9
       }
     },
     {
@@ -1315,7 +1402,8 @@
       "attributes": {
         "force": 6,
         "time": 7,
-        "aim": 6
+        "aim": 6,
+        "weight": 5
       }
     },
     {
@@ -1330,7 +1418,8 @@
       "attributes": {
         "force": 7,
         "time": 4,
-        "aim": 8
+        "aim": 8,
+        "weight": 7
       }
     },
     {
@@ -1345,7 +1434,8 @@
       "attributes": {
         "force": 8,
         "time": 4,
-        "aim": 8
+        "aim": 8,
+        "weight": 9
       }
     },
     {
@@ -1360,7 +1450,8 @@
       "attributes": {
         "force": 4,
         "time": 8,
-        "aim": 8
+        "aim": 8,
+        "weight": 5
       }
     }
   ],

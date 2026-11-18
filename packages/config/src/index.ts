@@ -45,6 +45,7 @@ export interface PhysicsConfig {
 }
 
 export interface RulesConfig {
+  carMassScales?: [number, number];
   discsPerTeam: number;
   goalsToWin: number;
   turnTimeMs: number;
@@ -114,6 +115,7 @@ export type Price = Partial<Record<CurrencyId, number>>;
 export type TeamGroup = 'original' | 'nation' | 'club';
 
 export interface TeamAttributes {
+  weight: number;
   force: number;
   time: number;
   aim: number;
@@ -293,9 +295,10 @@ export function arenaPrize(arena: ArenaDef, houseCut = arenasConfig.houseCut): n
 
 /** Fixed team abilities; unknown legacy/test teams retain the base gameplay limits. */
 export function teamAttributes(id: string): TeamAttributes {
-  return cosmetics.teams.find((t) => t.id === id)?.attributes ?? { force: 6, time: 6, aim: 6 };
+  return cosmetics.teams.find((t) => t.id === id)?.attributes ?? { force: 6, time: 6, aim: 6, weight: 6 };
 }
 /** Effect of each team attribute (1-10); mirrored in server/nakama/gamedata (TeamMaxImpulse, TeamTurnMs). */
+export const weightScale = (weight: number): number => 0.7 + 0.06 * weight;
 export const forceScale = (force: number): number => 0.7 + 0.03 * force;
 export const timeScale = (time: number): number => 0.6 + time / 15;
 export const aimRange = (aim: number): number => 260 * (0.4 + aim / 10);

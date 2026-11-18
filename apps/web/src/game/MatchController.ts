@@ -6,6 +6,8 @@ import {
   physicsConfig,
   rulesConfig,
   teamPhysics,
+  teamAttributes,
+  weightScale,
   teamTurnTime,
   type AIProfile,
   type RulesConfig,
@@ -114,7 +116,10 @@ export class MatchController implements MatchDriver {
   private lastEvents: MatchEvent[] = [];
 
   constructor(private readonly options: ControllerOptions) {
-    this.rules = options.rules ?? rulesConfig;
+    this.rules = {
+      ...(options.rules ?? rulesConfig),
+      carMassScales: options.players.map((p) => weightScale(teamAttributes(p.teamId).weight)) as [number, number],
+    };
     this.clock = options.clock ?? browserClock;
     this.state = createMatch({
       matchId: options.matchId,

@@ -17,6 +17,8 @@ import {
 // action scripts with its own rules + Rapier and must reach the same states.
 const VECTORS = fileURLToPath(new URL('./vectors.json', import.meta.url));
 
+const vectorRules = { ...rulesConfig, carMassScales: [1, 1.12] as [number, number] };
+
 type Action = { type: 'shot'; discIndex: number; ix: number; iy: number } | { type: 'timeout' };
 
 interface Snapshot {
@@ -54,7 +56,7 @@ function script(
     matchId: `vec-${seed}`,
     mode: 'online',
     rngSeed: seed,
-    rules: rulesConfig,
+    rules: vectorRules,
     players: [
       { id: 'a', displayName: 'A', level: 1, teamId: 'team_volt', isBot: false },
       { id: 'b', displayName: 'B', level: 1, teamId: 'team_coral', isBot: false },
@@ -80,7 +82,7 @@ function script(
     actions.push({ type: 'shot', discIndex, ix, iy });
     const shot = { seq: state.turn.seq, discIndex, ix, iy };
     const result = sim.simulateShot(state.bodies, { bodyIndex: discIndex, ix, iy });
-    const r = applyShotResult(state, side, shot, result, rulesConfig);
+    const r = applyShotResult(state, side, shot, result, vectorRules);
     state = r.state;
     snapshots.push(snapshot(state, r.events));
   }
@@ -96,10 +98,10 @@ describe('rules vectors for the Go server', () => {
   it('match vectors.json (regenerate with UPDATE_VECTORS=1)', { timeout: 120_000 }, () => {
     const scripts = [11, 23, 37, 41, 59].map((seed) => script(seed, 70, sim));
     if (process.env.UPDATE_VECTORS === '1' || !existsSync(VECTORS)) {
-      writeFileSync(VECTORS, `${JSON.stringify({ rules: rulesConfig, scripts }, null, 1)}\n`);
+      writeFileSync(VECTORS, `${JSON.stringify({ rules: vectorRules, scripts }, null, 1)}\n`);
     }
     const expected = JSON.parse(readFileSync(VECTORS, 'utf8')) as { rules: unknown; scripts: typeof scripts };
-    expect(expected.rules, 'rules.json changed: regenerate vectors').toEqual(rulesConfig);
+    expect(expected.rules, 'rules.json changed: regenerate vectors').toEqual(vectorRules);
     expect(scripts).toEqual(expected.scripts);
     // The scripts must exercise the interesting paths.
     const all = scripts.flatMap((s) => s.snapshots.flatMap((x) => x.events));

@@ -64,3 +64,12 @@ it('starts the selected car and its collider facing the shot arrow', () => {
   expect(result.angles![0]).toBeCloseTo(Math.PI / 4, 6);
   expect(result.bodies[0]!.angle).toBeCloseTo(Math.PI / 4, 6);
 });
+
+it('heavier cars move less under the same impulse and retain their mass', () => {
+  const shoot = (massScale: number) =>
+    sim.simulateShot(toF32Bodies([{ kind: 'disc', x: 0, y: 0, massScale }]), { bodyIndex: 0, ix: 2, iy: 0 });
+  const light = shoot(1),
+    heavy = shoot(1.24);
+  expect(heavy.bodies[0]!.x).toBeLessThan(light.bodies[0]!.x * 0.9);
+  expect(heavy.bodies[0]!.massScale).toBe(Math.fround(1.24));
+});

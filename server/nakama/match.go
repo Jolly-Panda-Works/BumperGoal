@@ -162,6 +162,10 @@ func (m *Match) MatchInit(ctx context.Context, logger runtime.Logger, _ *sql.DB,
 			avatars[rules.R] = d.Cosmetics.Avatars[int(randomSeed())%len(d.Cosmetics.Avatars)].ID
 		}
 	}
+	for i, p := range players {
+		a, _ := d.Cosmetics.TeamAttributes(p.TeamID)
+		matchRules.CarMassScales[i] = .7 + .06*float64(a.Weight)
+	}
 	state := &matchState{
 		trailIDs:     trailIDs,
 		matchRules:   matchRules,

@@ -138,18 +138,24 @@ func MixSeed(a, b uint32) uint32 {
 
 func KickoffBodies(r gamedata.Rules) []sim.Body {
 	n := r.DiscsPerTeam
+	scales := r.CarMassScales
+	for i := range scales {
+		if scales[i] == 0 {
+			scales[i] = 1
+		}
+	}
 	bodies := make([]sim.Body, 0, 2*n+1)
 	for i := 0; i < n; i++ {
-		bodies = append(bodies, sim.Body{Kind: "disc", X: float32(r.Formation[i][0]), Y: float32(r.Formation[i][1]), Angle: 0})
+		bodies = append(bodies, sim.Body{Kind: "disc", X: float32(r.Formation[i][0]), Y: float32(r.Formation[i][1]), Angle: 0, MassScale: float32(scales[0])})
 	}
 	opponent := r.OpponentFormation
 	if len(opponent) != n {
 		opponent = r.Formation
 	}
 	for i := 0; i < n; i++ {
-		bodies = append(bodies, sim.Body{Kind: "disc", X: -float32(opponent[i][0]), Y: float32(opponent[i][1]), Angle: float32(math.Pi)})
+		bodies = append(bodies, sim.Body{Kind: "disc", X: -float32(opponent[i][0]), Y: float32(opponent[i][1]), Angle: float32(math.Pi), MassScale: float32(scales[1])})
 	}
-	return append(bodies, sim.Body{Kind: "ball", X: 0, Y: 0})
+	return append(bodies, sim.Body{Kind: "ball", X: 0, Y: 0, MassScale: 1})
 }
 
 func NewMatch(matchID, mode string, players [2]Player, seed uint32, r gamedata.Rules) *State {

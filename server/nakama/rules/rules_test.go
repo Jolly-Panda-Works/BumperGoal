@@ -48,6 +48,7 @@ func TestRulesVectorsMatchTypeScript(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
+	data.Rules.CarMassScales = [2]float64{1, 1.12}
 	var physics sim.Config
 	if err := json.Unmarshal(data.PhysicsRaw, &physics); err != nil {
 		t.Fatal(err)

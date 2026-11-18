@@ -11,7 +11,8 @@
       [-4.4, -1.9],
       [-2.2, 0.9],
       [-2.2, -0.9]
-    ]
+    ],
+    "carMassScales": [1, 1.12]
   },
   "scripts": [
     {
@@ -26,227 +27,68 @@
         {
           "type": "shot",
           "discIndex": 1,
-          "ix": 6.0122528076171875,
-          "iy": -1.120010256767273
+          "ix": 5.948517799377441,
+          "iy": -1.4201195240020752
         },
         {
           "type": "shot",
           "discIndex": 7,
-          "ix": -1.3544626235961914,
-          "iy": -7.388629913330078
+          "ix": -6.911403656005859,
+          "iy": 2.942603349685669
         },
         {
           "type": "shot",
           "discIndex": 3,
-          "ix": 5.008617877960205,
-          "iy": -2.5029115676879883
+          "ix": 3.6553287506103516,
+          "iy": 4.241390228271484
         },
         {
           "type": "shot",
           "discIndex": 9,
-          "ix": 2.3491764068603516,
-          "iy": 6.813360214233398
-        },
-        {
-          "type": "shot",
-          "discIndex": 7,
-          "ix": -8.085859298706055,
-          "iy": 2.88924241065979
-        },
-        {
-          "type": "shot",
-          "discIndex": 1,
-          "ix": 3.1910154819488525,
-          "iy": -3.144531726837158
-        },
-        {
-          "type": "shot",
-          "discIndex": 7,
-          "ix": 2.0309860706329346,
-          "iy": -3.580002546310425
-        },
-        {
-          "type": "shot",
-          "discIndex": 0,
-          "ix": 5.612800598144531,
-          "iy": -1.7974627017974854
-        },
-        {
-          "type": "shot",
-          "discIndex": 9,
-          "ix": 5.551660060882568,
-          "iy": -1.098680853843689
-        },
-        {
-          "type": "shot",
-          "discIndex": 0,
-          "ix": 8.17218017578125,
-          "iy": 1.4186347723007202
-        },
-        {
-          "type": "shot",
-          "discIndex": 9,
-          "ix": -7.427487850189209,
-          "iy": -4.603115081787109
-        },
-        {
-          "type": "timeout"
-        },
-        {
-          "type": "shot",
-          "discIndex": 7,
-          "ix": -5.790793418884277,
-          "iy": 0.05231829732656479
-        },
-        {
-          "type": "shot",
-          "discIndex": 0,
-          "ix": 4.387276649475098,
-          "iy": 0.4723466634750366
-        },
-        {
-          "type": "shot",
-          "discIndex": 5,
-          "ix": -4.840480804443359,
-          "iy": -3.394282579421997
-        },
-        {
-          "type": "timeout"
-        },
-        {
-          "type": "timeout"
-        },
-        {
-          "type": "timeout"
-        },
-        {
-          "type": "shot",
-          "discIndex": 5,
-          "ix": -6.01462984085083,
-          "iy": -6.2087883949279785
-        },
-        {
-          "type": "shot",
-          "discIndex": 4,
-          "ix": 1.412147045135498,
-          "iy": -8.063477516174316
-        },
-        {
-          "type": "shot",
-          "discIndex": 5,
-          "ix": -5.950728416442871,
-          "iy": -6.420275688171387
+          "ix": 4.715678691864014,
+          "iy": 5.450035095214844
         },
         {
           "type": "shot",
           "discIndex": 2,
-          "ix": 8.647404670715332,
-          "iy": -1.5033035278320312
-        },
-        {
-          "type": "shot",
-          "discIndex": 5,
-          "ix": -4.109394550323486,
-          "iy": 3.134652614593506
-        },
-        {
-          "type": "shot",
-          "discIndex": 4,
-          "ix": -1.993316650390625,
-          "iy": 7.8432488441467285
-        },
-        {
-          "type": "shot",
-          "discIndex": 5,
-          "ix": -6.13111686706543,
-          "iy": 3.464639902114868
-        },
-        {
-          "type": "shot",
-          "discIndex": 2,
-          "ix": -6.4945387840271,
-          "iy": 3.8901398181915283
-        },
-        {
-          "type": "shot",
-          "discIndex": 3,
-          "ix": 5.967027187347412,
-          "iy": -3.974398612976074
-        },
-        {
-          "type": "shot",
-          "discIndex": 9,
-          "ix": -0.18555980920791626,
-          "iy": -6.163134574890137
-        },
-        {
-          "type": "shot",
-          "discIndex": 0,
-          "ix": 4.4789886474609375,
-          "iy": -4.374744415283203
-        },
-        {
-          "type": "shot",
-          "discIndex": 7,
-          "ix": -5.723752021789551,
-          "iy": 0.6026849150657654
-        },
-        {
-          "type": "timeout"
-        },
-        {
-          "type": "timeout"
-        },
-        {
-          "type": "shot",
-          "discIndex": 4,
-          "ix": -3.6039321422576904,
-          "iy": 7.997371673583984
-        },
-        {
-          "type": "shot",
-          "discIndex": 7,
-          "ix": -4.275666236877441,
-          "iy": 3.9562604427337646
-        },
-        {
-          "type": "shot",
-          "discIndex": 0,
-          "ix": 2.506951093673706,
-          "iy": -2.7205286026000977
-        },
-        {
-          "type": "shot",
-          "discIndex": 9,
-          "ix": -5.191199779510498,
-          "iy": 1.6518754959106445
-        },
-        {
-          "type": "shot",
-          "discIndex": 0,
-          "ix": 5.480595588684082,
-          "iy": 0.9079171419143677
-        },
-        {
-          "type": "timeout"
-        },
-        {
-          "type": "shot",
-          "discIndex": 2,
-          "ix": 8.230602264404297,
-          "iy": 1.7288191318511963
+          "ix": 6.857953071594238,
+          "iy": 5.166945934295654
         },
         {
           "type": "shot",
           "discIndex": 6,
-          "ix": -5.386216163635254,
-          "iy": -3.4333574771881104
+          "ix": -1.705568552017212,
+          "iy": 4.142667770385742
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": 3.2675955295562744,
+          "iy": 2.502826690673828
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": -2.5811939239501953,
+          "iy": 5.298286437988281
         },
         {
           "type": "shot",
           "discIndex": 4,
-          "ix": 2.82778263092041,
-          "iy": -4.197390079498291
+          "ix": 3.261523723602295,
+          "iy": 4.624985694885254
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": -5.1196136474609375,
+          "iy": 6.52584171295166
+        },
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": -4.525655269622803,
+          "iy": 7.474937438964844
         },
         {
           "type": "timeout"
@@ -254,164 +96,323 @@
         {
           "type": "shot",
           "discIndex": 2,
-          "ix": -7.615712642669678,
-          "iy": 0.7494533061981201
+          "ix": 5.545886993408203,
+          "iy": 1.6670814752578735
         },
         {
           "type": "shot",
-          "discIndex": 6,
-          "ix": -4.042159080505371,
-          "iy": 3.954902410507202
+          "discIndex": 5,
+          "ix": -4.361298561096191,
+          "iy": -0.671108067035675
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": 4.9741129875183105,
+          "iy": 3.1952476501464844
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": 5.455127239227295,
+          "iy": 6.705699920654297
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": -6.309837341308594,
+          "iy": 5.215340614318848
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": 6.2942657470703125,
+          "iy": 6.083858013153076
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": -7.217521667480469,
+          "iy": -4.994487285614014
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": -1.4646714925765991,
+          "iy": -4.956602573394775
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": -8.022796630859375,
+          "iy": -1.060468077659607
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": 0.36707064509391785,
+          "iy": -7.032750606536865
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": -5.899900913238525,
+          "iy": -4.743773937225342
         },
         {
           "type": "shot",
           "discIndex": 3,
-          "ix": -2.6410200595855713,
-          "iy": -2.841639995574951
+          "ix": 3.73840594291687,
+          "iy": 6.117644786834717
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": 1.8432507514953613,
+          "iy": 5.883968353271484
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": 4.830007076263428,
+          "iy": 3.983811855316162
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": 5.6373066902160645,
+          "iy": 1.1598882675170898
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": 3.799060583114624,
+          "iy": 7.906542778015137
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": 5.825207233428955,
+          "iy": -0.0166033785790205
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": 0.758076548576355,
+          "iy": 3.620966672897339
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": 4.763777732849121,
+          "iy": 2.6426634788513184
+        },
+        {
+          "type": "shot",
+          "discIndex": 0,
+          "ix": 0.48861461877822876,
+          "iy": 5.533760070800781
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": 7.4274091720581055,
+          "iy": 3.9452786445617676
+        },
+        {
+          "type": "shot",
+          "discIndex": 6,
+          "ix": -3.658043146133423,
+          "iy": 5.236218452453613
+        },
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": 3.4624578952789307,
+          "iy": 3.691317558288574
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": 7.625746250152588,
+          "iy": -0.6393375396728516
+        },
+        {
+          "type": "shot",
+          "discIndex": 6,
+          "ix": -4.60981559753418,
+          "iy": 3.2756528854370117
+        },
+        {
+          "type": "shot",
+          "discIndex": 3,
+          "ix": 2.6970417499542236,
+          "iy": 2.788524627685547
         },
         {
           "type": "shot",
           "discIndex": 8,
-          "ix": -4.08331298828125,
-          "iy": -6.459662437438965
+          "ix": 7.607751846313477,
+          "iy": 0.7230451107025146
         },
         {
           "type": "shot",
           "discIndex": 0,
-          "ix": -6.442160606384277,
-          "iy": -1.5048179626464844
+          "ix": -2.964608907699585,
+          "iy": 5.914135932922363
         },
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": -8.021354675292969,
-          "iy": -3.3847262859344482
+          "ix": -6.326248645782471,
+          "iy": 5.981394290924072
         },
         {
           "type": "shot",
           "discIndex": 1,
-          "ix": -1.1997406482696533,
-          "iy": -7.5039167404174805
+          "ix": 5.326706409454346,
+          "iy": 5.419809818267822
         },
         {
           "type": "shot",
           "discIndex": 6,
-          "ix": -2.2416627407073975,
-          "iy": 4.6721391677856445
+          "ix": -5.181858539581299,
+          "iy": -0.04772601276636124
         },
         {
           "type": "shot",
           "discIndex": 3,
-          "ix": -2.3802151679992676,
-          "iy": 4.815426349639893
+          "ix": 5.370656967163086,
+          "iy": -0.09897380322217941
         },
         {
           "type": "shot",
           "discIndex": 8,
-          "ix": -6.080169677734375,
-          "iy": 2.2323896884918213
+          "ix": 6.473140239715576,
+          "iy": -0.22467529773712158
         },
         {
           "type": "shot",
           "discIndex": 4,
-          "ix": 0.6254250407218933,
-          "iy": 6.911505699157715
+          "ix": 1.569446325302124,
+          "iy": 6.75994873046875
         },
         {
           "type": "shot",
           "discIndex": 6,
-          "ix": 1.9796699285507202,
-          "iy": 4.179059982299805
+          "ix": -4.616138935089111,
+          "iy": -0.27367445826530457
         },
         {
           "type": "shot",
           "discIndex": 1,
-          "ix": 0.9634624123573303,
-          "iy": 5.514255046844482
+          "ix": 1.9723179340362549,
+          "iy": 5.238819599151611
         },
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": -5.435383319854736,
-          "iy": 5.994532585144043
+          "ix": -0.9031720757484436,
+          "iy": 8.041274070739746
         },
         {
           "type": "shot",
           "discIndex": 1,
-          "ix": 0.9775287508964539,
-          "iy": 3.7699761390686035
+          "ix": 3.2028965950012207,
+          "iy": 2.215792417526245
         },
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": -8.567024230957031,
-          "iy": 0.20499131083488464
+          "ix": 8.56859302520752,
+          "iy": -0.12303829193115234
         },
         {
           "type": "shot",
           "discIndex": 1,
-          "ix": 4.692430019378662,
-          "iy": 4.552593231201172
+          "ix": 4.313167572021484,
+          "iy": 4.91340970993042
         },
         {
           "type": "shot",
           "discIndex": 6,
-          "ix": 3.7455036640167236,
-          "iy": 0.9584172368049622
+          "ix": 3.843123435974121,
+          "iy": 0.4216203987598419
         },
         {
           "type": "shot",
           "discIndex": 3,
-          "ix": 5.191573143005371,
-          "iy": 3.6954562664031982
+          "ix": 5.608073711395264,
+          "iy": 3.0262749195098877
         },
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": -2.962418794631958,
-          "iy": 2.2360706329345703
+          "ix": -2.1026127338409424,
+          "iy": 3.0585875511169434
         },
         {
           "type": "shot",
           "discIndex": 1,
-          "ix": 2.8044559955596924,
-          "iy": 4.904979705810547
+          "ix": 2.656543731689453,
+          "iy": 4.986639499664307
         },
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": -3.2880752086639404,
-          "iy": 4.50801944732666
+          "ix": -4.209733486175537,
+          "iy": 3.6622157096862793
         },
         {
           "type": "shot",
           "discIndex": 2,
-          "ix": 5.642143726348877,
-          "iy": 4.649474620819092
+          "ix": 3.4457175731658936,
+          "iy": 6.448133945465088
         },
         {
           "type": "shot",
           "discIndex": 6,
-          "ix": 6.141204833984375,
-          "iy": 0.19630227982997894
+          "ix": 6.144223690032959,
+          "iy": 0.03800930455327034
         },
         {
           "type": "shot",
           "discIndex": 0,
-          "ix": 8.118882179260254,
-          "iy": 1.2740546464920044
+          "ix": -1.4588147401809692,
+          "iy": 8.087726593017578
         },
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": -5.22711706161499,
-          "iy": 0.6252115964889526
+          "ix": -4.252318859100342,
+          "iy": 3.10345458984375
         },
         {
           "type": "shot",
           "discIndex": 4,
-          "ix": 3.25156831741333,
-          "iy": -1.676690697669983
+          "ix": 2.9690847396850586,
+          "iy": 2.1374104022979736
         }
       ],
       "snapshots": [
@@ -429,7 +430,7 @@
           "shotCount": 1,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "acc119e1",
+          "stateHash": "8894d1d7",
           "events": ["shot", "turn"]
         },
         {
@@ -446,7 +447,7 @@
           "shotCount": 2,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "73ca82ce",
+          "stateHash": "c88c3737",
           "events": ["shot", "turn"]
         },
         {
@@ -463,7 +464,7 @@
           "shotCount": 3,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "571b8425",
+          "stateHash": "7e0191ab",
           "events": ["shot", "turn"]
         },
         {
@@ -480,381 +481,381 @@
           "shotCount": 4,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "2ad7f6ce",
+          "stateHash": "bac5d4ee",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 5,
-            "side": "R",
+            "side": "L",
             "seq": 6
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 5,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "b9b84129",
-          "events": ["shot", "goal", "turn"]
+          "stateHash": "04ff7aae",
+          "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 6,
-            "side": "L",
+            "side": "R",
             "seq": 7
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 6,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "96cc988f",
+          "stateHash": "fe81c23c",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 7,
-            "side": "R",
+            "side": "L",
             "seq": 8
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 7,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "ee41225f",
+          "stateHash": "0d637829",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 8,
-            "side": "L",
+            "side": "R",
             "seq": 9
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 8,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "194f2050",
+          "stateHash": "07c81cc3",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 9,
-            "side": "R",
+            "side": "L",
             "seq": 10
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 9,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "68b5852e",
+          "stateHash": "2124d516",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 10,
-            "side": "L",
+            "side": "R",
             "seq": 11
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 10,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "dff49e33",
+          "stateHash": "e7717c64",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 11,
-            "side": "R",
+            "side": "L",
             "seq": 12
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 11,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "a79a88d9",
+          "stateHash": "74b05cd7",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 12,
-            "side": "L",
+            "side": "R",
             "seq": 13
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 12,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "2aeecd03",
+          "stateHash": "72a8c1ed",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 13,
-            "side": "R",
+            "side": "L",
             "seq": 14
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 12,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "2aeecd03",
+          "stateHash": "72a8c1ed",
           "events": ["timeout", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 14,
-            "side": "L",
+            "side": "R",
             "seq": 15
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 13,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "6d63fe3a",
+          "stateHash": "64260c1f",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 15,
-            "side": "R",
+            "side": "L",
             "seq": 16
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 14,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "94bb73db",
+          "stateHash": "060deba8",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 16,
-            "side": "L",
+            "side": "R",
             "seq": 17
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 15,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "566c3048",
+          "stateHash": "22e12e33",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 17,
-            "side": "R",
+            "side": "L",
             "seq": 18
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 15,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "566c3048",
+          "stateHash": "22e12e33",
           "events": ["timeout", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 18,
-            "side": "L",
+            "side": "R",
             "seq": 19
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 15,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "566c3048",
+          "stateHash": "22e12e33",
           "events": ["timeout", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 19,
-            "side": "R",
+            "side": "L",
             "seq": 20
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 15,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "566c3048",
+          "stateHash": "22e12e33",
           "events": ["timeout", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 20,
-            "side": "L",
+            "side": "R",
             "seq": 21
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 16,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "7a61eb2d",
+          "stateHash": "6252eb5d",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 21,
-            "side": "R",
+            "side": "L",
             "seq": 22
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 17,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "3b58855a",
+          "stateHash": "d780b8f7",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 22,
-            "side": "L",
+            "side": "R",
             "seq": 23
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 18,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "8e33ebda",
+          "stateHash": "9619a630",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 23,
-            "side": "R",
+            "side": "L",
             "seq": 24
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 19,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "389a0bd1",
+          "stateHash": "77c36e0c",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 24,
-            "side": "L",
+            "side": "R",
             "seq": 25
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 20,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "29cbdc9a",
+          "stateHash": "2a499537",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 25,
-            "side": "R",
+            "side": "L",
             "seq": 26
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 21,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "824dc24d",
+          "stateHash": "ef020fc7",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 26,
-            "side": "L",
+            "side": "R",
             "seq": 27
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 22,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "69164882",
+          "stateHash": "7d49a1ce",
           "events": ["shot", "turn"]
         },
         {
@@ -865,14 +866,14 @@
             "seq": 28
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 23,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "b9b84129",
-          "events": ["shot", "goal", "turn"]
+          "stateHash": "7fb89433",
+          "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
@@ -882,13 +883,13 @@
             "seq": 29
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 24,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "54fadd86",
+          "stateHash": "bb79bdca",
           "events": ["shot", "turn"]
         },
         {
@@ -899,13 +900,13 @@
             "seq": 30
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 25,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "53fd754f",
+          "stateHash": "a9411794",
           "events": ["shot", "turn"]
         },
         {
@@ -916,13 +917,13 @@
             "seq": 31
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 26,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "ff418783",
+          "stateHash": "96124d52",
           "events": ["shot", "turn"]
         },
         {
@@ -933,13 +934,13 @@
             "seq": 32
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 27,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "69aebd71",
+          "stateHash": "6870d490",
           "events": ["shot", "turn"]
         },
         {
@@ -950,13 +951,13 @@
             "seq": 33
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 27,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "69aebd71",
+          "stateHash": "6870d490",
           "events": ["timeout", "turn"]
         },
         {
@@ -967,13 +968,13 @@
             "seq": 34
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 27,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "69aebd71",
+          "stateHash": "6870d490",
           "events": ["timeout", "turn"]
         },
         {
@@ -984,13 +985,13 @@
             "seq": 35
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 28,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "a6bb42e5",
+          "stateHash": "4d9b967b",
           "events": ["shot", "turn"]
         },
         {
@@ -1001,13 +1002,13 @@
             "seq": 36
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 29,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "379792e5",
+          "stateHash": "4a506516",
           "events": ["shot", "turn"]
         },
         {
@@ -1018,13 +1019,13 @@
             "seq": 37
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 30,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "7d843753",
+          "stateHash": "a4791e07",
           "events": ["shot", "turn"]
         },
         {
@@ -1035,13 +1036,13 @@
             "seq": 38
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 31,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "1cd644b1",
+          "stateHash": "14099150",
           "events": ["shot", "turn"]
         },
         {
@@ -1052,13 +1053,13 @@
             "seq": 39
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 32,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "eaa6516c",
+          "stateHash": "2f14f1e4",
           "events": ["shot", "turn"]
         },
         {
@@ -1069,13 +1070,13 @@
             "seq": 40
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 32,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "eaa6516c",
+          "stateHash": "2f14f1e4",
           "events": ["timeout", "turn"]
         },
         {
@@ -1086,13 +1087,13 @@
             "seq": 41
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 33,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "17fc7eaa",
+          "stateHash": "52c1801f",
           "events": ["shot", "turn"]
         },
         {
@@ -1103,13 +1104,13 @@
             "seq": 42
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 34,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "8bc24f36",
+          "stateHash": "ae391a3d",
           "events": ["shot", "turn"]
         },
         {
@@ -1120,13 +1121,13 @@
             "seq": 43
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 35,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "20cc8813",
+          "stateHash": "7efe252c",
           "events": ["shot", "turn"]
         },
         {
@@ -1137,13 +1138,13 @@
             "seq": 44
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 35,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "20cc8813",
+          "stateHash": "7efe252c",
           "events": ["timeout", "turn"]
         },
         {
@@ -1154,13 +1155,13 @@
             "seq": 45
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 36,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "5649990b",
+          "stateHash": "a0863e98",
           "events": ["shot", "turn"]
         },
         {
@@ -1171,13 +1172,13 @@
             "seq": 46
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 37,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "7e1d7975",
+          "stateHash": "69bbb7b8",
           "events": ["shot", "turn"]
         },
         {
@@ -1188,13 +1189,13 @@
             "seq": 47
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 38,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "3f9084d3",
+          "stateHash": "91f4239e",
           "events": ["shot", "turn"]
         },
         {
@@ -1205,13 +1206,13 @@
             "seq": 48
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 39,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "ff05a0e0",
+          "stateHash": "fedeae20",
           "events": ["shot", "turn"]
         },
         {
@@ -1222,13 +1223,13 @@
             "seq": 49
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 40,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "f900fa49",
+          "stateHash": "5a137407",
           "events": ["shot", "turn"]
         },
         {
@@ -1239,13 +1240,13 @@
             "seq": 50
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 41,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "eed9b461",
+          "stateHash": "bf659058",
           "events": ["shot", "turn"]
         },
         {
@@ -1256,13 +1257,13 @@
             "seq": 51
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 42,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "613eea4b",
+          "stateHash": "0bc1cbd8",
           "events": ["shot", "turn"]
         },
         {
@@ -1273,13 +1274,13 @@
             "seq": 52
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 43,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "278d02b8",
+          "stateHash": "20e231f7",
           "events": ["shot", "turn"]
         },
         {
@@ -1290,13 +1291,13 @@
             "seq": 53
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 44,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "9880976c",
+          "stateHash": "b31e8238",
           "events": ["shot", "turn"]
         },
         {
@@ -1307,13 +1308,13 @@
             "seq": 54
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 45,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "0380478a",
+          "stateHash": "2afb8058",
           "events": ["shot", "turn"]
         },
         {
@@ -1324,13 +1325,13 @@
             "seq": 55
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 46,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "e7e86c12",
+          "stateHash": "980820aa",
           "events": ["shot", "turn"]
         },
         {
@@ -1341,13 +1342,13 @@
             "seq": 56
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 47,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "6897edc9",
+          "stateHash": "910c6d9c",
           "events": ["shot", "turn"]
         },
         {
@@ -1358,13 +1359,13 @@
             "seq": 57
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 48,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "4f401cf2",
+          "stateHash": "7f11d1a2",
           "events": ["shot", "turn"]
         },
         {
@@ -1375,13 +1376,13 @@
             "seq": 58
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 49,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "367b4a7c",
+          "stateHash": "d62d8d57",
           "events": ["shot", "turn"]
         },
         {
@@ -1392,13 +1393,13 @@
             "seq": 59
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 50,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "b6ff9404",
+          "stateHash": "f47294a3",
           "events": ["shot", "turn"]
         },
         {
@@ -1409,13 +1410,13 @@
             "seq": 60
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 51,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "cd2c78af",
+          "stateHash": "9af2ea72",
           "events": ["shot", "turn"]
         },
         {
@@ -1426,13 +1427,13 @@
             "seq": 61
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 52,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "246f21d6",
+          "stateHash": "95197912",
           "events": ["shot", "turn"]
         },
         {
@@ -1443,13 +1444,13 @@
             "seq": 62
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 53,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "5ba76f58",
+          "stateHash": "899a706c",
           "events": ["shot", "turn"]
         },
         {
@@ -1460,13 +1461,13 @@
             "seq": 63
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 54,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "9619363d",
+          "stateHash": "ae8e8a1b",
           "events": ["shot", "turn"]
         },
         {
@@ -1477,13 +1478,13 @@
             "seq": 64
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 55,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "62d0dbb2",
+          "stateHash": "6bc8d271",
           "events": ["shot", "turn"]
         },
         {
@@ -1494,13 +1495,13 @@
             "seq": 65
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 56,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "62393b28",
+          "stateHash": "ed5acafb",
           "events": ["shot", "turn"]
         },
         {
@@ -1511,13 +1512,13 @@
             "seq": 66
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 57,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "4a4aa65b",
+          "stateHash": "ef2b0e37",
           "events": ["shot", "turn"]
         },
         {
@@ -1528,13 +1529,13 @@
             "seq": 67
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 58,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "70d9c45b",
+          "stateHash": "d1b297a9",
           "events": ["shot", "turn"]
         },
         {
@@ -1545,13 +1546,13 @@
             "seq": 68
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 59,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "90b26675",
+          "stateHash": "4236754f",
           "events": ["shot", "turn"]
         },
         {
@@ -1562,13 +1563,13 @@
             "seq": 69
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 60,
           "suddenDeath": true,
           "result": null,
-          "stateHash": "2c8f6b12",
+          "stateHash": "c2417181",
           "events": ["shot", "sudden_death", "turn"]
         },
         {
@@ -1579,13 +1580,13 @@
             "seq": 70
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 61,
           "suddenDeath": true,
           "result": null,
-          "stateHash": "b415bccb",
+          "stateHash": "79b1820f",
           "events": ["shot", "turn"]
         },
         {
@@ -1596,13 +1597,13 @@
             "seq": 71
           },
           "score": {
-            "L": 1,
-            "R": 1
+            "L": 0,
+            "R": 0
           },
           "shotCount": 62,
           "suddenDeath": true,
           "result": null,
-          "stateHash": "858db095",
+          "stateHash": "4dcb0cda",
           "events": ["shot", "turn"]
         }
       ]
@@ -1619,32 +1620,32 @@
         {
           "type": "shot",
           "discIndex": 9,
-          "ix": 3.148571729660034,
-          "iy": 3.637695789337158
+          "ix": 4.619195938110352,
+          "iy": 1.345125675201416
         },
         {
           "type": "shot",
           "discIndex": 3,
-          "ix": 3.946092367172241,
-          "iy": 5.10207462310791
+          "ix": 4.891504287719727,
+          "iy": 4.204282760620117
         },
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": -6.3881988525390625,
-          "iy": -0.1501133292913437
+          "ix": -4.093378067016602,
+          "iy": 4.906717300415039
         },
         {
           "type": "shot",
           "discIndex": 0,
-          "ix": 7.367034435272217,
-          "iy": -1.884934425354004
+          "ix": 6.34240198135376,
+          "iy": 4.195248603820801
         },
         {
           "type": "shot",
           "discIndex": 7,
-          "ix": -5.768397808074951,
-          "iy": 0.021342722699046135
+          "ix": 0.010118372738361359,
+          "iy": 5.768428325653076
         },
         {
           "type": "timeout"
@@ -1652,8 +1653,8 @@
         {
           "type": "shot",
           "discIndex": 7,
-          "ix": 4.235260486602783,
-          "iy": -3.8049209117889404
+          "ix": -1.5600779056549072,
+          "iy": 5.475492000579834
         },
         {
           "type": "timeout"
@@ -1661,80 +1662,80 @@
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": 7.302722454071045,
-          "iy": 1.2794405221939087
+          "ix": -6.269720554351807,
+          "iy": 3.956934690475464
         },
         {
           "type": "shot",
           "discIndex": 0,
-          "ix": 5.993678092956543,
-          "iy": 4.181116104125977
+          "ix": 6.8830461502075195,
+          "iy": 2.4555211067199707
         },
         {
           "type": "shot",
           "discIndex": 8,
-          "ix": 4.536910533905029,
-          "iy": -1.2134417295455933
+          "ix": 4.392508506774902,
+          "iy": 1.661887288093567
         },
         {
           "type": "shot",
           "discIndex": 4,
-          "ix": 0.11264277994632721,
-          "iy": 4.352530479431152
+          "ix": 3.5327699184417725,
+          "iy": 2.544945001602173
         },
         {
           "type": "shot",
           "discIndex": 6,
-          "ix": -2.624973773956299,
-          "iy": -3.263071298599243
+          "ix": 4.1776652336120605,
+          "iy": 0.29195132851600647
         },
         {
           "type": "shot",
           "discIndex": 0,
-          "ix": 3.198518991470337,
-          "iy": -3.357889413833618
+          "ix": 4.315442085266113,
+          "iy": 1.6979124546051025
         },
         {
           "type": "shot",
           "discIndex": 7,
-          "ix": 6.674335956573486,
-          "iy": -3.6501731872558594
+          "ix": 6.070454120635986,
+          "iy": 4.584769248962402
         },
         {
           "type": "shot",
           "discIndex": 2,
-          "ix": 4.1277642250061035,
-          "iy": -0.7096320390701294
+          "ix": 4.06143856048584,
+          "iy": 1.0231000185012817
         },
         {
           "type": "shot",
           "discIndex": 7,
-          "ix": 0.23930411040782928,
-          "iy": 7.128462314605713
+          "ix": 5.968035697937012,
+          "iy": 3.9057388305664062
         },
         {
           "type": "shot",
           "discIndex": 1,
-          "ix": 7.355472087860107,
-          "iy": -1.2150236368179321
+          "ix": 7.38846492767334,
+          "iy": 0.9949074387550354
         },
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": -4.742942810058594,
-          "iy": -5.912240028381348
+          "ix": -2.9390368461608887,
+          "iy": 6.986569404602051
         },
         {
           "type": "shot",
           "discIndex": 2,
-          "ix": 4.290414810180664,
-          "iy": -3.5878353118896484
+          "ix": 5.223177909851074,
+          "iy": 1.9996581077575684
         },
         {
           "type": "shot",
           "discIndex": 9,
-          "ix": -0.7985619902610779,
-          "iy": -6.50130033493042
+          "ix": -1.6196357011795044,
+          "iy": 6.346762180328369
         },
         {
           "type": "timeout"
@@ -1742,14 +1743,14 @@
         {
           "type": "shot",
           "discIndex": 9,
-          "ix": -4.585023403167725,
-          "iy": 2.2466745376586914
+          "ix": -2.4345521926879883,
+          "iy": 4.488089084625244
         },
         {
           "type": "shot",
           "discIndex": 1,
-          "ix": -5.64498233795166,
-          "iy": 0.7358638048171997
+          "ix": 4.658412456512451,
+          "iy": 3.2720813751220703
         },
         {
           "type": "timeout"
@@ -1760,158 +1761,158 @@
         {
           "type": "shot",
           "discIndex": 6,
-          "ix": -5.753777980804443,
-          "iy": -0.6032754778862
+          "ix": -0.13189756870269775,
+          "iy": 5.783814430236816
         },
         {
           "type": "shot",
           "discIndex": 0,
-          "ix": -5.717623233795166,
-          "iy": 2.743706703186035
+          "ix": 5.156156063079834,
+          "iy": -3.6923153400421143
         },
         {
           "type": "shot",
-          "discIndex": 1,
-          "ix": 5.141241073608398,
-          "iy": -3.61281156539917
+          "discIndex": 6,
+          "ix": 4.343481540679932,
+          "iy": 4.540807723999023
         },
         {
           "type": "shot",
-          "discIndex": 5,
-          "ix": -5.995181083679199,
-          "iy": 0.6337327361106873
+          "discIndex": 0,
+          "ix": 5.973124980926514,
+          "iy": -0.8158373832702637
+        },
+        {
+          "type": "shot",
+          "discIndex": 8,
+          "ix": 4.197878837585449,
+          "iy": -1.3192768096923828
         },
         {
           "type": "shot",
           "discIndex": 3,
-          "ix": -3.693305492401123,
-          "iy": 2.392106294631958
+          "ix": 3.4781572818756104,
+          "iy": 5.5550737380981445
         },
         {
           "type": "shot",
-          "discIndex": 8,
-          "ix": -6.182568073272705,
-          "iy": -2.1753783226013184
-        },
-        {
-          "type": "shot",
-          "discIndex": 0,
-          "ix": 1.9790819883346558,
-          "iy": 7.210516929626465
-        },
-        {
-          "type": "shot",
-          "discIndex": 6,
-          "ix": -5.440558433532715,
-          "iy": -0.4807119071483612
-        },
-        {
-          "type": "timeout"
-        },
-        {
-          "type": "shot",
-          "discIndex": 7,
-          "ix": -2.846710205078125,
-          "iy": 3.925741195678711
+          "discIndex": 5,
+          "ix": 0.5871004462242126,
+          "iy": 7.4541015625
         },
         {
           "type": "shot",
           "discIndex": 1,
-          "ix": 3.7004220485687256,
-          "iy": -1.057463526725769
-        },
-        {
-          "type": "shot",
-          "discIndex": 8,
-          "ix": 6.339172840118408,
-          "iy": 3.6868956089019775
-        },
-        {
-          "type": "shot",
-          "discIndex": 0,
-          "ix": 8.333541870117188,
-          "iy": 1.4728574752807617
+          "ix": 4.657497406005859,
+          "iy": 2.85280179977417
         },
         {
           "type": "timeout"
         },
         {
           "type": "shot",
-          "discIndex": 0,
-          "ix": 5.435570240020752,
-          "iy": -1.5705230236053467
+          "discIndex": 2,
+          "ix": 3.8635077476501465,
+          "iy": 2.9306161403656006
+        },
+        {
+          "type": "shot",
+          "discIndex": 6,
+          "ix": 2.8183600902557373,
+          "iy": 2.62072491645813
+        },
+        {
+          "type": "shot",
+          "discIndex": 3,
+          "ix": 4.809107303619385,
+          "iy": 5.53631591796875
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": -2.4916696548461914,
+          "iy": 8.087571144104004
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": -5.645483016967773,
+          "iy": -0.3748213052749634
+        },
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": 3.9133338928222656,
+          "iy": 0.17402991652488708
         },
         {
           "type": "shot",
           "discIndex": 9,
-          "ix": 0.18123359978199005,
-          "iy": 3.9130067825317383
+          "ix": 4.491945743560791,
+          "iy": -6.762872695922852
         },
         {
           "type": "shot",
-          "discIndex": 4,
-          "ix": 7.603707313537598,
-          "iy": 2.8456385135650635
-        },
-        {
-          "type": "shot",
-          "discIndex": 6,
-          "ix": 5.064007759094238,
-          "iy": -0.45702141523361206
-        },
-        {
-          "type": "shot",
-          "discIndex": 0,
-          "ix": 3.510855197906494,
-          "iy": 1.5167230367660522
-        },
-        {
-          "type": "shot",
-          "discIndex": 8,
-          "ix": 3.717383623123169,
-          "iy": -0.5265649557113647
-        },
-        {
-          "type": "shot",
-          "discIndex": 2,
-          "ix": 5.264584541320801,
-          "iy": 4.214657306671143
+          "discIndex": 1,
+          "ix": 4.44710111618042,
+          "iy": -2.465022087097168
         },
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": 3.413601875305176,
-          "iy": -2.640299081802368
+          "ix": 1.378508448600769,
+          "iy": -3.567389488220215
         },
         {
           "type": "shot",
-          "discIndex": 2,
-          "ix": 6.472904682159424,
-          "iy": 0.835239827632904
+          "discIndex": 3,
+          "ix": 3.5908701419830322,
+          "iy": 1.0962949991226196
+        },
+        {
+          "type": "shot",
+          "discIndex": 7,
+          "ix": -1.3758809566497803,
+          "iy": 6.601980209350586
         },
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": 1.222063422203064,
-          "iy": 3.812917709350586
-        },
-        {
-          "type": "shot",
-          "discIndex": 4,
-          "ix": 3.791212797164917,
-          "iy": 2.959688663482666
-        },
-        {
-          "type": "shot",
-          "discIndex": 6,
-          "ix": 1.8743880987167358,
-          "iy": 6.083458423614502
+          "ix": -4.294830322265625,
+          "iy": 0.4222421646118164
         },
         {
           "type": "shot",
           "discIndex": 2,
-          "ix": 4.435715675354004,
-          "iy": -0.903391420841217
+          "ix": 4.9820756912231445,
+          "iy": 4.21604585647583
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": -3.6070027351379395,
+          "iy": 1.738191843032837
+        },
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": -4.697354316711426,
+          "iy": 1.0334004163742065
+        },
+        {
+          "type": "shot",
+          "discIndex": 6,
+          "ix": -6.0079803466796875,
+          "iy": -2.1037983894348145
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": -2.237863540649414,
+          "iy": -3.9349277019500732
         },
         {
           "type": "timeout"
@@ -1925,32 +1926,71 @@
         {
           "type": "shot",
           "discIndex": 1,
-          "ix": -0.5933974981307983,
-          "iy": -4.3627424240112305
+          "ix": 1.2405961751937866,
+          "iy": -4.2245192527771
         },
         {
           "type": "shot",
           "discIndex": 6,
-          "ix": -8.249938011169434,
-          "iy": -0.14407865703105927
+          "ix": -6.578939914703369,
+          "iy": -4.97993803024292
         },
         {
           "type": "shot",
           "discIndex": 0,
-          "ix": -7.273111820220947,
-          "iy": 3.9878079891204834
+          "ix": 4.394344329833984,
+          "iy": -7.034948825836182
         },
         {
           "type": "shot",
           "discIndex": 8,
-          "ix": -7.0624566078186035,
-          "iy": -3.954559087753296
+          "ix": -3.9135358333587646,
+          "iy": -7.08527135848999
         },
         {
           "type": "shot",
           "discIndex": 1,
-          "ix": -7.348667621612549,
-          "iy": -4.55658483505249
+          "ix": 1.693577527999878,
+          "iy": -8.479220390319824
+        },
+        {
+          "type": "shot",
+          "discIndex": 6,
+          "ix": 3.847364902496338,
+          "iy": -5.6909003257751465
+        },
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": 3.75020694732666,
+          "iy": 0.5496876239776611
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": 7.360420227050781,
+          "iy": -2.4156484603881836
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": 4.304488182067871,
+          "iy": -2.378971576690674
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": 8.486974716186523,
+          "iy": -1.1504801511764526
         }
       ],
       "snapshots": [
@@ -1968,7 +2008,7 @@
           "shotCount": 1,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "333edfdd",
+          "stateHash": "224218f8",
           "events": ["shot", "turn"]
         },
         {
@@ -1985,7 +2025,7 @@
           "shotCount": 2,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "94b6fd23",
+          "stateHash": "22e84710",
           "events": ["shot", "turn"]
         },
         {
@@ -2002,7 +2042,7 @@
           "shotCount": 3,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "292266cf",
+          "stateHash": "5f7ae64b",
           "events": ["shot", "turn"]
         },
         {
@@ -2019,7 +2059,7 @@
           "shotCount": 4,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "75173b6d",
+          "stateHash": "91fc6dbc",
           "events": ["shot", "turn"]
         },
         {
@@ -2036,7 +2076,7 @@
           "shotCount": 5,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "876daba7",
+          "stateHash": "44dab871",
           "events": ["shot", "turn"]
         },
         {
@@ -2053,7 +2093,7 @@
           "shotCount": 6,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "bdf728b3",
+          "stateHash": "5ac810f2",
           "events": ["shot", "turn"]
         },
         {
@@ -2070,7 +2110,7 @@
           "shotCount": 6,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "bdf728b3",
+          "stateHash": "5ac810f2",
           "events": ["timeout", "turn"]
         },
         {
@@ -2087,7 +2127,7 @@
           "shotCount": 7,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "24828dd3",
+          "stateHash": "5555a7b7",
           "events": ["shot", "turn"]
         },
         {
@@ -2104,7 +2144,7 @@
           "shotCount": 7,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "24828dd3",
+          "stateHash": "5555a7b7",
           "events": ["timeout", "turn"]
         },
         {
@@ -2121,7 +2161,7 @@
           "shotCount": 8,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "ecad2375",
+          "stateHash": "d50383fd",
           "events": ["shot", "turn"]
         },
         {
@@ -2138,7 +2178,7 @@
           "shotCount": 9,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "7d37a5a9",
+          "stateHash": "f7e5f75b",
           "events": ["shot", "turn"]
         },
         {
@@ -2155,7 +2195,7 @@
           "shotCount": 10,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "4c8283f8",
+          "stateHash": "94867294",
           "events": ["shot", "turn"]
         },
         {
@@ -2172,7 +2212,7 @@
           "shotCount": 11,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "308875a3",
+          "stateHash": "2b8f6873",
           "events": ["shot", "turn"]
         },
         {
@@ -2189,7 +2229,7 @@
           "shotCount": 12,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "424b3781",
+          "stateHash": "344db59e",
           "events": ["shot", "turn"]
         },
         {
@@ -2206,7 +2246,7 @@
           "shotCount": 13,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "297260ef",
+          "stateHash": "3e20ec99",
           "events": ["shot", "turn"]
         },
         {
@@ -2223,7 +2263,7 @@
           "shotCount": 14,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "cddb453a",
+          "stateHash": "f9d70d36",
           "events": ["shot", "turn"]
         },
         {
@@ -2240,7 +2280,7 @@
           "shotCount": 15,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "b44b41e5",
+          "stateHash": "499e3316",
           "events": ["shot", "turn"]
         },
         {
@@ -2257,7 +2297,7 @@
           "shotCount": 16,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "faaee530",
+          "stateHash": "1f5daa83",
           "events": ["shot", "turn"]
         },
         {
@@ -2274,7 +2314,7 @@
           "shotCount": 17,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "8b1823b5",
+          "stateHash": "91fbddfb",
           "events": ["shot", "turn"]
         },
         {
@@ -2291,7 +2331,7 @@
           "shotCount": 18,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "f2584055",
+          "stateHash": "3b614b6a",
           "events": ["shot", "turn"]
         },
         {
@@ -2308,7 +2348,7 @@
           "shotCount": 19,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "e572ed4b",
+          "stateHash": "05c78bea",
           "events": ["shot", "turn"]
         },
         {
@@ -2325,7 +2365,7 @@
           "shotCount": 20,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "db194529",
+          "stateHash": "d556e103",
           "events": ["shot", "turn"]
         },
         {
@@ -2342,7 +2382,7 @@
           "shotCount": 20,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "db194529",
+          "stateHash": "d556e103",
           "events": ["timeout", "turn"]
         },
         {
@@ -2359,7 +2399,7 @@
           "shotCount": 21,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "f87ff898",
+          "stateHash": "8e3e6799",
           "events": ["shot", "turn"]
         },
         {
@@ -2376,7 +2416,7 @@
           "shotCount": 22,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "c196f770",
+          "stateHash": "05a794cd",
           "events": ["shot", "turn"]
         },
         {
@@ -2393,7 +2433,7 @@
           "shotCount": 22,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "c196f770",
+          "stateHash": "05a794cd",
           "events": ["timeout", "turn"]
         },
         {
@@ -2410,7 +2450,7 @@
           "shotCount": 22,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "c196f770",
+          "stateHash": "05a794cd",
           "events": ["timeout", "turn"]
         },
         {
@@ -2427,330 +2467,330 @@
           "shotCount": 23,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "506f0831",
+          "stateHash": "951c9ea5",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 29,
-            "side": "L",
+            "side": "R",
             "seq": 30
           },
           "score": {
             "L": 0,
-            "R": 1
+            "R": 0
           },
           "shotCount": 24,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "b9b84129",
-          "events": ["shot", "goal", "turn"]
+          "stateHash": "5ea3a498",
+          "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 30,
-            "side": "R",
+            "side": "L",
             "seq": 31
           },
           "score": {
             "L": 0,
-            "R": 1
+            "R": 0
           },
           "shotCount": 25,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "e9fed19a",
+          "stateHash": "df497d08",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 31,
-            "side": "L",
+            "side": "R",
             "seq": 32
           },
           "score": {
             "L": 0,
-            "R": 1
+            "R": 0
           },
           "shotCount": 26,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "d94b59e6",
+          "stateHash": "6eed437a",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 32,
-            "side": "R",
+            "side": "L",
             "seq": 33
           },
           "score": {
             "L": 0,
-            "R": 1
+            "R": 0
           },
           "shotCount": 27,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "e222fe06",
+          "stateHash": "67463163",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 33,
-            "side": "L",
+            "side": "R",
             "seq": 34
           },
           "score": {
             "L": 0,
-            "R": 1
+            "R": 0
           },
           "shotCount": 28,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "d8f68a51",
+          "stateHash": "98cf8f99",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 34,
-            "side": "R",
+            "side": "L",
             "seq": 35
           },
           "score": {
             "L": 0,
-            "R": 1
+            "R": 0
           },
           "shotCount": 29,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "24144dd9",
+          "stateHash": "4f3f15b4",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 35,
-            "side": "L",
+            "side": "R",
             "seq": 36
           },
           "score": {
             "L": 0,
-            "R": 1
+            "R": 0
           },
           "shotCount": 30,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "f5005b35",
+          "stateHash": "2a9e1529",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 36,
-            "side": "R",
+            "side": "L",
             "seq": 37
           },
           "score": {
             "L": 0,
-            "R": 1
+            "R": 0
           },
           "shotCount": 30,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "f5005b35",
+          "stateHash": "2a9e1529",
           "events": ["timeout", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 37,
-            "side": "L",
+            "side": "R",
             "seq": 38
           },
           "score": {
             "L": 0,
-            "R": 1
+            "R": 0
           },
           "shotCount": 31,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "8bac0ed9",
+          "stateHash": "7c977fca",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 38,
-            "side": "R",
+            "side": "L",
             "seq": 39
           },
           "score": {
             "L": 0,
-            "R": 1
+            "R": 0
           },
           "shotCount": 32,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "78308315",
+          "stateHash": "0e36ac63",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 39,
-            "side": "L",
+            "side": "R",
             "seq": 40
           },
           "score": {
             "L": 0,
-            "R": 1
+            "R": 0
           },
           "shotCount": 33,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "2c228528",
+          "stateHash": "c2c12479",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 40,
-            "side": "R",
+            "side": "L",
             "seq": 41
           },
           "score": {
             "L": 0,
-            "R": 1
+            "R": 0
           },
           "shotCount": 34,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "6c2be606",
+          "stateHash": "8f50e338",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 41,
-            "side": "L",
+            "side": "R",
             "seq": 42
           },
           "score": {
             "L": 0,
-            "R": 1
+            "R": 0
           },
           "shotCount": 34,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "6c2be606",
+          "stateHash": "8f50e338",
           "events": ["timeout", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 42,
-            "side": "R",
+            "side": "L",
             "seq": 43
           },
           "score": {
             "L": 0,
-            "R": 1
+            "R": 0
           },
           "shotCount": 35,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "2eb7bd20",
+          "stateHash": "51a4b869",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 43,
-            "side": "L",
+            "side": "R",
             "seq": 44
           },
           "score": {
             "L": 0,
-            "R": 1
+            "R": 0
           },
           "shotCount": 36,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "c2f1c608",
+          "stateHash": "64576fc4",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 44,
-            "side": "R",
+            "side": "L",
             "seq": 45
           },
           "score": {
             "L": 0,
-            "R": 1
+            "R": 0
           },
           "shotCount": 37,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "365ee7b6",
+          "stateHash": "8980b203",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 45,
-            "side": "L",
+            "side": "R",
             "seq": 46
           },
           "score": {
             "L": 0,
-            "R": 1
+            "R": 0
           },
           "shotCount": 38,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "ab8aed9e",
+          "stateHash": "f263a181",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 46,
-            "side": "R",
+            "side": "L",
             "seq": 47
           },
           "score": {
             "L": 0,
-            "R": 1
+            "R": 0
           },
           "shotCount": 39,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "42d43a47",
+          "stateHash": "88db5d14",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 47,
-            "side": "L",
+            "side": "R",
             "seq": 48
           },
           "score": {
             "L": 0,
-            "R": 1
+            "R": 0
           },
           "shotCount": 40,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "6454fb13",
+          "stateHash": "0cfd9198",
           "events": ["shot", "turn"]
         },
         {
@@ -2761,14 +2801,14 @@
             "seq": 49
           },
           "score": {
-            "L": 0,
-            "R": 1
+            "L": 1,
+            "R": 0
           },
           "shotCount": 41,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "bc73cfff",
-          "events": ["shot", "turn"]
+          "stateHash": "068be6b4",
+          "events": ["shot", "goal", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
@@ -2778,13 +2818,13 @@
             "seq": 50
           },
           "score": {
-            "L": 0,
-            "R": 1
+            "L": 1,
+            "R": 0
           },
           "shotCount": 42,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "01d9b86d",
+          "stateHash": "1101302a",
           "events": ["shot", "turn"]
         },
         {
@@ -2795,13 +2835,13 @@
             "seq": 51
           },
           "score": {
-            "L": 0,
-            "R": 1
+            "L": 1,
+            "R": 0
           },
           "shotCount": 43,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "e9a5fe8a",
+          "stateHash": "37cf9bd3",
           "events": ["shot", "turn"]
         },
         {
@@ -2812,13 +2852,13 @@
             "seq": 52
           },
           "score": {
-            "L": 0,
-            "R": 1
+            "L": 1,
+            "R": 0
           },
           "shotCount": 44,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "e8bb1873",
+          "stateHash": "3434c6d3",
           "events": ["shot", "turn"]
         },
         {
@@ -2829,13 +2869,13 @@
             "seq": 53
           },
           "score": {
-            "L": 0,
-            "R": 1
+            "L": 1,
+            "R": 0
           },
           "shotCount": 45,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "74eb1bf0",
+          "stateHash": "6400d920",
           "events": ["shot", "turn"]
         },
         {
@@ -2846,13 +2886,13 @@
             "seq": 54
           },
           "score": {
-            "L": 0,
-            "R": 1
+            "L": 1,
+            "R": 0
           },
           "shotCount": 46,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "77f3bb4f",
+          "stateHash": "8025397d",
           "events": ["shot", "turn"]
         },
         {
@@ -2863,13 +2903,13 @@
             "seq": 55
           },
           "score": {
-            "L": 0,
-            "R": 1
+            "L": 1,
+            "R": 0
           },
           "shotCount": 47,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "c5875335",
+          "stateHash": "eb458148",
           "events": ["shot", "turn"]
         },
         {
@@ -2880,13 +2920,13 @@
             "seq": 56
           },
           "score": {
-            "L": 0,
-            "R": 1
+            "L": 1,
+            "R": 0
           },
           "shotCount": 47,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "c5875335",
+          "stateHash": "eb458148",
           "events": ["timeout", "turn"]
         },
         {
@@ -2897,13 +2937,13 @@
             "seq": 57
           },
           "score": {
-            "L": 0,
-            "R": 1
+            "L": 1,
+            "R": 0
           },
           "shotCount": 47,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "c5875335",
+          "stateHash": "eb458148",
           "events": ["timeout", "turn"]
         },
         {
@@ -2914,13 +2954,13 @@
             "seq": 58
           },
           "score": {
-            "L": 0,
-            "R": 1
+            "L": 1,
+            "R": 0
           },
           "shotCount": 47,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "c5875335",
+          "stateHash": "eb458148",
           "events": ["timeout", "turn"]
         },
         {
@@ -2931,13 +2971,13 @@
             "seq": 59
           },
           "score": {
-            "L": 0,
-            "R": 1
+            "L": 1,
+            "R": 0
           },
           "shotCount": 48,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "5e31ad7d",
+          "stateHash": "c09285f4",
           "events": ["shot", "turn"]
         },
         {
@@ -2948,13 +2988,13 @@
             "seq": 60
           },
           "score": {
-            "L": 0,
-            "R": 1
+            "L": 1,
+            "R": 0
           },
           "shotCount": 49,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "2157eaa3",
+          "stateHash": "1cb9677e",
           "events": ["shot", "turn"]
         },
         {
@@ -2965,13 +3005,13 @@
             "seq": 61
           },
           "score": {
-            "L": 0,
-            "R": 1
+            "L": 1,
+            "R": 0
           },
           "shotCount": 50,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "11eb5ebb",
+          "stateHash": "1c2bda75",
           "events": ["shot", "turn"]
         },
         {
@@ -2982,34 +3022,167 @@
             "seq": 62
           },
           "score": {
-            "L": 0,
-            "R": 1
+            "L": 1,
+            "R": 0
           },
           "shotCount": 51,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "fac40850",
+          "stateHash": "73ff735a",
           "events": ["shot", "turn"]
         },
         {
-          "phase": "ENDED",
+          "phase": "AWAIT_SHOT",
           "turn": {
-            "index": 61,
-            "side": "L",
-            "seq": 62
+            "index": 62,
+            "side": "R",
+            "seq": 63
           },
           "score": {
-            "L": 0,
-            "R": 2
+            "L": 1,
+            "R": 0
           },
           "shotCount": 52,
           "suddenDeath": false,
-          "result": {
-            "winner": "R",
-            "reason": "goals"
+          "result": null,
+          "stateHash": "1bd9e6d5",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 63,
+            "side": "L",
+            "seq": 64
           },
-          "stateHash": "cfe84918",
-          "events": ["shot", "goal", "ended"]
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 53,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "e2fe13bc",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 64,
+            "side": "R",
+            "seq": 65
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 54,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "88265c2c",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 65,
+            "side": "L",
+            "seq": 66
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 55,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "bc137868",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 66,
+            "side": "R",
+            "seq": 67
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 55,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "bc137868",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 67,
+            "side": "L",
+            "seq": 68
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 56,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "d90875ee",
+          "events": ["shot", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 68,
+            "side": "R",
+            "seq": 69
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 56,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "d90875ee",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 69,
+            "side": "L",
+            "seq": 70
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 56,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "d90875ee",
+          "events": ["timeout", "turn"]
+        },
+        {
+          "phase": "AWAIT_SHOT",
+          "turn": {
+            "index": 70,
+            "side": "R",
+            "seq": 71
+          },
+          "score": {
+            "L": 1,
+            "R": 0
+          },
+          "shotCount": 57,
+          "suddenDeath": false,
+          "result": null,
+          "stateHash": "a4589fe4",
+          "events": ["shot", "turn"]
         }
       ]
     },
@@ -3031,68 +3204,68 @@
         {
           "type": "shot",
           "discIndex": 8,
-          "ix": 6.491598129272461,
-          "iy": 1.1836607456207275
+          "ix": 6.535330772399902,
+          "iy": 0.9117830395698547
         },
         {
           "type": "shot",
           "discIndex": 3,
-          "ix": 6.542487144470215,
-          "iy": 0.1163041889667511
+          "ix": 6.521732807159424,
+          "iy": 0.5335387587547302
         },
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": -1.0159966945648193,
-          "iy": 3.968986749649048
+          "ix": 0.7368326783180237,
+          "iy": 4.030158996582031
         },
         {
           "type": "shot",
           "discIndex": 0,
-          "ix": 3.568617105484009,
-          "iy": 0.9467609524726868
+          "ix": 3.5455029010772705,
+          "iy": 1.0299482345581055
         },
         {
           "type": "shot",
           "discIndex": 9,
-          "ix": 6.198881149291992,
-          "iy": 4.532120227813721
+          "ix": 5.723869323730469,
+          "iy": 5.118941307067871
         },
         {
           "type": "shot",
           "discIndex": 3,
-          "ix": 4.046837329864502,
-          "iy": 4.520539283752441
+          "ix": 6.04036283493042,
+          "iy": 0.5711289048194885
         },
         {
           "type": "shot",
           "discIndex": 7,
-          "ix": 1.7638218402862549,
-          "iy": 3.5392308235168457
+          "ix": 2.349233388900757,
+          "iy": 3.180931568145752
         },
         {
           "type": "shot",
           "discIndex": 0,
-          "ix": 6.938421726226807,
-          "iy": 4.900558948516846
+          "ix": 7.202675819396973,
+          "iy": 4.503180980682373
         },
         {
           "type": "shot",
           "discIndex": 8,
-          "ix": 7.220775604248047,
-          "iy": 2.9154438972473145
+          "ix": 7.760600566864014,
+          "iy": -0.6422567963600159
         },
         {
           "type": "shot",
           "discIndex": 0,
-          "ix": -7.3708600997924805,
-          "iy": 0.6032585501670837
+          "ix": 6.414217948913574,
+          "iy": -3.6812102794647217
         },
         {
           "type": "shot",
           "discIndex": 9,
-          "ix": -5.814029693603516,
-          "iy": 3.392590284347534
+          "ix": 5.688640117645264,
+          "iy": 3.598886728286743
         },
         {
           "type": "timeout"
@@ -3100,134 +3273,134 @@
         {
           "type": "shot",
           "discIndex": 6,
-          "ix": -3.3555469512939453,
-          "iy": 5.871835231781006
+          "ix": 6.761414527893066,
+          "iy": -0.1463468372821808
         },
         {
           "type": "shot",
           "discIndex": 1,
-          "ix": -5.943694114685059,
-          "iy": 0.4149302840232849
+          "ix": 5.932783126831055,
+          "iy": 0.5493189692497253
         },
         {
           "type": "shot",
           "discIndex": 8,
-          "ix": -6.162619590759277,
-          "iy": 2.821183443069458
+          "ix": 6.238407611846924,
+          "iy": 2.6493823528289795
         },
         {
           "type": "shot",
           "discIndex": 4,
-          "ix": -6.646005153656006,
-          "iy": 3.5495543479919434
+          "ix": 6.227687358856201,
+          "iy": 4.2408294677734375
         },
         {
           "type": "shot",
           "discIndex": 6,
-          "ix": 1.7642253637313843,
-          "iy": 6.698747634887695
+          "ix": 6.622719764709473,
+          "iy": 2.0310819149017334
         },
         {
           "type": "shot",
           "discIndex": 2,
-          "ix": -0.4467589259147644,
-          "iy": 3.899505853652954
+          "ix": 3.221942186355591,
+          "iy": 2.2416129112243652
         },
         {
           "type": "shot",
           "discIndex": 7,
-          "ix": -4.487002372741699,
-          "iy": 2.4402999877929688
+          "ix": -3.1221566200256348,
+          "iy": 4.042325019836426
         },
         {
           "type": "shot",
           "discIndex": 3,
-          "ix": -3.7201714515686035,
-          "iy": -0.8237571120262146
+          "ix": 1.7467620372772217,
+          "iy": 3.3863067626953125
         },
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": -6.587256908416748,
-          "iy": 4.462836265563965
+          "ix": -2.868788003921509,
+          "iy": 7.4215168952941895
         },
         {
           "type": "shot",
           "discIndex": 4,
-          "ix": -7.5525689125061035,
-          "iy": 1.583787441253662
+          "ix": 5.964078903198242,
+          "iy": 4.896881103515625
         },
         {
           "type": "shot",
           "discIndex": 7,
-          "ix": -7.82432222366333,
-          "iy": 3.8679399490356445
+          "ix": -1.3526023626327515,
+          "iy": 8.62272834777832
         },
         {
           "type": "shot",
           "discIndex": 3,
-          "ix": -6.321437835693359,
-          "iy": 2.747427463531494
+          "ix": 5.808733940124512,
+          "iy": 3.7104642391204834
         },
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": -7.798857688903809,
-          "iy": -1.3503477573394775
+          "ix": -6.943843841552734,
+          "iy": 3.798506736755371
         },
         {
           "type": "shot",
           "discIndex": 3,
-          "ix": -5.674259185791016,
-          "iy": -2.9576380252838135
+          "ix": -6.3952412605285645,
+          "iy": -0.21384486556053162
         },
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": -1.2010043859481812,
-          "iy": -5.013223648071289
+          "ix": -4.275791645050049,
+          "iy": 2.8796582221984863
         },
         {
           "type": "shot",
           "discIndex": 3,
-          "ix": -1.9051706790924072,
-          "iy": -3.528529167175293
+          "ix": -3.341515064239502,
+          "iy": 2.216860294342041
         },
         {
           "type": "shot",
           "discIndex": 6,
-          "ix": 1.2437629699707031,
-          "iy": -4.206223964691162
+          "ix": -4.316376686096191,
+          "iy": 0.7798452377319336
         },
         {
           "type": "shot",
           "discIndex": 2,
-          "ix": 5.827343940734863,
-          "iy": -0.2256559431552887
+          "ix": -1.0265898704528809,
+          "iy": 5.740642070770264
         },
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": -7.158169746398926,
-          "iy": -4.8897294998168945
+          "ix": -7.65645694732666,
+          "iy": 4.065405368804932
         },
         {
           "type": "shot",
           "discIndex": 2,
-          "ix": 5.765665054321289,
-          "iy": 1.0266426801681519
+          "ix": -5.856294631958008,
+          "iy": -0.026547424495220184
         },
         {
           "type": "shot",
           "discIndex": 7,
-          "ix": 5.236344337463379,
-          "iy": -6.886270046234131
+          "ix": -8.62292766571045,
+          "iy": 0.6965208649635315
         },
         {
           "type": "shot",
           "discIndex": 2,
-          "ix": -1.1990015506744385,
-          "iy": -4.869528293609619
+          "ix": 1.0983691215515137,
+          "iy": 4.893208980560303
         },
         {
           "type": "timeout"
@@ -3235,104 +3408,104 @@
         {
           "type": "shot",
           "discIndex": 1,
-          "ix": -3.0686886310577393,
-          "iy": -6.662808895111084
+          "ix": 4.008331775665283,
+          "iy": 6.143545627593994
         },
         {
           "type": "shot",
           "discIndex": 7,
-          "ix": 1.087079405784607,
-          "iy": -8.058267593383789
+          "ix": -8.097989082336426,
+          "iy": 0.7348349094390869
         },
         {
           "type": "shot",
           "discIndex": 4,
-          "ix": 0.8734608888626099,
-          "iy": -5.881529331207275
+          "ix": -5.91650915145874,
+          "iy": 0.5918070077896118
         },
         {
           "type": "shot",
           "discIndex": 9,
-          "ix": -8.116695404052734,
-          "iy": -0.9256075620651245
+          "ix": -7.859055995941162,
+          "iy": 2.229961633682251
         },
         {
           "type": "shot",
           "discIndex": 1,
-          "ix": -6.416110992431641,
-          "iy": 1.175980567932129
+          "ix": 4.999100685119629,
+          "iy": -4.190275192260742
         },
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": -4.184299468994141,
-          "iy": 5.699179649353027
+          "ix": -2.091270685195923,
+          "iy": 6.753931999206543
         },
         {
           "type": "shot",
           "discIndex": 2,
-          "ix": -3.6883108615875244,
-          "iy": 3.4071731567382812
+          "ix": -4.2865095138549805,
+          "iy": 2.6150147914886475
         },
         {
           "type": "shot",
           "discIndex": 7,
-          "ix": -4.9645915031433105,
-          "iy": -2.7266740798950195
+          "ix": -5.659321308135986,
+          "iy": -0.23238804936408997
         },
         {
           "type": "shot",
           "discIndex": 2,
-          "ix": 5.292746067047119,
-          "iy": 6.7914347648620605
+          "ix": -1.57747483253479,
+          "iy": 8.464532852172852
         },
         {
           "type": "shot",
           "discIndex": 7,
-          "ix": 5.09371280670166,
-          "iy": -1.2432360649108887
+          "ix": -5.140603065490723,
+          "iy": -1.0323501825332642
         },
         {
           "type": "shot",
           "discIndex": 4,
-          "ix": -7.567564964294434,
-          "iy": 3.335655689239502
+          "ix": -8.270013809204102,
+          "iy": 0.03890107199549675
         },
         {
           "type": "shot",
           "discIndex": 7,
-          "ix": 1.112953543663025,
-          "iy": 5.039300918579102
+          "ix": -5.0352983474731445,
+          "iy": 1.130926251411438
         },
         {
           "type": "shot",
           "discIndex": 4,
-          "ix": 6.908981800079346,
-          "iy": 1.4957554340362549
+          "ix": -6.996161460876465,
+          "iy": -1.0124423503875732
         },
         {
           "type": "shot",
           "discIndex": 6,
-          "ix": 4.761460781097412,
-          "iy": -0.039809729903936386
+          "ix": -4.754570960998535,
+          "iy": 0.2591345012187958
         },
         {
           "type": "shot",
           "discIndex": 1,
-          "ix": 3.8160321712493896,
-          "iy": 2.161241292953491
+          "ix": -3.492913246154785,
+          "iy": 2.651909112930298
         },
         {
           "type": "shot",
           "discIndex": 9,
-          "ix": -4.558270454406738,
-          "iy": 0.18146416544914246
+          "ix": -4.3097968101501465,
+          "iy": 1.4954636096954346
         },
         {
           "type": "shot",
           "discIndex": 1,
-          "ix": 7.234516620635986,
-          "iy": 3.213496685028076
+          "ix": -2.677121162414551,
+          "iy": 7.449685573577881
         },
         {
           "type": "timeout"
@@ -3340,44 +3513,44 @@
         {
           "type": "shot",
           "discIndex": 0,
-          "ix": 2.62603759765625,
-          "iy": 6.695733070373535
+          "ix": -3.5461416244506836,
+          "iy": 6.257299423217773
         },
         {
           "type": "shot",
           "discIndex": 6,
-          "ix": 2.8749771118164062,
-          "iy": 3.105257272720337
+          "ix": -4.229733943939209,
+          "iy": -0.13216055929660797
         },
         {
           "type": "shot",
           "discIndex": 3,
-          "ix": -4.987267971038818,
-          "iy": -3.007949113845825
+          "ix": -5.803955078125,
+          "iy": 0.4844602346420288
         },
         {
           "type": "shot",
           "discIndex": 8,
-          "ix": -5.645303249359131,
-          "iy": 0.46258658170700073
+          "ix": -5.504045009613037,
+          "iy": 1.3375061750411987
         },
         {
           "type": "shot",
           "discIndex": 2,
-          "ix": -1.5502384901046753,
-          "iy": 4.304780960083008
+          "ix": -1.0428240299224854,
+          "iy": 4.454985618591309
         },
         {
           "type": "shot",
           "discIndex": 9,
-          "ix": -1.844910740852356,
-          "iy": 4.954670429229736
+          "ix": -3.2698276042938232,
+          "iy": 4.154597282409668
         },
         {
           "type": "shot",
           "discIndex": 0,
-          "ix": -3.6288905143737793,
-          "iy": 0.8212112188339233
+          "ix": -2.9828004837036133,
+          "iy": 2.2239911556243896
         },
         {
           "type": "timeout"
@@ -3385,8 +3558,8 @@
         {
           "type": "shot",
           "discIndex": 1,
-          "ix": -5.355436325073242,
-          "iy": 1.6514623165130615
+          "ix": -3.3831593990325928,
+          "iy": 4.46791410446167
         },
         {
           "type": "timeout"
@@ -3394,32 +3567,32 @@
         {
           "type": "shot",
           "discIndex": 3,
-          "ix": 2.470534324645996,
-          "iy": 4.040929317474365
+          "ix": -4.73630428314209,
+          "iy": 0.008344156667590141
         },
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": -1.5584224462509155,
-          "iy": 7.120837688446045
+          "ix": 2.010450601577759,
+          "iy": 7.006646633148193
         },
         {
           "type": "shot",
           "discIndex": 2,
-          "ix": 2.989295482635498,
-          "iy": 8.441506385803223
+          "ix": -5.622701168060303,
+          "iy": 6.969946384429932
         },
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": -5.2711100578308105,
-          "iy": 3.7254538536071777
+          "ix": -2.709959030151367,
+          "iy": 5.858304500579834
         },
         {
           "type": "shot",
           "discIndex": 0,
-          "ix": -2.7413315773010254,
-          "iy": 7.219517707824707
+          "ix": -5.939730167388916,
+          "iy": 4.935173511505127
         }
       ],
       "snapshots": [
@@ -3437,7 +3610,7 @@
           "shotCount": 1,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "ef1083ba",
+          "stateHash": "1564e3b3",
           "events": ["shot", "turn"]
         },
         {
@@ -3454,7 +3627,7 @@
           "shotCount": 2,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "5dd9f571",
+          "stateHash": "eb9ed806",
           "events": ["shot", "turn"]
         },
         {
@@ -3471,7 +3644,7 @@
           "shotCount": 3,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "cb140073",
+          "stateHash": "ab509b0b",
           "events": ["shot", "turn"]
         },
         {
@@ -3488,7 +3661,7 @@
           "shotCount": 4,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "1c890d73",
+          "stateHash": "a13123c3",
           "events": ["shot", "turn"]
         },
         {
@@ -3505,7 +3678,7 @@
           "shotCount": 5,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "0283f724",
+          "stateHash": "e291c39c",
           "events": ["shot", "turn"]
         },
         {
@@ -3522,7 +3695,7 @@
           "shotCount": 6,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "3718caf5",
+          "stateHash": "dde2e150",
           "events": ["shot", "turn"]
         },
         {
@@ -3539,7 +3712,7 @@
           "shotCount": 7,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "b21162e0",
+          "stateHash": "6e121182",
           "events": ["shot", "turn"]
         },
         {
@@ -3556,7 +3729,7 @@
           "shotCount": 8,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "4f4162c5",
+          "stateHash": "49f4eaad",
           "events": ["shot", "turn"]
         },
         {
@@ -3573,7 +3746,7 @@
           "shotCount": 9,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "1272eb9b",
+          "stateHash": "1d3fa5ab",
           "events": ["shot", "turn"]
         },
         {
@@ -3590,7 +3763,7 @@
           "shotCount": 10,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "671493f1",
+          "stateHash": "37d84fbc",
           "events": ["shot", "turn"]
         },
         {
@@ -3607,7 +3780,7 @@
           "shotCount": 11,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "8fc70b01",
+          "stateHash": "ca8e88c7",
           "events": ["shot", "turn"]
         },
         {
@@ -3624,7 +3797,7 @@
           "shotCount": 12,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "391653d8",
+          "stateHash": "4f6e99d7",
           "events": ["shot", "turn"]
         },
         {
@@ -3641,7 +3814,7 @@
           "shotCount": 13,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "a3f9ef7f",
+          "stateHash": "ae3409b4",
           "events": ["shot", "turn"]
         },
         {
@@ -3658,7 +3831,7 @@
           "shotCount": 13,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "a3f9ef7f",
+          "stateHash": "ae3409b4",
           "events": ["timeout", "turn"]
         },
         {
@@ -3675,7 +3848,7 @@
           "shotCount": 14,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "2d75f17c",
+          "stateHash": "fd9c2781",
           "events": ["shot", "turn"]
         },
         {
@@ -3692,7 +3865,7 @@
           "shotCount": 15,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "a91a0669",
+          "stateHash": "67372e6b",
           "events": ["shot", "turn"]
         },
         {
@@ -3709,7 +3882,7 @@
           "shotCount": 16,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "40dddd3e",
+          "stateHash": "f44d5902",
           "events": ["shot", "turn"]
         },
         {
@@ -3726,7 +3899,7 @@
           "shotCount": 17,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "d1d87a3c",
+          "stateHash": "50ed9e3c",
           "events": ["shot", "turn"]
         },
         {
@@ -3743,7 +3916,7 @@
           "shotCount": 18,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "2f5427a6",
+          "stateHash": "a00578a9",
           "events": ["shot", "turn"]
         },
         {
@@ -3760,7 +3933,7 @@
           "shotCount": 19,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "4e5d29e8",
+          "stateHash": "6ec1db01",
           "events": ["shot", "turn"]
         },
         {
@@ -3777,7 +3950,7 @@
           "shotCount": 20,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "d2573bf4",
+          "stateHash": "16e793b1",
           "events": ["shot", "turn"]
         },
         {
@@ -3794,7 +3967,7 @@
           "shotCount": 21,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "8cbad521",
+          "stateHash": "7378e5fa",
           "events": ["shot", "turn"]
         },
         {
@@ -3811,7 +3984,7 @@
           "shotCount": 22,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "caf02c8b",
+          "stateHash": "608c7720",
           "events": ["shot", "turn"]
         },
         {
@@ -3828,7 +4001,7 @@
           "shotCount": 23,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "9562be71",
+          "stateHash": "2cf7ea84",
           "events": ["shot", "turn"]
         },
         {
@@ -3845,7 +4018,7 @@
           "shotCount": 24,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "3e01d943",
+          "stateHash": "f958a626",
           "events": ["shot", "turn"]
         },
         {
@@ -3862,7 +4035,7 @@
           "shotCount": 25,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "6807fbd5",
+          "stateHash": "8fd64c24",
           "events": ["shot", "turn"]
         },
         {
@@ -3879,7 +4052,7 @@
           "shotCount": 26,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "df11d4bc",
+          "stateHash": "2673efc6",
           "events": ["shot", "turn"]
         },
         {
@@ -3896,7 +4069,7 @@
           "shotCount": 27,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "f4ad387d",
+          "stateHash": "1780c921",
           "events": ["shot", "turn"]
         },
         {
@@ -3913,7 +4086,7 @@
           "shotCount": 28,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "1aad951a",
+          "stateHash": "8dce0700",
           "events": ["shot", "turn"]
         },
         {
@@ -3930,7 +4103,7 @@
           "shotCount": 29,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "c9f0c75c",
+          "stateHash": "00b0d882",
           "events": ["shot", "turn"]
         },
         {
@@ -3947,7 +4120,7 @@
           "shotCount": 30,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "2f9a73f2",
+          "stateHash": "c0c39e75",
           "events": ["shot", "turn"]
         },
         {
@@ -3964,7 +4137,7 @@
           "shotCount": 31,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "23cb965a",
+          "stateHash": "5ab2f1be",
           "events": ["shot", "turn"]
         },
         {
@@ -3981,7 +4154,7 @@
           "shotCount": 32,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "eca5d617",
+          "stateHash": "1c380631",
           "events": ["shot", "turn"]
         },
         {
@@ -3998,7 +4171,7 @@
           "shotCount": 33,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "06b35a45",
+          "stateHash": "1988809a",
           "events": ["shot", "turn"]
         },
         {
@@ -4015,7 +4188,7 @@
           "shotCount": 34,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "044fefaa",
+          "stateHash": "c7ceb757",
           "events": ["shot", "turn"]
         },
         {
@@ -4032,7 +4205,7 @@
           "shotCount": 35,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "e0c05e32",
+          "stateHash": "767bf352",
           "events": ["shot", "turn"]
         },
         {
@@ -4049,7 +4222,7 @@
           "shotCount": 35,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "e0c05e32",
+          "stateHash": "767bf352",
           "events": ["timeout", "turn"]
         },
         {
@@ -4066,7 +4239,7 @@
           "shotCount": 36,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "a72084b4",
+          "stateHash": "2247fd8b",
           "events": ["shot", "turn"]
         },
         {
@@ -4083,7 +4256,7 @@
           "shotCount": 37,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "0dcf8639",
+          "stateHash": "96d157e5",
           "events": ["shot", "turn"]
         },
         {
@@ -4100,7 +4273,7 @@
           "shotCount": 38,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "3f1681fd",
+          "stateHash": "aeb15e44",
           "events": ["shot", "turn"]
         },
         {
@@ -4117,7 +4290,7 @@
           "shotCount": 39,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "4d21041a",
+          "stateHash": "12ad1c6d",
           "events": ["shot", "turn"]
         },
         {
@@ -4134,7 +4307,7 @@
           "shotCount": 40,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "e8bf6294",
+          "stateHash": "28062fa5",
           "events": ["shot", "turn"]
         },
         {
@@ -4151,7 +4324,7 @@
           "shotCount": 41,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "2184470f",
+          "stateHash": "38875401",
           "events": ["shot", "turn"]
         },
         {
@@ -4168,7 +4341,7 @@
           "shotCount": 42,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "360996f7",
+          "stateHash": "2369d8b0",
           "events": ["shot", "turn"]
         },
         {
@@ -4185,7 +4358,7 @@
           "shotCount": 43,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "e40ea547",
+          "stateHash": "4e5e99b6",
           "events": ["shot", "turn"]
         },
         {
@@ -4202,7 +4375,7 @@
           "shotCount": 44,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "6c5ba5f9",
+          "stateHash": "9f7b65ef",
           "events": ["shot", "turn"]
         },
         {
@@ -4219,7 +4392,7 @@
           "shotCount": 45,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "fb726255",
+          "stateHash": "aef01574",
           "events": ["shot", "turn"]
         },
         {
@@ -4236,7 +4409,7 @@
           "shotCount": 46,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "7c2ad615",
+          "stateHash": "b0aefd96",
           "events": ["shot", "turn"]
         },
         {
@@ -4253,7 +4426,7 @@
           "shotCount": 47,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "c1a1c02f",
+          "stateHash": "3932ba72",
           "events": ["shot", "turn"]
         },
         {
@@ -4270,7 +4443,7 @@
           "shotCount": 48,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "0e46dbda",
+          "stateHash": "b616dcfa",
           "events": ["shot", "turn"]
         },
         {
@@ -4287,7 +4460,7 @@
           "shotCount": 49,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "f79a02ec",
+          "stateHash": "9319c82a",
           "events": ["shot", "turn"]
         },
         {
@@ -4304,7 +4477,7 @@
           "shotCount": 50,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "89da473e",
+          "stateHash": "de214909",
           "events": ["shot", "turn"]
         },
         {
@@ -4321,7 +4494,7 @@
           "shotCount": 51,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "98f33802",
+          "stateHash": "f1fd0a49",
           "events": ["shot", "turn"]
         },
         {
@@ -4338,7 +4511,7 @@
           "shotCount": 52,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "fbde24b9",
+          "stateHash": "835da4bf",
           "events": ["shot", "turn"]
         },
         {
@@ -4355,7 +4528,7 @@
           "shotCount": 52,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "fbde24b9",
+          "stateHash": "835da4bf",
           "events": ["timeout", "turn"]
         },
         {
@@ -4372,7 +4545,7 @@
           "shotCount": 53,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "2ad3a8e6",
+          "stateHash": "a6686dac",
           "events": ["shot", "turn"]
         },
         {
@@ -4389,7 +4562,7 @@
           "shotCount": 54,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "6e3a3c23",
+          "stateHash": "530502f4",
           "events": ["shot", "turn"]
         },
         {
@@ -4406,7 +4579,7 @@
           "shotCount": 55,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "867fa07d",
+          "stateHash": "cfc3d6bc",
           "events": ["shot", "turn"]
         },
         {
@@ -4423,7 +4596,7 @@
           "shotCount": 56,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "022863f9",
+          "stateHash": "949300e4",
           "events": ["shot", "turn"]
         },
         {
@@ -4440,7 +4613,7 @@
           "shotCount": 57,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "2f1ab7da",
+          "stateHash": "acccb8d2",
           "events": ["shot", "turn"]
         },
         {
@@ -4457,7 +4630,7 @@
           "shotCount": 58,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "68a8ba25",
+          "stateHash": "7589cd7e",
           "events": ["shot", "turn"]
         },
         {
@@ -4474,7 +4647,7 @@
           "shotCount": 59,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "cb5c7e73",
+          "stateHash": "f36ef036",
           "events": ["shot", "turn"]
         },
         {
@@ -4491,7 +4664,7 @@
           "shotCount": 59,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "cb5c7e73",
+          "stateHash": "f36ef036",
           "events": ["timeout", "turn"]
         },
         {
@@ -4508,7 +4681,7 @@
           "shotCount": 60,
           "suddenDeath": true,
           "result": null,
-          "stateHash": "a5a0d770",
+          "stateHash": "f287453a",
           "events": ["shot", "sudden_death", "turn"]
         },
         {
@@ -4525,7 +4698,7 @@
           "shotCount": 60,
           "suddenDeath": true,
           "result": null,
-          "stateHash": "a5a0d770",
+          "stateHash": "f287453a",
           "events": ["timeout", "turn"]
         },
         {
@@ -4542,7 +4715,7 @@
           "shotCount": 61,
           "suddenDeath": true,
           "result": null,
-          "stateHash": "124e5d6f",
+          "stateHash": "27d11786",
           "events": ["shot", "turn"]
         },
         {
@@ -4559,7 +4732,7 @@
           "shotCount": 62,
           "suddenDeath": true,
           "result": null,
-          "stateHash": "1a5bd2a5",
+          "stateHash": "d06c2d8d",
           "events": ["shot", "turn"]
         },
         {
@@ -4576,7 +4749,7 @@
           "shotCount": 63,
           "suddenDeath": true,
           "result": null,
-          "stateHash": "cad6a4c0",
+          "stateHash": "e6eb7e3f",
           "events": ["shot", "turn"]
         },
         {
@@ -4593,7 +4766,7 @@
           "shotCount": 64,
           "suddenDeath": true,
           "result": null,
-          "stateHash": "fa3968ec",
+          "stateHash": "aca55261",
           "events": ["shot", "turn"]
         },
         {
@@ -4610,7 +4783,7 @@
           "shotCount": 65,
           "suddenDeath": true,
           "result": null,
-          "stateHash": "b21b9ac2",
+          "stateHash": "5334c7ee",
           "events": ["shot", "turn"]
         }
       ]
@@ -4627,8 +4800,8 @@
         {
           "type": "shot",
           "discIndex": 4,
-          "ix": 3.513594627380371,
-          "iy": -1.756331443786621
+          "ix": 2.6943247318267822,
+          "iy": -2.8584370613098145
         },
         {
           "type": "timeout"
@@ -4636,14 +4809,14 @@
         {
           "type": "shot",
           "discIndex": 2,
-          "ix": 5.804345607757568,
-          "iy": 0.7353562712669373
+          "ix": 5.444372177124023,
+          "iy": -2.1424264907836914
         },
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": -4.799189567565918,
-          "iy": -0.8438180685043335
+          "ix": -3.720972776412964,
+          "iy": -3.1462061405181885
         },
         {
           "type": "timeout"
@@ -4651,215 +4824,206 @@
         {
           "type": "shot",
           "discIndex": 8,
-          "ix": -2.9128663539886475,
-          "iy": 3.4465396404266357
+          "ix": 3.470693349838257,
+          "iy": -2.884044647216797
         },
         {
           "type": "shot",
           "discIndex": 3,
-          "ix": 2.050804853439331,
-          "iy": 7.684240818023682
+          "ix": 6.084434986114502,
+          "iy": -5.121817111968994
         },
         {
           "type": "shot",
           "discIndex": 6,
-          "ix": -4.819254398345947,
-          "iy": -6.0624613761901855
+          "ix": -2.3864386081695557,
+          "iy": -7.367737770080566
         },
         {
           "type": "shot",
           "discIndex": 2,
-          "ix": 3.7423160076141357,
-          "iy": -0.050812385976314545
+          "ix": 3.101224184036255,
+          "iy": -2.0952134132385254
         },
         {
           "type": "shot",
           "discIndex": 6,
-          "ix": -2.5141844749450684,
-          "iy": -3.3857364654541016
+          "ix": -1.4319230318069458,
+          "iy": -3.966602087020874
         },
         {
           "type": "shot",
           "discIndex": 0,
-          "ix": 4.9582390785217285,
-          "iy": -5.321448802947998
+          "ix": 7.001741886138916,
+          "iy": -1.969152808189392
         },
         {
           "type": "shot",
           "discIndex": 6,
-          "ix": -6.3763957023620605,
-          "iy": -1.8292927742004395
+          "ix": -2.44364070892334,
+          "iy": -6.167118549346924
         },
         {
           "type": "shot",
           "discIndex": 1,
-          "ix": 2.165712833404541,
-          "iy": -8.150435447692871
+          "ix": 4.298591613769531,
+          "iy": -7.255482196807861
         },
         {
           "type": "shot",
           "discIndex": 6,
-          "ix": 7.601879596710205,
-          "iy": 2.26263165473938
+          "ix": -4.539377689361572,
+          "iy": -6.504008769989014
         },
         {
           "type": "shot",
           "discIndex": 1,
-          "ix": 8.305545806884766,
-          "iy": -0.24029265344142914
+          "ix": 6.641150951385498,
+          "iy": -4.993489742279053
         },
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": 3.5704286098480225,
-          "iy": 6.836746692657471
+          "ix": -7.703770637512207,
+          "iy": 0.3754732310771942
         },
         {
           "type": "shot",
           "discIndex": 3,
-          "ix": 3.6570420265197754,
-          "iy": -3.0573482513427734
+          "ix": -0.35271820425987244,
+          "iy": -4.753622531890869
         },
         {
           "type": "shot",
           "discIndex": 7,
-          "ix": 5.806808948516846,
-          "iy": -2.236551284790039
+          "ix": -6.216334342956543,
+          "iy": 0.27996596693992615
         },
         {
           "type": "shot",
           "discIndex": 0,
-          "ix": 5.89923095703125,
-          "iy": 4.132009983062744
+          "ix": 2.407527446746826,
+          "iy": -6.788095951080322
         },
         {
           "type": "shot",
           "discIndex": 9,
-          "ix": 4.937037467956543,
-          "iy": 1.9106290340423584
+          "ix": -2.1948435306549072,
+          "iy": -4.817416667938232
         },
         {
           "type": "shot",
           "discIndex": 4,
-          "ix": 6.299983978271484,
-          "iy": 0.6232762336730957
+          "ix": 6.24785041809082,
+          "iy": 1.0210942029953003
         },
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": 5.08507776260376,
-          "iy": -0.848056972026825
+          "ix": -3.5311636924743652,
+          "iy": -3.756075143814087
         },
         {
           "type": "shot",
           "discIndex": 1,
-          "ix": -5.0288615226745605,
-          "iy": 7.174455642700195
+          "ix": 5.384511947631836,
+          "iy": 6.911533355712891
         },
         {
           "type": "shot",
           "discIndex": 9,
-          "ix": -3.35302734375,
-          "iy": 1.7754896879196167
+          "ix": 2.9036600589752197,
+          "iy": -2.442112445831299
         },
         {
           "type": "shot",
           "discIndex": 0,
-          "ix": 8.404730796813965,
-          "iy": 2.5948853492736816
+          "ix": 7.763844013214111,
+          "iy": -4.134688854217529
         },
         {
           "type": "shot",
           "discIndex": 6,
-          "ix": -7.117899417877197,
-          "iy": -2.8697564601898193
+          "ix": 2.0542192459106445,
+          "iy": -7.394604682922363
         },
         {
           "type": "shot",
           "discIndex": 3,
-          "ix": 5.925386428833008,
-          "iy": -1.3697166442871094
+          "ix": 5.846739768981934,
+          "iy": -1.6739047765731812
         },
         {
           "type": "shot",
           "discIndex": 7,
-          "ix": -5.205101013183594,
-          "iy": 2.011542320251465
+          "ix": 5.561203956604004,
+          "iy": -0.46085286140441895
         },
         {
           "type": "shot",
           "discIndex": 1,
-          "ix": 3.1374635696411133,
-          "iy": -2.0853888988494873
+          "ix": 2.3200457096099854,
+          "iy": -2.968149423599243
         },
         {
           "type": "shot",
           "discIndex": 7,
-          "ix": -0.9253854155540466,
-          "iy": 7.101304054260254
+          "ix": 6.66893196105957,
+          "iy": -2.6096363067626953
         },
         {
           "type": "shot",
           "discIndex": 1,
-          "ix": 4.7444891929626465,
-          "iy": -3.401500940322876
+          "ix": 4.878200531005859,
+          "iy": -3.2067973613739014
         },
         {
           "type": "shot",
           "discIndex": 9,
-          "ix": 3.7429616451263428,
-          "iy": 4.05247688293457
+          "ix": 4.397314071655273,
+          "iy": -3.3310604095458984
         },
         {
           "type": "shot",
           "discIndex": 4,
-          "ix": 5.785947799682617,
-          "iy": 1.082306146621704
+          "ix": 5.53539514541626,
+          "iy": -2.0019936561584473
         },
         {
           "type": "shot",
           "discIndex": 7,
-          "ix": -2.218496322631836,
-          "iy": 6.249144077301025
+          "ix": 0.6989563703536987,
+          "iy": 6.5943145751953125
         },
         {
           "type": "shot",
           "discIndex": 2,
-          "ix": 6.813589572906494,
-          "iy": 4.2406744956970215
+          "ix": 7.183807849884033,
+          "iy": 3.5778799057006836
         },
         {
           "type": "shot",
           "discIndex": 7,
-          "ix": 3.433518171310425,
-          "iy": 7.518611907958984
+          "ix": -1.277273416519165,
+          "iy": 8.166219711303711
         },
         {
           "type": "shot",
           "discIndex": 2,
-          "ix": 5.775892734527588,
-          "iy": 0.001535944640636444
+          "ix": 5.594311714172363,
+          "iy": 1.4368776082992554
         },
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": -0.8871931433677673,
-          "iy": 6.195915699005127
+          "ix": 1.4728668928146362,
+          "iy": 6.083349704742432
         },
         {
           "type": "shot",
           "discIndex": 2,
-          "ix": 6.770031452178955,
-          "iy": 4.589059829711914
-        },
-        {
-          "type": "timeout"
-        },
-        {
-          "type": "shot",
-          "discIndex": 4,
-          "ix": 4.068541526794434,
-          "iy": 2.9125702381134033
+          "ix": 4.498053073883057,
+          "iy": 6.830835819244385
         },
         {
           "type": "timeout"
@@ -4867,14 +5031,23 @@
         {
           "type": "shot",
           "discIndex": 4,
-          "ix": 3.4712026119232178,
-          "iy": 4.320584774017334
+          "ix": 2.0333681106567383,
+          "iy": 4.571816921234131
+        },
+        {
+          "type": "timeout"
+        },
+        {
+          "type": "shot",
+          "discIndex": 4,
+          "ix": 3.380384922027588,
+          "iy": 4.392004013061523
         },
         {
           "type": "shot",
           "discIndex": 7,
-          "ix": -1.2830392122268677,
-          "iy": 7.62692928314209
+          "ix": 1.8696749210357666,
+          "iy": 7.504702091217041
         },
         {
           "type": "timeout"
@@ -4882,8 +5055,8 @@
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": -2.544808864593506,
-          "iy": 5.104406833648682
+          "ix": 5.5743021965026855,
+          "iy": -1.2075508832931519
         },
         {
           "type": "timeout"
@@ -4891,8 +5064,8 @@
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": -4.290096282958984,
-          "iy": 5.1721649169921875
+          "ix": 6.639616966247559,
+          "iy": -1.0352309942245483
         },
         {
           "type": "timeout"
@@ -4913,7 +5086,7 @@
           "shotCount": 1,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "df3ddd77",
+          "stateHash": "b69d3ce0",
           "events": ["shot", "turn"]
         },
         {
@@ -4930,7 +5103,7 @@
           "shotCount": 2,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "32424c37",
+          "stateHash": "0e36635d",
           "events": ["shot", "turn"]
         },
         {
@@ -4947,7 +5120,7 @@
           "shotCount": 2,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "32424c37",
+          "stateHash": "0e36635d",
           "events": ["timeout", "turn"]
         },
         {
@@ -4964,7 +5137,7 @@
           "shotCount": 3,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "d8729301",
+          "stateHash": "2aa3f903",
           "events": ["shot", "turn"]
         },
         {
@@ -4981,7 +5154,7 @@
           "shotCount": 4,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "059ee13e",
+          "stateHash": "1e4f87cb",
           "events": ["shot", "turn"]
         },
         {
@@ -4998,7 +5171,7 @@
           "shotCount": 4,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "059ee13e",
+          "stateHash": "1e4f87cb",
           "events": ["timeout", "turn"]
         },
         {
@@ -5015,7 +5188,7 @@
           "shotCount": 5,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "6579b02e",
+          "stateHash": "a141ab0b",
           "events": ["shot", "turn"]
         },
         {
@@ -5032,7 +5205,7 @@
           "shotCount": 6,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "58ddea47",
+          "stateHash": "d760c57d",
           "events": ["shot", "turn"]
         },
         {
@@ -5049,7 +5222,7 @@
           "shotCount": 7,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "8dc905fb",
+          "stateHash": "72513d39",
           "events": ["shot", "turn"]
         },
         {
@@ -5066,7 +5239,7 @@
           "shotCount": 8,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "6d4cb03f",
+          "stateHash": "91c3c9a6",
           "events": ["shot", "turn"]
         },
         {
@@ -5083,7 +5256,7 @@
           "shotCount": 9,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "0a02bd93",
+          "stateHash": "a514e2c2",
           "events": ["shot", "turn"]
         },
         {
@@ -5100,7 +5273,7 @@
           "shotCount": 10,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "0d55ec96",
+          "stateHash": "e1bbc36b",
           "events": ["shot", "turn"]
         },
         {
@@ -5117,7 +5290,7 @@
           "shotCount": 11,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "f7d72add",
+          "stateHash": "f954cb99",
           "events": ["shot", "turn"]
         },
         {
@@ -5134,7 +5307,7 @@
           "shotCount": 12,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "59a5ac17",
+          "stateHash": "4d3dcdc4",
           "events": ["shot", "turn"]
         },
         {
@@ -5151,7 +5324,7 @@
           "shotCount": 13,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "dbfc19a4",
+          "stateHash": "6541b200",
           "events": ["shot", "turn"]
         },
         {
@@ -5168,7 +5341,7 @@
           "shotCount": 14,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "956b10da",
+          "stateHash": "b7edee77",
           "events": ["shot", "turn"]
         },
         {
@@ -5185,7 +5358,7 @@
           "shotCount": 15,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "7aa8bce0",
+          "stateHash": "6cb76737",
           "events": ["shot", "turn"]
         },
         {
@@ -5202,7 +5375,7 @@
           "shotCount": 16,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "fa5d9932",
+          "stateHash": "9fd27b89",
           "events": ["shot", "turn"]
         },
         {
@@ -5219,7 +5392,7 @@
           "shotCount": 17,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "e9ec1c0c",
+          "stateHash": "3edbd7e9",
           "events": ["shot", "turn"]
         },
         {
@@ -5236,7 +5409,7 @@
           "shotCount": 18,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "135cb2cc",
+          "stateHash": "ba6d6b38",
           "events": ["shot", "turn"]
         },
         {
@@ -5253,7 +5426,7 @@
           "shotCount": 19,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "8256fb59",
+          "stateHash": "9ece4c26",
           "events": ["shot", "turn"]
         },
         {
@@ -5270,7 +5443,7 @@
           "shotCount": 20,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "e4df272d",
+          "stateHash": "4f383495",
           "events": ["shot", "turn"]
         },
         {
@@ -5287,7 +5460,7 @@
           "shotCount": 21,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "1fb906c4",
+          "stateHash": "b9a5374e",
           "events": ["shot", "turn"]
         },
         {
@@ -5298,14 +5471,14 @@
             "seq": 25
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 22,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "b9b84129",
-          "events": ["shot", "goal", "turn"]
+          "stateHash": "3d8ff464",
+          "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
@@ -5315,13 +5488,13 @@
             "seq": 26
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 23,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "6974bb90",
+          "stateHash": "b8b2d112",
           "events": ["shot", "turn"]
         },
         {
@@ -5332,13 +5505,13 @@
             "seq": 27
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 24,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "fa7f392f",
+          "stateHash": "9818bc96",
           "events": ["shot", "turn"]
         },
         {
@@ -5349,13 +5522,13 @@
             "seq": 28
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 25,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "b20e98a4",
+          "stateHash": "bb1179ef",
           "events": ["shot", "turn"]
         },
         {
@@ -5366,13 +5539,13 @@
             "seq": 29
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 26,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "7cb2e06a",
+          "stateHash": "bf9582b1",
           "events": ["shot", "turn"]
         },
         {
@@ -5383,13 +5556,13 @@
             "seq": 30
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 27,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "5a5c9e8b",
+          "stateHash": "f6131cd6",
           "events": ["shot", "turn"]
         },
         {
@@ -5400,13 +5573,13 @@
             "seq": 31
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 28,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "9733ae5e",
+          "stateHash": "86e23534",
           "events": ["shot", "turn"]
         },
         {
@@ -5417,13 +5590,13 @@
             "seq": 32
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 29,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "3ffd2216",
+          "stateHash": "b37b9b99",
           "events": ["shot", "turn"]
         },
         {
@@ -5434,13 +5607,13 @@
             "seq": 33
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 30,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "3e0f1021",
+          "stateHash": "d1dd7a2b",
           "events": ["shot", "turn"]
         },
         {
@@ -5451,13 +5624,13 @@
             "seq": 34
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 31,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "30500919",
+          "stateHash": "0d6c482d",
           "events": ["shot", "turn"]
         },
         {
@@ -5468,13 +5641,13 @@
             "seq": 35
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 32,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "02a8f497",
+          "stateHash": "e474d55f",
           "events": ["shot", "turn"]
         },
         {
@@ -5485,13 +5658,13 @@
             "seq": 36
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 33,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "0a8386bb",
+          "stateHash": "9371f094",
           "events": ["shot", "turn"]
         },
         {
@@ -5502,13 +5675,13 @@
             "seq": 37
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 34,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "e3e2f44a",
+          "stateHash": "a5eda7b5",
           "events": ["shot", "turn"]
         },
         {
@@ -5519,13 +5692,13 @@
             "seq": 38
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 35,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "3a7d8296",
+          "stateHash": "239163a7",
           "events": ["shot", "turn"]
         },
         {
@@ -5536,13 +5709,13 @@
             "seq": 39
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 36,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "16da7404",
+          "stateHash": "d07d644d",
           "events": ["shot", "turn"]
         },
         {
@@ -5553,13 +5726,13 @@
             "seq": 40
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 37,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "df010461",
+          "stateHash": "3e544e6e",
           "events": ["shot", "turn"]
         },
         {
@@ -5570,13 +5743,13 @@
             "seq": 41
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 38,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "f8ec970b",
+          "stateHash": "62a9be95",
           "events": ["shot", "turn"]
         },
         {
@@ -5587,13 +5760,13 @@
             "seq": 42
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 38,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "f8ec970b",
+          "stateHash": "62a9be95",
           "events": ["timeout", "turn"]
         },
         {
@@ -5604,13 +5777,13 @@
             "seq": 43
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 39,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "0f60cda4",
+          "stateHash": "75ac7014",
           "events": ["shot", "turn"]
         },
         {
@@ -5621,13 +5794,13 @@
             "seq": 44
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 39,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "0f60cda4",
+          "stateHash": "75ac7014",
           "events": ["timeout", "turn"]
         },
         {
@@ -5638,13 +5811,13 @@
             "seq": 45
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 40,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "945362e7",
+          "stateHash": "3754bfe6",
           "events": ["shot", "turn"]
         },
         {
@@ -5655,13 +5828,13 @@
             "seq": 46
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 41,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "4e601282",
+          "stateHash": "06438547",
           "events": ["shot", "turn"]
         },
         {
@@ -5672,13 +5845,13 @@
             "seq": 47
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 41,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "4e601282",
+          "stateHash": "06438547",
           "events": ["timeout", "turn"]
         },
         {
@@ -5689,13 +5862,13 @@
             "seq": 48
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 42,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "2fbf85bf",
+          "stateHash": "c01e8ad7",
           "events": ["shot", "turn"]
         },
         {
@@ -5706,13 +5879,13 @@
             "seq": 49
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 42,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "2fbf85bf",
+          "stateHash": "c01e8ad7",
           "events": ["timeout", "turn"]
         },
         {
@@ -5723,13 +5896,13 @@
             "seq": 50
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 43,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "4f5a2e20",
+          "stateHash": "16d44a22",
           "events": ["shot", "turn"]
         },
         {
@@ -5740,7 +5913,7 @@
             "seq": 50
           },
           "score": {
-            "L": 1,
+            "L": 0,
             "R": 0
           },
           "shotCount": 43,
@@ -5749,7 +5922,7 @@
             "winner": "R",
             "reason": "forfeit_timeouts"
           },
-          "stateHash": "4f5a2e20",
+          "stateHash": "16d44a22",
           "events": ["timeout", "ended"]
         }
       ]
@@ -5766,8 +5939,8 @@
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": -4.452818870544434,
-          "iy": -0.11843272298574448
+          "ix": -4.403654098510742,
+          "iy": 0.6704124212265015
         },
         {
           "type": "timeout"
@@ -5775,80 +5948,80 @@
         {
           "type": "shot",
           "discIndex": 7,
-          "ix": -5.205073356628418,
-          "iy": 5.49472188949585
+          "ix": -5.0095601081848145,
+          "iy": 5.673541069030762
         },
         {
           "type": "shot",
           "discIndex": 1,
-          "ix": 6.042015552520752,
-          "iy": -0.39383450150489807
+          "ix": 5.054819107055664,
+          "iy": 3.333146572113037
         },
         {
           "type": "shot",
           "discIndex": 7,
-          "ix": -5.285987854003906,
-          "iy": 5.820760250091553
+          "ix": 3.555708646774292,
+          "iy": 7.0128350257873535
         },
         {
           "type": "shot",
           "discIndex": 0,
-          "ix": 3.249638557434082,
-          "iy": -3.009251594543457
+          "ix": 4.394453525543213,
+          "iy": 0.5518383979797363
         },
         {
           "type": "shot",
           "discIndex": 6,
-          "ix": -2.8837227821350098,
-          "iy": -2.714634656906128
+          "ix": -3.4162468910217285,
+          "iy": 2.0035860538482666
         },
         {
           "type": "shot",
           "discIndex": 0,
-          "ix": 5.6067423820495605,
-          "iy": 3.741558313369751
+          "ix": 4.12738037109375,
+          "iy": 5.329123020172119
         },
         {
           "type": "shot",
           "discIndex": 6,
-          "ix": -5.122912883758545,
-          "iy": 1.0678269863128662
+          "ix": -5.1273698806762695,
+          "iy": 1.0462156534194946
         },
         {
           "type": "shot",
           "discIndex": 3,
-          "ix": -2.5498101711273193,
-          "iy": 5.521117687225342
+          "ix": -3.1175825595855713,
+          "iy": 5.221584796905518
         },
         {
           "type": "shot",
           "discIndex": 7,
-          "ix": -7.7100911140441895,
-          "iy": -1.1046160459518433
+          "ix": -4.858303070068359,
+          "iy": 6.08790397644043
         },
         {
           "type": "shot",
           "discIndex": 3,
-          "ix": -0.2365400642156601,
-          "iy": -5.824043273925781
+          "ix": 3.2444939613342285,
+          "iy": 4.842384338378906
         },
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": -4.386403560638428,
-          "iy": -1.22763991355896
+          "ix": -3.96337890625,
+          "iy": 2.2448301315307617
         },
         {
           "type": "shot",
           "discIndex": 2,
-          "ix": -4.662892818450928,
-          "iy": 3.3130064010620117
+          "ix": 3.824375629425049,
+          "iy": 4.2535552978515625
         },
         {
           "type": "shot",
           "discIndex": 9,
-          "ix": -4.454919338226318,
-          "iy": 1.5772112607955933
+          "ix": -4.043097972869873,
+          "iy": 2.446887731552124
         },
         {
           "type": "timeout"
@@ -5859,26 +6032,26 @@
         {
           "type": "shot",
           "discIndex": 3,
-          "ix": -8.000545501708984,
-          "iy": 3.0341625213623047
+          "ix": 7.42167329788208,
+          "iy": -4.258359909057617
         },
         {
           "type": "shot",
           "discIndex": 5,
-          "ix": -3.7937657833099365,
-          "iy": -2.85815167427063
+          "ix": -2.6765682697296143,
+          "iy": 3.9239866733551025
         },
         {
           "type": "shot",
           "discIndex": 4,
-          "ix": -4.929062366485596,
-          "iy": 1.1251386404037476
+          "ix": -4.423961162567139,
+          "iy": 2.4474799633026123
         },
         {
           "type": "shot",
           "discIndex": 7,
-          "ix": -6.048778533935547,
-          "iy": 0.7660781741142273
+          "ix": -4.347115993499756,
+          "iy": 4.275181770324707
         },
         {
           "type": "timeout"
@@ -5889,62 +6062,62 @@
         {
           "type": "shot",
           "discIndex": 2,
-          "ix": -0.6783308982849121,
-          "iy": 4.461607456207275
+          "ix": 4.1792168617248535,
+          "iy": 1.703002691268921
         },
         {
           "type": "shot",
           "discIndex": 9,
-          "ix": -5.571336269378662,
-          "iy": 6.799414157867432
+          "ix": -6.162106990814209,
+          "iy": 6.268991470336914
         },
         {
           "type": "shot",
           "discIndex": 1,
-          "ix": -7.717465400695801,
-          "iy": -1.5952359437942505
+          "ix": 7.87998104095459,
+          "iy": 0.09972953796386719
         },
         {
           "type": "shot",
           "discIndex": 8,
-          "ix": -4.788642406463623,
-          "iy": 1.8479253053665161
+          "ix": -4.792749404907227,
+          "iy": 1.8372472524642944
         },
         {
           "type": "shot",
           "discIndex": 2,
-          "ix": 2.5177955627441406,
-          "iy": 2.848790168762207
+          "ix": 2.8420071601867676,
+          "iy": 2.525449514389038
         },
         {
           "type": "shot",
           "discIndex": 8,
-          "ix": -7.439485549926758,
-          "iy": -2.1062374114990234
+          "ix": -7.716121196746826,
+          "iy": -0.49361324310302734
         },
         {
           "type": "shot",
           "discIndex": 3,
-          "ix": -1.2976102828979492,
-          "iy": 4.013763427734375
+          "ix": 1.3214565515518188,
+          "iy": 4.005975723266602
         },
         {
           "type": "shot",
           "discIndex": 9,
-          "ix": -4.946349143981934,
-          "iy": 1.8274965286254883
+          "ix": -4.19268798828125,
+          "iy": 3.1980435848236084
         },
         {
           "type": "shot",
           "discIndex": 1,
-          "ix": 2.513629674911499,
-          "iy": 8.245071411132812
+          "ix": 7.7256622314453125,
+          "iy": 3.822784900665283
         },
         {
           "type": "shot",
           "discIndex": 8,
-          "ix": -5.284970283508301,
-          "iy": -5.87901496887207
+          "ix": -7.810396671295166,
+          "iy": -1.2212423086166382
         },
         {
           "type": "timeout"
@@ -5955,44 +6128,44 @@
         {
           "type": "shot",
           "discIndex": 2,
-          "ix": 3.8052139282226562,
-          "iy": -2.5505189895629883
+          "ix": 4.11248779296875,
+          "iy": -2.0179800987243652
         },
         {
           "type": "shot",
           "discIndex": 9,
-          "ix": 1.5157548189163208,
-          "iy": -8.863216400146484
+          "ix": -8.4111909866333,
+          "iy": 3.1789908409118652
         },
         {
           "type": "shot",
           "discIndex": 0,
-          "ix": 2.614138603210449,
-          "iy": -5.114062309265137
+          "ix": 4.927899360656738,
+          "iy": -2.9501118659973145
         },
         {
           "type": "shot",
           "discIndex": 7,
-          "ix": -4.153898239135742,
-          "iy": -3.0016279220581055
+          "ix": 1.5963643789291382,
+          "iy": 4.869934558868408
         },
         {
           "type": "shot",
           "discIndex": 4,
-          "ix": 1.2176579236984253,
-          "iy": -6.765229225158691
+          "ix": 6.870388507843018,
+          "iy": -0.2208695113658905
         },
         {
           "type": "shot",
           "discIndex": 6,
-          "ix": 6.284659385681152,
-          "iy": -3.620561361312866
+          "ix": 2.230482816696167,
+          "iy": -6.901474475860596
         },
         {
           "type": "shot",
           "discIndex": 3,
-          "ix": -1.4280788898468018,
-          "iy": -8.209228515625
+          "ix": 8.007235527038574,
+          "iy": -2.3054311275482178
         },
         {
           "type": "timeout"
@@ -6000,44 +6173,44 @@
         {
           "type": "shot",
           "discIndex": 2,
-          "ix": 6.729950904846191,
-          "iy": 3.3242554664611816
+          "ix": 7.233979225158691,
+          "iy": -2.003112316131592
         },
         {
           "type": "shot",
           "discIndex": 8,
-          "ix": -1.8869569301605225,
-          "iy": 3.109362840652466
+          "ix": 3.4505369663238525,
+          "iy": -1.1500163078308105
         },
         {
           "type": "shot",
           "discIndex": 1,
-          "ix": 3.5463123321533203,
-          "iy": 5.741190433502197
+          "ix": 5.866698265075684,
+          "iy": -3.3345839977264404
         },
         {
           "type": "shot",
           "discIndex": 7,
-          "ix": -3.3562960624694824,
-          "iy": 6.390390872955322
+          "ix": 6.988546848297119,
+          "iy": 1.8061096668243408
         },
         {
           "type": "shot",
           "discIndex": 4,
-          "ix": -6.933879375457764,
-          "iy": 1.5987515449523926
+          "ix": 6.449499130249023,
+          "iy": 3.006434917449951
         },
         {
           "type": "shot",
           "discIndex": 7,
-          "ix": -0.7863724231719971,
-          "iy": 4.792202472686768
+          "ix": 4.72855281829834,
+          "iy": 1.1065144538879395
         },
         {
           "type": "shot",
           "discIndex": 3,
-          "ix": -4.962230682373047,
-          "iy": 0.07720204442739487
+          "ix": 4.868686676025391,
+          "iy": -0.9620741009712219
         },
         {
           "type": "timeout"
@@ -6045,8 +6218,8 @@
         {
           "type": "shot",
           "discIndex": 0,
-          "ix": 5.641176223754883,
-          "iy": -4.307558536529541
+          "ix": 6.798634052276611,
+          "iy": 2.038750410079956
         },
         {
           "type": "timeout"
@@ -6054,95 +6227,83 @@
         {
           "type": "shot",
           "discIndex": 4,
-          "ix": -6.810149192810059,
-          "iy": -2.1209311485290527
+          "ix": 7.132388591766357,
+          "iy": -0.07423959672451019
         },
         {
           "type": "shot",
           "discIndex": 9,
-          "ix": -3.5156898498535156,
-          "iy": 2.058238983154297
+          "ix": 3.3157694339752197,
+          "iy": 2.3668746948242188
         },
         {
           "type": "shot",
           "discIndex": 4,
-          "ix": -4.019635200500488,
-          "iy": 7.253525257110596
+          "ix": 7.335308074951172,
+          "iy": 3.868377923965454
+        },
+        {
+          "type": "shot",
+          "discIndex": 5,
+          "ix": 2.993992567062378,
+          "iy": 6.722030162811279
         },
         {
           "type": "shot",
           "discIndex": 0,
-          "ix": 7.058151721954346,
-          "iy": -2.0813868045806885
-        },
-        {
-          "type": "shot",
-          "discIndex": 5,
-          "ix": -5.433849334716797,
-          "iy": 3.69584584236145
-        },
-        {
-          "type": "shot",
-          "discIndex": 2,
-          "ix": 4.295653343200684,
-          "iy": 4.459535121917725
-        },
-        {
-          "type": "shot",
-          "discIndex": 5,
-          "ix": -2.5102055072784424,
-          "iy": 5.2998046875
-        },
-        {
-          "type": "shot",
-          "discIndex": 1,
-          "ix": -1.6097716093063354,
-          "iy": 8.383378028869629
+          "ix": 6.2393975257873535,
+          "iy": 2.0629866123199463
         },
         {
           "type": "shot",
           "discIndex": 7,
-          "ix": -5.681069374084473,
-          "iy": 0.8406175971031189
+          "ix": 3.8881630897521973,
+          "iy": 4.818950176239014
         },
         {
           "type": "shot",
-          "discIndex": 4,
-          "ix": -3.3540303707122803,
-          "iy": 4.128692150115967
+          "discIndex": 0,
+          "ix": 5.847347736358643,
+          "iy": -0.4445059895515442
         },
         {
           "type": "shot",
-          "discIndex": 8,
-          "ix": -4.692379951477051,
-          "iy": -1.2364314794540405
+          "discIndex": 6,
+          "ix": 6.055509567260742,
+          "iy": 6.016908645629883
+        },
+        {
+          "type": "shot",
+          "discIndex": 2,
+          "ix": 4.873020648956299,
+          "iy": 3.038890838623047
+        },
+        {
+          "type": "shot",
+          "discIndex": 9,
+          "ix": 3.380380392074585,
+          "iy": -4.1071457862854
+        },
+        {
+          "type": "shot",
+          "discIndex": 3,
+          "ix": 4.750565052032471,
+          "iy": 0.989609956741333
         },
         {
           "type": "timeout"
         },
         {
           "type": "shot",
-          "discIndex": 5,
-          "ix": -5.324609279632568,
-          "iy": -3.6328556537628174
+          "discIndex": 0,
+          "ix": 6.2288594245910645,
+          "iy": -1.6584383249282837
         },
         {
           "type": "shot",
-          "discIndex": 1,
-          "ix": 3.7393252849578857,
-          "iy": 6.913612365722656
-        },
-        {
-          "type": "shot",
-          "discIndex": 7,
-          "ix": -6.939151763916016,
-          "iy": 4.35341739654541
-        },
-        {
-          "type": "shot",
-          "discIndex": 2,
-          "ix": -4.365477085113525,
-          "iy": -0.8800321817398071
+          "discIndex": 6,
+          "ix": 7.840713024139404,
+          "iy": 0.5511891841888428
         }
       ],
       "snapshots": [
@@ -6160,7 +6321,7 @@
           "shotCount": 1,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "94e8bf29",
+          "stateHash": "a0c019d7",
           "events": ["shot", "turn"]
         },
         {
@@ -6177,7 +6338,7 @@
           "shotCount": 2,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "6ab5ca2c",
+          "stateHash": "4f2fcc56",
           "events": ["shot", "turn"]
         },
         {
@@ -6194,7 +6355,7 @@
           "shotCount": 2,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "6ab5ca2c",
+          "stateHash": "4f2fcc56",
           "events": ["timeout", "turn"]
         },
         {
@@ -6211,7 +6372,7 @@
           "shotCount": 3,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "2018becd",
+          "stateHash": "119dbf51",
           "events": ["shot", "turn"]
         },
         {
@@ -6228,7 +6389,7 @@
           "shotCount": 4,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "ba27ff8e",
+          "stateHash": "3201cc80",
           "events": ["shot", "turn"]
         },
         {
@@ -6245,7 +6406,7 @@
           "shotCount": 5,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "ad55ec44",
+          "stateHash": "08586617",
           "events": ["shot", "turn"]
         },
         {
@@ -6262,7 +6423,7 @@
           "shotCount": 6,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "65f8ae8f",
+          "stateHash": "fe50dadd",
           "events": ["shot", "turn"]
         },
         {
@@ -6279,7 +6440,7 @@
           "shotCount": 7,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "5456b3b8",
+          "stateHash": "499aa7d9",
           "events": ["shot", "turn"]
         },
         {
@@ -6296,7 +6457,7 @@
           "shotCount": 8,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "a29ab9b5",
+          "stateHash": "c758600b",
           "events": ["shot", "turn"]
         },
         {
@@ -6313,7 +6474,7 @@
           "shotCount": 9,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "cfa005f3",
+          "stateHash": "0f508049",
           "events": ["shot", "turn"]
         },
         {
@@ -6330,7 +6491,7 @@
           "shotCount": 10,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "04e9792f",
+          "stateHash": "cb5b41ab",
           "events": ["shot", "turn"]
         },
         {
@@ -6347,7 +6508,7 @@
           "shotCount": 11,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "984c572b",
+          "stateHash": "0b155934",
           "events": ["shot", "turn"]
         },
         {
@@ -6364,7 +6525,7 @@
           "shotCount": 12,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "e29f42fd",
+          "stateHash": "40f76f08",
           "events": ["shot", "turn"]
         },
         {
@@ -6381,7 +6542,7 @@
           "shotCount": 13,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "21546f26",
+          "stateHash": "e2a87b7c",
           "events": ["shot", "turn"]
         },
         {
@@ -6398,7 +6559,7 @@
           "shotCount": 14,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "081fbf0d",
+          "stateHash": "62030802",
           "events": ["shot", "turn"]
         },
         {
@@ -6415,7 +6576,7 @@
           "shotCount": 15,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "0ff1fde4",
+          "stateHash": "153c0475",
           "events": ["shot", "turn"]
         },
         {
@@ -6432,7 +6593,7 @@
           "shotCount": 15,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "0ff1fde4",
+          "stateHash": "153c0475",
           "events": ["timeout", "turn"]
         },
         {
@@ -6449,7 +6610,7 @@
           "shotCount": 15,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "0ff1fde4",
+          "stateHash": "153c0475",
           "events": ["timeout", "turn"]
         },
         {
@@ -6466,7 +6627,7 @@
           "shotCount": 16,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "97f8d9f3",
+          "stateHash": "8a00d1d5",
           "events": ["shot", "turn"]
         },
         {
@@ -6483,7 +6644,7 @@
           "shotCount": 17,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "56bcadd4",
+          "stateHash": "5a71a8e0",
           "events": ["shot", "turn"]
         },
         {
@@ -6500,7 +6661,7 @@
           "shotCount": 18,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "7b3b6544",
+          "stateHash": "79107d37",
           "events": ["shot", "turn"]
         },
         {
@@ -6517,7 +6678,7 @@
           "shotCount": 19,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "bc4fe2d6",
+          "stateHash": "6fa00582",
           "events": ["shot", "turn"]
         },
         {
@@ -6534,7 +6695,7 @@
           "shotCount": 19,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "bc4fe2d6",
+          "stateHash": "6fa00582",
           "events": ["timeout", "turn"]
         },
         {
@@ -6551,7 +6712,7 @@
           "shotCount": 19,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "bc4fe2d6",
+          "stateHash": "6fa00582",
           "events": ["timeout", "turn"]
         },
         {
@@ -6568,7 +6729,7 @@
           "shotCount": 20,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "1c27b546",
+          "stateHash": "fecfcba4",
           "events": ["shot", "turn"]
         },
         {
@@ -6585,7 +6746,7 @@
           "shotCount": 21,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "244c26bc",
+          "stateHash": "0ecde5ce",
           "events": ["shot", "turn"]
         },
         {
@@ -6602,7 +6763,7 @@
           "shotCount": 22,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "9207e9d7",
+          "stateHash": "ef78c39d",
           "events": ["shot", "turn"]
         },
         {
@@ -6619,7 +6780,7 @@
           "shotCount": 23,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "c83a3e69",
+          "stateHash": "1a137441",
           "events": ["shot", "turn"]
         },
         {
@@ -6636,7 +6797,7 @@
           "shotCount": 24,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "b26a7454",
+          "stateHash": "c9231e2e",
           "events": ["shot", "turn"]
         },
         {
@@ -6653,7 +6814,7 @@
           "shotCount": 25,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "61be6db9",
+          "stateHash": "6ecf06c4",
           "events": ["shot", "turn"]
         },
         {
@@ -6670,7 +6831,7 @@
           "shotCount": 26,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "06b1dc88",
+          "stateHash": "f215ca06",
           "events": ["shot", "turn"]
         },
         {
@@ -6687,7 +6848,7 @@
           "shotCount": 27,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "244c4162",
+          "stateHash": "10ec01a2",
           "events": ["shot", "turn"]
         },
         {
@@ -6704,7 +6865,7 @@
           "shotCount": 28,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "79c11fab",
+          "stateHash": "0c63f612",
           "events": ["shot", "turn"]
         },
         {
@@ -6721,7 +6882,7 @@
           "shotCount": 29,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "521bcb8a",
+          "stateHash": "60f7275f",
           "events": ["shot", "turn"]
         },
         {
@@ -6738,7 +6899,7 @@
           "shotCount": 29,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "521bcb8a",
+          "stateHash": "60f7275f",
           "events": ["timeout", "turn"]
         },
         {
@@ -6755,7 +6916,7 @@
           "shotCount": 29,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "521bcb8a",
+          "stateHash": "60f7275f",
           "events": ["timeout", "turn"]
         },
         {
@@ -6772,7 +6933,7 @@
           "shotCount": 30,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "b87ebbcd",
+          "stateHash": "100da1ed",
           "events": ["shot", "turn"]
         },
         {
@@ -6789,7 +6950,7 @@
           "shotCount": 31,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "8c305edb",
+          "stateHash": "ca192e7b",
           "events": ["shot", "turn"]
         },
         {
@@ -6806,7 +6967,7 @@
           "shotCount": 32,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "0821b0d9",
+          "stateHash": "ec0f4008",
           "events": ["shot", "turn"]
         },
         {
@@ -6823,7 +6984,7 @@
           "shotCount": 33,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "0c01454a",
+          "stateHash": "cc8646fb",
           "events": ["shot", "turn"]
         },
         {
@@ -6840,7 +7001,7 @@
           "shotCount": 34,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "fd01caac",
+          "stateHash": "6356bba6",
           "events": ["shot", "turn"]
         },
         {
@@ -6857,7 +7018,7 @@
           "shotCount": 35,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "35cae097",
+          "stateHash": "c16145f5",
           "events": ["shot", "turn"]
         },
         {
@@ -6874,7 +7035,7 @@
           "shotCount": 36,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "914c68bd",
+          "stateHash": "8ceb1bef",
           "events": ["shot", "turn"]
         },
         {
@@ -6891,7 +7052,7 @@
           "shotCount": 36,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "914c68bd",
+          "stateHash": "8ceb1bef",
           "events": ["timeout", "turn"]
         },
         {
@@ -6908,7 +7069,7 @@
           "shotCount": 37,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "272ef53e",
+          "stateHash": "3eadb116",
           "events": ["shot", "turn"]
         },
         {
@@ -6925,7 +7086,7 @@
           "shotCount": 38,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "51a417e1",
+          "stateHash": "6ff0065e",
           "events": ["shot", "turn"]
         },
         {
@@ -6942,7 +7103,7 @@
           "shotCount": 39,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "f99e0e7e",
+          "stateHash": "c22916bd",
           "events": ["shot", "turn"]
         },
         {
@@ -6959,7 +7120,7 @@
           "shotCount": 40,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "14104e1d",
+          "stateHash": "1c1cd250",
           "events": ["shot", "turn"]
         },
         {
@@ -6976,7 +7137,7 @@
           "shotCount": 41,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "382af81d",
+          "stateHash": "cd921204",
           "events": ["shot", "turn"]
         },
         {
@@ -6993,7 +7154,7 @@
           "shotCount": 42,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "3bbafe34",
+          "stateHash": "de0a98ec",
           "events": ["shot", "turn"]
         },
         {
@@ -7004,14 +7165,14 @@
             "seq": 52
           },
           "score": {
-            "L": 0,
+            "L": 1,
             "R": 0
           },
           "shotCount": 43,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "9170a57f",
-          "events": ["shot", "turn"]
+          "stateHash": "068be6b4",
+          "events": ["shot", "goal", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
@@ -7021,13 +7182,13 @@
             "seq": 53
           },
           "score": {
-            "L": 0,
+            "L": 1,
             "R": 0
           },
           "shotCount": 43,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "9170a57f",
+          "stateHash": "068be6b4",
           "events": ["timeout", "turn"]
         },
         {
@@ -7038,13 +7199,13 @@
             "seq": 54
           },
           "score": {
-            "L": 0,
+            "L": 1,
             "R": 0
           },
           "shotCount": 44,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "1d06b43a",
+          "stateHash": "f822da72",
           "events": ["shot", "turn"]
         },
         {
@@ -7055,13 +7216,13 @@
             "seq": 55
           },
           "score": {
-            "L": 0,
+            "L": 1,
             "R": 0
           },
           "shotCount": 44,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "1d06b43a",
+          "stateHash": "f822da72",
           "events": ["timeout", "turn"]
         },
         {
@@ -7072,13 +7233,13 @@
             "seq": 56
           },
           "score": {
-            "L": 0,
+            "L": 1,
             "R": 0
           },
           "shotCount": 45,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "02bbb78b",
+          "stateHash": "4a1c6cd5",
           "events": ["shot", "turn"]
         },
         {
@@ -7089,252 +7250,221 @@
             "seq": 57
           },
           "score": {
-            "L": 0,
+            "L": 1,
             "R": 0
           },
           "shotCount": 46,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "266b515a",
+          "stateHash": "cb218eea",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 57,
-            "side": "L",
+            "side": "R",
             "seq": 58
           },
           "score": {
-            "L": 0,
-            "R": 1
+            "L": 1,
+            "R": 0
           },
           "shotCount": 47,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "b9b84129",
-          "events": ["shot", "goal", "turn"]
+          "stateHash": "f20f4ee9",
+          "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 58,
-            "side": "R",
+            "side": "L",
             "seq": 59
           },
           "score": {
-            "L": 0,
-            "R": 1
+            "L": 1,
+            "R": 0
           },
           "shotCount": 48,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "28556f94",
+          "stateHash": "9203effa",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 59,
-            "side": "L",
+            "side": "R",
             "seq": 60
           },
           "score": {
-            "L": 0,
-            "R": 1
+            "L": 1,
+            "R": 0
           },
           "shotCount": 49,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "df018916",
+          "stateHash": "2a2ad6e0",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 60,
-            "side": "R",
+            "side": "L",
             "seq": 61
           },
           "score": {
-            "L": 0,
-            "R": 1
+            "L": 1,
+            "R": 0
           },
           "shotCount": 50,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "991e5e93",
+          "stateHash": "c8cff223",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 61,
-            "side": "L",
+            "side": "R",
             "seq": 62
           },
           "score": {
-            "L": 0,
-            "R": 1
+            "L": 1,
+            "R": 0
           },
           "shotCount": 51,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "41412a9c",
+          "stateHash": "caabc1b7",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 62,
-            "side": "R",
+            "side": "L",
             "seq": 63
           },
           "score": {
-            "L": 0,
-            "R": 1
+            "L": 1,
+            "R": 0
           },
           "shotCount": 52,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "db91b5be",
+          "stateHash": "4ad3dd3c",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 63,
-            "side": "L",
+            "side": "R",
             "seq": 64
           },
           "score": {
-            "L": 0,
-            "R": 1
+            "L": 1,
+            "R": 0
           },
           "shotCount": 53,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "9d80883c",
+          "stateHash": "e7364982",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 64,
-            "side": "R",
+            "side": "L",
             "seq": 65
           },
           "score": {
-            "L": 0,
-            "R": 1
+            "L": 1,
+            "R": 0
           },
           "shotCount": 54,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "122e001d",
+          "stateHash": "1e1229ed",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 65,
-            "side": "L",
+            "side": "R",
             "seq": 66
           },
           "score": {
-            "L": 0,
-            "R": 1
+            "L": 1,
+            "R": 0
           },
           "shotCount": 55,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "85103b88",
+          "stateHash": "47dd3682",
           "events": ["shot", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 66,
-            "side": "R",
+            "side": "L",
             "seq": 67
           },
           "score": {
-            "L": 0,
-            "R": 1
+            "L": 1,
+            "R": 0
           },
           "shotCount": 55,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "85103b88",
+          "stateHash": "47dd3682",
           "events": ["timeout", "turn"]
         },
         {
           "phase": "AWAIT_SHOT",
           "turn": {
             "index": 67,
-            "side": "L",
+            "side": "R",
             "seq": 68
           },
           "score": {
-            "L": 0,
-            "R": 1
+            "L": 1,
+            "R": 0
           },
           "shotCount": 56,
           "suddenDeath": false,
           "result": null,
-          "stateHash": "f19bb647",
+          "stateHash": "f12f0036",
           "events": ["shot", "turn"]
         },
         {
-          "phase": "AWAIT_SHOT",
+          "phase": "ENDED",
           "turn": {
-            "index": 68,
+            "index": 67,
             "side": "R",
-            "seq": 69
+            "seq": 68
           },
           "score": {
-            "L": 0,
-            "R": 1
+            "L": 2,
+            "R": 0
           },
           "shotCount": 57,
           "suddenDeath": false,
-          "result": null,
-          "stateHash": "15d9faad",
-          "events": ["shot", "turn"]
-        },
-        {
-          "phase": "AWAIT_SHOT",
-          "turn": {
-            "index": 69,
-            "side": "L",
-            "seq": 70
+          "result": {
+            "winner": "L",
+            "reason": "goals"
           },
-          "score": {
-            "L": 0,
-            "R": 1
-          },
-          "shotCount": 58,
-          "suddenDeath": false,
-          "result": null,
-          "stateHash": "c55807e9",
-          "events": ["shot", "turn"]
-        },
-        {
-          "phase": "AWAIT_SHOT",
-          "turn": {
-            "index": 70,
-            "side": "R",
-            "seq": 71
-          },
-          "score": {
-            "L": 0,
-            "R": 1
-          },
-          "shotCount": 59,
-          "suddenDeath": false,
-          "result": null,
-          "stateHash": "756dee11",
-          "events": ["shot", "turn"]
+          "stateHash": "2fe11d11",
+          "events": ["shot", "goal", "ended"]
         }
       ]
     }

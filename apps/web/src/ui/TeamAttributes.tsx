@@ -6,7 +6,7 @@ export function TeamAttributes({ id }: { id: string }) {
   const attributes = teamAttributes(id);
   return (
     <dl className="team-attributes">
-      {(['force', 'time', 'aim'] as const).map((key) => {
+      {(['force', 'time', 'aim', 'weight'] as const).map((key) => {
         const value = attributes[key];
         const label = t(`teamAttributes.${key}`);
         const shown =

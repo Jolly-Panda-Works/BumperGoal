@@ -10,7 +10,7 @@
   },
   "disc": {
     "radius": 0.841,
-    "density": 0.4355,
+    "density": 0.85,
     "linearDamping": 1.4,
     "restitution": 0.85,
     "halfLength": 0.71,

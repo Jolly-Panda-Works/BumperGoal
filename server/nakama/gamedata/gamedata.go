@@ -32,6 +32,7 @@ var arenasJSON []byte
 var aiProfilesJSON []byte
 
 type Rules struct {
+	CarMassScales       [2]float64   `json:"carMassScales,omitempty"`
 	DiscsPerTeam        int          `json:"discsPerTeam"`
 	GoalsToWin          int          `json:"goalsToWin"`
 	TurnTimeMs          int          `json:"turnTimeMs"`
@@ -77,9 +78,10 @@ type Economy struct {
 }
 
 type TeamAttributes struct {
-	Force int `json:"force"`
-	Time  int `json:"time"`
-	Aim   int `json:"aim"`
+	Weight int `json:"weight"`
+	Force  int `json:"force"`
+	Time   int `json:"time"`
+	Aim    int `json:"aim"`
 }
 
 type Cosmetic struct {
@@ -261,7 +263,7 @@ func (c Cosmetics) TeamAttributes(id string) (TeamAttributes, bool) {
 			return *t.Attributes, true
 		}
 	}
-	return TeamAttributes{Force: 6, Time: 6, Aim: 6}, false
+	return TeamAttributes{Force: 6, Time: 6, Aim: 6, Weight: 6}, false
 }
 func (c Cosmetics) TeamMaxImpulse(id string, base float64) float64 {
 	a, ok := c.TeamAttributes(id)

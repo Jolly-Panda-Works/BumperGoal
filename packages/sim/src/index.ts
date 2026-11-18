@@ -11,7 +11,7 @@ import RAPIER from '@dimforge/rapier2d-deterministic-compat';
 import type { PhysicsConfig } from '@flickkick/config';
 
 /** Bump when simulation behaviour changes. Part of the match protocol. */
-export const SIM_VERSION = 5;
+export const SIM_VERSION = 6;
 export const RAPIER_VERSION = '0.21.0';
 
 export type BodyKind = 'disc' | 'ball';
@@ -21,6 +21,7 @@ export interface BodyState {
   kind: BodyKind;
   /** Physical heading in radians, carried between turns. */
   angle?: number;
+  massScale?: number;
   x: number;
   y: number;
 }
@@ -67,7 +68,7 @@ export function hashBodies(bodies: readonly BodyState[]): string {
   };
   for (const b of bodies) {
     mix(b.kind === 'ball' ? 1 : 0);
-    for (const v of [b.x, b.y, b.angle ?? 0]) {
+    for (const v of [b.x, b.y, b.angle ?? 0, b.massScale ?? 1]) {
       view.setFloat32(0, v, true);
       for (let i = 0; i < 4; i++) mix(view.getUint8(i));
     }
@@ -76,7 +77,13 @@ export function hashBodies(bodies: readonly BodyState[]): string {
 }
 
 export function toF32Bodies(bodies: readonly BodyState[]): BodyState[] {
-  return bodies.map((b) => ({ kind: b.kind, x: fround(b.x), y: fround(b.y), angle: fround(b.angle ?? 0) }));
+  return bodies.map((b) => ({
+    kind: b.kind,
+    x: fround(b.x),
+    y: fround(b.y),
+    angle: fround(b.angle ?? 0),
+    massScale: fround(b.massScale ?? 1),
+  }));
 }
 
 let initPromise: Promise<void> | null = null;
@@ -170,7 +177,13 @@ export class FlickSim {
                 p.borderRadius ?? 0,
               )
             : RAPIER.ColliderDesc.ball(p.radius);
-        world.createCollider(shape.setDensity(p.density).setRestitution(p.restitution).setFriction(0), body);
+        world.createCollider(
+          shape
+            .setDensity(p.density * (b.massScale ?? 1))
+            .setRestitution(p.restitution)
+            .setFriction(0),
+          body,
+        );
         return body;
       });
       handles[impulse.bodyIndex]!.applyImpulse({ x: impulse.ix, y: impulse.iy }, true);
@@ -253,6 +266,7 @@ export class FlickSim {
         x: positions[i * 2]!,
         y: positions[i * 2 + 1]!,
         angle: rotations[i]!,
+        massScale: b.massScale ?? 1,
       }));
       if (!this.isSane(finalBodies)) outcome = 'invalid';
       return {
@@ -278,6 +292,9 @@ export class FlickSim {
         Number.isFinite(b.x) &&
         Number.isFinite(b.y) &&
         Number.isFinite(b.angle ?? 0) &&
+        Number.isFinite(b.massScale ?? 1) &&
+        (b.massScale ?? 1) >= 0.25 &&
+        (b.massScale ?? 1) <= 4 &&
         Math.abs(b.x) <= limitX &&
         Math.abs(b.y) <= limitY,
     );

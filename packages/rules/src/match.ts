@@ -29,10 +29,16 @@ export interface CreateMatchInput {
 export function kickoffBodies(rules: RulesConfig): BodyState[] {
   const formation = rules.formation.slice(0, rules.discsPerTeam);
   if (formation.length !== rules.discsPerTeam) throw new Error('formation has fewer positions than discsPerTeam');
-  const left = formation.map(([x, y]) => ({ kind: 'disc' as const, x, y, angle: 0 }));
+  const left = formation.map(([x, y]) => ({
+    kind: 'disc' as const,
+    x,
+    y,
+    angle: 0,
+    massScale: rules.carMassScales?.[0] ?? 1,
+  }));
   const right = (rules.opponentFormation ?? formation)
     .slice(0, rules.discsPerTeam)
-    .map(([x, y]) => ({ kind: 'disc' as const, x: -x, y, angle: Math.PI }));
+    .map(([x, y]) => ({ kind: 'disc' as const, x: -x, y, angle: Math.PI, massScale: rules.carMassScales?.[1] ?? 1 }));
   return toF32Bodies([...left, ...right, { kind: 'ball', x: 0, y: 0 }]);
 }
 

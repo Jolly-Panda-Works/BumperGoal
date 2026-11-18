@@ -503,7 +503,7 @@ func (d *Data) Validate() error {
 	}
 	for _, t := range d.Cosmetics.Teams {
 		if a := t.Attributes; a != nil {
-			for name, v := range map[string]int{"force": a.Force, "time": a.Time, "aim": a.Aim} {
+			for name, v := range map[string]int{"force": a.Force, "time": a.Time, "aim": a.Aim, "weight": a.Weight} {
 				checks = append(checks, between("cosmetics."+t.ID+"."+name, float64(v), 1, 10))
 			}
 		}

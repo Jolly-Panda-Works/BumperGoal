@@ -552,3 +552,9 @@
     padding: 20px 22px;
   }
 }
+.team-attribute--weight .is-filled {
+  background: linear-gradient(#9cdbff, #527acb);
+}
+.shell .shop-product--team > .team-attributes {
+  min-block-size: 116px;
+}

@@ -31,7 +31,7 @@ var rapierWasm []byte
 const RapierWasmSHA256 = "0570d5c822275fbadbbfe4bda0c589b039c2f41259676dc53f6679085601155d"
 
 // Version must equal SIM_VERSION in packages/sim/src/index.ts.
-const Version = 5
+const Version = 6
 
 const hostModuleName = "./rapier_wasm2d_bg.js"
 
@@ -80,10 +80,11 @@ type Config struct {
 }
 
 type Body struct {
-	Angle float32 `json:"angle"`
-	Kind  string  `json:"kind"` // "disc" | "ball"
-	X     float32 `json:"x"`
-	Y     float32 `json:"y"`
+	MassScale float32 `json:"massScale"`
+	Angle     float32 `json:"angle"`
+	Kind      string  `json:"kind"` // "disc" | "ball"
+	X         float32 `json:"x"`
+	Y         float32 `json:"y"`
 }
 
 type Impulse struct {
@@ -493,7 +494,11 @@ func (s *Sim) SimulateShot(bodies []Body, imp Impulse, maxSteps int) (res Result
 		} else {
 			shape = s.call("rawshape_ball", p.Radius)
 		}
-		s.createCollider(w, shape, p.Density, p.Restitution, handles[i])
+		scale := b.MassScale
+		if scale == 0 {
+			scale = 1
+		}
+		s.createCollider(w, shape, p.Density*float64(scale), p.Restitution, handles[i])
 	}
 	iv := s.vec(imp.IX, imp.IY)
 	s.call("rawrigidbodyset_rbApplyImpulse", w.bodies, handles[imp.BodyIndex], iv, true)
@@ -559,7 +564,11 @@ loop:
 
 	final := make([]Body, n)
 	for i, b := range bodies {
-		final[i] = Body{Kind: b.Kind, X: positions[i*2], Y: positions[i*2+1], Angle: api.DecodeF32(s.call("rawrigidbodyset_rbRotation", w.bodies, handles[i]))}
+		scale := b.MassScale
+		if scale == 0 {
+			scale = 1
+		}
+		final[i] = Body{MassScale: scale, Kind: b.Kind, X: positions[i*2], Y: positions[i*2+1], Angle: api.DecodeF32(s.call("rawrigidbodyset_rbRotation", w.bodies, handles[i]))}
 	}
 	if !s.sane(final) {
 		outcome = "invalid"
@@ -574,7 +583,7 @@ func (s *Sim) sane(bodies []Body) bool {
 	limitX := a.HalfWidth + a.GoalDepth + s.config.BoundsMargin
 	limitY := a.HalfHeight + s.config.BoundsMargin
 	for _, b := range bodies {
-		if !finite32(b.X) || !finite32(b.Y) || !finite32(b.Angle) || math.Abs(float64(b.X)) > limitX || math.Abs(float64(b.Y)) > limitY {
+		if !finite32(b.X) || !finite32(b.Y) || !finite32(b.Angle) || !finite32(bodyMassScale(b)) || bodyMassScale(b) < 0.25 || bodyMassScale(b) > 4 || math.Abs(float64(b.X)) > limitX || math.Abs(float64(b.Y)) > limitY {
 			return false
 		}
 	}
@@ -602,7 +611,7 @@ func HashBodies(bodies []Body) string {
 		} else {
 			h.Write([]byte{0})
 		}
-		for _, v := range []float32{b.X, b.Y, b.Angle} {
+		for _, v := range []float32{b.X, b.Y, b.Angle, bodyMassScale(b)} {
 			bits := math.Float32bits(v)
 			buf[0], buf[1], buf[2], buf[3] = byte(bits), byte(bits>>8), byte(bits>>16), byte(bits>>24)
 			h.Write(buf)
@@ -612,3 +621,10 @@ func HashBodies(bodies []Body) string {
 }
 
 var ErrInvalid = errors.New("invalid simulation")
+
+func bodyMassScale(b Body) float32 {
+	if b.MassScale == 0 {
+		return 1
+	}
+	return b.MassScale
+}
