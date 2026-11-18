@@ -1,17 +1,27 @@
 # Bumper Goal
 
-Independent car-themed variant of FlickKick. Cars replace player discs; the football and turn-based rules remain.
+Independent car-themed variant of FlickKick. Cars replace player pieces; the football and turn-based rules remain.
 
-## Car art
+## 3D arena
 
-Cicada, Cruiser and Carrier use the supplied RetroCartoonCarsPack1 low-poly FBX models and their 3072 texture atlases. Textures were flattened from the supplied PSD composites. The original Unity .mat files are not browser materials; the sprite renderer uses their diffuse atlases with simple studio lighting.
+The React game host mounts a Three.js WebGL 2 scene with a fixed oblique perspective camera. The camera fits the complete arena on desktop and phone screens, and reverses the board for online players on the opposite side. Cars use the supplied 3D meshes, the ball rolls as a sphere, and both goals have raised frames and mesh nets. Lighting and shadows show their height above the grass.
 
-`art-source/cars/` contains the source models and converted texture atlases. Regenerate transparent sprites with Blender 3+:
+The original deterministic 2D physics and server protocol remain unchanged. Pointer rays intersect the pitch plane before conversion into shot coordinates, so slingshot aiming matches the perspective view. Colored rings show the active team. Speed- and acceleration-sensitive twin tire tracks fade over 12 seconds. Existing circular collision shapes are retained.
+
+## Car assets
+
+Red Cicada cars form the left team; matching police Cruisers form the right team. The Carrier is also included as an exported asset. Source FBX meshes and texture atlases are in `art-source/cars/`. The Unity materials are rebuilt as browser PBR materials using their diffuse texture atlases. The web models use embedded 1024-pixel textures and normalized 1.42-unit car lengths.
+
+Regenerate the browser models with Blender 3+:
 
 ```sh
-blender -b --python tools/render-cars.py
+blender -b --python tools/export-cars-glb.py
 ```
 
-The current Phaser renderer uses top-down PNG renders, not live 3D models. Each team uses one matching model and paint scheme: red Cicada cars for the left team, police Cruisers for the right team. Cars are 38% larger than the first car build and face the aim and travel direction. Colored rings distinguish teams. Tire tracks use measured speed and acceleration, fade after 12 seconds, and never connect kickoff corrections or separate shots. Existing circular collision shapes and shot physics are retained; rectangular vehicle collisions are a separate gameplay change.
+The earlier PNG sprite exporter remains available as `tools/render-cars.py`; the active match uses the GLB models.
 
-Run with `pnpm install` then `pnpm dev`. GitHub target: Jolly-Panda-Works/BumperGoal. Published as a standalone repository snapshot, with car source assets included.
+## Validation
+
+`apps/web/test/arena3dProjection.test.ts` covers slingshot direction and power for both board orientations. `apps/web/e2e/arena3d.spec.ts` checks model loading and complete shots on desktop and phone viewports. The existing pointer-based browser helpers use the perspective camera projection.
+
+Run with `pnpm install` then `pnpm dev`. GitHub: Jolly-Panda-Works/BumperGoal.

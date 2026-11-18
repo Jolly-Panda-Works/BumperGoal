@@ -1,3 +1,4 @@
+import { boardToPage } from './board3d';
 import { expect, test, type Page } from '@playwright/test';
 
 // Regression: the HUD/board must not move when the turn (and the turn timer)
@@ -56,7 +57,7 @@ for (const viewport of [
             ).__fkMatch.state().bodies,
         );
         const d = state[1]!;
-        const from = { x: box.x + (360 - d.y * 66) * s, y: box.y + (640 - d.x * 66) * s };
+        const from = await boardToPage(page, d.x, d.y);
         await page.mouse.move(from.x, from.y);
         await page.mouse.down();
         await page.mouse.move(from.x - 60 * s, from.y, { steps: 4 });

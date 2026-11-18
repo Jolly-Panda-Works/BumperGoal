@@ -1,3 +1,4 @@
+import { boardToPage } from './board3d';
 import { expect, test, type Browser, type Page } from '@playwright/test';
 
 // Real online journeys against the local Nakama stack (skipped when it is down).
@@ -46,16 +47,15 @@ async function shoot(page: Page) {
   const disc = discs.sort(
     (a, b) => Math.hypot(a.x - ball.x, a.y - ball.y) - Math.hypot(b.x - ball.x, b.y - ball.y),
   )[0]!;
-  const box = (await page.locator('[data-testid=game-host] canvas').boundingBox())!;
-  const k = box.width / 720;
-  const direction = s.turn.side === 'L' ? -1 : 1;
-  const px = (x: number, y: number) => ({
-    x: box.x + (360 + direction * y * 66) * k,
-    y: box.y + (640 + direction * x * 66) * k,
-  });
   const d = Math.hypot(ball.x - disc.x, ball.y - disc.y);
-  const from = px(disc.x, disc.y);
-  const to = px(disc.x - ((ball.x - disc.x) / d) * 2, disc.y - ((ball.y - disc.y) / d) * 2);
+  const orientation = s.turn.side === 'L' ? 1 : -1;
+  const from = await boardToPage(page, disc.x, disc.y, orientation);
+  const to = await boardToPage(
+    page,
+    disc.x - ((ball.x - disc.x) / d) * 2,
+    disc.y - ((ball.y - disc.y) / d) * 2,
+    orientation,
+  );
   await page.mouse.move(from.x, from.y);
   await page.mouse.down();
   await page.mouse.move(to.x, to.y, { steps: 6 });

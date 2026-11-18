@@ -1,3 +1,4 @@
+import { boardToPage } from './board3d';
 import { expect, test, type Page } from '@playwright/test';
 
 // Local journeys from the master plan that do not need the Nakama server:
@@ -20,13 +21,6 @@ interface BodyState {
   kind: string;
   x: number;
   y: number;
-}
-
-/** Board units → page pixels, mirroring MatchScene (1280×720 logical, 66 px/unit, FIT). */
-async function boardToPage(page: Page, x: number, y: number) {
-  const box = (await page.locator('[data-testid=game-host] canvas').boundingBox())!;
-  const s = box.width / 720;
-  return { x: box.x + (360 - y * 66) * s, y: box.y + (640 - x * 66) * s };
 }
 
 async function matchState(page: Page) {

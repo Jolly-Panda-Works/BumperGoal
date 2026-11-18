@@ -1,0 +1,631 @@
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import type { Entity } from 'koota';
+import { physicsConfig } from '@flickkick/config';
+import { audio } from '../services/audio';
+import { settingsStore } from '../services/settings';
+import { bodyEntities, clearAiming, runFrame } from './ecs/systems';
+import { Aiming, BodyRef, Highlighted, HudTrait, HoldTrait, IsBall, PlaybackTrait, Position, Team } from './ecs/traits';
+import { fitArenaCamera } from './arenaCamera';
+import { arenaPosition, FIELD_WIDTH_SCALE, shotFromGround } from './arena3dProjection';
+import { TireMarks } from './tireMarks';
+import { assetUrl } from './art';
+import type { SceneInit } from './MatchScene';
+
+const TEAM_COLORS = [0xc93637, 0x338de0];
+const UP = new THREE.Vector3(0, 1, 0);
+interface Body3D {
+  entity: Entity;
+  object: THREE.Group;
+  ring?: THREE.Mesh;
+  last: THREE.Vector3;
+}
+
+/** A real 3D presentation of the existing deterministic two-dimensional match. */
+export class ThreeArena {
+  readonly renderer: THREE.WebGLRenderer;
+  private scene = new THREE.Scene();
+  private camera = new THREE.PerspectiveCamera(34, 1, 0.1, 180);
+  private bodies: Body3D[] = [];
+  private disposed = false;
+  private observer: ResizeObserver;
+  private off: (() => void)[] = [];
+  private lastTime = 0;
+  private clock = 0;
+  private orientation: number;
+  private ray = new THREE.Raycaster();
+  private ground = new THREE.Plane(UP, 0);
+  private drag?: { entity: Entity; pointer: number; start: THREE.Vector3 };
+  private arrow = new THREE.ArrowHelper(new THREE.Vector3(0, 0, -1), new THREE.Vector3(), 1, 0xffdd59, 0.35, 0.24);
+  private tireMarks = new TireMarks();
+  private tracksCanvas = document.createElement('canvas');
+  private tracksTexture: THREE.CanvasTexture;
+  private lastImpact = 0;
+  private lastTracks = -1000;
+  private goalFlashUntil = 0;
+
+  constructor(
+    private parent: HTMLDivElement,
+    private init: SceneInit,
+  ) {
+    this.orientation = init.bottomSide === 'R' ? -1 : 1;
+    this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false, powerPreference: 'high-performance' });
+    this.renderer.setPixelRatio(Math.min(devicePixelRatio, settingsStore.get().graphics === 'low' ? 1 : 2));
+    this.renderer.shadowMap.enabled = settingsStore.get().graphics !== 'low';
+    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    this.renderer.outputColorSpace = THREE.SRGBColorSpace;
+    this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    this.renderer.toneMappingExposure = 1.12;
+    this.renderer.domElement.style.touchAction = 'none';
+    this.renderer.domElement.setAttribute('aria-label', 'Bumper Goal 3D football arena');
+    parent.appendChild(this.renderer.domElement);
+    this.scene.background = new THREE.Color('#13252c');
+    this.scene.fog = new THREE.Fog('#13252c', 48, 85);
+    this.scene.add(new THREE.HemisphereLight(0xe7f5ff, 0x476346, 1.9));
+    const sun = new THREE.DirectionalLight(0xffe9c7, 2.5);
+    sun.position.set(-7, 15, 8);
+    sun.castShadow = true;
+    sun.shadow.mapSize.set(2048, 2048);
+    Object.assign(sun.shadow.camera, { left: -11, right: 11, top: 12, bottom: -12, near: 1, far: 45 });
+    sun.shadow.bias = -0.0005;
+    sun.shadow.normalBias = 0.03;
+    this.scene.add(sun);
+    this.tracksCanvas.width = 512;
+    this.tracksCanvas.height = 1024;
+    this.tracksTexture = new THREE.CanvasTexture(this.tracksCanvas);
+    const existing = new Set(this.scene.children);
+    this.makeArena();
+    const scenery = new THREE.Group();
+    for (const child of [...this.scene.children]) if (!existing.has(child)) scenery.add(child);
+    scenery.scale.x = FIELD_WIDTH_SCALE;
+    this.scene.add(scenery);
+    this.makeBodies();
+    this.arrow.visible = false;
+    this.scene.add(this.arrow);
+    this.observer = new ResizeObserver(() => this.resize());
+    this.observer.observe(parent);
+    this.resize();
+    const canvas = this.renderer.domElement;
+    canvas.addEventListener('pointerdown', this.pointerDown);
+    canvas.addEventListener('pointermove', this.pointerMove);
+    canvas.addEventListener('pointerup', this.pointerUp);
+    canvas.addEventListener('pointercancel', this.pointerCancel);
+    canvas.addEventListener('lostpointercapture', this.pointerCancel);
+    this.off.push(
+      init.controller.bus.on('playShot', () => {
+        this.cancelAim();
+        audio.play('kick');
+        audio.playMusic('match', 0.4);
+        audio.vibrate(20);
+      }),
+    );
+    this.off.push(
+      init.controller.bus.on('events', (events) => {
+        for (const event of events) {
+          if (event.type === 'goal') {
+            init.controller.world.set(HoldTrait, { until: this.clock + 1100 });
+            this.goalFlashUntil = this.clock + 900;
+            audio.play('goal');
+            audio.play('wow');
+            audio.excite(1, 2.6);
+            audio.vibrate([60, 40, 120]);
+          }
+          if (event.type === 'timeout') audio.play('error');
+          if (event.type === 'ended') audio.play('whistle');
+        }
+      }),
+    );
+    audio.startCrowd();
+    this.renderer.setAnimationLoop(this.frame);
+  }
+
+  private box(
+    w: number,
+    h: number,
+    d: number,
+    color: number,
+    x: number,
+    y: number,
+    z: number,
+    parent: THREE.Object3D = this.scene,
+  ) {
+    const mesh = new THREE.Mesh(
+      new THREE.BoxGeometry(w, h, d),
+      new THREE.MeshStandardMaterial({ color, roughness: 0.82 }),
+    );
+    mesh.position.set(x, y, z);
+    mesh.castShadow = true;
+    mesh.receiveShadow = true;
+    parent.add(mesh);
+    return mesh;
+  }
+
+  private line(points: THREE.Vector3[], color = 0xf3f6d9, opacity = 0.88, parent: THREE.Object3D = this.scene) {
+    const line = new THREE.Line(
+      new THREE.BufferGeometry().setFromPoints(points),
+      new THREE.LineBasicMaterial({ color, transparent: true, opacity }),
+    );
+    parent.add(line);
+    return line;
+  }
+
+  private grassTexture() {
+    const canvas = document.createElement('canvas');
+    canvas.width = 768;
+    canvas.height = 1280;
+    const ctx = canvas.getContext('2d')!;
+    ctx.fillStyle = '#4d9940';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    for (let stripe = 0; stripe < 12; stripe++) {
+      ctx.fillStyle = stripe % 2 ? '#4d9940' : '#438c38';
+      ctx.fillRect(0, (stripe * canvas.height) / 12, canvas.width, canvas.height / 12 + 1);
+    }
+    let seed = 42;
+    for (let i = 0; i < 75000; i++) {
+      seed = (Math.imul(seed, 1664525) + 1013904223) | 0;
+      const x = (seed >>> 8) % canvas.width;
+      seed = (Math.imul(seed, 1664525) + 1013904223) | 0;
+      const y = (seed >>> 8) % canvas.height;
+      ctx.fillStyle = i % 2 ? '#d1d97912' : '#153d2518';
+      ctx.fillRect(x, y, 1, 3);
+    }
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.colorSpace = THREE.SRGBColorSpace;
+    texture.anisotropy = 8;
+    return texture;
+  }
+
+  private makeArena() {
+    this.box(11.4, 0.65, 19, 0x263f49, 0, -0.46, 0);
+    this.box(10.7, 0.18, 18.3, 0xd3bd87, 0, -0.14, 0);
+    const turf = new THREE.Mesh(
+      new THREE.PlaneGeometry(9, 15),
+      new THREE.MeshStandardMaterial({ map: this.grassTexture(), roughness: 1 }),
+    );
+    turf.rotation.x = -Math.PI / 2;
+    turf.receiveShadow = true;
+    this.scene.add(turf);
+    const tracks = new THREE.Mesh(
+      new THREE.PlaneGeometry(9, 15),
+      new THREE.MeshBasicMaterial({ map: this.tracksTexture, transparent: true, depthWrite: false }),
+    );
+    tracks.rotation.x = -Math.PI / 2;
+    tracks.position.y = 0.012;
+    this.scene.add(tracks);
+    const rect = (x1: number, z1: number, x2: number, z2: number) =>
+      this.line([
+        new THREE.Vector3(x1, 0.018, z1),
+        new THREE.Vector3(x2, 0.018, z1),
+        new THREE.Vector3(x2, 0.018, z2),
+        new THREE.Vector3(x1, 0.018, z2),
+        new THREE.Vector3(x1, 0.018, z1),
+      ]);
+    rect(-4.42, -7.43, 4.42, 7.43);
+    this.box(8.84, 0.012, 0.045, 0xe9f2d4, 0, 0.02, 0);
+    this.line(
+      Array.from(
+        { length: 97 },
+        (_, i) => new THREE.Vector3(Math.cos((i * Math.PI) / 48) * 1.18, 0.022, Math.sin((i * Math.PI) / 48) * 1.18),
+      ),
+    );
+    for (const sign of [-1, 1]) {
+      rect(-2.15, sign * 7.43, 2.15, sign * 5.35);
+      rect(-1.4, sign * 7.43, 1.4, sign * 6.6);
+      this.goal(sign);
+      // Low perimeter curbs keep the near goal and cars unobstructed.
+      for (const x of [-3.3, 3.3]) this.box(2.35, 0.18, 0.13, 0xe4dac0, x, 0.1, sign * 7.58);
+      for (const side of [-1, 1]) {
+        this.box(0.16, 0.25, 15.35, 0xe4dac0, side * 4.65, 0.1, 0);
+        this.box(0.18, 0.06, 15.5, sign === 1 ? 0xc04e48 : 0x487fbd, side * 4.65, 0.25, 0);
+      }
+    }
+    this.stadium();
+  }
+
+  private goal(sign: number) {
+    const frame = new THREE.Group();
+    this.scene.add(frame);
+    const z = sign * 7.5;
+    const postMaterial = new THREE.MeshStandardMaterial({ color: 0xfaf5df, roughness: 0.3, metalness: 0.3 });
+    const beam = (a: THREE.Vector3, b: THREE.Vector3) => {
+      const mesh = new THREE.Mesh(new THREE.CylinderGeometry(0.065, 0.065, a.distanceTo(b), 12), postMaterial);
+      mesh.position.copy(a).add(b).multiplyScalar(0.5);
+      mesh.quaternion.setFromUnitVectors(UP, b.clone().sub(a).normalize());
+      mesh.castShadow = true;
+      frame.add(mesh);
+    };
+    for (const x of [-1.3, 1.3]) {
+      beam(new THREE.Vector3(x, 0, z), new THREE.Vector3(x, 1.15, z));
+      beam(new THREE.Vector3(x, 1.15, z), new THREE.Vector3(x, 0.85, z + sign * 0.95));
+      beam(new THREE.Vector3(x, 0.85, z + sign * 0.95), new THREE.Vector3(x, 0, z + sign * 0.95));
+      for (let step = 0; step <= 6; step++) {
+        const dz = (step * 0.95) / 6;
+        this.line(
+          [new THREE.Vector3(x, 0, z + sign * dz), new THREE.Vector3(x, 1.15 - dz * 0.3, z + sign * dz)],
+          0xe9f1eb,
+          0.38,
+          frame,
+        );
+      }
+      for (let y = 0.15; y < 1; y += 0.15)
+        this.line([new THREE.Vector3(x, y, z), new THREE.Vector3(x, y * 0.74, z + sign * 0.95)], 0xe9f1eb, 0.38, frame);
+    }
+    beam(new THREE.Vector3(-1.3, 1.15, z), new THREE.Vector3(1.3, 1.15, z));
+    beam(new THREE.Vector3(-1.3, 0.85, z + sign * 0.95), new THREE.Vector3(1.3, 0.85, z + sign * 0.95));
+    for (let x = -1.3; x <= 1.31; x += 0.16) {
+      this.line(
+        [
+          new THREE.Vector3(x, 0, z + sign * 0.95),
+          new THREE.Vector3(x, 0.85, z + sign * 0.95),
+          new THREE.Vector3(x, 1.15, z),
+        ],
+        0xe9f1eb,
+        0.45,
+        frame,
+      );
+    }
+    for (let y = 0.15; y < 0.9; y += 0.15)
+      this.line(
+        [new THREE.Vector3(-1.3, y, z + sign * 0.95), new THREE.Vector3(1.3, y, z + sign * 0.95)],
+        0xe9f1eb,
+        0.4,
+        frame,
+      );
+  }
+
+  private stadium() {
+    const palette = [0xb54d42, 0xe7c368, 0x5087a5, 0x65a173];
+    const people = new THREE.InstancedMesh(
+      new THREE.SphereGeometry(0.105, 6, 5),
+      new THREE.MeshStandardMaterial({ color: 0xffffff }),
+      144,
+    );
+    const matrix = new THREE.Matrix4();
+    let person = 0;
+    for (const side of [-1, 1]) {
+      for (let row = 0; row < 3; row++) {
+        const x = side * (5.1 + row * 0.22);
+        this.box(0.28, 0.24 + row * 0.22, 14.8, row % 2 ? 0x527484 : 0x354d58, x, row * 0.11, 0);
+        for (let seat = 0; seat < 24; seat++) {
+          matrix.makeTranslation(x, 0.3 + row * 0.22, -7 + seat * 0.6);
+          people.setMatrixAt(person, matrix);
+          people.setColorAt(person++, new THREE.Color(palette[(seat + row * 3) % palette.length]!));
+        }
+      }
+      for (const z of [-7.1, 7.1]) {
+        this.box(0.1, 3.4, 0.1, 0x526573, side * 5.35, 1.7, z);
+        const panel = this.box(0.75, 0.38, 0.18, 0xffedb4, side * 5.35, 3.35, z);
+        (panel.material as THREE.MeshStandardMaterial).emissive.set(0xf8d99d);
+      }
+    }
+    this.scene.add(people);
+    // A small sign behind the far goal anchors the arena without obscuring play.
+    const canvas = document.createElement('canvas');
+    canvas.width = 1024;
+    canvas.height = 180;
+    const ctx = canvas.getContext('2d')!;
+    ctx.fillStyle = '#163345';
+    ctx.fillRect(0, 0, 1024, 180);
+    ctx.fillStyle = '#f9dc80';
+    ctx.font = '900 90px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('BUMPER GOAL', 512, 119);
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.colorSpace = THREE.SRGBColorSpace;
+    const sign = new THREE.Mesh(
+      new THREE.PlaneGeometry(4.2, 0.75),
+      new THREE.MeshBasicMaterial({ map: texture, side: THREE.DoubleSide }),
+    );
+    sign.position.set(0, 1.7, -8.61);
+    this.scene.add(sign);
+    this.box(4.4, 0.9, 0.15, 0x36505b, 0, 1.7, -8.72);
+  }
+
+  private makeBodies() {
+    const entities = bodyEntities(this.init.controller.world);
+    for (const entity of entities) {
+      const object = new THREE.Group();
+      this.scene.add(object);
+      const pos = entity.get(Position)!;
+      object.position.copy(this.toWorld(pos.x, pos.y));
+      const isBall = entity.has(IsBall);
+      let ring: THREE.Mesh | undefined;
+      if (isBall) {
+        const material = new THREE.MeshStandardMaterial({ color: 0xfcfaf0, roughness: 0.65 });
+        const ball = new THREE.Mesh(new THREE.SphereGeometry(physicsConfig.ball.radius, 24, 16), material);
+        ball.position.y = physicsConfig.ball.radius;
+        ball.castShadow = true;
+        object.add(ball);
+        // Black pentagonal patches sit on the actual spherical surface.
+        const patchLayout = new THREE.IcosahedronGeometry(1, 0);
+        const vertices = patchLayout.getAttribute('position');
+        const used = new Set<string>();
+        for (let i = 0; i < vertices.count; i++) {
+          const normal = new THREE.Vector3().fromBufferAttribute(vertices, i).normalize();
+          const key = normal
+            .toArray()
+            .map((n) => n.toFixed(2))
+            .join(',');
+          if (used.has(key)) continue;
+          used.add(key);
+          const patch = new THREE.Mesh(
+            new THREE.CircleGeometry(0.071, 5),
+            new THREE.MeshStandardMaterial({ color: 0x18252a, side: THREE.DoubleSide }),
+          );
+          patch.position.copy(normal.multiplyScalar(physicsConfig.ball.radius + 0.002));
+          patch.quaternion.setFromUnitVectors(new THREE.Vector3(0, 0, 1), normal.normalize());
+          ball.add(patch);
+        }
+        patchLayout.dispose();
+      } else {
+        const team = entity.get(Team)!.side === 'L' ? 0 : 1;
+        ring = new THREE.Mesh(
+          new THREE.RingGeometry(0.49, 0.535, 48),
+          new THREE.MeshBasicMaterial({
+            color: TEAM_COLORS[team],
+            transparent: true,
+            opacity: 0.9,
+            side: THREE.DoubleSide,
+          }),
+        );
+        ring.rotation.x = -Math.PI / 2;
+        ring.position.y = 0.025;
+        object.add(ring);
+        object.rotation.y = team === 0 ? Math.PI : 0;
+        if (this.orientation === -1) object.rotation.y += Math.PI;
+        // A lit 3D car remains available while the supplied model streams in.
+        const fallback = new THREE.Group();
+        this.box(0.65, 0.24, 1.25, TEAM_COLORS[team]!, 0, 0.24, 0, fallback);
+        this.box(0.54, 0.22, 0.58, 0x233b48, 0, 0.45, -0.05, fallback);
+        object.add(fallback);
+        new GLTFLoader().load(
+          assetUrl(`cars/${team === 0 ? 'cicada' : 'cruiser'}.glb`),
+          (gltf) => {
+            if (this.disposed) {
+              this.disposeTree(gltf.scene);
+              return;
+            }
+            object.remove(fallback);
+            this.disposeTree(fallback);
+            gltf.scene.traverse((o) => {
+              if (o instanceof THREE.Mesh) {
+                o.castShadow = true;
+                o.receiveShadow = true;
+              }
+            });
+            object.add(gltf.scene);
+          },
+          undefined,
+          (error) => console.warn('Car model unavailable; keeping the 3D fallback.', error),
+        );
+      }
+      this.bodies.push({ entity, object, ring, last: object.position.clone() });
+    }
+  }
+
+  private toWorld(x: number, y: number) {
+    const point = arenaPosition(x, y, this.orientation);
+    return new THREE.Vector3(point.x, 0, point.z);
+  }
+
+  private resize() {
+    const w = Math.max(1, this.parent.clientWidth),
+      h = Math.max(1, this.parent.clientHeight);
+    this.renderer.setSize(w, h);
+    fitArenaCamera(this.camera, w, h);
+  }
+
+  private point(event: PointerEvent) {
+    const rect = this.renderer.domElement.getBoundingClientRect();
+    this.ray.setFromCamera(
+      new THREE.Vector2(
+        ((event.clientX - rect.left) / rect.width) * 2 - 1,
+        (-(event.clientY - rect.top) / rect.height) * 2 + 1,
+      ),
+      this.camera,
+    );
+    return this.ray.ray.intersectPlane(this.ground, new THREE.Vector3());
+  }
+
+  private pointerDown = (event: PointerEvent) => {
+    if (this.drag || !event.isPrimary || event.button !== 0 || this.init.controller.world.get(PlaybackTrait)?.active)
+      return;
+    audio.unlock();
+    const at = this.point(event);
+    if (!at) return;
+    let selected: Body3D | undefined,
+      nearest = 0.85;
+    for (const body of this.bodies) {
+      if (body.entity.has(IsBall)) continue;
+      const distance = body.object.position.distanceTo(at);
+      if (distance < nearest) {
+        selected = body;
+        nearest = distance;
+      }
+    }
+    if (!selected) return;
+    const controller = this.init.controller;
+    if (!controller.canAim()) {
+      this.init.onInvalidPress?.('not_your_turn');
+      return;
+    }
+    if (selected.entity.get(Team)!.side !== controller.current.turn.side) {
+      audio.play('error');
+      this.init.onInvalidPress?.('not_your_disc');
+      return;
+    }
+    selected.entity.add(Aiming({ angle: 0, power: 0, pointerId: event.pointerId }));
+    this.drag = { entity: selected.entity, pointer: event.pointerId, start: selected.object.position.clone() };
+    this.renderer.domElement.setPointerCapture(event.pointerId);
+    audio.play('tap');
+    event.preventDefault();
+  };
+
+  private pointerMove = (event: PointerEvent) => {
+    if (!this.drag || this.drag.pointer !== event.pointerId) return;
+    const at = this.point(event);
+    if (!at) return;
+    const { angle, power } = shotFromGround(this.drag.start, at, this.orientation, settingsStore.get().aimSensitivity);
+    this.drag.entity.set(Aiming, { angle, power, pointerId: event.pointerId });
+    this.arrow.visible = power > 0;
+    this.arrow.position.copy(this.drag.start).y = 0.18;
+    this.arrow.setDirection(
+      new THREE.Vector3(
+        Math.sin(angle) * this.orientation * FIELD_WIDTH_SCALE,
+        0,
+        -Math.cos(angle) * this.orientation,
+      ).normalize(),
+    );
+    this.arrow.setLength(0.65 + power * 2.9, 0.35, 0.24);
+    this.arrow.setColor(new THREE.Color().lerpColors(new THREE.Color(0xd3f06b), new THREE.Color(0xff854f), power));
+  };
+
+  private pointerUp = (event: PointerEvent) => {
+    if (!this.drag || this.drag.pointer !== event.pointerId) return;
+    this.pointerMove(event);
+    const entity = this.drag.entity,
+      aim = entity.get(Aiming)!;
+    const index = entity.get(BodyRef)!.index;
+    this.cancelAim();
+    if (this.renderer.domElement.hasPointerCapture(event.pointerId))
+      this.renderer.domElement.releasePointerCapture(event.pointerId);
+    if (aim.power > 0) this.init.controller.requestShot(index, aim.angle, aim.power);
+  };
+
+  private pointerCancel = () => this.cancelAim();
+  private cancelAim() {
+    this.drag = undefined;
+    clearAiming(this.init.controller.world);
+    this.arrow.visible = false;
+  }
+
+  private frame = (time: number) => {
+    if (this.disposed) return;
+    const delta = this.lastTime ? Math.min(time - this.lastTime, 100) : 0;
+    this.lastTime = time;
+    const world = this.init.controller.world;
+    if (world.get(HudTrait)?.paused) {
+      this.renderer.render(this.scene, this.camera);
+      return;
+    }
+    this.clock += delta;
+    runFrame(world, {
+      deltaMs: delta,
+      nowMs: this.clock,
+      reducedMotion: settingsStore.get().reducedMotion,
+      onImpact: (impact) => {
+        if (this.clock - this.lastImpact < 45) return;
+        audio.play(
+          impact.nearWall ? 'wall' : this.bodies[impact.index]?.entity.has(IsBall) ? 'ball' : 'hit',
+          Math.min(1, impact.strength * 6),
+        );
+        this.lastImpact = this.clock;
+      },
+      onShotFinished: () => this.init.controller.completeShot(),
+    });
+    const playing = world.get(PlaybackTrait)?.active ?? false;
+    if (!playing) this.tireMarks.resetMotion();
+    if (this.drag && (!this.init.controller.canAim() || playing)) this.cancelAim();
+    for (const body of this.bodies) {
+      const pos = body.entity.get(Position)!;
+      const next = this.toWorld(pos.x, pos.y),
+        movement = next.clone().sub(body.last);
+      if (body.entity.has(IsBall)) {
+        const ball = body.object.children[0]!;
+        if (movement.lengthSq() > 0.000001)
+          ball.rotateOnWorldAxis(
+            new THREE.Vector3(movement.z, 0, -movement.x).normalize(),
+            movement.length() / physicsConfig.ball.radius,
+          );
+      } else {
+        const aim = body.entity.get(Aiming);
+        if (aim && aim.power > 0)
+          body.object.rotation.y = Math.atan2(
+            Math.sin(aim.angle) * this.orientation * FIELD_WIDTH_SCALE,
+            -Math.cos(aim.angle) * this.orientation,
+          );
+        else if (playing && movement.lengthSq() > 0.000001) body.object.rotation.y = Math.atan2(movement.x, movement.z);
+        if (body.ring) {
+          const active = body.entity.has(Highlighted);
+          (body.ring.material as THREE.MeshBasicMaterial).color.set(
+            active ? 0xd2f45b : TEAM_COLORS[body.entity.get(Team)!.side === 'L' ? 0 : 1]!,
+          );
+          const pulse = settingsStore.get().reducedMotion ? 1 : 1 + (active ? Math.sin(this.clock / 180) * 0.06 : 0);
+          body.ring.scale.setScalar(pulse);
+        }
+        if (playing)
+          this.tireMarks.sample(body.entity.get(BodyRef)!.index, next.x * 66, next.z * 66, this.clock, 0.27 * 66);
+      }
+      body.object.position.copy(next);
+      body.last.copy(next);
+    }
+    this.drawTracks();
+    (this.scene.background as THREE.Color).setHex(this.clock < this.goalFlashUntil ? 0x466f61 : 0x13252c);
+    this.renderer.render(this.scene, this.camera);
+  };
+
+  private drawTracks() {
+    const interval = this.init.controller.world.get(PlaybackTrait)?.active ? 33 : 100;
+    if (this.clock - this.lastTracks < interval) return;
+    this.lastTracks = this.clock;
+    this.tireMarks.prune(this.clock);
+    const ctx = this.tracksCanvas.getContext('2d')!;
+    ctx.clearRect(0, 0, 512, 1024);
+    const x = (value: number) => ((value / 66 / FIELD_WIDTH_SCALE + 4.5) / 9) * 512;
+    const y = (value: number) => ((value / 66 + 7.5) / 15) * 1024;
+    ctx.strokeStyle = '#182016';
+    ctx.lineCap = 'round';
+    for (const mark of this.tireMarks.marks) {
+      ctx.globalAlpha = mark.alpha * Math.min(1, (TireMarks.lifetime - this.clock + mark.time) / 4000);
+      ctx.lineWidth = mark.width * 0.9;
+      for (const sign of [-1, 1]) {
+        ctx.beginPath();
+        ctx.moveTo(x(mark.x1 + mark.offsetX * sign), y(mark.y1 + mark.offsetY * sign));
+        ctx.lineTo(x(mark.x2 + mark.offsetX * sign), y(mark.y2 + mark.offsetY * sign));
+        ctx.stroke();
+      }
+    }
+    this.tracksTexture.needsUpdate = true;
+  }
+
+  private disposeTree(root: THREE.Object3D) {
+    const geometries = new Set<THREE.BufferGeometry>(),
+      materials = new Set<THREE.Material>(),
+      textures = new Set<THREE.Texture>();
+    root.traverse((object) => {
+      if (object instanceof THREE.Mesh || object instanceof THREE.Line) {
+        geometries.add(object.geometry);
+        for (const material of Array.isArray(object.material) ? object.material : [object.material]) {
+          materials.add(material);
+          for (const value of Object.values(material)) if (value instanceof THREE.Texture) textures.add(value);
+        }
+      }
+    });
+    geometries.forEach((g) => g.dispose());
+    textures.forEach((t) => t.dispose());
+    materials.forEach((m) => m.dispose());
+  }
+
+  destroy() {
+    this.disposed = true;
+    this.renderer.setAnimationLoop(null);
+    this.observer.disconnect();
+    this.off.forEach((off) => off());
+    this.cancelAim();
+    const canvas = this.renderer.domElement;
+    canvas.removeEventListener('pointerdown', this.pointerDown);
+    canvas.removeEventListener('pointermove', this.pointerMove);
+    canvas.removeEventListener('pointerup', this.pointerUp);
+    canvas.removeEventListener('pointercancel', this.pointerCancel);
+    canvas.removeEventListener('lostpointercapture', this.pointerCancel);
+    this.scene.traverse((object) => {
+      if (object instanceof THREE.Light && 'shadow' in object) (object as THREE.DirectionalLight).shadow?.dispose();
+    });
+    this.disposeTree(this.scene);
+    this.renderer.dispose();
+    this.renderer.forceContextLoss();
+    canvas.remove();
+    audio.stopCrowd();
+    this.tireMarks.clear();
+  }
+}

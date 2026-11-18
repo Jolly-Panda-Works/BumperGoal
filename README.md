@@ -2,7 +2,7 @@
 
 Turn-based, physics-based car soccer for desktop and mobile browsers, with online multiplayer (Nakama) and AI opponents. Cars replace the player pieces; the football remains.
 
-Bumper Goal uses the supplied RetroCartoonCarsPack1 models. Each team has matching cars, with larger sprites and speed/acceleration-sensitive tire tracks. See [the Bumper Goal notes](docs/BUMPER_GOAL.md).
+Bumper Goal uses the supplied RetroCartoonCarsPack1 models. The match uses a real 3D arena with a fixed oblique camera, matching team car models, raised goals and speed/acceleration-sensitive tire tracks. See [the Bumper Goal notes](docs/BUMPER_GOAL.md).
 
 ## Branches
 
