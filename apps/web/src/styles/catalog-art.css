@@ -644,3 +644,32 @@
   border-color: transparent;
   box-shadow: none;
 }
+/* Mikhak needs room above and below the line for complete Persian glyphs. */
+.shell--catalog-art .catalog-art .shop-heading .tabs button {
+  height: auto;
+  min-height: 70px;
+  align-self: stretch;
+}
+.shell--catalog-art .catalog-art .tabs button .tab-icon-label {
+  display: block;
+  justify-self: stretch;
+  min-width: 0;
+  max-inline-size: 100%;
+  padding: 4px 3px;
+  line-height: 1.6;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+@media (max-width: 1099px) {
+  .shell--catalog-art .catalog-art .shop-heading .tabs button {
+    min-height: 65px;
+  }
+}
+@media (max-width: 599px) {
+  .shell--catalog-art .catalog-art .shop-heading .tabs button {
+    min-height: 60px;
+  }
+}
