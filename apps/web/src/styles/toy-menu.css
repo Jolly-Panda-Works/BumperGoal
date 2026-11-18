@@ -853,3 +853,28 @@ body .toy-play {
 body .toy-play::after {
   border-top-color: #f5ffd6c9;
 }
+/* Remove the white top stripe while retaining the molded rims and lower shadows. */
+body .toy-control::after {
+  content: none;
+  display: none;
+}
+body .toy-control:not(.toy-play),
+body .toy-profile,
+body .toy-shortcut[href='/rewards'] .toy-shortcut__face,
+body .toy-shop {
+  box-shadow:
+    inset 0 -5px 0 #054b9d,
+    inset 3px 0 0 #71d8ff,
+    0 5px 0 #073e7a,
+    0 8px 12px #10374f50 !important;
+}
+body .toy-play {
+  box-shadow:
+    inset 0 -6px 0 #1b8522,
+    inset 3px 0 0 #b7f35d,
+    0 5px 0 #aa6d0b,
+    0 8px 12px #123a4f55 !important;
+}
+body:has(.toy-menu) .stadium-wallet.stadium-wallet--shared .stadium-wallet__plus {
+  box-shadow: 0 2px #073e7a !important;
+}
