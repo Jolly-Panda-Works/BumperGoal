@@ -39,3 +39,4 @@ import './styles/shared-header.css';
 import './styles/catalog-art.css';
 
 import './styles/flat-ui.css';
+import './styles/toy-menu.css';

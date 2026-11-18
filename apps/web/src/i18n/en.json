@@ -68,6 +68,7 @@
     "replayConfirm": "Are you sure you want to watch the tutorial again?"
   },
   "home": {
+    "friendsShort": "Friends",
     "greeting": "Hi, {{name}}",
     "playOnline": "Play online",
     "playOnlineDesc": "Ranked matches with coin stakes",

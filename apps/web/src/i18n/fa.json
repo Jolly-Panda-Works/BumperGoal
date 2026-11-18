@@ -68,6 +68,7 @@
     "replayConfirm": "مطمئنی می‌خواهی آموزش را دوباره ببینی؟"
   },
   "home": {
+    "friendsShort": "دوستان",
     "greeting": "سلام {{name}}",
     "playOnline": "بازی آنلاین",
     "playOnlineDesc": "مسابقهٔ رتبه‌ای با ورودیهٔ سکه",
