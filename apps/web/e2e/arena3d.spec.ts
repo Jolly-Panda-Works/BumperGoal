@@ -20,6 +20,9 @@ for (const viewport of [
     await page.getByRole('button', { name: 'Kick off' }).click();
     await expect(page.getByLabel('Bumper Goal 3D football arena')).toBeVisible();
     await expect.poll(() => models.size).toBe(2);
+    const canvas = await page.getByLabel('Bumper Goal 3D football arena').boundingBox();
+    expect(canvas).toMatchObject({ x: 0, y: 0, width: viewport.width, height: viewport.height });
+    await expect(page.locator('.hud')).toBeInViewport();
     const state = await page.evaluate(() =>
       (
         window as unknown as {
