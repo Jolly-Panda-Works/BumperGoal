@@ -56,25 +56,28 @@ export function Shell() {
         ? '/league'
         : location.pathname;
 
-  const pageTitle = location.pathname.startsWith('/rewards/levels')
-    ? 'rewards.levelRewards'
-    : location.pathname.startsWith('/profile/history')
-      ? 'profile.history'
-      : location.pathname.startsWith('/settings')
-        ? 'settings.title'
-        : location.pathname.startsWith('/shop')
-          ? 'nav.shop'
-          : location.pathname.startsWith('/locker')
-            ? 'nav.inventory'
-            : location.pathname.startsWith('/league')
-              ? 'nav.league'
-              : location.pathname.startsWith('/leaderboard')
-                ? 'nav.leaderboard'
-                : location.pathname.startsWith('/rewards')
-                  ? 'rewards.daily'
-                  : location.pathname.startsWith('/play')
-                    ? 'home.chooseMode'
-                    : 'nav.home';
+  const pageTitle =
+    location.pathname === '/profile'
+      ? 'profile.title'
+      : location.pathname.startsWith('/rewards/levels')
+        ? 'rewards.levelRewards'
+        : location.pathname.startsWith('/profile/history')
+          ? 'profile.history'
+          : location.pathname.startsWith('/settings')
+            ? 'settings.title'
+            : location.pathname.startsWith('/shop')
+              ? 'nav.shop'
+              : location.pathname.startsWith('/locker')
+                ? 'nav.inventory'
+                : location.pathname.startsWith('/league')
+                  ? 'nav.league'
+                  : location.pathname.startsWith('/leaderboard')
+                    ? 'nav.leaderboard'
+                    : location.pathname.startsWith('/rewards')
+                      ? 'rewards.daily'
+                      : location.pathname.startsWith('/play')
+                        ? 'home.chooseMode'
+                        : 'nav.home';
   const backTo =
     location.pathname.startsWith('/profile/') ||
     location.pathname === '/settings' ||
@@ -108,7 +111,7 @@ export function Shell() {
             </Link>
           </div>
         </header>
-      ) : location.pathname !== '/home' && location.pathname !== '/profile' ? (
+      ) : location.pathname !== '/home' ? (
         <header className="topbar unified-topbar">
           <PageHeading title={t(pageTitle)} to={backTo} />
           <ResourceMeters />

@@ -294,3 +294,26 @@ body .stadium-wallet.stadium-wallet--shared .stadium-wallet__plus {
     font-size: clamp(12px, 3.4cqw, 17px);
   }
 }
+/* Page headings float directly over the stadium, without a header strip. */
+.shell--unified-header .topbar.unified-topbar {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+.shell--profile-art > .topbar.unified-topbar {
+  display: flex !important;
+}
+.shell--profile-art .shell__main {
+  min-height: 0;
+}
+.shell--profile-art .screen.profile-art {
+  min-height: calc(100dvh - clamp(115px, 15dvh, 160px));
+  padding-top: 8px;
+  padding-bottom: 20px;
+}
+@media (max-aspect-ratio: 1/1) {
+  .shell--profile-art .screen.profile-art {
+    min-height: calc(100dvh - 130px);
+  }
+}

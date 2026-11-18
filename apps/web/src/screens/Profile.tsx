@@ -5,8 +5,6 @@ import { useCollectibleReaction } from '../ui/collectibleReaction';
 import { TeamAttributes } from '../ui/TeamAttributes';
 import { TeamCarPreview } from '../ui/TeamCarPreview';
 import { TrailPreview } from '../ui/TrailPreview';
-import { PageHeading } from '../ui/PageHeading';
-import { ResourceMeters } from '../ui/ResourceMeters';
 import { LevelStar } from '../ui/LevelStar';
 import { lazy, Suspense, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -80,10 +78,6 @@ export function ProfileScreen() {
 
   return (
     <div className="screen profile-screen profile-art">
-      <header className="profile-art__header">
-        <PageHeading title={t('profile.title')} to="/home" />
-        <ResourceMeters />
-      </header>
       <div className="profile-art__layout">
         <section className="profile-art__identity" aria-label={t('profile.displayName')}>
           <button

@@ -638,3 +638,9 @@
 .shell--catalog-art .catalog-art .shop-products {
   animation: none;
 }
+/* Categories retain their individual button frames; the shared backing is transparent. */
+.shell--catalog-art .catalog-art .shop-heading .tabs {
+  background: none;
+  border-color: transparent;
+  box-shadow: none;
+}
