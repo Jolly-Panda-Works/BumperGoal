@@ -677,8 +677,11 @@ export function Tabs<T extends string>({
               onChange(tab.id);
               return;
             }
-            if (document.startViewTransition) document.startViewTransition(() => flushSync(() => onChange(tab.id)));
-            else {
+            if (document.startViewTransition) {
+              const transition = document.startViewTransition(() => flushSync(() => onChange(tab.id)));
+              // Rapid tab changes/navigation can legitimately skip a snapshot.
+              void transition.ready.catch(() => undefined);
+            } else {
               const screen = event.currentTarget.closest('.screen');
               onChange(tab.id);
               screen?.animate(

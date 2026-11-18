@@ -1,3 +1,4 @@
+import { LeagueScreen } from '../screens/League';
 import { lazy, Suspense, useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { BrowserRouter, Link, Navigate, Route, useLocation } from 'react-router';
@@ -26,7 +27,6 @@ import { WelcomeScreen } from '../screens/Welcome';
 import { MatchStatsScreen } from '../screens/History';
 import { HomeScreen } from '../screens/Home';
 import { PlayAIScreen } from '../screens/PlayAI';
-import { LocalSetupScreen } from '../screens/LocalSetup';
 import { OnlineScreen } from '../screens/Online';
 import { MatchmakingScreen } from '../screens/Matchmaking';
 import { MatchScreen } from '../screens/Match';
@@ -164,13 +164,15 @@ export function App() {
           <Route path="/" element={<Navigate to="/home" replace />} />
           <Route path="/home" element={rakhtkan ? <RakhtkanHome /> : <HomeScreen />} />
           <Route path="/play/ai" element={fullOnly(<PlayAIScreen />)} />
-          <Route path="/play/local" element={rakhtkan ? <FriendsScreen /> : <LocalSetupScreen />} />
+          <Route path="/play/local" element={<FriendsScreen />} />
           <Route path="/play/online" element={<OnlineScreen />} />
           <Route path="/play/online/search" element={<MatchmakingScreen />} />
           <Route path="/profile" element={fullOnly(<ProfileScreen />)} />
           <Route path="/profile/history/:kind/:matchId" element={<MatchStatsScreen />} />
           <Route path="/profile/history" element={fullOnly(<HistoryScreen />)} />
           <Route path="/locker" element={rakhtkan ? <Navigate to="/shop" replace /> : <LockerScreen />} />
+          <Route path="/league" element={<LeagueScreen />} />
+          <Route path="/inventory" element={<Navigate to="/locker" replace />} />
           <Route path="/leaderboard" element={fullOnly(<LeaderboardScreen />)} />
           <Route path="/shop" element={<ShopScreen />} />
           <Route path="/level-up" element={fullOnly(<LevelUpScreen />)} />

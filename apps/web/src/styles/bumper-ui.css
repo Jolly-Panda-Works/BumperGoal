@@ -1,0 +1,328 @@
+/* Complete Bumper Goal shell: bottom navigation on phones, side navigation on desktop. */
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.section-heading .screen-header {
+  flex: 1;
+}
+.section-note {
+  margin: 0;
+  color: #bbd7ee;
+  line-height: 1.7;
+  font-size: 0.84rem;
+}
+.league-screen {
+  gap: 18px;
+}
+.league-hero {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  background: linear-gradient(130deg, #1459a7, #093168);
+  border: 2px solid #46b5ff;
+  box-shadow:
+    inset 0 2px #8fd5ff44,
+    0 6px 0 #061f46;
+}
+.league-hero__copy {
+  flex: 1;
+  min-inline-size: 160px;
+}
+.league-hero__copy h2 {
+  margin: 10px 0;
+  color: #ffe063;
+}
+.league-identity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.league-hero small {
+  display: block;
+  margin-block-start: 7px;
+  color: #c6e5ff;
+}
+.league-stats {
+  display: flex;
+  justify-content: space-around;
+  gap: 24px;
+  margin: 0;
+}
+.league-stats dt {
+  color: #bcd8f0;
+  font-size: 0.8rem;
+}
+.league-stats dd {
+  margin: 6px 0 0;
+  color: #ffe463;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+.league-road {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 16px;
+}
+.league-stage {
+  position: relative;
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+  text-align: center;
+  padding: 20px 14px;
+  border: 2px solid #3b89c8;
+  background: linear-gradient(#174e80, #102c50);
+}
+.league-stage.is-unlocked {
+  border-color: #ffc83e;
+}
+.league-stage.is-locked {
+  opacity: 0.75;
+}
+.league-stage__number {
+  position: absolute;
+  inset-inline-start: 10px;
+  top: 8px;
+  color: #8cd8ff;
+  font-weight: 800;
+}
+.league-stage h3,
+.league-stage p {
+  margin: 0;
+}
+.league-stage dl {
+  display: flex;
+  justify-content: space-around;
+  inline-size: 100%;
+  gap: 12px;
+  margin: 5px 0;
+}
+.league-stage dt {
+  color: #bad5ea;
+  font-size: 0.72rem;
+}
+.league-stage dd {
+  margin: 4px 0 0;
+  color: #ffdc52;
+  font-weight: 800;
+}
+.league-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.shell .navbar {
+  background: linear-gradient(#133f70, #0b254b);
+  border-block-start: 2px solid #2b70ad;
+}
+.shell .navbar__item {
+  color: #c1daf0;
+}
+.shell .navbar__item.is-active {
+  background: linear-gradient(#2889cd, #125b9b);
+  color: white;
+  border: 1px solid #70cbff;
+  box-shadow: inset 0 1px #b0e8ff66;
+}
+.shell .navbar__item span {
+  white-space: nowrap;
+}
+.shell .locker-screen .shop-heading .tabs {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.shell .shop-heading > .section-note {
+  padding-inline: 3px;
+}
+.home.lobby {
+  grid-template-rows: minmax(90px, 0.65fr) auto minmax(0, 1fr);
+}
+.home .lobby__modes {
+  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+}
+.home .lobby-mode {
+  inline-size: 100%;
+  aspect-ratio: 0.85;
+  flex-direction: column;
+  justify-content: center;
+  padding: 14px 8px;
+  background-size: 100% 100%;
+}
+.home .lobby-mode__art {
+  inline-size: min(90px, 70%);
+  block-size: 90px;
+}
+.home .lobby-mode__copy {
+  position: static;
+  inline-size: 100%;
+}
+.home .lobby-mode__copy strong {
+  font-size: clamp(0.78rem, 1.6vw, 1.1rem);
+  text-align: center;
+}
+@media (max-width: 699px) {
+  .league-hero {
+    gap: 16px;
+    padding: 18px 14px;
+  }
+  .league-hero > .rank-badge {
+    max-inline-size: 90px;
+  }
+  .league-stats {
+    inline-size: 100%;
+    gap: 10px;
+  }
+  .league-road {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .league-stage {
+    padding: 18px 10px;
+  }
+  .section-heading .btn {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+  .home .lobby__modes {
+    grid-template-columns: 1fr;
+    align-content: center;
+    gap: 9px;
+  }
+  .home .lobby-mode {
+    inline-size: min(100%, 330px);
+    aspect-ratio: 3.5;
+    flex-direction: row;
+    justify-content: start;
+    padding: 10px 18px;
+  }
+  .home .lobby-mode__art {
+    inline-size: 56px;
+    block-size: 56px;
+  }
+  .home .lobby-mode__copy strong {
+    font-size: 0.98rem;
+  }
+  .home.lobby {
+    grid-template-rows: minmax(80px, 1fr) auto minmax(0, 1.5fr);
+  }
+}
+@media (min-width: 700px) and (pointer: fine) {
+  #root {
+    inline-size: 100%;
+    max-inline-size: none;
+    box-shadow: none;
+  }
+  .shell,
+  .shell.shell--lobby {
+    block-size: 100dvh;
+    grid-template-columns: 106px minmax(0, 1fr);
+    grid-template-rows: 76px auto minmax(0, 1fr);
+    grid-template-areas: 'top top' 'nav banner' 'nav main';
+    background: radial-gradient(ellipse at 65% 10%, #155ca0, #071d40 75%);
+  }
+  .shell .topbar {
+    grid-area: top;
+    block-size: 76px;
+    padding: 10px 24px;
+    background: #0d2b55cc;
+    border-block-end: 2px solid #2a6299;
+  }
+  .shell .topbar__right {
+    max-inline-size: 1440px;
+    margin-inline: auto;
+  }
+  .shell .profile-chip__name {
+    max-inline-size: 20ch;
+  }
+  .shell .navbar {
+    position: relative;
+    inset: auto;
+    block-size: 100%;
+    min-block-size: 0;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 90px;
+    align-content: start;
+    padding: 18px 8px;
+    gap: 10px;
+    border-block-start: 0;
+    border-inline-end: 2px solid #265b93;
+  }
+  .shell .navbar::before {
+    display: none;
+  }
+  .shell .navbar__item {
+    min-block-size: 80px;
+    font-size: 0.82rem;
+    gap: 8px;
+  }
+  .shell .navbar__item .game-art-icon {
+    inline-size: 40px !important;
+    block-size: 40px !important;
+  }
+  .shell .shell__main {
+    inline-size: 100%;
+    max-inline-size: 1450px;
+    padding: 24px 30px;
+    overflow-y: auto;
+  }
+  .shell .screen {
+    max-inline-size: none;
+  }
+  .shell .home.lobby {
+    block-size: 100%;
+    grid-template-rows: minmax(140px, 0.7fr) auto minmax(190px, 1fr);
+    max-inline-size: 1180px;
+    margin-inline: auto;
+  }
+  .shell .home .lobby__brand {
+    inline-size: 100%;
+    max-inline-size: 500px;
+  }
+  .shell .home .logo--big {
+    font-size: clamp(2.8rem, 5vw, 5rem);
+  }
+  .shell .home .lobby__brand p {
+    display: block;
+    font-size: 1.1rem;
+  }
+  .shell .home .lobby-mode {
+    aspect-ratio: 1.4;
+    max-block-size: 310px;
+  }
+  .shell .home .lobby-mode__art {
+    inline-size: 110px;
+    block-size: 110px;
+  }
+  .shell .shop-products {
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  }
+  .shell .shop-heading .tabs {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .shell .shop-heading .tabs button {
+    min-inline-size: 100px;
+  }
+  .shell .locker-screen .shop-heading .tabs {
+    display: flex;
+  }
+  .shell .local-setup,
+  .shell .form-screen {
+    max-inline-size: 950px;
+    margin-inline: auto;
+  }
+  .shell .profile-screen {
+    max-inline-size: 1100px;
+    margin-inline: auto;
+  }
+  .shell .leaderboard-screen {
+    max-inline-size: 1100px;
+    margin-inline: auto;
+  }
+}

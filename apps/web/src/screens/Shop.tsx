@@ -3,7 +3,7 @@ import { activateEquipment, equipmentState } from '../services/equipment';
 import { useLocalProfile } from '../services/localProfile';
 import { useCollectibleReaction } from '../ui/collectibleReaction';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
-import { useSearchParams } from 'react-router';
+import { Link, useSearchParams } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import { cosmetics } from '@flickkick/config';
 import { IconShirt, IconUser, IconPacks, IconBall, IconFormation, IconTrail } from '../ui/icons';
@@ -123,7 +123,13 @@ export function ShopScreen() {
       className={`screen shop-screen ${rakhtkan ? 'rakhtkan-shop' : ''} ${tab === 'currency' ? 'shop-screen--packs' : ''}`}
     >
       <div className="shop-heading">
-        <ScreenHeader title={t('shop.title')} />
+        <div className="section-heading">
+          <ScreenHeader title={t('shop.title')} />
+          <Link className="btn btn--ghost" to="/locker">
+            {t('nav.inventory')}
+          </Link>
+        </div>
+        <p className="section-note">{t('shop.purchaseOnly')}</p>
         <Tabs
           value={tab}
           onChange={(value) => {

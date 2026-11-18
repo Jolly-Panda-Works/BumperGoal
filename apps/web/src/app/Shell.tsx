@@ -39,8 +39,8 @@ export function Shell() {
   const nav = [
     { to: '/home', label: t('nav.home'), icon: <IconHome /> },
     { to: '/shop', label: t('nav.shop'), icon: <IconShop /> },
-    { to: '/leaderboard', label: t('nav.leaderboard'), icon: <IconTrophy /> },
-    { to: '/locker', label: t('profile.locker'), icon: <IconLocker /> },
+    { to: '/league', label: t('nav.league'), icon: <IconTrophy /> },
+    { to: '/locker', label: t('nav.inventory'), icon: <IconLocker /> },
     { to: '/profile', label: t('nav.profile'), icon: <IconUser /> },
   ].filter((item) => !rakhtkan || item.to === '/home' || item.to === '/shop');
 
@@ -50,7 +50,9 @@ export function Shell() {
     location.pathname === '/settings' ||
     location.pathname === '/tutorial'
       ? '/profile'
-      : location.pathname;
+      : location.pathname.startsWith('/leaderboard')
+        ? '/league'
+        : location.pathname;
 
   return (
     <div className={`shell ${location.pathname === '/home' ? 'shell--lobby' : ''}`}>

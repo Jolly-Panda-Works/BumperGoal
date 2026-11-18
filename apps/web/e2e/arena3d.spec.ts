@@ -19,6 +19,10 @@ for (const viewport of [
     await page.goto('/play/local');
     await page.getByRole('button', { name: 'Kick off' }).click();
     await expect(page.getByLabel('Bumper Goal 3D football arena')).toBeVisible();
+    await expect(page.getByLabel('Bumper Goal 3D football arena')).toHaveAttribute(
+      'data-layout',
+      viewport.width >= 700 ? 'landscape' : 'portrait',
+    );
     await expect.poll(() => models.size).toBe(2);
     const canvas = await page.getByLabel('Bumper Goal 3D football arena').boundingBox();
     expect(canvas).toMatchObject({ x: 0, y: 0, width: viewport.width, height: viewport.height });

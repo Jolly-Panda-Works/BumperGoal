@@ -1,12 +1,20 @@
+import { preferredArenaLayout, type ArenaLayout } from './arenaLayout';
 import { type PerspectiveCamera, Vector3 } from 'three';
 import { FIELD_WIDTH_SCALE } from './arena3dProjection';
 
 /** Fixed oblique camera, fitted to the whole playable arena on any viewport. */
-export function fitArenaCamera(camera: PerspectiveCamera, width: number, height: number, halfLength: number) {
+export function fitArenaCamera(
+  camera: PerspectiveCamera,
+  width: number,
+  height: number,
+  halfLength: number,
+  layout: ArenaLayout = preferredArenaLayout(width),
+) {
   camera.aspect = width / height;
   camera.updateProjectionMatrix();
-  const target = new Vector3(0, 0, 0.85);
-  const direction = new Vector3(0, 1.7, 1).normalize();
+  const horizontal = layout === 'landscape';
+  const target = horizontal ? new Vector3(-0.55, 0, 0) : new Vector3(0, 0, 0.85);
+  const direction = new Vector3(horizontal ? -1 : 0, 1.7, horizontal ? 0 : 1).normalize();
   let distance = 18;
   for (let step = 0; step < 70; step++) {
     camera.position.copy(target).addScaledVector(direction, distance);

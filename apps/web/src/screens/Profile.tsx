@@ -29,6 +29,7 @@ import {
 } from '../ui/components';
 import {
   IconCheck,
+  IconUser,
   IconHistory,
   IconGift,
   IconSchool,
@@ -334,7 +335,7 @@ export function LockerScreen() {
   const { t } = useTranslation();
   const reaction = useCollectibleReaction();
   const profile = useLocalProfile();
-  const [tab, setTab] = useState<'teams' | 'balls' | 'formations' | 'trails'>('teams');
+  const [tab, setTab] = useState<'teams' | 'balls' | 'avatars' | 'formations' | 'trails'>('teams');
   useLocalInventory();
   useOnline();
   const current =
@@ -344,20 +345,32 @@ export function LockerScreen() {
         ? profile.ballId
         : tab === 'trails'
           ? profile.trailId
-          : profile.formationId;
+          : tab === 'avatars'
+            ? profile.avatarId
+            : profile.formationId;
   return (
     <div className="screen shop-screen locker-screen">
       <div className="shop-heading">
-        <ScreenHeader title={t('locker.title')} />
+        <div className="section-heading">
+          <ScreenHeader title={t('nav.inventory')} />
+          <Link className="btn btn--ghost" to="/shop">
+            {t('nav.shop')}
+          </Link>
+        </div>
+        <p className="section-note">{t('locker.manageOnly')}</p>
         <Tabs
           value={tab}
           onChange={setTab}
-          tabs={(['teams', 'balls', 'formations', 'trails'] as const).map((id) => ({
+          tabs={(['teams', 'balls', 'avatars', 'formations', 'trails'] as const).map((id) => ({
             id,
             label: t(`shop.tabs.${id}`),
-            icon: { teams: <IconShirt />, balls: <IconBall />, formations: <IconFormation />, trails: <IconTrail /> }[
-              id
-            ],
+            icon: {
+              teams: <IconShirt />,
+              balls: <IconBall />,
+              avatars: <IconUser />,
+              formations: <IconFormation />,
+              trails: <IconTrail />,
+            }[id],
           }))}
         />
         {tab === 'trails' && (
@@ -423,7 +436,7 @@ export function LockerScreen() {
                       if (getOnline().status === 'online')
                         void updateProfile({ formationId: item.id }).catch((err: Error) => toast(err.message, 'error'));
                     } else {
-                      void equip(tab === 'teams' ? 'teamId' : 'ballId', item.id);
+                      void equip(tab === 'teams' ? 'teamId' : tab === 'avatars' ? 'avatarId' : 'ballId', item.id);
                     }
                   }}
                 >

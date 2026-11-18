@@ -32,3 +32,5 @@ import './styles/lobby.css';
 import './styles/motion.css';
 
 import './styles/rakhtkan.css';
+
+import './styles/bumper-ui.css';

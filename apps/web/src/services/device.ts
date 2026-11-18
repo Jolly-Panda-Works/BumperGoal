@@ -26,6 +26,8 @@ export async function enterMatchMode(): Promise<void> {
 }
 
 export function leaveMatchMode(): void {
+  // Keep phone menus upright while the game remains in immersive mode.
+  if (isPhone() && document.fullscreenElement) return;
   try {
     (screen.orientation as LockableOrientation | undefined)?.unlock?.();
   } catch {

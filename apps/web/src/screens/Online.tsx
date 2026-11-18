@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { arenaName } from '../i18n/arenaName';
-import { useNavigate } from 'react-router';
+import { useNavigate, useSearchParams } from 'react-router';
 import { arenaPrize, arenasConfig, rulesConfig } from '@flickkick/config';
 import { formatNumber } from '../i18n';
 import { useLocalProfile } from '../services/localProfile';
@@ -20,7 +20,10 @@ export function OnlineScreen() {
   const online = status === 'online' || localOnlineEnabled;
   const coins = status === 'online' ? (profile?.wallet.coins ?? 0) : inventory.coins;
   const lastUnlocked = arenasConfig.arenas.reduce((last, arena, index) => (arena.minLevel <= level ? index : last), 0);
-  const [selected, setSelected] = useState(lastUnlocked);
+  const [searchParams] = useSearchParams();
+  const requested = arenasConfig.arenas.findIndex((arena) => arena.id === searchParams.get('arena'));
+  const initialArena = requested >= 0 ? requested : lastUnlocked;
+  const [selected, setSelected] = useState(initialArena);
   const list = useRef<HTMLDivElement>(null);
   const settleTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const drag = useRef<{ x: number; scroll: number; moved: boolean } | null>(null);
@@ -63,11 +66,11 @@ export function OnlineScreen() {
   }, [finishDrag]);
   useEffect(() => {
     const frame = requestAnimationFrame(() => {
-      const e = list.current?.children[lastUnlocked] as HTMLElement | undefined;
+      const e = list.current?.children[initialArena] as HTMLElement | undefined;
       e?.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'instant' });
     });
     return () => cancelAnimationFrame(frame);
-  }, [lastUnlocked]);
+  }, [initialArena]);
   const select = (index: number) => {
     const clamped = Math.max(0, Math.min(arenasConfig.arenas.length - 1, index));
     const e = list.current?.children[clamped] as HTMLElement | undefined;

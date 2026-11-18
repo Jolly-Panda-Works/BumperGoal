@@ -1,3 +1,5 @@
+import { isPhone } from '../services/device';
+import { preferredArenaLayout } from './arenaLayout';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import type { Entity } from 'koota';
@@ -459,7 +461,9 @@ export class ThreeArena {
     const w = Math.max(1, this.parent.clientWidth),
       h = Math.max(1, this.parent.clientHeight);
     this.renderer.setSize(w, h);
-    fitArenaCamera(this.camera, w, h, physicsConfig.arena.halfWidth);
+    const layout = preferredArenaLayout(w, isPhone());
+    this.renderer.domElement.dataset.layout = layout;
+    fitArenaCamera(this.camera, w, h, physicsConfig.arena.halfWidth, layout);
   }
 
   private point(event: PointerEvent) {

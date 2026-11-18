@@ -9,7 +9,9 @@
     "leaderboard": "Ranks",
     "profile": "Profile",
     "settings": "Settings",
-    "main": "Main"
+    "main": "Main",
+    "league": "League",
+    "inventory": "Assets"
   },
   "common": {
     "back": "Back",
@@ -199,7 +201,7 @@
     "goalsFor": "Goals scored",
     "goalsAgainst": "Goals conceded",
     "history": "Match history",
-    "locker": "Locker",
+    "locker": "Assets",
     "online": "Online profile",
     "onlineNote": "Level, XP, coins and ranked statistics are kept on the server.",
     "linkTitle": "Secure your account",
@@ -275,16 +277,18 @@
     "confirmPurchase": "Confirm purchase",
     "confirmPack": "Get this pack?",
     "getPack": "Get pack",
-    "locked": "Locked"
+    "locked": "Locked",
+    "purchaseOnly": "Buy new items here. Manage and equip your collection in Assets."
   },
   "locker": {
-    "title": "Locker",
+    "title": "Assets",
     "equip": "Equip",
     "equipped": "Equipped",
     "locked": "Not owned",
     "trailNone": "No trail equipped",
     "trailDisable": "Disable trail",
-    "trailEmpty": "Buy a trail in the shop to equip it."
+    "trailEmpty": "Buy a trail in the shop to equip it.",
+    "manageOnly": "Your owned items. Choose what to equip, or visit the Shop for new items."
   },
   "rewards": {
     "title": "Rewards",
@@ -547,7 +551,7 @@
   },
   "orientation": {
     "title": "Turn your phone upright",
-    "hint": "Bumper Goal is designed for portrait play."
+    "hint": "Play portrait on phones and landscape on desktop."
   },
   "stats": {
     "title": "Match stats",
@@ -685,5 +689,20 @@
     "success": "Success",
     "warning": "Warning",
     "error": "Error"
+  },
+  "league": {
+    "title": "League",
+    "rankings": "Rankings",
+    "progress": "Level progress",
+    "leagueWins": "League wins",
+    "online": "League progress and rewards are synced with the server.",
+    "local": "Your device progress is shown here. Global rankings and online opponents use the game server.",
+    "road": "Arena road",
+    "rewards": "Level rewards",
+    "entry": "Entry coins",
+    "prize": "Win prize",
+    "play": "Enter arena",
+    "locked": "Locked",
+    "history": "Match history"
   }
 }
