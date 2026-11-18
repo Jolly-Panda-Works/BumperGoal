@@ -160,7 +160,9 @@
     "menu": "Match menu",
     "backToMatch": "Back to match",
     "onlineNoPause": "Online matches keep running while this menu is open.",
-    "reconnecting": "Connection lost. Reconnecting…"
+    "reconnecting": "Connection lost. Reconnecting…",
+    "goalScored": "YOU SCORED!",
+    "goalConceded": "GOAL CONCEDED"
   },
   "result": {
     "win": "Victory!",

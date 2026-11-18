@@ -69,6 +69,7 @@ export class ThreeArena {
   private cameraRest = new THREE.Vector3();
   private lastTracks = -1000;
   private goalFlashUntil = 0;
+  private goalFlashColor = 0xcce998;
   private pendingKickoffAt: number | null = null;
 
   constructor(
@@ -142,10 +143,12 @@ export class ThreeArena {
             this.pendingKickoffAt = init.controller.current.phase === 'ENDED' ? null : this.clock + 1100;
             init.controller.world.set(HoldTrait, { until: this.clock + 1100 });
             this.goalFlashUntil = this.clock + 900;
+            const scored = event.scorer === (init.bottomSide ?? 'L');
+            this.goalFlashColor = scored ? 0xffe36b : 0xa73943;
             audio.play('goal');
-            audio.play('wow');
-            audio.excite(1, 2.6);
-            audio.vibrate([60, 40, 120]);
+            audio.play(scored ? 'wow' : 'oh');
+            audio.excite(scored ? 1 : 0.3, 2.6);
+            audio.vibrate(scored ? [60, 40, 120] : [100, 60, 100]);
           }
           if (event.type === 'timeout') audio.play('error');
           if (event.type === 'ended') audio.play('whistle');
@@ -733,7 +736,7 @@ export class ThreeArena {
         );
       }
     this.drawTracks();
-    (this.scene.background as THREE.Color).setHex(this.clock < this.goalFlashUntil ? 0xcce998 : 0x31a54e);
+    (this.scene.background as THREE.Color).setHex(this.clock < this.goalFlashUntil ? this.goalFlashColor : 0x31a54e);
     this.cameraRest.copy(this.camera.position);
     if (!settings.reducedMotion && settings.graphics === 'high')
       this.camera.position.add(this.impactEffects.cameraOffset(this.clock, this.camera));

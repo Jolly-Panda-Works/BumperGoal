@@ -412,3 +412,143 @@
   inline-size: 192px;
   block-size: 164px;
 }
+
+/* Goal feedback stays above the pitch and below match dialogs. */
+.goal-feedback {
+  position: absolute;
+  inset: 0;
+  z-index: 25;
+  pointer-events: none;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  --goal-accent: #ffe45c;
+}
+.goal-feedback--conceded {
+  --goal-accent: #ff6075;
+}
+.goal-feedback__wash {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 25%, #ffbd2455 100%);
+  animation: goal-wash 1.5s ease-out both;
+}
+.goal-feedback--conceded .goal-feedback__wash {
+  background: radial-gradient(ellipse at center, transparent 20%, #fa234888 100%);
+}
+.goal-feedback__message {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  padding: 22px 38px;
+  max-inline-size: calc(100% - 32px);
+  border: 3px solid var(--goal-accent);
+  border-radius: 26px;
+  background: linear-gradient(150deg, #174f88f2, #061d42f5);
+  box-shadow:
+    0 0 65px #ffdc4766,
+    0 9px 0 #03132b99;
+  color: #fff;
+  text-align: center;
+  animation: goal-slam 1.5s both;
+}
+.goal-feedback--conceded .goal-feedback__message {
+  background: linear-gradient(150deg, #8d2039f2, #31152ff5);
+  box-shadow:
+    0 0 65px #ff315466,
+    0 9px 0 #180b2099;
+}
+.goal-feedback__label {
+  color: var(--goal-accent);
+  font-size: clamp(0.9rem, 2.5vw, 1.4rem);
+  font-weight: 900;
+}
+.goal-feedback__message strong {
+  color: var(--goal-accent);
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1.05;
+  text-shadow: 0 5px 0 #0008;
+}
+.goal-feedback__player {
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+.goal-feedback__score {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+}
+.goal-feedback__particles {
+  position: absolute;
+  inset: 0;
+}
+.goal-feedback__particles i {
+  position: absolute;
+  left: var(--x);
+  top: -10%;
+  width: 10px;
+  height: 19px;
+  border-radius: 2px;
+  background: var(--color);
+  animation: goal-confetti 1.5s var(--delay) ease-out both;
+}
+.goal-feedback--conceded .goal-feedback__particles i {
+  background: #ff6580;
+  width: 5px;
+  height: 70px;
+}
+@keyframes goal-confetti {
+  from {
+    transform: translate(0, -30px) rotate(var(--spin));
+    opacity: 1;
+  }
+  to {
+    transform: translate(var(--drift), 100vh) rotate(calc(var(--spin) + 420deg));
+    opacity: 0;
+  }
+}
+@keyframes goal-slam {
+  0% {
+    opacity: 0;
+    transform: scale(0.65);
+  }
+  15% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+  25%,
+  80% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+}
+@keyframes goal-wash {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  15%,
+  70% {
+    opacity: 1;
+  }
+}
+.reduced-motion .goal-feedback * {
+  animation: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .goal-feedback * {
+    animation: none !important;
+  }
+  .goal-feedback__particles {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .goal-feedback__message {
+    padding: 20px 22px;
+  }
+}

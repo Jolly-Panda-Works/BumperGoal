@@ -7,6 +7,7 @@ import { profileById, type MatchEvent, type MatchState, type PlayerInfo, type Si
 import { createAIClient } from '../game/aiClient';
 import { themeOf } from '../game/art';
 import { GameHost } from '../game/GameHost';
+import { GoalFeedback } from '../ui/GoalFeedback';
 import { MatchController } from '../game/MatchController';
 import { OnlineMatchController } from '../game/OnlineMatchController';
 import type { MatchDriver } from '../game/driver';
@@ -287,7 +288,7 @@ function MatchView({
     };
     const offEvents = controller.bus.on('events', (events: MatchEvent[]) => {
       for (const e of events) {
-        if (e.type === 'goal') showBanner(e.ownGoal ? t('match.ownGoal') : t('match.goal'), 'goal', 3000);
+        if (e.type === 'goal') showBanner(e.ownGoal ? t('match.ownGoal') : t('match.goal'), 'goal', 1500);
         if (e.type === 'sudden_death') showBanner(t('match.suddenDeath'), 'info', 2200);
         if (e.type === 'timeout') toast(t('match.timeout'));
       }
@@ -455,12 +456,12 @@ function MatchView({
               toast(t(reason === 'not_your_disc' ? 'match.notYourDisc' : 'match.notYourTurn'), 'error', 1400),
           }}
         />
-        {banner && (
-          <div
-            // With effects on, the board shows its own GOAL! slam; keep this for screen readers.
-            className={`match-banner match-banner--${banner.kind} ${banner.kind === 'goal' && !settingsStore.get().reducedMotion ? 'visually-hidden' : ''}`}
-            role="status"
-          >
+        <GoalFeedback
+          controller={controller}
+          playerSide={controller instanceof OnlineMatchController ? controller.side : 'L'}
+        />
+        {banner && banner.kind !== 'goal' && (
+          <div className={`match-banner match-banner--${banner.kind}`} role="status">
             {banner.text}
           </div>
         )}
