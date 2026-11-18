@@ -42,22 +42,22 @@
     "disc_ball": [
       {
         "outcome": "goal_right",
-        "ticks": 61,
-        "hash": "527c3b7e"
+        "ticks": 64,
+        "hash": "05e1595f"
       }
     ],
     "wall_bounce": [
       {
         "outcome": "settled",
-        "ticks": 231,
-        "hash": "841a3c97"
+        "ticks": 238,
+        "hash": "93bd614d"
       }
     ],
     "goal_entry": [
       {
         "outcome": "goal_right",
-        "ticks": 22,
-        "hash": "ed105b95"
+        "ticks": 21,
+        "hash": "4bce6bd1"
       }
     ],
     "low_speed": [
@@ -84,33 +84,33 @@
     "formation_multi_shot": [
       {
         "outcome": "settled",
-        "ticks": 312,
-        "hash": "d86fb4b3"
+        "ticks": 277,
+        "hash": "7886f545"
       },
       {
         "outcome": "settled",
-        "ticks": 278,
-        "hash": "47b5f8e7"
+        "ticks": 227,
+        "hash": "964de517"
       },
       {
         "outcome": "settled",
-        "ticks": 228,
-        "hash": "cccfea47"
+        "ticks": 224,
+        "hash": "4d82fc8d"
       },
       {
         "outcome": "settled",
-        "ticks": 222,
-        "hash": "39de4a70"
+        "ticks": 219,
+        "hash": "c78bbce2"
       },
       {
         "outcome": "settled",
-        "ticks": 228,
-        "hash": "1fea6067"
+        "ticks": 244,
+        "hash": "5af59579"
       },
       {
         "outcome": "settled",
-        "ticks": 253,
-        "hash": "56008eb5"
+        "ticks": 223,
+        "hash": "45f0f49c"
       }
     ]
   }

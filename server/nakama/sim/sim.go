@@ -31,7 +31,7 @@ var rapierWasm []byte
 const RapierWasmSHA256 = "0570d5c822275fbadbbfe4bda0c589b039c2f41259676dc53f6679085601155d"
 
 // Version must equal SIM_VERSION in packages/sim/src/index.ts.
-const Version = 4
+const Version = 5
 
 const hostModuleName = "./rapier_wasm2d_bg.js"
 
@@ -482,7 +482,11 @@ func (s *Sim) SimulateShot(bodies []Body, imp Impulse, maxSteps int) (res Result
 			p = s.config.Ball
 			ballIndex = i
 		}
-		handles[i] = s.createRigidBody(w, b.X, b.Y, true, p.LinearDamping, true, b.Angle, p.AngularDamping, b.Kind == "ball")
+		angle := b.Angle
+		if b.Kind == "disc" && i == imp.BodyIndex && (imp.IX != 0 || imp.IY != 0) {
+			angle = float32(math.Atan2(float64(imp.IY), float64(imp.IX)))
+		}
+		handles[i] = s.createRigidBody(w, b.X, b.Y, true, p.LinearDamping, true, angle, p.AngularDamping, b.Kind == "ball")
 		var shape uint64
 		if b.Kind == "disc" && p.HalfLength > 0 && p.HalfWidth > 0 {
 			shape = s.call("rawshape_roundCuboid", p.HalfLength-p.BorderRadius, p.HalfWidth-p.BorderRadius, p.BorderRadius)

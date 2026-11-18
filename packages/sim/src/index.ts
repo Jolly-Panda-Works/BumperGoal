@@ -11,7 +11,7 @@ import RAPIER from '@dimforge/rapier2d-deterministic-compat';
 import type { PhysicsConfig } from '@flickkick/config';
 
 /** Bump when simulation behaviour changes. Part of the match protocol. */
-export const SIM_VERSION = 4;
+export const SIM_VERSION = 5;
 export const RAPIER_VERSION = '0.21.0';
 
 export type BodyKind = 'disc' | 'ball';
@@ -146,11 +146,15 @@ export class FlickSim {
           walls,
         );
       }
-      const handles = bodies.map((b) => {
+      const handles = bodies.map((b, index) => {
         const p = b.kind === 'ball' ? config.ball : config.disc;
         const desc = RAPIER.RigidBodyDesc.dynamic()
           .setTranslation(b.x, b.y)
-          .setRotation(b.angle ?? 0)
+          .setRotation(
+            b.kind === 'disc' && index === impulse.bodyIndex && (impulse.ix !== 0 || impulse.iy !== 0)
+              ? Math.atan2(impulse.iy, impulse.ix)
+              : (b.angle ?? 0),
+          )
           .setLinearDamping(p.linearDamping)
           .setAngularDamping(b.kind === 'disc' ? (p.angularDamping ?? 0) : 0)
           .setCanSleep(false)

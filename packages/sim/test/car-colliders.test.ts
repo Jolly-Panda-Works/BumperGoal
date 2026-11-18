@@ -54,3 +54,13 @@ it('retains the physical car heading between shots', () => {
   expect(next.angles![0]).toBe(first.bodies[0]!.angle);
   expect(next.bodies[0]!.angle).toBeCloseTo(first.bodies[0]!.angle!, 5);
 });
+
+it('starts the selected car and its collider facing the shot arrow', () => {
+  const result = sim.simulateShot(
+    toF32Bodies([{ kind: 'disc', x: 0, y: 0, angle: 0 }]),
+    { bodyIndex: 0, ix: 2, iy: 2 },
+    { recordFrames: true },
+  );
+  expect(result.angles![0]).toBeCloseTo(Math.PI / 4, 6);
+  expect(result.bodies[0]!.angle).toBeCloseTo(Math.PI / 4, 6);
+});

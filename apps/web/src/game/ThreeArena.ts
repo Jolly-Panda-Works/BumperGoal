@@ -1,5 +1,6 @@
 import { ImpactEffects } from './ImpactEffects';
 import { CarTrails } from './CarTrails';
+import { AimArrow } from './AimArrow';
 import { collisionContact } from './collisionContact';
 import { kickoffCarHeading, resetKickoffViews } from './kickoffPresentation';
 import { isPhone } from '../services/device';
@@ -56,7 +57,7 @@ export class ThreeArena {
   private ray = new THREE.Raycaster();
   private ground = new THREE.Plane(UP, 0);
   private drag?: { entity: Entity; pointer: number; start: THREE.Vector3 };
-  private arrow = new THREE.ArrowHelper(new THREE.Vector3(0, 0, -1), new THREE.Vector3(), 1, 0xffdd59, 0.35, 0.24);
+  private arrow = new AimArrow();
   private tireMarks = new TireMarks();
   private tracksCanvas = document.createElement('canvas');
   private tracksTexture: THREE.CanvasTexture;
@@ -581,7 +582,7 @@ export class ThreeArena {
         -Math.cos(angle) * this.orientation,
       ).normalize(),
     );
-    this.arrow.setLength(0.65 + power * 2.9, 0.35, 0.24);
+    this.arrow.setLength(0.65 + power * 2.9);
     this.arrow.setColor(new THREE.Color().lerpColors(new THREE.Color(0xd3f06b), new THREE.Color(0xff854f), power));
   };
 
@@ -698,9 +699,12 @@ export class ThreeArena {
             this.clock,
             this.init.trailIds?.[body.entity.get(Team)!.side],
           );
+        const aim = body.entity.get(Aiming);
         if (body.headingRoot)
           body.headingRoot.rotation.y =
-            Math.PI - (body.entity.get(Heading)?.angle ?? 0) + (this.orientation === -1 ? Math.PI : 0);
+            Math.PI -
+            (aim && aim.power > 0 ? aim.angle : (body.entity.get(Heading)?.angle ?? 0)) +
+            (this.orientation === -1 ? Math.PI : 0);
         if (body.ring) {
           const active = body.entity.has(Highlighted);
           (body.ring.material as THREE.MeshBasicMaterial).color.set(
