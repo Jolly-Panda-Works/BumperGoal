@@ -646,3 +646,28 @@ body .toy-shortcut__face {
     grid-row: 1;
   }
 }
+/* Reference wallet: translucent dark backing, no raised blue frame. */
+body:has(.toy-menu) .stadium-wallet.stadium-wallet--shared > a {
+  background: #10284970 !important;
+  border: 0 !important;
+  border-radius: 999px;
+  box-shadow: none !important;
+  padding-left: clamp(30px, 4vw, 52px);
+}
+body:has(.toy-menu) .stadium-wallet.stadium-wallet--shared > a > .currency-icon {
+  left: -8px;
+}
+body:has(.toy-menu) .stadium-wallet.stadium-wallet--shared .stadium-wallet__plus {
+  position: absolute;
+  left: clamp(23px, 3.5vw, 43px);
+  bottom: -6px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  flex-basis: 24px;
+  border: 1px solid #d4ff98 !important;
+}
+body:has(.toy-menu) .stadium-wallet.stadium-wallet--shared .stadium-wallet__amount {
+  padding-right: 10px;
+  text-shadow: 0 2px 2px #08223c !important;
+}
