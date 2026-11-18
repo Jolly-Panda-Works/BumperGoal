@@ -610,3 +610,31 @@
     transform: scale(0.98) rotate(2deg);
   }
 }
+.catalog-viewport {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  padding: 8px;
+  margin: -8px;
+  isolation: isolate;
+}
+.shell--catalog-art .catalog-art .catalog-viewport .shop-products {
+  position: relative;
+  will-change: transform;
+  min-height: 0;
+}
+.catalog-viewport [data-catalog-snapshot] {
+  user-select: none;
+}
+.catalog-viewport .shop-product {
+  backface-visibility: hidden;
+  transform-origin: center;
+}
+.catalog-pager > span {
+  font-size: 24px;
+  min-width: 160px;
+}
+
+.shell--catalog-art .catalog-art .shop-products {
+  animation: none;
+}

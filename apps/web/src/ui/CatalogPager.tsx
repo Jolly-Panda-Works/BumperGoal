@@ -2,36 +2,43 @@ import { useTranslation } from 'react-i18next';
 import { formatNumber } from '../i18n';
 import { IconBack } from './icons';
 
+/** Arrows advance one item in the same catalog; the label describes visible items. */
 export function CatalogPager({
-  page,
-  pages,
+  offset,
+  total,
+  visibleCount,
   onChange,
 }: {
-  page: number;
-  pages: number;
-  onChange: (page: number) => void;
+  offset: number;
+  total: number;
+  visibleCount: number;
+  onChange: (offset: number) => void;
 }) {
   const { t } = useTranslation();
+  const last = Math.max(0, total - visibleCount);
+  const first = total ? offset + 1 : 0;
+  const end = Math.min(total, offset + visibleCount);
   return (
     <nav className="catalog-pager" aria-label={t('catalog.pagination')}>
       <button
         type="button"
         className="icon-btn"
         aria-label={t('catalog.previous')}
-        disabled={page === 0}
-        onClick={() => onChange(page - 1)}
+        disabled={offset === 0}
+        onClick={() => onChange(offset - 1)}
       >
         <IconBack size={28} />
       </button>
-      <span dir="ltr">
-        {formatNumber(page + 1)} / {formatNumber(Math.max(1, pages))}
+      <span dir="ltr" aria-live="polite">
+        {formatNumber(first)}
+        {end > first ? `–${formatNumber(end)}` : ''} / {formatNumber(total)}
       </span>
       <button
         type="button"
         className="icon-btn catalog-pager__next"
         aria-label={t('catalog.next')}
-        disabled={page >= pages - 1}
-        onClick={() => onChange(page + 1)}
+        disabled={offset >= last}
+        onClick={() => onChange(offset + 1)}
       >
         <IconBack size={28} />
       </button>

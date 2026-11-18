@@ -1,3 +1,4 @@
+import { useCatalogMotion } from '../ui/useCatalogMotion';
 import { CatalogPager } from '../ui/CatalogPager';
 import { rakhtkan } from '../services/gameVariant';
 import { activateEquipment, equipmentState } from '../services/equipment';
@@ -13,7 +14,6 @@ import { claimLocalPack, ownsLocal, purchaseLocal, useLocalInventory } from '../
 import { Avatar, Badge, Button, Card, Dialog, PriceTag, ScreenHeader, Tabs } from '../ui/components';
 import { TeamAttributes } from '../ui/TeamAttributes';
 import { ItemPreview } from './Profile';
-import { useSettings } from '../services/settings';
 import { claimPack, getOnline, purchaseItem, useOnline } from '../services/online';
 import { toast } from '../ui/toast';
 type Tab = 'teams' | 'balls' | 'avatars' | 'formations' | 'trails' | 'currency';
@@ -71,30 +71,9 @@ export function ShopScreen() {
       setBuying(null);
     }
   };
-  const settings = useSettings();
-  const listRef = useRef<HTMLDivElement>(null);
-  const transitionVersion = useRef(0);
-  useEffect(
-    () => () => {
-      transitionVersion.current++;
-    },
-    [],
-  );
-  const changeCategory = async (apply: () => void) => {
-    const version = ++transitionVersion.current;
-    const element = listRef.current;
-    if (element && !settings.reducedMotion && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      const exit = element.animate(
-        [
-          { opacity: 1, transform: 'translateY(0)' },
-          { opacity: 0, transform: 'translateY(5px)' },
-        ],
-        { duration: 100, fill: 'forwards' },
-      );
-      await exit.finished.catch(() => undefined);
-    }
-    if (version === transitionVersion.current) apply();
-  };
+  const motion = useCatalogMotion();
+  const listRef = motion.listRef;
+  const changeCategory = motion.switchCategory;
   const [params] = useSearchParams();
   const [tab, setTab] = useState<Tab>(!rakhtkan && params.get('tab') === 'currency' ? 'currency' : 'teams');
   const [group, setGroup] = useState(
@@ -125,9 +104,9 @@ export function ShopScreen() {
             .flat()
             .filter((item): item is (typeof cosmetics.avatars)[number] => !!item)
         : cosmetics[tab];
-  const pages = Math.max(1, Math.ceil((tab === 'currency' ? packItems.length : items.length) / 4));
+  const pages = Math.max(1, (tab === 'currency' ? packItems.length : items.length) - motion.visibleCount + 1);
   const currentPage = Math.min(page, pages - 1);
-  const visibleItems = rakhtkan ? items : items.slice(currentPage * 4, currentPage * 4 + 4);
+  const visibleItems = rakhtkan ? items : items.slice(currentPage, currentPage + motion.visibleCount);
   return (
     <div
       className={`screen shop-screen ${!rakhtkan ? 'catalog-art' : ''} ${rakhtkan ? 'rakhtkan-shop' : ''} ${tab === 'currency' ? 'shop-screen--packs' : ''}`}
@@ -141,6 +120,7 @@ export function ShopScreen() {
         </div>
         <p className="section-note">{t('shop.purchaseOnly')}</p>
         <Tabs
+          animate={rakhtkan}
           value={tab}
           onChange={(value) => {
             if (value === tab) {
@@ -171,6 +151,7 @@ export function ShopScreen() {
       <div className="shop-tools">
         {groups.length > 0 && (
           <Tabs
+            animate={rakhtkan}
             value={group}
             onChange={(value) => {
               if (value === group) {
@@ -185,75 +166,85 @@ export function ShopScreen() {
           />
         )}
       </div>
-      <div
-        key={`${tab}-${group}`}
-        ref={listRef}
-        className="shop-products"
-        onScroll={(event) => {
-          event.currentTarget.dataset.scrolled = String(event.currentTarget.scrollTop > 1);
-        }}
-      >
-        {tab === 'currency'
-          ? packItems.slice(currentPage * 4, currentPage * 4 + 4).map((pack) => (
-              <Card
-                className={`shop-product shop-product--pack ${inventory.packs.includes(pack.id) ? 'is-owned' : ''}`}
-                key={pack.id}
-              >
-                {reaction.render(pack.id)}
-                <CurrencyPackArt id={pack.id} />
-                <strong>{t(`packs.${pack.id}`)}</strong>
-                <PriceTag price={pack.grant} />
-                <Button
-                  size="sm"
-                  disabled={!!pack.oneTime && inventory.packs.includes(pack.id)}
-                  onClick={() => setPurchase({ kind: 'currency', id: pack.id })}
+      <div className="catalog-viewport">
+        <div
+          ref={listRef}
+          className="shop-products"
+          onScroll={(event) => {
+            event.currentTarget.dataset.scrolled = String(event.currentTarget.scrollTop > 1);
+          }}
+        >
+          {tab === 'currency'
+            ? packItems.slice(currentPage, currentPage + motion.visibleCount).map((pack) => (
+                <Card
+                  className={`shop-product shop-product--pack ${inventory.packs.includes(pack.id) ? 'is-owned' : ''}`}
+                  key={pack.id}
+                  data-catalog-id={pack.id}
                 >
-                  {t('shop.getPack')}
-                </Button>
-              </Card>
-            ))
-          : visibleItems.map((item) => (
-              <Card
-                className={`shop-product ${tab === 'teams' ? 'shop-product--team' : ''} ${ownsLocal(tab, item.id) ? 'is-owned' : ''} ${rakhtkan && equipmentState(tab, item.id) === 'active' ? 'is-equipped' : ''}`}
-                data-item-state={equipmentState(tab, item.id)}
-                key={item.id}
-              >
-                {reaction.render(item.id)}
-                <ItemPreview kind={tab} id={item.id} />
-                <strong>{t(`${tab}.${item.id}`)}</strong>
-                {tab === 'teams' && <TeamAttributes id={item.id} />}
-                <PriceTag price={item.price} />
-                <ShopActions>
-                  {rakhtkan && equipmentState(tab, item.id) === 'active' ? (
-                    <Badge tone="success">{t('locker.equipped')}</Badge>
-                  ) : ownsLocal(tab, item.id) ? (
-                    <>
-                      <Badge tone="success">{t('shop.owned')}</Badge>
-                      {rakhtkan && (
-                        <Button size="sm" disabled={activating !== null} onClick={() => void activate(tab, item.id)}>
-                          {t('locker.equip')}
+                  {reaction.render(pack.id)}
+                  <CurrencyPackArt id={pack.id} />
+                  <strong>{t(`packs.${pack.id}`)}</strong>
+                  <PriceTag price={pack.grant} />
+                  <Button
+                    size="sm"
+                    disabled={!!pack.oneTime && inventory.packs.includes(pack.id)}
+                    onClick={() => setPurchase({ kind: 'currency', id: pack.id })}
+                  >
+                    {t('shop.getPack')}
+                  </Button>
+                </Card>
+              ))
+            : visibleItems.map((item) => (
+                <Card
+                  className={`shop-product ${tab === 'teams' ? 'shop-product--team' : ''} ${ownsLocal(tab, item.id) ? 'is-owned' : ''} ${rakhtkan && equipmentState(tab, item.id) === 'active' ? 'is-equipped' : ''}`}
+                  data-item-state={equipmentState(tab, item.id)}
+                  key={item.id}
+                  data-catalog-id={item.id}
+                >
+                  {reaction.render(item.id)}
+                  <ItemPreview kind={tab} id={item.id} />
+                  <strong>{t(`${tab}.${item.id}`)}</strong>
+                  {tab === 'teams' && <TeamAttributes id={item.id} />}
+                  <PriceTag price={item.price} />
+                  <ShopActions>
+                    {rakhtkan && equipmentState(tab, item.id) === 'active' ? (
+                      <Badge tone="success">{t('locker.equipped')}</Badge>
+                    ) : ownsLocal(tab, item.id) ? (
+                      <>
+                        <Badge tone="success">{t('shop.owned')}</Badge>
+                        {rakhtkan && (
+                          <Button size="sm" disabled={activating !== null} onClick={() => void activate(tab, item.id)}>
+                            {t('locker.equip')}
+                          </Button>
+                        )}
+                      </>
+                    ) : (
+                      <>
+                        {rakhtkan && <Badge>{t('shop.locked')}</Badge>}
+                        <Button
+                          size="sm"
+                          disabled={buying !== null}
+                          onClick={() => setPurchase({ kind: tab, id: item.id })}
+                        >
+                          {t('shop.buy')}
                         </Button>
-                      )}
-                    </>
-                  ) : (
-                    <>
-                      {rakhtkan && <Badge>{t('shop.locked')}</Badge>}
-                      <Button
-                        size="sm"
-                        disabled={buying !== null}
-                        onClick={() => setPurchase({ kind: tab, id: item.id })}
-                      >
-                        {t('shop.buy')}
-                      </Button>
-                    </>
-                  )}
-                </ShopActions>
-              </Card>
-            ))}
+                      </>
+                    )}
+                  </ShopActions>
+                </Card>
+              ))}
+        </div>
       </div>
       {tab !== 'currency' && items.length === 0 && <p role="status">{t('shop.noResults')}</p>}
       {!rakhtkan && (
-        <CatalogPager page={currentPage} pages={pages} onChange={(index) => setCatalogPage({ key: pageKey, index })} />
+        <CatalogPager
+          offset={currentPage}
+          total={tab === 'currency' ? packItems.length : items.length}
+          visibleCount={motion.visibleCount}
+          onChange={(index) =>
+            void motion.moveWindow(() => setCatalogPage({ key: pageKey, index }), index - currentPage)
+          }
+        />
       )}
       <Dialog
         open={!!purchase && !!selected}

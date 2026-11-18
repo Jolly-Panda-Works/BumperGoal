@@ -1,3 +1,4 @@
+import { useCatalogMotion } from '../ui/useCatalogMotion';
 import { CatalogPager } from '../ui/CatalogPager';
 import { ShieldAvatar } from '../ui/ShieldAvatar';
 import { useCollectibleReaction } from '../ui/collectibleReaction';
@@ -370,16 +371,21 @@ export function LockerScreen() {
   const requestedTab = params.get('tab');
   const tab: 'teams' | 'balls' | 'avatars' | 'formations' | 'trails' =
     (['teams', 'balls', 'avatars', 'formations', 'trails'] as const).find((value) => value === requestedTab) ?? 'teams';
-  const setTab = (value: string) =>
-    setParams((current) => {
-      current.set('tab', value);
-      return current;
-    });
+  const motion = useCatalogMotion();
+  const setTab = (value: string) => {
+    if (value === tab) return;
+    void motion.switchCategory(() =>
+      setParams((current) => {
+        current.set('tab', value);
+        return current;
+      }),
+    );
+  };
   useLocalInventory();
   useOnline();
   const [catalogPage, setCatalogPage] = useState({ key: '', index: 0 });
   const ownedItems = cosmetics[tab].filter((item) => ownsLocal(tab, item.id));
-  const pages = Math.max(1, Math.ceil(ownedItems.length / 4));
+  const pages = Math.max(1, ownedItems.length - motion.visibleCount + 1);
   const page = Math.min(catalogPage.key === tab ? catalogPage.index : 0, pages - 1);
   const current =
     tab === 'teams'
@@ -402,6 +408,7 @@ export function LockerScreen() {
         </div>
         <p className="section-note">{t('locker.manageOnly')}</p>
         <Tabs
+          animate={false}
           value={tab}
           onChange={setTab}
           tabs={(['teams', 'balls', 'avatars', 'formations', 'trails'] as const).map((id) => ({
@@ -435,59 +442,67 @@ export function LockerScreen() {
           </div>
         )}
       </div>
-      <div className="shop-products" key={tab}>
-        {tab === 'trails' && !cosmetics.trails.some((item) => ownsLocal('trails', item.id)) && (
-          <p className="catalog-empty">{t('locker.trailEmpty')}</p>
-        )}
-        {ownedItems.slice(page * 4, page * 4 + 4).map((item) => (
-          <Card
-            key={item.id}
-            className={`shop-product is-owned ${tab === 'teams' ? 'shop-product--team' : ''} ${current === item.id ? 'is-equipped' : ''}`}
-          >
-            {reaction.render(item.id)}
-            <ItemPreview kind={tab} id={item.id} />
-            <strong>{t(`${tab}.${item.id}`)}</strong>
-            {tab === 'teams' && <TeamAttributes id={item.id} />}
-            {current === item.id ? (
-              <Badge tone="success">
-                <IconCheck size={14} /> {t('locker.equipped')}
-              </Badge>
-            ) : (
-              <Button
-                size="sm"
-                onClick={() => {
-                  reaction.play(item.id);
-                  if (tab === 'trails') {
-                    profileStore.set((p) => ({
-                      ...p,
-                      trailId: item.id,
-                      pending: getOnline().status === 'online' ? { ...p.pending, trailId: item.id } : p.pending,
-                    }));
-                    if (getOnline().status === 'online')
-                      void updateProfile({ trailId: item.id }).catch((err: Error) => toast(err.message, 'error'));
-                  } else if (tab === 'formations') {
-                    profileStore.set((p) => ({
-                      ...p,
-                      formationId: item.id,
-                      pending:
-                        item.price === null || getOnline().status === 'online'
-                          ? { ...p.pending, formationId: item.id }
-                          : p.pending,
-                    }));
-                    if (getOnline().status === 'online')
-                      void updateProfile({ formationId: item.id }).catch((err: Error) => toast(err.message, 'error'));
-                  } else {
-                    void equip(tab === 'teams' ? 'teamId' : tab === 'avatars' ? 'avatarId' : 'ballId', item.id);
-                  }
-                }}
-              >
-                {t('locker.equip')}
-              </Button>
-            )}
-          </Card>
-        ))}
+      <div className="catalog-viewport">
+        <div className="shop-products" ref={motion.listRef}>
+          {tab === 'trails' && !cosmetics.trails.some((item) => ownsLocal('trails', item.id)) && (
+            <p className="catalog-empty">{t('locker.trailEmpty')}</p>
+          )}
+          {ownedItems.slice(page, page + motion.visibleCount).map((item) => (
+            <Card
+              key={item.id}
+              data-catalog-id={item.id}
+              className={`shop-product is-owned ${tab === 'teams' ? 'shop-product--team' : ''} ${current === item.id ? 'is-equipped' : ''}`}
+            >
+              {reaction.render(item.id)}
+              <ItemPreview kind={tab} id={item.id} />
+              <strong>{t(`${tab}.${item.id}`)}</strong>
+              {tab === 'teams' && <TeamAttributes id={item.id} />}
+              {current === item.id ? (
+                <Badge tone="success">
+                  <IconCheck size={14} /> {t('locker.equipped')}
+                </Badge>
+              ) : (
+                <Button
+                  size="sm"
+                  onClick={() => {
+                    reaction.play(item.id);
+                    if (tab === 'trails') {
+                      profileStore.set((p) => ({
+                        ...p,
+                        trailId: item.id,
+                        pending: getOnline().status === 'online' ? { ...p.pending, trailId: item.id } : p.pending,
+                      }));
+                      if (getOnline().status === 'online')
+                        void updateProfile({ trailId: item.id }).catch((err: Error) => toast(err.message, 'error'));
+                    } else if (tab === 'formations') {
+                      profileStore.set((p) => ({
+                        ...p,
+                        formationId: item.id,
+                        pending:
+                          item.price === null || getOnline().status === 'online'
+                            ? { ...p.pending, formationId: item.id }
+                            : p.pending,
+                      }));
+                      if (getOnline().status === 'online')
+                        void updateProfile({ formationId: item.id }).catch((err: Error) => toast(err.message, 'error'));
+                    } else {
+                      void equip(tab === 'teams' ? 'teamId' : tab === 'avatars' ? 'avatarId' : 'ballId', item.id);
+                    }
+                  }}
+                >
+                  {t('locker.equip')}
+                </Button>
+              )}
+            </Card>
+          ))}
+        </div>
       </div>
-      <CatalogPager page={page} pages={pages} onChange={(index) => setCatalogPage({ key: tab, index })} />
+      <CatalogPager
+        offset={page}
+        total={ownedItems.length}
+        visibleCount={motion.visibleCount}
+        onChange={(index) => void motion.moveWindow(() => setCatalogPage({ key: tab, index }), index - page)}
+      />
     </div>
   );
 }

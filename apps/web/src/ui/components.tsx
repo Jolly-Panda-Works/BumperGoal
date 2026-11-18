@@ -636,10 +636,12 @@ export function Tabs<T extends string>({
   value,
   tabs,
   onChange,
+  animate = true,
 }: {
   value: T;
   tabs: { id: T; label: string; icon?: ReactNode }[];
   onChange: (v: T) => void;
+  animate?: boolean;
 }) {
   return (
     <div className={`tabs ${tabs.some((tab) => tab.icon) ? 'tabs--icons' : ''}`} role="tablist">
@@ -653,6 +655,10 @@ export function Tabs<T extends string>({
           aria-selected={tab.id === value}
           className={tab.id === value ? 'is-active' : ''}
           onClick={(event) => {
+            if (!animate) {
+              onChange(tab.id);
+              return;
+            }
             if (tab.id === value) {
               onChange(tab.id);
               return;
