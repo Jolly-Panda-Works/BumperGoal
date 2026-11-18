@@ -671,3 +671,61 @@ body:has(.toy-menu) .stadium-wallet.stadium-wallet--shared .stadium-wallet__amou
   padding-right: 10px;
   text-shadow: 0 2px 2px #08223c !important;
 }
+/* Larger home controls, scaled against the available screen height. */
+.toy-menu__header {
+  height: clamp(60px, 12cqh, 104px);
+}
+.toy-menu__left {
+  top: 25%;
+  gap: 4cqh;
+}
+body .toy-shortcut__face {
+  height: clamp(78px, 18cqh, 148px);
+  width: auto;
+}
+.toy-menu__bottom {
+  height: clamp(82px, 17cqh, 148px);
+  gap: 2cqw;
+}
+body .toy-play > span:first-child {
+  font-size: clamp(40px, 7cqw, 88px);
+}
+.toy-profile__level {
+  width: 34px;
+  height: 34px;
+  font-size: 20px;
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .toy-menu__header {
+    height: clamp(56px, 14cqh, 68px);
+  }
+  .toy-menu__left {
+    top: 25%;
+    gap: 3cqh;
+  }
+  body .toy-shortcut__face {
+    height: clamp(72px, 19cqh, 88px);
+  }
+  .toy-menu__bottom {
+    height: clamp(76px, 20cqh, 94px);
+  }
+  .toy-profile__level {
+    width: 29px;
+    height: 29px;
+    font-size: 17px;
+  }
+}
+@media (orientation: portrait) {
+  .toy-menu__header {
+    height: 64px;
+  }
+  .toy-menu__left {
+    top: 23%;
+  }
+  body .toy-shortcut__face {
+    height: 88px;
+  }
+  .toy-menu__bottom {
+    height: 94px;
+  }
+}
