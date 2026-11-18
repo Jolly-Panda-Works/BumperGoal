@@ -11,7 +11,7 @@ import RAPIER from '@dimforge/rapier2d-deterministic-compat';
 import type { PhysicsConfig } from '@flickkick/config';
 
 /** Bump when simulation behaviour changes. Part of the match protocol. */
-export const SIM_VERSION = 3;
+export const SIM_VERSION = 4;
 export const RAPIER_VERSION = '0.21.0';
 
 export type BodyKind = 'disc' | 'ball';
@@ -19,6 +19,8 @@ export type BodyKind = 'disc' | 'ball';
 /** A body at rest. x and y are always exact f32 values. */
 export interface BodyState {
   kind: BodyKind;
+  /** Physical heading in radians, carried between turns. */
+  angle?: number;
   x: number;
   y: number;
 }
@@ -41,6 +43,8 @@ export interface ShotResult {
   hash: string;
   /** Recorded positions, frame-major: [frame][body][x,y]. Frame 0 = start. */
   frames: Float32Array | null;
+  /** One physical rotation per body per recorded frame. */
+  angles?: Float32Array | null;
 }
 
 export interface SimulateOptions {
@@ -63,7 +67,7 @@ export function hashBodies(bodies: readonly BodyState[]): string {
   };
   for (const b of bodies) {
     mix(b.kind === 'ball' ? 1 : 0);
-    for (const v of [b.x, b.y]) {
+    for (const v of [b.x, b.y, b.angle ?? 0]) {
       view.setFloat32(0, v, true);
       for (let i = 0; i < 4; i++) mix(view.getUint8(i));
     }
@@ -72,7 +76,7 @@ export function hashBodies(bodies: readonly BodyState[]): string {
 }
 
 export function toF32Bodies(bodies: readonly BodyState[]): BodyState[] {
-  return bodies.map((b) => ({ kind: b.kind, x: fround(b.x), y: fround(b.y) }));
+  return bodies.map((b) => ({ kind: b.kind, x: fround(b.x), y: fround(b.y), angle: fround(b.angle ?? 0) }));
 }
 
 let initPromise: Promise<void> | null = null;
@@ -103,7 +107,11 @@ export class FlickSim {
   /** Mass of a body kind (density × area), used to reason about impulses. */
   massOf(kind: BodyKind): number {
     const p = kind === 'ball' ? this.config.ball : this.config.disc;
-    return fround(p.density * Math.PI * p.radius * p.radius);
+    const area =
+      kind === 'disc' && p.halfLength && p.halfWidth
+        ? 4 * p.halfLength * p.halfWidth - (4 - Math.PI) * Math.pow(p.borderRadius ?? 0, 2)
+        : Math.PI * p.radius * p.radius;
+    return fround(p.density * area);
   }
 
   /**
@@ -126,6 +134,8 @@ export class FlickSim {
 
     // ---- world construction (order matters: mirrored in Go) ----
     const world = new RAPIER.World({ x: 0, y: 0 });
+    world.integrationParameters.maxCcdSubsteps = 4;
+    world.integrationParameters.contact_natural_frequency = 120;
     try {
       const walls = world.createRigidBody(RAPIER.RigidBodyDesc.fixed());
       for (const [x1, y1, x2, y2] of arenaSegments(config)) {
@@ -138,34 +148,45 @@ export class FlickSim {
       }
       const handles = bodies.map((b) => {
         const p = b.kind === 'ball' ? config.ball : config.disc;
-        const body = world.createRigidBody(
-          RAPIER.RigidBodyDesc.dynamic()
-            .setTranslation(b.x, b.y)
-            .setLinearDamping(p.linearDamping)
-            .lockRotations()
-            .setCanSleep(false)
-            .setCcdEnabled(b.kind === 'ball'),
-        );
-        world.createCollider(
-          RAPIER.ColliderDesc.ball(p.radius).setDensity(p.density).setRestitution(p.restitution).setFriction(0),
-          body,
-        );
+        const desc = RAPIER.RigidBodyDesc.dynamic()
+          .setTranslation(b.x, b.y)
+          .setRotation(b.angle ?? 0)
+          .setLinearDamping(p.linearDamping)
+          .setAngularDamping(b.kind === 'disc' ? (p.angularDamping ?? 0) : 0)
+          .setCanSleep(false)
+          .setSoftCcdPrediction(0.6)
+          .setCcdEnabled(true);
+        if (b.kind === 'ball') desc.lockRotations();
+        const body = world.createRigidBody(desc);
+        const shape =
+          b.kind === 'disc' && p.halfLength && p.halfWidth
+            ? RAPIER.ColliderDesc.roundCuboid(
+                p.halfLength - (p.borderRadius ?? 0),
+                p.halfWidth - (p.borderRadius ?? 0),
+                p.borderRadius ?? 0,
+              )
+            : RAPIER.ColliderDesc.ball(p.radius);
+        world.createCollider(shape.setDensity(p.density).setRestitution(p.restitution).setFriction(0), body);
         return body;
       });
       handles[impulse.bodyIndex]!.applyImpulse({ x: impulse.ix, y: impulse.iy }, true);
 
       // ---- stepping ----
       const frames = options.recordFrames ? new Float32Array((maxSteps + 1) * n * 2) : null;
+      const angles = options.recordFrames ? new Float32Array((maxSteps + 1) * n) : null;
+      const rotations = new Float32Array(n);
       const positions = new Float32Array(n * 2);
       const readPositions = () => {
         for (let i = 0; i < n; i++) {
           const t = handles[i]!.translation();
           positions[i * 2] = t.x;
           positions[i * 2 + 1] = t.y;
+          rotations[i] = handles[i]!.rotation();
         }
       };
       readPositions();
       frames?.set(positions, 0);
+      angles?.set(rotations, 0);
 
       const stop2 = a.stopSpeed * a.stopSpeed;
       const ballIndex = bodies.findIndex((b) => b.kind === 'ball');
@@ -177,6 +198,7 @@ export class FlickSim {
         if (frames) {
           readPositions();
           frames.set(positions, ticks * n * 2);
+          angles?.set(rotations, ticks * n);
         } else if (ballIndex >= 0) {
           // AI predictions need only the ball for goal checks, then final positions.
           const ball = handles[ballIndex]!.translation();
@@ -204,11 +226,15 @@ export class FlickSim {
         for (let i = 0; i < n; i++) {
           const v = handles[i]!.linvel();
           const speed2 = v.x * v.x + v.y * v.y;
+          const spin = handles[i]!.angvel();
           if (speed2 < stop2) {
             if (speed2 > 0) handles[i]!.setLinvel({ x: 0, y: 0 }, true);
           } else {
             moving = true;
           }
+          if (Math.abs(spin) < a.stopSpeed) {
+            if (spin !== 0) handles[i]!.setAngvel(0, true);
+          } else moving = true;
         }
         if (!moving) {
           outcome = 'settled';
@@ -222,6 +248,7 @@ export class FlickSim {
         kind: b.kind,
         x: positions[i * 2]!,
         y: positions[i * 2 + 1]!,
+        angle: rotations[i]!,
       }));
       if (!this.isSane(finalBodies)) outcome = 'invalid';
       return {
@@ -230,6 +257,7 @@ export class FlickSim {
         bodies: finalBodies,
         hash: hashBodies(finalBodies),
         frames: frames ? frames.slice(0, (ticks + 1) * n * 2) : null,
+        angles: angles ? angles.slice(0, (ticks + 1) * n) : null,
       };
     } finally {
       world.free();
@@ -242,7 +270,12 @@ export class FlickSim {
     const limitX = a.halfWidth + a.goalDepth + this.config.boundsMargin;
     const limitY = a.halfHeight + this.config.boundsMargin;
     return bodies.every(
-      (b) => Number.isFinite(b.x) && Number.isFinite(b.y) && Math.abs(b.x) <= limitX && Math.abs(b.y) <= limitY,
+      (b) =>
+        Number.isFinite(b.x) &&
+        Number.isFinite(b.y) &&
+        Number.isFinite(b.angle ?? 0) &&
+        Math.abs(b.x) <= limitX &&
+        Math.abs(b.y) <= limitY,
     );
   }
 }

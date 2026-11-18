@@ -10,7 +10,18 @@ import { physicsConfig } from '@flickkick/config';
 import { audio } from '../services/audio';
 import { settingsStore } from '../services/settings';
 import { bodyEntities, clearAiming, runFrame, type Impact } from './ecs/systems';
-import { Aiming, BodyRef, Highlighted, HudTrait, HoldTrait, IsBall, PlaybackTrait, Position, Team } from './ecs/traits';
+import {
+  Aiming,
+  BodyRef,
+  Heading,
+  Highlighted,
+  HudTrait,
+  HoldTrait,
+  IsBall,
+  PlaybackTrait,
+  Position,
+  Team,
+} from './ecs/traits';
 import { cartoonSurroundings } from './cartoonSurroundings';
 import { fitArenaCamera } from './arenaCamera';
 import { arenaPosition, FIELD_WIDTH_SCALE, shotFromGround } from './arena3dProjection';
@@ -25,6 +36,7 @@ interface Body3D {
   object: THREE.Group;
   ring?: THREE.Mesh;
   chassis?: THREE.Group;
+  headingRoot?: THREE.Group;
   last: THREE.Vector3;
 }
 
@@ -368,12 +380,14 @@ export class ThreeArena {
     const entities = bodyEntities(this.init.controller.world);
     for (const entity of entities) {
       const object = new THREE.Group();
+      object.scale.x = FIELD_WIDTH_SCALE;
       this.scene.add(object);
       const pos = entity.get(Position)!;
       object.position.copy(this.toWorld(pos.x, pos.y));
       const isBall = entity.has(IsBall);
       let ring: THREE.Mesh | undefined;
       let chassis: THREE.Group | undefined;
+      let headingRoot: THREE.Group | undefined;
       if (isBall) {
         const material = new THREE.MeshStandardMaterial({ color: 0xfcfaf0, roughness: 0.65 });
         const ball = new THREE.Mesh(new THREE.SphereGeometry(physicsConfig.ball.radius, 24, 16), material);
@@ -415,14 +429,25 @@ export class ThreeArena {
         ring.rotation.x = -Math.PI / 2;
         ring.position.y = 0.025;
         object.add(ring);
-        object.rotation.y = kickoffCarHeading(entity.get(Team)!.side, this.orientation);
+        headingRoot = new THREE.Group();
+        object.add(headingRoot);
+        headingRoot.rotation.y = kickoffCarHeading(entity.get(Team)!.side, this.orientation);
         chassis = new THREE.Group();
-        object.add(chassis);
+        headingRoot.add(chassis);
         const modelRoot = chassis;
         // A lit 3D car remains available while the supplied model streams in.
         const fallback = new THREE.Group();
-        this.box(0.65, 0.24, 1.25, TEAM_COLORS[team]!, 0, 0.24, 0, fallback);
-        this.box(0.54, 0.22, 0.58, 0x233b48, 0, 0.45, -0.05, fallback);
+        this.box(
+          (physicsConfig.disc.halfWidth ?? 0.45) * 2,
+          0.24,
+          (physicsConfig.disc.halfLength ?? 0.71) * 2,
+          TEAM_COLORS[team]!,
+          0,
+          0.24,
+          0,
+          fallback,
+        );
+        this.box(0.72, 0.22, 0.58, 0x233b48, 0, 0.45, -0.05, fallback);
         modelRoot.add(fallback);
         new GLTFLoader().load(
           assetUrl(`cars/${team === 0 ? 'cicada' : 'cruiser'}.glb`),
@@ -458,13 +483,16 @@ export class ThreeArena {
                 o.material = Array.isArray(o.material) ? converted : converted[0]!;
               }
             });
+            const bounds = new THREE.Box3().setFromObject(gltf.scene).getSize(new THREE.Vector3());
+            gltf.scene.scale.x = ((physicsConfig.disc.halfWidth ?? 0.45) * 2) / bounds.x;
+            gltf.scene.scale.z = ((physicsConfig.disc.halfLength ?? 0.71) * 2) / bounds.z;
             modelRoot.add(gltf.scene);
           },
           undefined,
           (error) => console.warn('Car model unavailable; keeping the 3D fallback.', error),
         );
       }
-      this.bodies.push({ entity, object, ring, chassis, last: object.position.clone() });
+      this.bodies.push({ entity, object, ring, chassis, headingRoot, last: object.position.clone() });
     }
   }
 
@@ -585,7 +613,12 @@ export class ThreeArena {
   private onImpact(impact: Impact): void {
     const bodies = this.bodies.map((view) => {
       const pos = view.entity.get(Position)!;
-      return { kind: view.entity.has(IsBall) ? ('ball' as const) : ('disc' as const), x: pos.x, y: pos.y };
+      return {
+        kind: view.entity.has(IsBall) ? ('ball' as const) : ('disc' as const),
+        angle: view.entity.get(Heading)?.angle ?? 0,
+        x: pos.x,
+        y: pos.y,
+      };
     });
     const contact = collisionContact(impact, bodies);
     const strength = Math.min(1, impact.strength * 6);
@@ -648,13 +681,9 @@ export class ThreeArena {
             movement.length() / physicsConfig.ball.radius,
           );
       } else {
-        const aim = body.entity.get(Aiming);
-        if (aim && aim.power > 0)
-          body.object.rotation.y = Math.atan2(
-            Math.sin(aim.angle) * this.orientation * FIELD_WIDTH_SCALE,
-            -Math.cos(aim.angle) * this.orientation,
-          );
-        else if (playing && movement.lengthSq() > 0.000001) body.object.rotation.y = Math.atan2(movement.x, movement.z);
+        if (body.headingRoot)
+          body.headingRoot.rotation.y =
+            Math.PI - (body.entity.get(Heading)?.angle ?? 0) + (this.orientation === -1 ? Math.PI : 0);
         if (body.ring) {
           const active = body.entity.has(Highlighted);
           (body.ring.material as THREE.MeshBasicMaterial).color.set(

@@ -42,7 +42,7 @@ describe('createMatch', () => {
   it('builds a mirrored kickoff with the ball in the centre', () => {
     const bodies = kickoffBodies(rulesConfig);
     expect(bodies).toHaveLength(rulesConfig.discsPerTeam * 2 + 1);
-    expect(bodies.at(-1)).toEqual({ kind: 'ball', x: 0, y: 0 });
+    expect(bodies.at(-1)).toEqual({ kind: 'ball', x: 0, y: 0, angle: 0 });
     for (let i = 0; i < rulesConfig.discsPerTeam; i++) {
       expect(bodies[i + rulesConfig.discsPerTeam]!.x).toBe(-bodies[i]!.x);
       expect(bodies[i]!.x).toBeLessThan(0);

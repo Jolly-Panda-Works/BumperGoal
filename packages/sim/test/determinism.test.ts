@@ -193,7 +193,7 @@ it.each(scenarios.scenarios.map((s) => [s.name, s] as const))(
     for (const shot of scenario.shots) {
       const plain = sim.simulateShot(bodies, impulseOf(shot));
       const recorded = sim.simulateShot(bodies, impulseOf(shot), { recordFrames: true });
-      expect({ ...plain, frames: null }).toEqual({ ...recorded, frames: null });
+      expect({ ...plain, frames: null, angles: null }).toEqual({ ...recorded, frames: null, angles: null });
       bodies = plain.bodies;
     }
   },

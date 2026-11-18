@@ -13,7 +13,7 @@ describe('collision feedback', () => {
       { kind: 'ball', x: 0.63, y: 0 },
     ]);
     expect(ball.kind).toBe('ball');
-    expect(ball.x).toBeCloseTo(0.42);
+    expect(ball.x).toBeCloseTo(0.71);
     expect(ball.bodies).toEqual([0, 1]);
     expect(
       collisionContact(impact, [

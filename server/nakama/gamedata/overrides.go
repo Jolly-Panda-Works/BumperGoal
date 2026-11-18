@@ -408,10 +408,14 @@ type Physics struct {
 }
 
 type Body struct {
-	Radius        float64 `json:"radius"`
-	Density       float64 `json:"density"`
-	LinearDamping float64 `json:"linearDamping"`
-	Restitution   float64 `json:"restitution"`
+	HalfLength     float64 `json:"halfLength,omitempty"`
+	HalfWidth      float64 `json:"halfWidth,omitempty"`
+	BorderRadius   float64 `json:"borderRadius,omitempty"`
+	AngularDamping float64 `json:"angularDamping,omitempty"`
+	Radius         float64 `json:"radius"`
+	Density        float64 `json:"density"`
+	LinearDamping  float64 `json:"linearDamping"`
+	Restitution    float64 `json:"restitution"`
 }
 
 func between(name string, v, lo, hi float64) error {
@@ -461,6 +465,12 @@ func (d *Data) Validate() error {
 			between("physics."+name+".restitution", b.Restitution, 0, 1.5),
 		)
 	}
+	checks = append(checks,
+		between("physics.disc.halfLength", p.Disc.HalfLength, 0.1, 1.5),
+		between("physics.disc.halfWidth", p.Disc.HalfWidth, 0.1, 1.5),
+		between("physics.disc.borderRadius", p.Disc.BorderRadius, 0, math.Min(p.Disc.HalfLength, p.Disc.HalfWidth)),
+		between("physics.disc.angularDamping", p.Disc.AngularDamping, 0, 20),
+	)
 	for _, c := range []string{"coins", "gems"} {
 		if _, ok := d.Economy.StartingBalance[c]; !ok {
 			checks = append(checks, fmt.Errorf("economy.startingBalance needs %s", c))

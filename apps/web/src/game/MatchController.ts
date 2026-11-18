@@ -69,6 +69,7 @@ export interface ShotPlayback {
   side: Side;
   shot: Shot;
   frames: Float32Array;
+  angles?: Float32Array;
   bodyCount: number;
   ticks: number;
   result: ShotResult;
@@ -228,6 +229,7 @@ export class MatchController implements MatchDriver {
       side,
       shot,
       frames: result.frames!,
+      angles: result.angles ?? new Float32Array(0),
       bodyCount: this.state.bodies.length,
       ticks: result.ticks,
       elapsedMs: 0,
@@ -238,6 +240,7 @@ export class MatchController implements MatchDriver {
       side,
       shot,
       frames: result.frames!,
+      angles: result.angles ?? new Float32Array(0),
       bodyCount: this.state.bodies.length,
       ticks: result.ticks,
       result,

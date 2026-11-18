@@ -9,11 +9,13 @@ it('offers three free and seventeen distinct purchasable legal formations', () =
   for (const f of cosmetics.formations) {
     expect(f.positions).toHaveLength(rulesConfig.discsPerTeam);
     for (const [i, [x, y]] of f.positions.entries()) {
-      expect(x).toBeLessThan(-physicsConfig.disc.radius);
-      expect(Math.abs(x)).toBeLessThan(physicsConfig.arena.halfWidth - physicsConfig.disc.radius);
-      expect(Math.abs(y)).toBeLessThan(physicsConfig.arena.halfHeight - physicsConfig.disc.radius);
+      expect(x).toBeLessThan(-physicsConfig.disc.halfLength!);
+      expect(Math.abs(x)).toBeLessThan(physicsConfig.arena.halfWidth - physicsConfig.disc.halfLength!);
+      expect(Math.abs(y)).toBeLessThan(physicsConfig.arena.halfHeight - physicsConfig.disc.halfWidth!);
       for (const [a, b] of f.positions.slice(i + 1))
-        expect(Math.hypot(x - a, y - b)).toBeGreaterThan(physicsConfig.disc.radius * 2);
+        expect(
+          Math.abs(x - a) > physicsConfig.disc.halfLength! * 2 || Math.abs(y - b) > physicsConfig.disc.halfWidth! * 2,
+        ).toBe(true);
     }
   }
 });

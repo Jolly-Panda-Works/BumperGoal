@@ -43,6 +43,7 @@ describe('ECS under a no-eval CSP', () => {
     const n = state.bodies.length;
     world.set(traits.PlaybackTrait, {
       active: true,
+      angles: new Float32Array(),
       side: 'L',
       shot: null,
       frames: new Float32Array(2 * n * 2),

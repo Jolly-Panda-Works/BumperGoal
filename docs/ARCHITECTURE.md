@@ -82,7 +82,7 @@ The product owner replaced Box2D 3.1 with **`@dimforge/rapier2d-deterministic`**
 - Cost: a 5v5 formation shot (~320 steps) takes ~6.5 ms in wazero. AI decision in V8: Rookie 131 ms, Amateur 129 ms, Pro 270 ms, Elite 503 ms.
 - Not yet verified: Firefox, Safari/iOS, Android Chrome, linux/arm64.
 
-### 3.3 Simulation contract (`SIM_VERSION = 3`)
+### 3.3 Simulation contract (`SIM_VERSION = 4`)
 
 - Rapier's default fixed step (1/60 s, default solver iterations), independent of rendering. The renderer plays back recorded frames.
 - **Fresh world per shot**, built in a fixed order (walls body + 16 segments: walls with 45° corner cuts and goal pockets, then bodies in index order, each with one ball collider), so no warm-start state crosses turns.

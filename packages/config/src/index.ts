@@ -12,6 +12,11 @@ import { NEW_ARENA_PATH, cloneJson, isNewArena, locate, valueFits, type ConfigDo
 export * from './overrides';
 
 export interface BodyParams {
+  /** Optional rounded car rectangle; radius remains the conservative query bound. */
+  halfLength?: number;
+  halfWidth?: number;
+  borderRadius?: number;
+  angularDamping?: number;
   radius: number;
   density: number;
   linearDamping: number;

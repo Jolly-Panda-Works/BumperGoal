@@ -12,6 +12,7 @@ import {
 } from '../src/game/ecs/systems';
 import {
   Highlighted,
+  Heading,
   HoldTrait,
   IsBall,
   IsDisc,
@@ -68,9 +69,11 @@ describe('match world', () => {
     const n = state.bodies.length;
     const ticks = 3;
     const frames = new Float32Array((ticks + 1) * n * 2);
+    const angles = Float32Array.from({ length: (ticks + 1) * n }, (_, i) => Math.floor(i / n) * 0.2);
     for (let f = 0; f <= ticks; f++) for (let i = 0; i < n; i++) frames[(f * n + i) * 2] = f; // x = frame number
     world.set(PlaybackTrait, {
       active: true,
+      angles,
       side: 'L',
       shot: null,
       frames,
@@ -82,8 +85,10 @@ describe('match world', () => {
 
     expect(playbackSystem(world, FRAME_MS * 1.5)).toBe(false);
     expect(bodyEntities(world)[0]!.get(Position)!.x).toBeCloseTo(1.5, 5);
+    expect(bodyEntities(world)[0]!.get(Heading)!.angle).toBeCloseTo(0.3, 5);
     expect(playbackSystem(world, FRAME_MS * 5)).toBe(true);
     expect(bodyEntities(world)[0]!.get(Position)!.x).toBe(3);
+    expect(bodyEntities(world)[0]!.get(Heading)!.angle).toBeCloseTo(0.6, 5);
     expect(world.get(PlaybackTrait)!.active).toBe(false);
     world.destroy();
   });

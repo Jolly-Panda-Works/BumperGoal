@@ -140,14 +140,14 @@ func KickoffBodies(r gamedata.Rules) []sim.Body {
 	n := r.DiscsPerTeam
 	bodies := make([]sim.Body, 0, 2*n+1)
 	for i := 0; i < n; i++ {
-		bodies = append(bodies, sim.Body{Kind: "disc", X: float32(r.Formation[i][0]), Y: float32(r.Formation[i][1])})
+		bodies = append(bodies, sim.Body{Kind: "disc", X: float32(r.Formation[i][0]), Y: float32(r.Formation[i][1]), Angle: 0})
 	}
 	opponent := r.OpponentFormation
 	if len(opponent) != n {
 		opponent = r.Formation
 	}
 	for i := 0; i < n; i++ {
-		bodies = append(bodies, sim.Body{Kind: "disc", X: -float32(opponent[i][0]), Y: float32(opponent[i][1])})
+		bodies = append(bodies, sim.Body{Kind: "disc", X: -float32(opponent[i][0]), Y: float32(opponent[i][1]), Angle: float32(math.Pi)})
 	}
 	return append(bodies, sim.Body{Kind: "ball", X: 0, Y: 0})
 }

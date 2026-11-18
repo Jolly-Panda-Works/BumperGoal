@@ -35,6 +35,7 @@ export const PlaybackTrait = trait(() => ({
   side: 'L' as Side,
   shot: null as Shot | null,
   frames: new Float32Array(0) as Float32Array<ArrayBufferLike>,
+  angles: new Float32Array(0) as Float32Array<ArrayBufferLike>,
   bodyCount: 0,
   ticks: 0,
   elapsedMs: 0,
@@ -53,6 +54,8 @@ export const IsDisc = trait();
 export const IsBall = trait();
 export const Team = trait(() => ({ side: 'L' as Side }));
 
+/** Physical heading, interpolated from the same ticks as position. */
+export const Heading = trait(() => ({ angle: 0, target: 0 }));
 /** Rendered position in board units. */
 export const Position = trait(() => ({ x: 0, y: 0 }));
 /** Where the canonical state says the body is; Position eases towards it. */

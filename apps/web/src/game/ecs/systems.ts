@@ -8,6 +8,7 @@ import {
   BodyRef,
   EventsTrait,
   Highlighted,
+  Heading,
   HoldTrait,
   HudTrait,
   IsBall,
@@ -30,10 +31,19 @@ export function createMatchWorld(state: MatchState): World {
     // AoS traits keep the object they are given: Position and Target need their own.
     const position = Position({ x: b.x, y: b.y });
     const target = Target({ x: b.x, y: b.y });
+    const heading = Heading({ angle: b.angle ?? 0, target: b.angle ?? 0 });
     if (b.kind === 'ball') {
-      world.spawn(BodyRef({ index }), IsBall, position, target, View);
+      world.spawn(BodyRef({ index }), IsBall, position, target, heading, View);
     } else {
-      world.spawn(BodyRef({ index }), IsDisc, Team({ side: discOwner(state, index)! }), position, target, View);
+      world.spawn(
+        BodyRef({ index }),
+        IsDisc,
+        Team({ side: discOwner(state, index)! }),
+        position,
+        target,
+        heading,
+        View,
+      );
     }
   });
   return world;
@@ -57,6 +67,9 @@ export function syncTargetsSystem(world: World): void {
     if (!b) return;
     target.x = b.x;
     target.y = b.y;
+  });
+  world.query(BodyRef, Heading).updateEach(([ref, heading]) => {
+    heading.target = state.bodies[ref.index]?.angle ?? 0;
   });
 }
 
@@ -93,6 +106,14 @@ export function playbackSystem(world: World, deltaMs: number, onImpact?: (impact
     target.x = pos.x;
     target.y = pos.y;
   });
+
+  if (pb.angles.length)
+    world.query(BodyRef, Heading).updateEach(([ref, heading]) => {
+      const a = pb.angles[f0 * n + ref.index]!;
+      const b = pb.angles[f1 * n + ref.index]!;
+      heading.angle = a + Math.atan2(Math.sin(b - a), Math.cos(b - a)) * t;
+      heading.target = heading.angle;
+    });
 
   if (onImpact) {
     const arena = physicsConfig.arena;
@@ -133,6 +154,10 @@ export function easeSystem(world: World, deltaMs: number, nowMs: number, instant
     }
     pos.x += dx * k;
     pos.y += dy * k;
+  });
+  world.query(Heading).updateEach(([heading]) => {
+    const delta = Math.atan2(Math.sin(heading.target - heading.angle), Math.cos(heading.target - heading.angle));
+    heading.angle = instant || Math.abs(delta) < 1e-4 ? heading.target : heading.angle + delta * k;
   });
 }
 

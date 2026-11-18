@@ -117,9 +117,9 @@ func benchFormation(b *testing.B, newEngine func(Config) *Engine) {
 	engine := newEngine(cfg)
 	s, _ := engine.NewSim(ctx)
 	bodies := []Body{
-		{"disc", -6.2, 0}, {"disc", -4.4, 1.9}, {"disc", -4.4, -1.9}, {"disc", -2.2, 0.9}, {"disc", -2.2, -0.9},
-		{"disc", 6.2, 0}, {"disc", 4.4, 1.9}, {"disc", 4.4, -1.9}, {"disc", 2.2, 0.9}, {"disc", 2.2, -0.9},
-		{"ball", 0, 0},
+		{Kind: "disc", X: -6.2, Y: 0}, {Kind: "disc", X: -4.4, Y: 1.9}, {Kind: "disc", X: -4.4, Y: -1.9}, {Kind: "disc", X: -2.2, Y: 0.9}, {Kind: "disc", X: -2.2, Y: -0.9},
+		{Kind: "disc", X: 6.2, Y: 0}, {Kind: "disc", X: 4.4, Y: 1.9}, {Kind: "disc", X: 4.4, Y: -1.9}, {Kind: "disc", X: 2.2, Y: 0.9}, {Kind: "disc", X: 2.2, Y: -0.9},
+		{Kind: "ball", X: 0, Y: 0},
 	}
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {

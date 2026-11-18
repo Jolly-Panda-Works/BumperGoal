@@ -31,7 +31,7 @@ var rapierWasm []byte
 const RapierWasmSHA256 = "0570d5c822275fbadbbfe4bda0c589b039c2f41259676dc53f6679085601155d"
 
 // Version must equal SIM_VERSION in packages/sim/src/index.ts.
-const Version = 3
+const Version = 4
 
 const hostModuleName = "./rapier_wasm2d_bg.js"
 
@@ -48,10 +48,14 @@ const (
 const MaxBodies = 32
 
 type BodyParams struct {
-	Radius        float64 `json:"radius"`
-	Density       float64 `json:"density"`
-	LinearDamping float64 `json:"linearDamping"`
-	Restitution   float64 `json:"restitution"`
+	HalfLength     float64 `json:"halfLength,omitempty"`
+	HalfWidth      float64 `json:"halfWidth,omitempty"`
+	BorderRadius   float64 `json:"borderRadius,omitempty"`
+	AngularDamping float64 `json:"angularDamping,omitempty"`
+	Radius         float64 `json:"radius"`
+	Density        float64 `json:"density"`
+	LinearDamping  float64 `json:"linearDamping"`
+	Restitution    float64 `json:"restitution"`
 }
 
 type Arena struct {
@@ -76,9 +80,10 @@ type Config struct {
 }
 
 type Body struct {
-	Kind string  `json:"kind"` // "disc" | "ball"
-	X    float32 `json:"x"`
-	Y    float32 `json:"y"`
+	Angle float32 `json:"angle"`
+	Kind  string  `json:"kind"` // "disc" | "ball"
+	X     float32 `json:"x"`
+	Y     float32 `json:"y"`
 }
 
 type Impulse struct {
@@ -357,7 +362,7 @@ type world struct {
 }
 
 func (s *Sim) newWorld() world {
-	return world{
+	w := world{
 		params:    s.call("rawintegrationparameters_new"),
 		islands:   s.call("rawislandmanager_new"),
 		broad:     s.call("rawbroadphase_new"),
@@ -370,6 +375,9 @@ func (s *Sim) newWorld() world {
 		ccd:       s.call("rawccdsolver_new"),
 		pipeline:  s.call("rawphysicspipeline_new"),
 	}
+	s.call("rawintegrationparameters_set_maxCcdSubsteps", w.params, 4)
+	s.call("rawintegrationparameters_set_contact_natural_frequency", w.params, float32(120))
+	return w
 }
 
 func (s *Sim) freeWorld(w world) {
@@ -387,19 +395,23 @@ func (s *Sim) freeWorld(w world) {
 }
 
 // createRigidBody mirrors RigidBodyDesc → RawRigidBodySet.createRigidBody.
-func (s *Sim) createRigidBody(w world, x, y float32, dynamic bool, linearDamping float64, ccd bool) handle {
+func (s *Sim) createRigidBody(w world, x, y float32, dynamic bool, linearDamping float64, ccd bool, angle float32, angularDamping float64, lockRotation bool) handle {
 	tr := s.vec(x, y)
-	rot := s.call("rawrotation_fromAngle", float32(0))
+	rot := s.call("rawrotation_fromAngle", angle)
 	linvel := s.vec(0, 0)
 	com := s.vec(0, 0)
 	rbType, canSleep, rotationsEnabled := 1, true, true
 	if dynamic {
-		rbType, canSleep, rotationsEnabled = 0, false, false
+		rbType, canSleep, rotationsEnabled = 0, false, !lockRotation
+	}
+	softCcd := float32(0)
+	if dynamic {
+		softCcd = 0.6
 	}
 	h := s.call("rawrigidbodyset_createRigidBody", w.bodies, true, tr, rot,
 		float32(1), float32(0), false, com, linvel, float32(0), float32(0),
-		true, true, rotationsEnabled, linearDamping, float32(0), rbType,
-		canSleep, false, float32(0), ccd, 0, 0, 0)
+		true, true, rotationsEnabled, linearDamping, angularDamping, rbType,
+		canSleep, false, softCcd, ccd, 0, 0, 0)
 	s.free("vector", tr)
 	s.free("rotation", rot)
 	s.free("vector", linvel)
@@ -453,7 +465,7 @@ func (s *Sim) SimulateShot(bodies []Body, imp Impulse, maxSteps int) (res Result
 		s.freeWorld(w)
 	}()
 
-	walls := s.createRigidBody(w, 0, 0, false, 0, false)
+	walls := s.createRigidBody(w, 0, 0, false, 0, false, 0, 0, false)
 	for _, seg := range ArenaSegments(s.config) {
 		v1 := s.vec(float32(seg[0]), float32(seg[1]))
 		v2 := s.vec(float32(seg[2]), float32(seg[3]))
@@ -470,8 +482,13 @@ func (s *Sim) SimulateShot(bodies []Body, imp Impulse, maxSteps int) (res Result
 			p = s.config.Ball
 			ballIndex = i
 		}
-		handles[i] = s.createRigidBody(w, b.X, b.Y, true, p.LinearDamping, b.Kind == "ball")
-		shape := s.call("rawshape_ball", p.Radius)
+		handles[i] = s.createRigidBody(w, b.X, b.Y, true, p.LinearDamping, true, b.Angle, p.AngularDamping, b.Kind == "ball")
+		var shape uint64
+		if b.Kind == "disc" && p.HalfLength > 0 && p.HalfWidth > 0 {
+			shape = s.call("rawshape_roundCuboid", p.HalfLength-p.BorderRadius, p.HalfWidth-p.BorderRadius, p.BorderRadius)
+		} else {
+			shape = s.call("rawshape_ball", p.Radius)
+		}
 		s.createCollider(w, shape, p.Density, p.Restitution, handles[i])
 	}
 	iv := s.vec(imp.IX, imp.IY)
@@ -511,12 +528,20 @@ loop:
 		moving := false
 		for _, h := range handles {
 			vx, vy := read("Linvel", h)
+			spin := api.DecodeF32(s.call("rawrigidbodyset_rbAngvel", w.bodies, h))
 			speed2 := float64(vx)*float64(vx) + float64(vy)*float64(vy)
 			if speed2 < stop2 {
 				if speed2 > 0 {
 					z := s.vec(0, 0)
 					s.call("rawrigidbodyset_rbSetLinvel", w.bodies, h, z, true)
 					s.free("vector", z)
+				}
+			} else {
+				moving = true
+			}
+			if math.Abs(float64(spin)) < a.StopSpeed {
+				if spin != 0 {
+					s.call("rawrigidbodyset_rbSetAngvel", w.bodies, h, float32(0), true)
 				}
 			} else {
 				moving = true
@@ -530,7 +555,7 @@ loop:
 
 	final := make([]Body, n)
 	for i, b := range bodies {
-		final[i] = Body{Kind: b.Kind, X: positions[i*2], Y: positions[i*2+1]}
+		final[i] = Body{Kind: b.Kind, X: positions[i*2], Y: positions[i*2+1], Angle: api.DecodeF32(s.call("rawrigidbodyset_rbRotation", w.bodies, handles[i]))}
 	}
 	if !s.sane(final) {
 		outcome = "invalid"
@@ -545,7 +570,7 @@ func (s *Sim) sane(bodies []Body) bool {
 	limitX := a.HalfWidth + a.GoalDepth + s.config.BoundsMargin
 	limitY := a.HalfHeight + s.config.BoundsMargin
 	for _, b := range bodies {
-		if !finite32(b.X) || !finite32(b.Y) || math.Abs(float64(b.X)) > limitX || math.Abs(float64(b.Y)) > limitY {
+		if !finite32(b.X) || !finite32(b.Y) || !finite32(b.Angle) || math.Abs(float64(b.X)) > limitX || math.Abs(float64(b.Y)) > limitY {
 			return false
 		}
 	}
@@ -573,7 +598,7 @@ func HashBodies(bodies []Body) string {
 		} else {
 			h.Write([]byte{0})
 		}
-		for _, v := range []float32{b.X, b.Y} {
+		for _, v := range []float32{b.X, b.Y, b.Angle} {
 			bits := math.Float32bits(v)
 			buf[0], buf[1], buf[2], buf[3] = byte(bits), byte(bits>>8), byte(bits>>16), byte(bits>>24)
 			h.Write(buf)

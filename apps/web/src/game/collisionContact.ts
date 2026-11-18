@@ -20,7 +20,19 @@ export function collisionContact(impact: Impact, bodies: readonly BodyState[]) {
   });
   if (other >= 0) {
     const body = bodies[other]!;
-    const f = radius / Math.max(0.001, nearest);
+    let surface = radius;
+    if (current?.kind === 'disc') {
+      const angle = current.angle ?? 0;
+      const dx = (body.x - impact.x) / Math.max(0.001, nearest);
+      const dy = (body.y - impact.y) / Math.max(0.001, nearest);
+      const longitudinal = Math.abs(dx * Math.cos(angle) + dy * Math.sin(angle));
+      const lateral = Math.abs(-dx * Math.sin(angle) + dy * Math.cos(angle));
+      surface = Math.min(
+        (physicsConfig.disc.halfLength ?? radius) / Math.max(0.0001, longitudinal),
+        (physicsConfig.disc.halfWidth ?? radius) / Math.max(0.0001, lateral),
+      );
+    }
+    const f = surface / Math.max(0.001, nearest);
     return {
       x: impact.x + (body.x - impact.x) * f,
       y: impact.y + (body.y - impact.y) * f,

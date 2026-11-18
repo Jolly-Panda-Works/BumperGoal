@@ -161,10 +161,8 @@ export class ImpactEffects {
     if (age > 0.42) return;
     const decay = Math.exp(-age * 11) * jolt.strength;
     chassis.position.y = Math.abs(Math.sin(age * 32)) * decay * 0.09;
-    chassis.rotation.x = Math.sin(age * 36) * decay * 0.13;
-    chassis.rotation.z = Math.sin(age * 29) * decay * 0.07;
     chassis.scale.y = 1 - decay * 0.06;
-    chassis.scale.z = 1 + decay * 0.025;
+    chassis.scale.z = 1;
   }
 
   cameraOffset(now: number, camera: THREE.Camera): THREE.Vector3 {
