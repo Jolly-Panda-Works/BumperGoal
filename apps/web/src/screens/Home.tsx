@@ -36,7 +36,8 @@ export function HomeScreen() {
               className="toy-profile__level"
               aria-label={t('common.levelLong', { level: formatNumber(profile.knownLevel) })}
             >
-              {formatNumber(profile.knownLevel)}
+              <small>{t('home.levelLabel')}</small>
+              <b>{formatNumber(profile.knownLevel)}</b>
             </span>
           </Link>
           <Link className="toy-control toy-settings" to="/settings" aria-label={t('nav.settings')}>
@@ -56,7 +57,10 @@ export function HomeScreen() {
             </span>
             {dailyReady && (
               <span className="toy-badge" aria-label={t('rewards.claim')}>
-                !
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 5v9" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+                  <circle cx="12" cy="19" r="1.6" fill="currentColor" />
+                </svg>
               </span>
             )}
           </Link>

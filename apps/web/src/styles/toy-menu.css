@@ -922,3 +922,130 @@ body .toy-shop > span {
     font-size: 17px;
   }
 }
+/* Consistent safe margins and centered flat utility badges. */
+body:has(.toy-menu) {
+  --menu-badge-size: clamp(32px, 3vw, 44px);
+}
+.toy-menu__stage {
+  --toy-safe-left: max(24px, 3cqw, env(safe-area-inset-left));
+  --toy-safe-right: max(24px, 3cqw, env(safe-area-inset-right));
+  --toy-safe-top: max(18px, 3cqh, env(safe-area-inset-top));
+  --toy-safe-bottom: max(24px, 3cqh, env(safe-area-inset-bottom));
+}
+body:has(.toy-menu) .stadium-wallet.stadium-wallet--shared {
+  top: max(18px, 3vh, env(safe-area-inset-top));
+  right: max(24px, 3vw, env(safe-area-inset-right));
+}
+body .toy-badge {
+  width: var(--menu-badge-size);
+  height: var(--menu-badge-size);
+  min-width: 0;
+  min-height: 0;
+  max-width: none;
+  max-height: none;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+.toy-badge > svg {
+  display: block;
+  width: 72%;
+  height: 72%;
+}
+body:has(.toy-menu) .stadium-wallet.stadium-wallet--shared .stadium-wallet__plus {
+  width: var(--menu-badge-size);
+  height: var(--menu-badge-size);
+  min-width: 0;
+  min-height: 0;
+  max-width: none;
+  max-height: none;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: #59bd24 !important;
+  border: 2px solid #c1ef8e !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+body:has(.toy-menu) .stadium-wallet.stadium-wallet--shared .stadium-wallet__plus > svg {
+  display: block;
+  width: 64%;
+  height: 64%;
+  margin: 0;
+  padding: 0;
+}
+body .toy-shop {
+  border-radius: 13% / 26%;
+}
+body .toy-profile {
+  overflow: visible;
+  padding-left: 32%;
+}
+body .toy-profile > .shield-avatar {
+  position: absolute;
+  left: -7px;
+  top: -5%;
+  width: auto;
+  height: 137%;
+  max-width: none;
+  max-height: none;
+  aspect-ratio: 100 / 114;
+}
+body .toy-profile__level {
+  width: clamp(44px, 6cqh, 60px);
+  height: clamp(44px, 6cqh, 60px);
+  left: 22%;
+  bottom: -26%;
+  border-radius: 50%;
+  background: #ffd247;
+  border: 2px solid #fff1b3;
+  color: #623500;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  line-height: 1;
+}
+.toy-profile__level > small {
+  font-size: clamp(10px, 1.2cqw, 13px);
+  line-height: 1.2;
+}
+.toy-profile__level > b {
+  font-size: clamp(20px, 2.1cqw, 27px);
+  line-height: 1.1;
+}
+body .toy-settings {
+  height: 76%;
+  min-height: 44px;
+  top: 8%;
+}
+@media (orientation: portrait) {
+  .toy-menu__stage {
+    --toy-safe-left: max(20px, env(safe-area-inset-left));
+    --toy-safe-right: max(20px, env(safe-area-inset-right));
+  }
+  body:has(.toy-menu) .stadium-wallet.stadium-wallet--shared {
+    top: max(104px, calc(env(safe-area-inset-top) + 94px));
+    left: 8%;
+    right: 8%;
+  }
+}
+body .toy-profile {
+  padding-left: 0;
+  box-sizing: border-box;
+}
+.toy-profile__name {
+  position: absolute;
+  left: 32%;
+  right: 8px;
+  top: 0;
+  bottom: 0;
+  display: grid;
+  place-items: center;
+}

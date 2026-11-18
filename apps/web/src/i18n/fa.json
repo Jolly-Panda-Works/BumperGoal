@@ -68,6 +68,7 @@
     "replayConfirm": "مطمئنی می‌خواهی آموزش را دوباره ببینی؟"
   },
   "home": {
+    "levelLabel": "سطح",
     "friendsShort": "دوستان",
     "greeting": "سلام {{name}}",
     "playOnline": "بازی آنلاین",
