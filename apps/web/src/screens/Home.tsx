@@ -77,6 +77,7 @@ export function HomeScreen() {
         <nav className="toy-menu__bottom" aria-label={t('nav.main')}>
           <Link className="toy-control toy-bottom-button toy-shop" to="/shop" aria-label={t('nav.shop')}>
             <img src={assetUrl('icons/shop.webp')} alt="" />
+            <span>{t('nav.shop')}</span>
           </Link>
           <Link className="toy-control toy-bottom-button toy-garage" to="/locker" aria-label={t('nav.inventory')}>
             <span className="toy-art toy-art--car" />

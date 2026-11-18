@@ -878,3 +878,47 @@ body .toy-play {
 body:has(.toy-menu) .stadium-wallet.stadium-wallet--shared .stadium-wallet__plus {
   box-shadow: 0 2px #073e7a !important;
 }
+/* Notification is a larger flat circle; shop retains the left-icon/right-title rule. */
+body .toy-badge {
+  width: clamp(32px, 3cqw, 44px);
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #f34132;
+  border: 2px solid #ffe3cf;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  font-size: clamp(23px, 2.3cqw, 32px);
+  line-height: 1;
+  right: -6px;
+  top: -10px;
+}
+body .toy-shop {
+  aspect-ratio: 2;
+  border-radius: 22%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  padding: 6px;
+  direction: ltr;
+}
+body .toy-shop > img {
+  width: 92%;
+  height: 92%;
+  max-width: 100%;
+  object-fit: contain;
+  justify-self: center;
+  align-self: center;
+  min-width: 0;
+}
+body .toy-shop > span {
+  text-align: center;
+  justify-self: stretch;
+  font-size: clamp(18px, 2.5cqw, 34px);
+  line-height: 1.2;
+}
+@media (max-width: 700px) {
+  body .toy-shop > span {
+    font-size: 17px;
+  }
+}
