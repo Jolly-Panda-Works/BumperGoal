@@ -7,7 +7,7 @@ import { useLocalProfile } from '../services/localProfile';
 import { useLocalInventory } from '../services/localInventory';
 import { useOnline } from '../services/online';
 import { formatNumber } from '../i18n';
-import { Avatar, BallPreview, CurrencyPill, Dialog } from '../ui/components';
+import { Avatar, BallPreview, CurrencyIcon, Dialog } from '../ui/components';
 import { IconGear, IconGift, IconShop, IconTrophy, IconGarage } from '../ui/icons';
 const HomeCar = lazy(() => import('../ui/HomeCar'));
 /** Live controls over independent art layers; no text is baked into the scenery. */
@@ -28,32 +28,43 @@ export function HomeScreen() {
     <div className="screen home stadium-home">
       <div className="stadium-home__stage">
         <Link to="/profile" className="stadium-profile" aria-label={t('nav.profile')}>
-          <Avatar id={profile.avatarId} size={100} />
-          <span>
+          <span className="stadium-profile__portrait">
+            <Avatar id={profile.avatarId} size={100} />
+          </span>
+          <span className="stadium-profile__copy">
             <strong>
               <bdi>{profile.displayName}</bdi>
             </strong>
-            <small>★ {t('common.levelLong', { level: formatNumber(profile.knownLevel) })}</small>
+            <small>{t('common.levelLong', { level: formatNumber(profile.knownLevel) })}</small>
           </span>
+          <span className="stadium-profile__level" aria-hidden="true">
+            {formatNumber(profile.knownLevel)}
+          </span>
+        </Link>
+        <Link
+          className="stadium-settings cartoon-button cartoon-button--blue"
+          to="/settings"
+          aria-label={t('nav.settings')}
+        >
+          <IconGear size={44} />
         </Link>
         <div className="stadium-brand">
           <img src={assetUrl('home/wordmark.webp')} alt="Bumper Goal" width={1776} height={880} />
         </div>
         <div className="stadium-wallet">
           <Link to="/shop?tab=currency&group=coins" aria-label={t('common.coins')}>
-            <CurrencyPill currency="coins" amount={wallet?.coins ?? 0} />
+            <CurrencyIcon currency="coins" size={80} />
+            <span className="stadium-wallet__amount">
+              <bdi>{formatNumber(wallet?.coins ?? 0)}</bdi>
+            </span>
             <b aria-hidden="true">+</b>
           </Link>
           <Link to="/shop?tab=currency&group=gems" aria-label={t('common.gems')}>
-            <CurrencyPill currency="gems" amount={wallet?.gems ?? 0} />
+            <CurrencyIcon currency="gems" size={80} />
+            <span className="stadium-wallet__amount">
+              <bdi>{formatNumber(wallet?.gems ?? 0)}</bdi>
+            </span>
             <b aria-hidden="true">+</b>
-          </Link>
-          <Link
-            className="stadium-settings cartoon-button cartoon-button--blue"
-            to="/settings"
-            aria-label={t('nav.settings')}
-          >
-            <IconGear size={44} />
           </Link>
         </div>
         <div className="stadium-shortcuts">
