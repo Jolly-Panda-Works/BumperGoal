@@ -266,3 +266,130 @@ body :is(.shell, .dialog-backdrop, .toast-host) * {
   color: inherit;
   direction: ltr;
 }
+
+/* Purchase confirmation uses the same flat blue, cyan and gold as the catalog. */
+body .dialog:has(.purchase-preview) {
+  width: min(600px, calc(100vw - 24px));
+  max-width: 600px;
+  padding: 20px;
+  border: 3px solid #35ceef;
+  border-radius: 24px;
+  background: #0d4b91;
+  color: #fff;
+}
+body .dialog:has(.purchase-preview) .dialog__header {
+  gap: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #348fc3;
+}
+body .dialog:has(.purchase-preview) .dialog__header h2 {
+  font-size: clamp(23px, 2vw, 32px);
+  color: #fff;
+}
+body .dialog:has(.purchase-preview) .dialog__header .icon-btn {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  background: #078bd8 !important;
+  border: 2px solid #5ddfff !important;
+  border-radius: 50%;
+}
+body .dialog .purchase-preview {
+  gap: 16px;
+  padding: 4px 8px 10px;
+  color: #fff;
+}
+body .purchase-preview .team-car-preview {
+  inline-size: min(100%, 340px);
+  block-size: 230px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+body .purchase-preview h3 {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: #0865ad;
+  color: #fff;
+  font-size: clamp(22px, 2vw, 30px);
+}
+body .purchase-preview .team-attributes {
+  width: 100%;
+  margin: 0;
+  gap: 10px;
+}
+body .purchase-preview .team-attribute {
+  grid-template-columns: 90px minmax(0, 1fr);
+  gap: 8px;
+  font-size: 16px;
+}
+body .purchase-preview .team-attribute dt,
+body .purchase-preview .team-attribute bdi {
+  color: #fff;
+}
+body .purchase-preview .team-attribute dd {
+  grid-template-columns: minmax(0, 1fr) 48px;
+  gap: 10px;
+}
+body .purchase-preview .team-attribute__bar {
+  height: 16px;
+  gap: 3px;
+}
+body .purchase-preview .team-attribute__bar i {
+  background: #326596 !important;
+  border: 0;
+  border-radius: 2px;
+}
+body .purchase-preview .team-attribute__bar i.is-filled {
+  background: #ffda27 !important;
+}
+body .purchase-preview > .price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 26px;
+  font-weight: 900;
+  color: #ffdf35;
+  direction: ltr;
+}
+body .purchase-preview > .price .currency-icon {
+  width: 34px;
+  height: 34px;
+}
+body .dialog:has(.purchase-preview) .dialog__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding-top: 8px;
+}
+body .dialog:has(.purchase-preview) .dialog__actions .btn {
+  min-height: 54px;
+  width: 100%;
+  border-radius: 12px;
+  font-size: 22px;
+  background: #ffda27 !important;
+  border: 2px solid #ffef84 !important;
+  color: #403000 !important;
+}
+body .dialog:has(.purchase-preview) .dialog__actions .btn--ghost {
+  background: #087dcb !important;
+  border-color: #4dcff2 !important;
+  color: #fff !important;
+}
+@media (max-width: 480px), (max-height: 700px) {
+  body .dialog:has(.purchase-preview) {
+    padding: 14px;
+  }
+  body .purchase-preview .team-car-preview {
+    block-size: 160px;
+  }
+  body .purchase-preview .team-attribute {
+    grid-template-columns: 72px minmax(0, 1fr);
+    font-size: 13px;
+  }
+  body .dialog .purchase-preview {
+    gap: 10px;
+  }
+}
