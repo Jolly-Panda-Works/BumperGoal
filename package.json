@@ -29,7 +29,8 @@
     "art:check": "node tools/art-doc.mjs --check",
     "audio:export": "node tools/export-audio.mjs",
     "icons:export": "node tools/export-icons.mjs",
-    "art:export": "node tools/export-art.mjs && prettier --write apps/web/src/game/artManifest.json"
+    "art:export": "node tools/export-art.mjs && prettier --write apps/web/src/game/artManifest.json",
+    "build:cloudflare": "pnpm --filter @flickkick/web build && node tools/check-cloudflare-build.mjs"
   },
   "devDependencies": {
     "@dimforge/rapier2d-deterministic": "0.21.0",

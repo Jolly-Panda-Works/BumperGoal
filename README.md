@@ -48,6 +48,10 @@ Without the server the game still runs; online screens say so.
 
 ## Production deployment
 
+For the browser client on Cloudflare Pages and `bumpergoal.jollypanda.ir`, see
+[`docs/CLOUDFLARE.md`](docs/CLOUDFLARE.md). Use `pnpm run build:cloudflare` to build and
+validate the static deployment. Online multiplayer still requires the separate backend below.
+
 The root `Dockerfile` builds the web client with pnpm and serves it with Caddy.
 The root `docker-compose.yml` runs web, Nakama, PostgreSQL and automatic backups.
 
