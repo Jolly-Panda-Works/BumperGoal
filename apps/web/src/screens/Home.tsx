@@ -92,11 +92,11 @@ export function HomeScreen() {
           </Link>
         </div>
         <div className="stadium-shortcuts">
-          <Link className="cartoon-button cartoon-button--purple" to="/league">
+          <Link className="cartoon-button cartoon-button--purple cartoon-button--labeled" to="/league">
             <IconTrophy size={64} />
             <span>{t('nav.league')}</span>
           </Link>
-          <Link className="cartoon-button cartoon-button--blue" to="/rewards">
+          <Link className="cartoon-button cartoon-button--blue cartoon-button--labeled" to="/rewards">
             <IconGift size={64} />
             <span>{t('rewards.daily')}</span>
           </Link>
@@ -115,12 +115,12 @@ export function HomeScreen() {
             </Suspense>
           </div>
         </div>
-        <Link className="stadium-shop cartoon-button cartoon-button--orange" to="/shop">
+        <Link className="stadium-shop cartoon-button cartoon-button--orange cartoon-button--labeled" to="/shop">
           <IconShop size={64} />
           <span>{t('nav.shop')}</span>
         </Link>
         <div className="stadium-actions">
-          <Link className="cartoon-button cartoon-button--blue stadium-garage" to="/locker">
+          <Link className="cartoon-button cartoon-button--blue stadium-garage cartoon-button--labeled" to="/locker">
             <IconGarage size={64} />
             <span>{t('nav.inventory')}</span>
           </Link>

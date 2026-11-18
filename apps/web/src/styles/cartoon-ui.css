@@ -1100,3 +1100,41 @@ html[dir='rtl'] {
   text-shadow: 0 2px #fff49b;
   -webkit-text-stroke: 0.3px #633000;
 }
+/* Fixed physical icon/title regions; text itself follows the chosen language. */
+.stadium-home .cartoon-button--labeled {
+  display: grid;
+  grid-template-columns: minmax(0, 32%) minmax(0, 68%);
+  align-items: center;
+  justify-items: center;
+  direction: ltr;
+  gap: 0;
+  padding: 8px 12px;
+}
+.stadium-home .cartoon-button--labeled > :is(.game-art-icon, .garage-icon) {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: center;
+  max-width: 100%;
+  object-fit: contain;
+}
+.stadium-home .cartoon-button--labeled > span:not(.game-art-icon) {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: stretch;
+  text-align: center;
+  direction: var(--ui-direction);
+  min-width: 0;
+  overflow-wrap: normal;
+}
+@media (max-aspect-ratio: 1/1) {
+  .stadium-home .cartoon-button--labeled {
+    padding: 5px 7px !important;
+  }
+  .stadium-shortcuts .cartoon-button--labeled .game-art-icon {
+    width: 9cqw !important;
+    height: 6cqh !important;
+  }
+  .stadium-home .stadium-garage.cartoon-button--labeled {
+    font-size: clamp(14px, 4.5cqw, 20px);
+  }
+}
