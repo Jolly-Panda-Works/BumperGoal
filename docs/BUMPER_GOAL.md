@@ -6,7 +6,7 @@ Independent car-themed variant of FlickKick. Cars replace player pieces; the foo
 
 The React game host mounts a full-viewport Three.js WebGL 2 scene with a fixed oblique perspective camera. The score HUD floats over the arena instead of taking a separate row. Olive checkerboard grass, warm stone ramparts, blue canals and roofs, and low-poly trees provide the cartoon tournament style. Imported cars use toon materials. Static scenery is batched by material to reduce draw calls on phones. The camera fits the complete arena on desktop and phone screens, and reverses the board for online players on the opposite side. Cars use the supplied 3D meshes, the ball rolls as a sphere, and both goals have raised frames and mesh nets. Lighting and shadows show their height above the grass.
 
-The original deterministic 2D physics and server protocol remain unchanged. Pointer rays intersect the pitch plane before conversion into shot coordinates, so slingshot aiming matches the perspective view. Colored rings show the active team. Speed- and acceleration-sensitive twin tire tracks fade over 12 seconds. Existing circular collision shapes are retained.
+The original deterministic 2D physics and server protocol remain unchanged. Pointer rays intersect the pitch plane before conversion into shot coordinates, so slingshot aiming matches the perspective view. Colored rings show the active team. Speed- and acceleration-sensitive twin tire tracks fade over 12 seconds. Existing circular collision shapes are retained. The goals sit at ±8.7 units, 1.2 units farther back at each end; the 17.4-unit pitch provides extra space behind the original car formations. The physics geometry, server configuration and shared determinism vectors use these same dimensions.
 
 ## Car assets
 

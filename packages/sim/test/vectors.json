@@ -2,7 +2,7 @@
   "rapier": "0.21.0",
   "physics": {
     "arena": {
-      "halfWidth": 7.5,
+      "halfWidth": 8.7,
       "halfHeight": 4.5,
       "goalHalfWidth": 1.3,
       "goalDepth": 1,
@@ -38,22 +38,22 @@
     "disc_ball": [
       {
         "outcome": "settled",
-        "ticks": 338,
-        "hash": "afd79947"
+        "ticks": 337,
+        "hash": "cb60d03e"
       }
     ],
     "wall_bounce": [
       {
         "outcome": "settled",
         "ticks": 230,
-        "hash": "e964de86"
+        "hash": "730a60fb"
       }
     ],
     "goal_entry": [
       {
         "outcome": "goal_right",
-        "ticks": 22,
-        "hash": "ed161778"
+        "ticks": 28,
+        "hash": "4b06f52b"
       }
     ],
     "low_speed": [
@@ -81,32 +81,32 @@
       {
         "outcome": "settled",
         "ticks": 315,
-        "hash": "5d417efa"
+        "hash": "ce796dc3"
       },
       {
         "outcome": "settled",
         "ticks": 231,
-        "hash": "df9dc9b1"
+        "hash": "c5188ca0"
       },
       {
         "outcome": "settled",
         "ticks": 235,
-        "hash": "ad14b8c8"
+        "hash": "fa1cc726"
       },
       {
         "outcome": "settled",
         "ticks": 228,
-        "hash": "0ded9ef6"
+        "hash": "b259e97c"
       },
       {
         "outcome": "settled",
         "ticks": 243,
-        "hash": "10a11aa1"
+        "hash": "2b9f989b"
       },
       {
         "outcome": "settled",
         "ticks": 247,
-        "hash": "0795cb1c"
+        "hash": "576bbe5a"
       }
     ]
   }

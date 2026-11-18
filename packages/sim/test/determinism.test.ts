@@ -126,6 +126,21 @@ describe('simulation contract', () => {
     expect(left.outcome).toBe('goal_left');
   });
 
+  it('keeps the new space in play and scores only beyond the relocated goal line', () => {
+    for (const side of [-1, 1]) {
+      const shot = (x: number) =>
+        sim.simulateShot(
+          toF32Bodies([
+            { kind: 'disc', x: 0, y: 3 },
+            { kind: 'ball', x: x * side, y: 0 },
+          ]),
+          { bodyIndex: 0, ix: 0.01, iy: 0 },
+        );
+      expect(shot(8.1).outcome).toBe('settled');
+      expect(shot(physicsConfig.arena.halfWidth + 0.1).outcome).toBe(side === 1 ? 'goal_right' : 'goal_left');
+    }
+  });
+
   it('walls contain the bodies', () => {
     const r = sim.simulateShot(toF32Bodies([{ kind: 'disc', x: 0, y: 0 }]), { bodyIndex: 0, ix: 9, iy: 9 });
     expect(r.outcome).toBe('settled');

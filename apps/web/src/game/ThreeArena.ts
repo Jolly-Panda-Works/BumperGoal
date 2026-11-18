@@ -180,18 +180,21 @@ export class ThreeArena {
   }
 
   private makeArena() {
+    const halfLength = physicsConfig.arena.halfWidth;
+    const length = halfLength * 2;
+    const goalLine = halfLength - 0.07;
     this.scene.add(cartoonSurroundings());
-    this.box(11.4, 0.65, 19, 0x586b74, 0, -0.46, 0);
-    this.box(10.7, 0.18, 18.3, 0xc4b587, 0, -0.14, 0);
+    this.box(11.4, 0.65, length + 4, 0x586b74, 0, -0.46, 0);
+    this.box(10.7, 0.18, length + 3.3, 0xc4b587, 0, -0.14, 0);
     const turf = new THREE.Mesh(
-      new THREE.PlaneGeometry(9, 15),
+      new THREE.PlaneGeometry(9, length),
       new THREE.MeshToonMaterial({ map: this.grassTexture() }),
     );
     turf.rotation.x = -Math.PI / 2;
     turf.receiveShadow = true;
     this.scene.add(turf);
     const tracks = new THREE.Mesh(
-      new THREE.PlaneGeometry(9, 15),
+      new THREE.PlaneGeometry(9, length),
       new THREE.MeshBasicMaterial({ map: this.tracksTexture, transparent: true, depthWrite: false }),
     );
     tracks.rotation.x = -Math.PI / 2;
@@ -205,7 +208,7 @@ export class ThreeArena {
         new THREE.Vector3(x1, 0.018, z2),
         new THREE.Vector3(x1, 0.018, z1),
       ]);
-    rect(-4.42, -7.43, 4.42, 7.43);
+    rect(-4.42, -goalLine, 4.42, goalLine);
     this.box(8.84, 0.012, 0.045, 0xe9f2d4, 0, 0.02, 0);
     this.line(
       Array.from(
@@ -214,14 +217,14 @@ export class ThreeArena {
       ),
     );
     for (const sign of [-1, 1]) {
-      rect(-2.15, sign * 7.43, 2.15, sign * 5.35);
-      rect(-1.4, sign * 7.43, 1.4, sign * 6.6);
+      rect(-2.15, sign * goalLine, 2.15, sign * (halfLength - 2.15));
+      rect(-1.4, sign * goalLine, 1.4, sign * (halfLength - 0.9));
       this.goal(sign);
       // Low perimeter curbs keep the near goal and cars unobstructed.
-      for (const x of [-3.3, 3.3]) this.box(2.35, 0.18, 0.13, 0xd9c98c, x, 0.1, sign * 7.58);
+      for (const x of [-3.3, 3.3]) this.box(2.35, 0.18, 0.13, 0xd9c98c, x, 0.1, sign * (halfLength + 0.08));
       for (const side of [-1, 1]) {
-        this.box(0.16, 0.25, 15.35, 0xd9c98c, side * 4.65, 0.1, 0);
-        this.box(0.18, 0.06, 15.5, sign === 1 ? 0xc04e48 : 0x487fbd, side * 4.65, 0.25, 0);
+        this.box(0.16, 0.25, length + 0.35, 0xd9c98c, side * 4.65, 0.1, 0);
+        this.box(0.18, 0.06, length + 0.5, sign === 1 ? 0xc04e48 : 0x487fbd, side * 4.65, 0.25, 0);
       }
     }
     this.stadium();
@@ -230,7 +233,7 @@ export class ThreeArena {
   private goal(sign: number) {
     const frame = new THREE.Group();
     this.scene.add(frame);
-    const z = sign * 7.5;
+    const z = sign * physicsConfig.arena.halfWidth;
     const postMaterial = new THREE.MeshStandardMaterial({ color: 0xfaf5df, roughness: 0.3, metalness: 0.3 });
     const beam = (a: THREE.Vector3, b: THREE.Vector3) => {
       const mesh = new THREE.Mesh(new THREE.CylinderGeometry(0.065, 0.065, a.distanceTo(b), 12), postMaterial);
@@ -290,9 +293,21 @@ export class ThreeArena {
     for (const side of [-1, 1]) {
       for (let row = 0; row < 3; row++) {
         const x = side * (5.1 + row * 0.22);
-        this.box(0.28, 0.24 + row * 0.22, 14.8, row % 2 ? 0x819398 : 0x667b82, x, row * 0.11, 0);
+        this.box(
+          0.28,
+          0.24 + row * 0.22,
+          physicsConfig.arena.halfWidth * 2 - 0.2,
+          row % 2 ? 0x819398 : 0x667b82,
+          x,
+          row * 0.11,
+          0,
+        );
         for (let seat = 0; seat < 24; seat++) {
-          matrix.makeTranslation(x, 0.3 + row * 0.22, -7 + seat * 0.6);
+          matrix.makeTranslation(
+            x,
+            0.3 + row * 0.22,
+            -physicsConfig.arena.halfWidth + 0.5 + (seat * (physicsConfig.arena.halfWidth * 2 - 1)) / 23,
+          );
           people.setMatrixAt(person, matrix);
           people.setColorAt(person++, new THREE.Color(palette[(seat + row * 3) % palette.length]!));
         }
@@ -316,9 +331,9 @@ export class ThreeArena {
       new THREE.PlaneGeometry(4.2, 0.75),
       new THREE.MeshBasicMaterial({ map: texture, side: THREE.DoubleSide }),
     );
-    sign.position.set(0, 1.7, -8.61);
+    sign.position.set(0, 1.7, -physicsConfig.arena.halfWidth - 1.11);
     this.scene.add(sign);
-    this.box(4.4, 0.9, 0.15, 0xc9bb88, 0, 1.7, -8.72);
+    this.box(4.4, 0.9, 0.15, 0xc9bb88, 0, 1.7, -physicsConfig.arena.halfWidth - 1.22);
   }
 
   private makeBodies() {
@@ -420,7 +435,7 @@ export class ThreeArena {
     const w = Math.max(1, this.parent.clientWidth),
       h = Math.max(1, this.parent.clientHeight);
     this.renderer.setSize(w, h);
-    fitArenaCamera(this.camera, w, h);
+    fitArenaCamera(this.camera, w, h, physicsConfig.arena.halfWidth);
   }
 
   private point(event: PointerEvent) {
@@ -580,7 +595,8 @@ export class ThreeArena {
     const ctx = this.tracksCanvas.getContext('2d')!;
     ctx.clearRect(0, 0, 512, 1024);
     const x = (value: number) => ((value / 66 / FIELD_WIDTH_SCALE + 4.5) / 9) * 512;
-    const y = (value: number) => ((value / 66 + 7.5) / 15) * 1024;
+    const y = (value: number) =>
+      ((value / 66 + physicsConfig.arena.halfWidth) / (physicsConfig.arena.halfWidth * 2)) * 1024;
     ctx.strokeStyle = '#182016';
     ctx.lineCap = 'round';
     for (const mark of this.tireMarks.marks) {
