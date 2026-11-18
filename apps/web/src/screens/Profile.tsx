@@ -17,7 +17,6 @@ import { connect, getOnline, linkEmail, refreshProfile, rpc, updateProfile, useO
 import {
   Avatar,
   Dialog,
-  ArtImage,
   BallPreview,
   Badge,
   Button,
@@ -31,6 +30,7 @@ import {
 } from '../ui/components';
 import {
   IconCheck,
+  IconEdit,
   IconUsers,
   IconTrophy,
   IconHistory,
@@ -41,7 +41,6 @@ import {
 } from '../ui/icons';
 import { localOnlineEnabled } from '../services/localRanked';
 import { ownsLocal, useLocalInventory } from '../services/localInventory';
-import { assetUrl } from '../game/art';
 import { toast } from '../ui/toast';
 const ProfileModel = lazy(() => import('../ui/HomeCar'));
 
@@ -90,7 +89,7 @@ export function ProfileScreen() {
               <ShieldAvatar id={profile.avatarId} />
             </span>
             <span className="icon-btn profile-art__avatar-edit">
-              <ArtImage src={assetUrl('lobby/edit.webp')} size={26} />
+              <IconEdit size={26} />
             </span>
           </button>
           <div className="profile-art__name">
@@ -107,7 +106,7 @@ export function ProfileScreen() {
                 setEdit('name');
               }}
             >
-              <ArtImage src={assetUrl('lobby/edit.webp')} size={30} />
+              <IconEdit size={30} />
             </button>
           </div>
           <div className="profile-art__experience">

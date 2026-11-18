@@ -1,0 +1,244 @@
+/* Flat interface: solid surfaces, simple outlines, no highlights or extrusion. */
+body *,
+body *::before,
+body *::after {
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+:root {
+  --shadow-1: none;
+  --shadow-press: none;
+}
+body :where(.btn, .icon-btn, .cartoon-button, .tabs button, .segmented button) {
+  background: #087ed5 !important;
+  background-image: none !important;
+  border: 1px solid #52c8f2 !important;
+  color: #fff;
+  filter: none !important;
+}
+body :is(.btn--primary, .cartoon-button--gold),
+body .tabs button[aria-selected='true'],
+body .segmented button[aria-checked='true'] {
+  background: #ffda27 !important;
+  border-color: #ffda27 !important;
+  color: #193452 !important;
+}
+body .cartoon-button--purple {
+  background: #8a42db !important;
+  border-color: #ab75ed !important;
+}
+body .cartoon-button--orange {
+  background: #ff9e22 !important;
+  border-color: #ffb644 !important;
+  color: #193452 !important;
+}
+body .btn--danger {
+  background: #ed4560 !important;
+  border-color: #ff8095 !important;
+}
+body .btn--ghost {
+  background: #174e88 !important;
+  border-color: #5295c5 !important;
+}
+body :is(.btn, .icon-btn, .cartoon-button)::before,
+body :is(.btn, .icon-btn, .cartoon-button)::after,
+.stadium-profile--nameplate > .stadium-profile__copy::before,
+.stadium-profile__level::before,
+.stadium-wallet__plus::before {
+  content: none !important;
+  display: none !important;
+}
+body :is(.btn, .icon-btn, .cartoon-button):active {
+  transform: none;
+}
+body
+  :is(
+    .card,
+    .dialog,
+    .toast,
+    .notice,
+    .league-hero,
+    .league-stage,
+    .local-rank,
+    .server-notice,
+    .profile-art__identity,
+    .profile-art__details,
+    .shop-product.card
+  ) {
+  background: #0c3e79 !important;
+  background-image: none !important;
+  border-color: #3aa6d5;
+}
+body :is(.input, .select, .identity-code, .profile-art__code) {
+  background-image: none !important;
+}
+body .navbar {
+  background: #103765 !important;
+  background-image: none !important;
+}
+body .navbar__item.is-active {
+  background: #087ed5 !important;
+  background-image: none !important;
+}
+body :is(.team-car-preview, .profile-art__stat, .profile-art__name, .profile-art__loadout) {
+  background: #14558f !important;
+  background-image: none !important;
+}
+body .catalog-art .team-car-preview,
+body .profile-art__equipment .team-car-preview {
+  background: transparent !important;
+}
+body :is(.profile-art__section-title, .catalog-pager > span) {
+  background: #087ed5 !important;
+  border: 1px solid #54c9ee !important;
+}
+body .stadium-profile--nameplate > .stadium-profile__copy {
+  background: #105094 !important;
+  border: 1px solid #45bce8 !important;
+}
+body .stadium-profile--nameplate .stadium-profile__portrait > .stadium-profile__level {
+  background: #ffd34d !important;
+  border: 1px solid #c49422 !important;
+}
+body .stadium-wallet.stadium-wallet--shared > a,
+body .currency-pill {
+  background: #10457d !important;
+  background-image: none !important;
+  border: 1px solid #45bce8 !important;
+}
+body .stadium-wallet.stadium-wallet--shared .stadium-wallet__plus {
+  background: #77d72e !important;
+  border: 1px solid #77d72e !important;
+}
+body .stadium-wallet__plus svg {
+  stroke: none;
+  filter: none !important;
+}
+body :is(.badge--success, .shop-product > .badge, .collectible-reaction__check) {
+  background: #85db35 !important;
+  background-image: none !important;
+  border: 1px solid #b0ed78 !important;
+  color: #173b21 !important;
+}
+body .catalog-art .shop-product > .price {
+  background: #ffda27 !important;
+  border: 1px solid #ffda27 !important;
+  color: #193452 !important;
+}
+body .catalog-art .shop-product.is-equipped {
+  border-color: #ffda27 !important;
+}
+body .catalog-art .shop-product > strong {
+  background: #075594 !important;
+  border: 1px solid #33b7e5 !important;
+}
+body :is(.progress, .stadium-profile__xp) {
+  background: #06294e !important;
+  background-image: none !important;
+  border: 1px solid #3888b7 !important;
+}
+body :is(.progress__fill, .stadium-profile__xp i) {
+  background: #3bdaee !important;
+  background-image: none !important;
+}
+body .team-attribute__bar i {
+  background: #5279a2 !important;
+  border: 0 !important;
+}
+body .team-attribute__bar .is-filled {
+  background: #ffda27 !important;
+}
+body .hud,
+body .hud * {
+  background-image: none !important;
+}
+body .hud {
+  background: #10457d !important;
+}
+body
+  :is(
+    .game-art-icon,
+    .currency-icon,
+    .garage-icon,
+    .shield-avatar,
+    .stadium-brand,
+    .profile-art__avatar,
+    .profile-art__level,
+    .profile-art__stat-icon,
+    .profile-art__avatar-edit,
+    .stadium-hero__car,
+    .stadium-hero__ball,
+    .trail-preview,
+    .team-car-preview img,
+    .collectible-reaction i,
+    .collectible-reaction__check svg
+  ) {
+  filter: none !important;
+}
+.currency-icon {
+  display: inline-flex;
+  width: var(--currency-size, 20px);
+  height: var(--currency-size, 20px);
+  flex-shrink: 0;
+}
+.currency-icon > svg {
+  width: 100%;
+  height: 100%;
+}
+.game-art-icon > svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.stadium-brand > .logo {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  font-size: clamp(25px, 4cqw, 70px);
+  line-height: 1.05;
+  font-style: normal;
+  letter-spacing: 0;
+  -webkit-text-stroke: 0 !important;
+}
+.stadium-brand .logo__kick {
+  color: #ffda27;
+  font-style: normal;
+}
+.stadium-brand .logo__flick {
+  color: white;
+}
+body .profile-art__level b,
+body .stadium-profile__level b {
+  -webkit-text-stroke: 0;
+  color: #583d12;
+}
+body
+  :is(
+    .collectible-reaction__check,
+    .profile-art__stat,
+    .profile-art__section-title,
+    .profile-art__loadout,
+    .profile-art__name
+  ) {
+  background-image: none !important;
+}
+.currency-pack-art--flat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 15px;
+}
+.currency-pack-art--flat > .currency-icon {
+  width: 60px;
+  height: 60px;
+}
+body .profile-art__avatar .profile-art__avatar-edit svg {
+  width: 26px;
+  height: 26px;
+}
+
+body :is(.shell, .dialog-backdrop, .toast-host) * {
+  filter: none !important;
+}

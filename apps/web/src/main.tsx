@@ -37,3 +37,5 @@ import './styles/profile-art.css';
 import './styles/shared-header.css';
 
 import './styles/catalog-art.css';
+
+import './styles/flat-ui.css';

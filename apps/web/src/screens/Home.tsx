@@ -6,7 +6,7 @@ import { assetUrl } from '../game/art';
 import { carModelForTeam } from '@flickkick/config';
 import { useLocalProfile } from '../services/localProfile';
 import { formatNumber } from '../i18n';
-import { Dialog } from '../ui/components';
+import { Dialog, Logo } from '../ui/components';
 import { IconGear, IconGift, IconShop, IconTrophy, IconGarage } from '../ui/icons';
 import { ResourceMeters } from '../ui/ResourceMeters';
 const HomeCar = lazy(() => import('../ui/HomeCar'));
@@ -49,7 +49,7 @@ export function HomeScreen() {
           <IconGear size={44} />
         </Link>
         <div className="stadium-brand">
-          <img src={assetUrl('home/wordmark.webp')} alt="Bumper Goal" width={1776} height={880} />
+          <Logo big />
         </div>
         <ResourceMeters />
         <div className="stadium-shortcuts">

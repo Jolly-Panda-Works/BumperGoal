@@ -9,17 +9,11 @@ export function ShieldAvatar({ id }: { id: string }) {
   return (
     <svg className="shield-avatar" viewBox="0 0 100 114" aria-hidden="true" focusable="false">
       <defs>
-        <linearGradient id={`${key}-rim`} x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#bcffff" />
-          <stop offset=".22" stopColor="#21c9ff" />
-          <stop offset=".55" stopColor="#06428b" />
-          <stop offset="1" stopColor="#27d8ff" />
-        </linearGradient>
         <clipPath id={`${key}-mask`}>
           <path d={inner} />
         </clipPath>
       </defs>
-      <path d={outer} fill={`url(#${key}-rim)`} stroke="#032958" strokeWidth="2" strokeLinejoin="round" />
+      <path d={outer} fill="#35caff" stroke="#032958" strokeWidth="2" strokeLinejoin="round" />
       <path d={inner} fill="#082859" />
       <image
         href={avatarUrl(id)}
@@ -31,7 +25,6 @@ export function ShieldAvatar({ id }: { id: string }) {
         clipPath={`url(#${key}-mask)`}
       />
       <path d={inner} fill="none" stroke="#073c7f" strokeWidth="2" strokeLinejoin="round" />
-      <path d="M12 17V10L26 5H74" fill="none" stroke="#b6f9ff" strokeWidth="1.5" opacity=".8" />
     </svg>
   );
 }

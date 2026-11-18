@@ -17,7 +17,7 @@ import { avatarUrl, ballUrl, uiUrl } from '../game/art';
 import { formatNumber } from '../i18n';
 import { connect, useOnline } from '../services/online';
 import { useSettings } from '../services/settings';
-import { IconClose, IconCoin, IconGem, IconInfo, IconOffline } from './icons';
+import { IconClose, IconCoin, IconGem, IconInfo, IconOffline, IconTrophy } from './icons';
 import { RetryImage } from './RetryImage';
 
 type Variant = 'primary' | 'secondary' | 'ghost' | 'danger';
@@ -184,17 +184,24 @@ export function RankBadge({ rank, size = 40, label = true }: { rank: Rank; size?
   const { t } = useTranslation();
   return (
     <span className="rank-badge" title={t(`ranks.${rank}`)}>
-      <ArtImage src={uiUrl(`rank_${rank}`)} size={size} />
+      <IconTrophy
+        size={size}
+        style={{
+          color: (
+            { bronze: '#d99b55', silver: '#c4dae8', gold: '#ffd34d', platinum: '#60dcda', legend: '#d390ff' } as const
+          )[rank],
+        }}
+      />
       {label && <span>{t(`ranks.${rank}`)}</span>}
     </span>
   );
 }
 
 export function CurrencyIcon({ currency, size = 20 }: { currency: 'coins' | 'gems'; size?: number }) {
-  return currency === 'coins' ? (
-    <ArtImage className="currency-icon" src={uiUrl('coin')} size={size} fallback={<IconCoin size={size} />} />
-  ) : (
-    <ArtImage className="currency-icon" src={uiUrl('gem')} size={size} fallback={<IconGem size={size} />} />
+  return (
+    <span className="currency-icon" style={{ '--currency-size': `${size}px` } as React.CSSProperties}>
+      {currency === 'coins' ? <IconCoin size={size} /> : <IconGem size={size} />}
+    </span>
   );
 }
 

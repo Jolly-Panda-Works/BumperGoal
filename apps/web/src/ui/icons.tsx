@@ -1,14 +1,118 @@
 // Shared game art for navigation/category icons; utility controls retain simple strokes.
 import type { SVGProps } from 'react';
-import { RetryImage } from './RetryImage';
 
 type IconProps = SVGProps<SVGSVGElement> & { size?: number };
 
+const flatPaths: Record<string, React.ReactNode> = {
+  home: (
+    <>
+      <path d="m3 10 9-7 9 7v11H3Z" />
+      <path d="M9 21v-8h6v8" />
+    </>
+  ),
+  shop: (
+    <>
+      <path d="M3 9h18l-2-6H5Z" />
+      <path d="M4 9v12h16V9M9 21v-7h6v7M3 9q2 5 5 0 4 5 8 0 3 5 5 0" />
+    </>
+  ),
+  teams: (
+    <>
+      <path d="m8 3-6 4 3 5 3-2v11h8V10l3 2 3-5-6-4q-4 4-8 0Z" />
+    </>
+  ),
+  avatars: (
+    <>
+      <circle cx="12" cy="8" r="4" />
+      <path d="M4 21v-3a8 8 0 0 1 16 0v3Z" />
+    </>
+  ),
+  rank: (
+    <>
+      <path d="M7 3h10v5a5 5 0 0 1-10 0Z" fill="currentColor" />
+      <path d="M7 5H3v3a5 5 0 0 0 5 5m9-8h4v3a5 5 0 0 1-5 5M12 13v6m-5 2h10M9 19h6" />
+    </>
+  ),
+  settings: (
+    <>
+      <path
+        d="m9 3 1-2h4l1 2 3 2 3 1v4l-2 2 2 2v4l-3 1-3 2-1 2h-4l-1-2-3-2-3-1v-4l2-2-2-2V6l3-1Z"
+        transform="translate(0 1) scale(1 .9)"
+      />
+      <circle cx="12" cy="12" r="4" />
+    </>
+  ),
+  history: (
+    <>
+      <path d="M4 6a9 9 0 1 1-1 9M4 2v5h5M12 7v6l4 2" />
+    </>
+  ),
+  'level-reward': (
+    <>
+      <path d="M3 9h18v5H3ZM5 14v7h14v-7M12 9v12" />
+      <path d="M12 9C2 9 4 0 9 4l3 5c10 0 8-9 3-5Z" />
+    </>
+  ),
+  packs: (
+    <>
+      <path d="M3 9h18v12H3ZM2 5h20v4H2ZM12 5v16" />
+      <path d="M12 5C5 5 5-1 9 2l3 3c7 0 7-6 3-3Z" />
+    </>
+  ),
+  tutorial: (
+    <>
+      <path d="M12 5C9 2 4 3 2 4v16c4-2 7-2 10 0 3-2 6-2 10 0V4c-2-1-7-2-10 1v15Z" />
+    </>
+  ),
+  balls: (
+    <>
+      <circle cx="12" cy="12" r="10" />
+      <path d="m12 7 5 4-2 6H9l-2-6Zm0-5v5m10-2-5 6m5 8-2-2M7 19l2-2M2 10l5 1m15-1-5 1" />
+    </>
+  ),
+  formations: (
+    <>
+      <rect x="2" y="2" width="20" height="20" rx="2" />
+      <circle cx="12" cy="6" r="2" />
+      <circle cx="6" cy="17" r="2" />
+      <circle cx="18" cy="17" r="2" />
+      <path d="m11 8-4 7m6-7 4 7" />
+    </>
+  ),
+  trails: (
+    <>
+      <path d="M2 6h12M2 12h9M2 18h12" />
+      <circle cx="17" cy="12" r="5" />
+    </>
+  ),
+  locker: (
+    <>
+      <path d="m2 8 10-6 10 6v14H2Z" />
+      <path d="M6 22V10h12v12M6 14h12m-12 4h12" />
+    </>
+  ),
+};
 function gameArt(name: string) {
   return function GameArtIcon({ size = 22, className = '', style }: IconProps) {
     return (
-      <span className={`game-art-icon ${className}`} style={{ width: size, height: size, ...style }} aria-hidden="true">
-        <RetryImage src={`/assets/icons/${name}.webp`} alt="" draggable={false} decoding="async" />
+      <span
+        className={`game-art-icon ${className}`}
+        style={{ width: size, height: size, color: name === 'rank' ? '#ffd34d' : undefined, ...style }}
+        aria-hidden="true"
+      >
+        <svg
+          width="100%"
+          height="100%"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          focusable="false"
+        >
+          {flatPaths[name] ?? flatPaths.avatars}
+        </svg>
       </span>
     );
   };
@@ -95,6 +199,11 @@ export const IconUser = gameArt('avatars');
 export const IconGear = gameArt('settings');
 
 export const IconBack = make(<path d="M15 5 8 12l7 7" />);
+export const IconEdit = make(
+  <>
+    <path d="m4 16-1 5 5-1L21 7l-4-4ZM14 6l4 4" />
+  </>,
+);
 export const IconClose = make(<path d="M6 6l12 12M18 6 6 18" />);
 export const IconPlay = make(<path d="M8 5v14l11-7z" />, true);
 export const IconPause = make(<path d="M8 5h3v14H8zM13 5h3v14h-3z" />, true);
