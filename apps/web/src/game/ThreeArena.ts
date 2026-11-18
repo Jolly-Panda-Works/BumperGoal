@@ -1,3 +1,4 @@
+import { kickoffCarHeading, resetKickoffViews } from './kickoffPresentation';
 import { isPhone } from '../services/device';
 import { preferredArenaLayout } from './arenaLayout';
 import * as THREE from 'three';
@@ -46,6 +47,7 @@ export class ThreeArena {
   private lastImpact = 0;
   private lastTracks = -1000;
   private goalFlashUntil = 0;
+  private pendingKickoffAt: number | null = null;
 
   constructor(
     private parent: HTMLDivElement,
@@ -100,6 +102,7 @@ export class ThreeArena {
     canvas.addEventListener('lostpointercapture', this.pointerCancel);
     this.off.push(
       init.controller.bus.on('playShot', () => {
+        if (this.pendingKickoffAt !== null) this.resetForKickoff();
         this.cancelAim();
         audio.play('kick');
         audio.playMusic('match', 0.4);
@@ -110,6 +113,7 @@ export class ThreeArena {
       init.controller.bus.on('events', (events) => {
         for (const event of events) {
           if (event.type === 'goal') {
+            this.pendingKickoffAt = init.controller.current.phase === 'ENDED' ? null : this.clock + 1100;
             init.controller.world.set(HoldTrait, { until: this.clock + 1100 });
             this.goalFlashUntil = this.clock + 900;
             audio.play('goal');
@@ -401,8 +405,7 @@ export class ThreeArena {
         ring.rotation.x = -Math.PI / 2;
         ring.position.y = 0.025;
         object.add(ring);
-        object.rotation.y = team === 0 ? Math.PI : 0;
-        if (this.orientation === -1) object.rotation.y += Math.PI;
+        object.rotation.y = kickoffCarHeading(entity.get(Team)!.side, this.orientation);
         // A lit 3D car remains available while the supplied model streams in.
         const fallback = new THREE.Group();
         this.box(0.65, 0.24, 1.25, TEAM_COLORS[team]!, 0, 0.24, 0, fallback);
@@ -479,7 +482,13 @@ export class ThreeArena {
   }
 
   private pointerDown = (event: PointerEvent) => {
-    if (this.drag || !event.isPrimary || event.button !== 0 || this.init.controller.world.get(PlaybackTrait)?.active)
+    if (
+      this.pendingKickoffAt !== null ||
+      this.drag ||
+      !event.isPrimary ||
+      event.button !== 0 ||
+      this.init.controller.world.get(PlaybackTrait)?.active
+    )
       return;
     audio.unlock();
     const at = this.point(event);
@@ -550,6 +559,15 @@ export class ThreeArena {
     this.arrow.visible = false;
   }
 
+  private resetForKickoff(): void {
+    this.cancelAim();
+    resetKickoffViews(this.bodies, this.init.controller.current, this.orientation);
+    this.tireMarks.clear();
+    this.lastTracks = -Infinity;
+    this.pendingKickoffAt = null;
+    this.init.controller.world.set(HoldTrait, { until: 0 });
+  }
+
   private frame = (time: number) => {
     if (this.disposed) return;
     const delta = this.lastTime ? Math.min(time - this.lastTime, 100) : 0;
@@ -575,6 +593,10 @@ export class ThreeArena {
       onShotFinished: () => this.init.controller.completeShot(),
     });
     const playing = world.get(PlaybackTrait)?.active ?? false;
+    if (this.pendingKickoffAt !== null && this.clock >= this.pendingKickoffAt && !playing) {
+      if (this.init.controller.current.phase === 'AWAIT_SHOT') this.resetForKickoff();
+      else this.pendingKickoffAt = null;
+    }
     if (!playing) this.tireMarks.resetMotion();
     if (this.drag && (!this.init.controller.canAim() || playing)) this.cancelAim();
     for (const body of this.bodies) {
