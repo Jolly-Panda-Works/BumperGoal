@@ -326,3 +326,52 @@
     margin-inline: auto;
   }
 }
+
+/* Team catalog: car bodies replace the original circular playing pieces. */
+.team-car-preview {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 136px;
+  block-size: 118px;
+  max-inline-size: 100%;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #238cdb, #103967);
+  border: 2px solid color-mix(in srgb, var(--team-color) 65%, #fff);
+  box-shadow:
+    inset 0 1px 0 #ffffff55,
+    0 5px 0 #082a4c;
+  overflow: hidden;
+}
+.team-car-preview img {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: contain;
+  filter: saturate(1.35) contrast(1.08) drop-shadow(0 7px 3px #061d3699);
+}
+.shop-product--team.card {
+  grid-template-columns: 112px minmax(0, 1fr);
+}
+.shop-product--team > .team-car-preview {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  inline-size: 112px;
+  block-size: 112px;
+  justify-self: center;
+}
+.purchase-preview .team-car-preview {
+  inline-size: 192px;
+  block-size: 164px;
+}
+@media (max-width: 380px) {
+  .shop-product--team.card {
+    grid-template-columns: 92px minmax(0, 1fr);
+    gap: 8px;
+  }
+  .shop-product--team > .team-car-preview {
+    inline-size: 92px;
+    block-size: 100px;
+  }
+}

@@ -1,5 +1,6 @@
 import { useCollectibleReaction } from '../ui/collectibleReaction';
 import { TeamAttributes } from '../ui/TeamAttributes';
+import { TeamCarPreview } from '../ui/TeamCarPreview';
 import { TrailPreview } from '../ui/TrailPreview';
 import { PanelScreen } from '../ui/components';
 import { useState } from 'react';
@@ -460,7 +461,7 @@ export function ItemPreview({
   if (kind === 'trails') return <TrailPreview id={id} />;
   if (kind === 'formations') return <FormationPreview id={id} />;
   if (kind === 'avatars') return <Avatar id={id} size={56} />;
-  if (kind === 'teams') return <TeamSwatch teamId={id} size={56} />;
+  if (kind === 'teams') return <TeamCarPreview teamId={id} />;
   return <BallPreview ballId={id} size={56} />;
 }
 
