@@ -50,6 +50,7 @@ export class ThreeArena {
   private scene = new THREE.Scene();
   private camera = new THREE.PerspectiveCamera(34, 1, 0.1, 180);
   private bodies: Body3D[] = [];
+  private loadedCarModels = 0;
   private disposed = false;
   private observer: ResizeObserver;
   private off: (() => void)[] = [];
@@ -510,6 +511,7 @@ export class ThreeArena {
             gltf.scene.scale.z = ((physicsConfig.disc.halfLength ?? 0.71) * 2) / bounds.z;
             driveRig!.wheels = wheelPivots(gltf.scene);
             modelRoot.add(gltf.scene);
+            this.renderer.domElement.dataset.modelsReady = String(++this.loadedCarModels);
           },
           undefined,
           (error) => console.warn('Car model unavailable; keeping the 3D fallback.', error),

@@ -1,11 +1,14 @@
 import { expect, test } from '@playwright/test';
-import { boardToPage } from './board3d';
+import { boardToPage, waitForArenaInput } from './board3d';
 
 for (const viewport of [
   { label: 'desktop', width: 1280, height: 1000 },
   { label: 'phone @mobile', width: 393, height: 852 },
 ]) {
   test(`3D models and a real slingshot shot (${viewport.label})`, async ({ page }) => {
+    await page.addInitScript(() =>
+      localStorage.setItem('flickkick.settings.v1', JSON.stringify({ graphics: 'low', language: 'en' })),
+    );
     await page.setViewportSize(viewport);
     const errors: string[] = [];
     const models = new Set<string>();
@@ -24,6 +27,7 @@ for (const viewport of [
       viewport.width >= 700 ? 'landscape' : 'portrait',
     );
     await expect.poll(() => models.size).toBe(2);
+    await expect(page.getByLabel('Bumper Goal 3D football arena')).toHaveAttribute('data-models-ready', '10');
     const canvas = await page.getByLabel('Bumper Goal 3D football arena').boundingBox();
     expect(canvas).toMatchObject({ x: 0, y: 0, width: viewport.width, height: viewport.height });
     await expect(page.locator('.hud')).toBeInViewport();
@@ -38,6 +42,7 @@ for (const viewport of [
     const start = await boardToPage(page, car.x, car.y);
     const pull = viewport.width >= 700 ? 2.8 : 2.3;
     const end = await boardToPage(page, car.x + (state.turn.side === 'L' ? -pull : pull), car.y);
+    await waitForArenaInput(page, start);
     await page.mouse.move(start.x, start.y);
     await page.mouse.down();
     await page.mouse.move(end.x, end.y, { steps: 10 });

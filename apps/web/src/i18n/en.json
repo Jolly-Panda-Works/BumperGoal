@@ -434,7 +434,16 @@
     "club_tractor": "Tractor",
     "club_zob_ahan": "Zob Ahan",
     "nation_italy": "Italy",
-    "nation_switzerland": "Switzerland"
+    "nation_switzerland": "Switzerland",
+    "team_tiny_1": "Turbo Buggy",
+    "team_tiny_2": "Trail Jeep",
+    "team_tiny_3": "Mini Truck",
+    "team_tiny_4": "Arctic Buggy",
+    "team_tiny_5": "Neon Racer",
+    "team_tiny_6": "Rust Rod",
+    "team_tiny_7": "Jungle Van",
+    "team_tiny_8": "Rally GT",
+    "team_tiny_9": "Rocket Truck"
   },
   "balls": {
     "ball_classic": "Classic",

@@ -48,6 +48,159 @@
         "weight": 9
       },
       "carModel": "carrier"
+    },
+    {
+      "id": "team_tiny_1",
+      "carModel": "tiny-racer-1",
+      "primary": "#45CFFF",
+      "secondary": "#182F3C",
+      "emblem": "car",
+      "price": {
+        "coins": 500
+      },
+      "group": "original",
+      "attributes": {
+        "force": 7,
+        "time": 5,
+        "aim": 6,
+        "weight": 5
+      }
+    },
+    {
+      "id": "team_tiny_2",
+      "carModel": "tiny-racer-2",
+      "primary": "#FFD23D",
+      "secondary": "#182F3C",
+      "emblem": "car",
+      "price": {
+        "coins": 650
+      },
+      "group": "original",
+      "attributes": {
+        "force": 7,
+        "time": 6,
+        "aim": 5,
+        "weight": 7
+      }
+    },
+    {
+      "id": "team_tiny_3",
+      "carModel": "tiny-racer-3",
+      "primary": "#FF5838",
+      "secondary": "#182F3C",
+      "emblem": "car",
+      "price": {
+        "coins": 800
+      },
+      "group": "original",
+      "attributes": {
+        "force": 9,
+        "time": 5,
+        "aim": 4,
+        "weight": 10
+      }
+    },
+    {
+      "id": "team_tiny_4",
+      "carModel": "tiny-racer-4",
+      "primary": "#C4F5FF",
+      "secondary": "#182F3C",
+      "emblem": "car",
+      "price": {
+        "coins": 950
+      },
+      "group": "original",
+      "attributes": {
+        "force": 6,
+        "time": 6,
+        "aim": 6,
+        "weight": 6
+      }
+    },
+    {
+      "id": "team_tiny_5",
+      "carModel": "tiny-racer-5",
+      "primary": "#A4FF3D",
+      "secondary": "#182F3C",
+      "emblem": "car",
+      "price": {
+        "coins": 1100
+      },
+      "group": "original",
+      "attributes": {
+        "force": 6,
+        "time": 4,
+        "aim": 8,
+        "weight": 4
+      }
+    },
+    {
+      "id": "team_tiny_6",
+      "carModel": "tiny-racer-6",
+      "primary": "#DC9F48",
+      "secondary": "#182F3C",
+      "emblem": "car",
+      "price": {
+        "coins": 1250
+      },
+      "group": "original",
+      "attributes": {
+        "force": 8,
+        "time": 5,
+        "aim": 5,
+        "weight": 6
+      }
+    },
+    {
+      "id": "team_tiny_7",
+      "carModel": "tiny-racer-7",
+      "primary": "#88D524",
+      "secondary": "#182F3C",
+      "emblem": "car",
+      "price": {
+        "coins": 1400
+      },
+      "group": "original",
+      "attributes": {
+        "force": 7,
+        "time": 7,
+        "aim": 4,
+        "weight": 9
+      }
+    },
+    {
+      "id": "team_tiny_8",
+      "carModel": "tiny-racer-8",
+      "primary": "#4C9FFF",
+      "secondary": "#182F3C",
+      "emblem": "car",
+      "price": {
+        "coins": 1550
+      },
+      "group": "original",
+      "attributes": {
+        "force": 5,
+        "time": 6,
+        "aim": 7,
+        "weight": 5
+      }
+    },
+    {
+      "id": "team_tiny_9",
+      "carModel": "tiny-racer-9",
+      "primary": "#B353F6",
+      "secondary": "#182F3C",
+      "emblem": "car",
+      "price": {
+        "coins": 1700
+      },
+      "group": "original",
+      "attributes": {
+        "force": 8,
+        "time": 4,
+        "aim": 6,
+        "weight": 8
+      }
     }
   ],
   "balls": [

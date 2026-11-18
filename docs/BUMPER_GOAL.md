@@ -40,6 +40,8 @@ The earlier PNG sprite exporter remains available as `tools/render-cars.py`; the
 
 Run with `pnpm install` then `pnpm dev`. GitHub: Jolly-Panda-Works/BumperGoal.
 
-## Three-model car catalog
+## Car catalog
 
-The team catalog contains Cicada (free), Cruiser (free), and Carrier (400 coins). Their stable legacy IDs remain team_volt, team_coral, and team_ocean. Each entry declares its actual carModel; preview images, profile icons, and in-match GLBs resolve the same model. Retired national/club entries are removed. Legacy purchases and selections map through the shared team-aliases.json file on both client and server, preserving ownership without changing currency balances.
+The original catalog entries are Cicada (free), Cruiser (free), and Carrier (400 coins). Their stable legacy IDs remain team_volt, team_coral, and team_ocean. Each entry declares its actual carModel; preview images, profile icons, and in-match GLBs resolve the same model. Retired national/club entries are removed. Legacy purchases and selections map through the shared team-aliases.json file on both client and server, preserving ownership without changing currency balances.
+
+The supplied Low Poly Tiny Cartoon Racing Cars Asset Pack adds nine textured cars (tiny-racer-1 through tiny-racer-9), for twelve models total. Original FBX files and atlases are retained under art-source/tiny-racing. Rebuild their normalized GLBs with Blender and tools/export-tiny-racing-cars.py. Each has a shop thumbnail, translated name, stats, coin price, and wheel/axle nodes for the existing drive effects.

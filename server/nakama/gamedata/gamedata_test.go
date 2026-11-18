@@ -53,8 +53,8 @@ func TestClubTeamsSwitch(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if len(on.Cosmetics.Teams) != 3 || on.Cosmetics.Exists("teams", "club_real_madrid") || on.Cosmetics.Exists("teams", "nation_iran") {
-		t.Fatal("catalog must contain only the three real car models")
+	if len(on.Cosmetics.Teams) != 12 || on.Cosmetics.Exists("teams", "club_real_madrid") || on.Cosmetics.Exists("teams", "nation_iran") {
+		t.Fatal("catalog must contain only the real car models")
 	}
 
 	saved := economyJSON
@@ -72,8 +72,8 @@ func TestClubTeamsSwitch(t *testing.T) {
 	if off.Cosmetics.Exists("teams", "club_real_madrid") {
 		t.Fatal("club teams must leave the catalog when clubTeams is disabled")
 	}
-	if len(off.Cosmetics.Teams) != 3 || !off.Cosmetics.Exists("teams", "team_volt") {
-		t.Fatal("the three car teams must stay")
+	if len(off.Cosmetics.Teams) != 12 || !off.Cosmetics.Exists("teams", "team_volt") {
+		t.Fatal("all real car teams must stay")
 	}
 }
 

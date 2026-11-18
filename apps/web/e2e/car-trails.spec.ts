@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { boardToPage } from './board3d';
+import { boardToPage, waitForArenaInput } from './board3d';
 test('equipped trail renders behind moving cars', async ({ page }) => {
   await page.goto('/');
   await page.getByLabel('Your player name').fill('Trail Driver');
@@ -31,6 +31,7 @@ test('equipped trail renders behind moving cars', async ({ page }) => {
     const car = state.bodies[state.turn.side === 'L' ? 3 : 8];
     const start = await boardToPage(page, car.x, car.y);
     const end = await boardToPage(page, car.x + (state.turn.side === 'L' ? -2.3 : 2.3), car.y);
+    await waitForArenaInput(page, start);
     await page.mouse.move(start.x, start.y);
     await page.mouse.down();
     await page.mouse.move(end.x, end.y, { steps: 10 });

@@ -434,7 +434,16 @@
     "club_tractor": "Tractor",
     "club_zob_ahan": "Zob Ahan",
     "nation_italy": "Italy",
-    "nation_switzerland": "Switzerland"
+    "nation_switzerland": "Switzerland",
+    "team_tiny_1": "باغي توربو",
+    "team_tiny_2": "جيب تريل",
+    "team_tiny_3": "شاحنة صغيرة",
+    "team_tiny_4": "باغي قطبي",
+    "team_tiny_5": "متسابق نيون",
+    "team_tiny_6": "هات رود",
+    "team_tiny_7": "فان الغابة",
+    "team_tiny_8": "رالي جي تي",
+    "team_tiny_9": "شاحنة الصاروخ"
   },
   "balls": {
     "ball_classic": "كلاسيكية",

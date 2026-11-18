@@ -434,7 +434,16 @@
     "club_tractor": "تراکتور",
     "club_zob_ahan": "ذوب‌آهن",
     "nation_italy": "ایتالیا",
-    "nation_switzerland": "سوئیس"
+    "nation_switzerland": "سوئیس",
+    "team_tiny_1": "باگی توربو",
+    "team_tiny_2": "جیپ تریل",
+    "team_tiny_3": "کامیونک",
+    "team_tiny_4": "باگی یخی",
+    "team_tiny_5": "ریسر نئونی",
+    "team_tiny_6": "هات‌راد",
+    "team_tiny_7": "ون جنگلی",
+    "team_tiny_8": "رالی جی‌تی",
+    "team_tiny_9": "کامیون راکتی"
   },
   "balls": {
     "ball_classic": "کلاسیک",

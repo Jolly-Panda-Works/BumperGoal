@@ -43,12 +43,12 @@ describe('balance overrides', () => {
     expect(cosmetics.teams.find((t) => t.id === 'team_ocean')?.price).not.toBeNull();
   });
 
-  it('keeps the three real models regardless of the retired club-team switch', () => {
+  it('keeps the real car models regardless of the retired club-team switch', () => {
     applyConfigOverrides(1, { 'economy/features/clubTeams/enabled': false });
     expect(cosmetics.teams.some((t) => t.group === 'club')).toBe(false);
     applyConfigOverrides(2, {});
     expect(cosmetics.teams.some((t) => t.group === 'club')).toBe(false);
-    expect(cosmetics.teams).toHaveLength(3);
+    expect(cosmetics.teams).toHaveLength(12);
   });
 
   it('rejects locked, structural and mistyped edits', () => {

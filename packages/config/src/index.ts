@@ -122,7 +122,7 @@ export interface TeamAttributes {
   aim: number;
 }
 export interface TeamDef {
-  carModel: 'cicada' | 'cruiser' | 'carrier';
+  carModel: 'cicada' | 'cruiser' | 'carrier' | `tiny-racer-${1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9}`;
   attributes: TeamAttributes;
   id: string;
   group: TeamGroup;

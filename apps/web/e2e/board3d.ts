@@ -14,3 +14,10 @@ export async function boardToPage(page: Page, x: number, y: number, orientation 
   const p = new Vector3(point.x, 0, point.z).project(camera);
   return { x: box.x + ((p.x + 1) / 2) * box.width, y: box.y + ((1 - p.y) / 2) * box.height };
 }
+
+/** Route transitions briefly disable pointer input; wait for the actual canvas hit target. */
+export async function waitForArenaInput(page: Page, point: { x: number; y: number }) {
+  const canvas = page.getByLabel('Bumper Goal 3D football arena');
+  const box = (await canvas.boundingBox())!;
+  await canvas.click({ position: { x: point.x - box.x, y: point.y - box.y }, trial: true });
+}
