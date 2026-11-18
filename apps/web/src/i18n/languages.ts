@@ -1,6 +1,5 @@
 import en from './en.json';
 import fa from './fa.json';
-import ar from './ar.json';
 
 export interface LanguageDefinition {
   label: string;
@@ -13,7 +12,6 @@ export interface LanguageDefinition {
 export const builtInLanguages = {
   en: { label: 'English', dir: 'ltr', locale: 'en-US', translation: en },
   fa: { label: 'فارسی', dir: 'rtl', locale: 'fa-IR', translation: fa },
-  ar: { label: 'العربية', dir: 'rtl', locale: 'ar', translation: ar },
 } as const satisfies Record<string, LanguageDefinition>;
 export type BuiltInLanguage = keyof typeof builtInLanguages;
 
@@ -54,10 +52,9 @@ function isCustomLanguage(v: unknown): v is CustomLanguage {
   );
 }
 
-/** Every language players can pick, built-in first. */
+/** Bumper Goal players can choose only English or Persian; cached admin entries stay archived. */
 export const languageRegistry = (): Record<Language, LanguageDefinition> => ({
   ...builtInLanguages,
-  ...Object.fromEntries(custom.map((l) => [l.code, l])),
 });
 
 export const customLanguages = (): readonly CustomLanguage[] => custom;
@@ -79,7 +76,7 @@ export function subscribeLanguages(fn: () => void): () => void {
 }
 
 export const isLanguage = (value: unknown): boolean =>
-  typeof value === 'string' && (Object.hasOwn(builtInLanguages, value) || custom.some((l) => l.code === value));
+  typeof value === 'string' && Object.hasOwn(builtInLanguages, value);
 export const defaultLanguage: Language = 'en';
 export function detectLanguage(locale: string): Language {
   const lower = locale.toLowerCase();

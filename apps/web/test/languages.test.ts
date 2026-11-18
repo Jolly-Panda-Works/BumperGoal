@@ -14,6 +14,8 @@ describe('language registry', () => {
   it('detects registered locales and safely falls back for unsupported languages', () => {
     expect(detectLanguage('fa-IR')).toBe('fa');
     expect(detectLanguage('en-GB')).toBe('en');
+    expect(detectLanguage('ar-SA')).toBe('en');
+    expect(isLanguage('ar')).toBe(false);
     expect(detectLanguage('zz-ZZ')).toBe('en');
     expect(isLanguage('__proto__')).toBe(false);
   });
@@ -28,7 +30,7 @@ describe('language registry', () => {
 });
 
 describe('admin-added languages', () => {
-  it('registers valid server languages and rejects ones that shadow built-ins', () => {
+  it('keeps archived server languages out of the two-language game', () => {
     setCustomLanguages([
       {
         code: 'de',
@@ -41,8 +43,9 @@ describe('admin-added languages', () => {
       { code: 'fa', label: 'fake', dir: 'rtl', locale: 'fa', version: 1, translation: {} },
     ]);
     expect(customLanguages().map((l) => l.code)).toEqual(['de']);
-    expect(isLanguage('de')).toBe(true);
-    expect(detectLanguage('de-AT')).toBe('de');
+    expect(isLanguage('de')).toBe(false);
+    expect(Object.keys(languageRegistry())).toEqual(['en', 'fa']);
+    expect(detectLanguage('de-AT')).toBe('en');
     expect(languageRegistry().fa!.label).toBe('فارسی');
     setCustomLanguages([]);
     expect(isLanguage('de')).toBe(false);

@@ -30,7 +30,7 @@ const (
 )
 
 // Built into the web client; the panel cannot replace them.
-var builtInLanguages = map[string]bool{"en": true, "fa": true, "ar": true}
+var builtInLanguages = map[string]bool{"en": true, "fa": true}
 
 var (
 	languageCode   = regexp.MustCompile(`^[a-z]{2,3}(-[a-z0-9]{2,8})?$`)
@@ -64,13 +64,8 @@ func currentLanguages() *languageIndex {
 
 // enabledLanguages is what players may pick.
 func (idx *languageIndex) enabled() []LanguageMeta {
-	out := []LanguageMeta{}
-	for _, l := range idx.Languages {
-		if l.Enabled {
-			out = append(out, l)
-		}
-	}
-	return out
+	// The game ships only English and Persian. Keep admin translations archived.
+	return []LanguageMeta{}
 }
 
 func readLanguageIndex(ctx context.Context, nk runtime.NakamaModule) (languageIndex, string, error) {

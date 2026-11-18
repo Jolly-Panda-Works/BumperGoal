@@ -63,8 +63,8 @@ func TestAdminLanguagesLifecycle(t *testing.T) {
 		t.Fatal(err)
 	}
 	players, err = adminCall(t, rpcLanguagesGet, nk, map[string]any{"codes": []string{"de", "fr"}})
-	if err != nil || !strings.Contains(string(players["translations"]), "Start") || currentLanguages().Revision != 2 {
-		t.Fatalf("enabled language missing: %v %s", err, players["translations"])
+	if err != nil || string(players["languages"]) != "[]" || string(players["translations"]) != "{}" || currentLanguages().Revision != 2 {
+		t.Fatalf("archived language leaked into the two-language game: %v %s", err, players["translations"])
 	}
 
 	if _, err := adminCall(t, rpcAdminLanguageDelete, nk, map[string]any{"token": token, "code": "de"}); err != nil {
