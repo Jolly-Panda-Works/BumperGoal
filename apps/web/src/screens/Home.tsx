@@ -7,7 +7,6 @@ import { carModelForTeam } from '@flickkick/config';
 import { useLocalProfile } from '../services/localProfile';
 import { formatNumber } from '../i18n';
 import { Dialog } from '../ui/components';
-import { IconUsers } from '../ui/icons';
 import { useLocalInventory } from '../services/localInventory';
 import { ResourceMeters } from '../ui/ResourceMeters';
 const HomeCar = lazy(() => import('../ui/HomeCar'));
@@ -46,36 +45,20 @@ export function HomeScreen() {
         </header>
         <ResourceMeters illustrated />
         <aside className="toy-menu__left">
-          <Link className="toy-shortcut" to="/league">
+          <Link className="toy-shortcut" to="/league" aria-label={t('nav.league')}>
             <span className="toy-control toy-shortcut__face">
               <span className="toy-art toy-art--trophy" />
             </span>
-            <span className="toy-ribbon toy-ribbon--purple">{t('nav.league')}</span>
           </Link>
-          <Link className="toy-shortcut" to="/rewards">
+          <Link className="toy-shortcut" to="/rewards" aria-label={t('rewards.daily')}>
             <span className="toy-control toy-shortcut__face">
               <img src={assetUrl('icons/level-reward.webp')} alt="" />
             </span>
-            <span className="toy-ribbon toy-ribbon--gold">{t('rewards.daily')}</span>
             {dailyReady && (
               <span className="toy-badge" aria-label={t('rewards.claim')}>
                 !
               </span>
             )}
-          </Link>
-        </aside>
-        <aside className="toy-menu__right">
-          <Link className="toy-shortcut" to="/play/online">
-            <span className="toy-control toy-shortcut__face">
-              <span className="toy-art toy-art--flags" />
-            </span>
-            <span className="toy-ribbon">{t('home.playOnline')}</span>
-          </Link>
-          <Link className="toy-shortcut" to="/leaderboard">
-            <span className="toy-control toy-shortcut__face">
-              <span className="toy-art toy-art--trophy" />
-            </span>
-            <span className="toy-ribbon toy-ribbon--purple">{t('nav.leaderboard')}</span>
           </Link>
         </aside>
         <div className="toy-menu__hero" aria-hidden="true">
@@ -92,21 +75,19 @@ export function HomeScreen() {
           </div>
         </div>
         <nav className="toy-menu__bottom" aria-label={t('nav.main')}>
-          <Link className="toy-control toy-bottom-button" to="/shop">
+          <Link className="toy-control toy-bottom-button toy-shop" to="/shop" aria-label={t('nav.shop')}>
             <img src={assetUrl('icons/shop.webp')} alt="" />
-            <span>{t('nav.shop')}</span>
           </Link>
-          <Link className="toy-control toy-bottom-button toy-friends" to="/play/local">
-            <IconUsers size={40} />
-            <span>{t('home.friendsShort')}</span>
-          </Link>
-          <Link className="toy-control toy-bottom-button toy-garage" to="/locker">
+          <Link className="toy-control toy-bottom-button toy-garage" to="/locker" aria-label={t('nav.inventory')}>
             <span className="toy-art toy-art--car" />
-            <span>{t('nav.inventory')}</span>
           </Link>
-          <button className="toy-control toy-play" type="button" onClick={() => setPlay(true)}>
+          <button
+            className="toy-control toy-play"
+            aria-label={t('home.startMatch')}
+            type="button"
+            onClick={() => setPlay(true)}
+          >
             <span aria-hidden="true">▶</span>
-            <span>{t('home.startMatch')}</span>
           </button>
         </nav>
       </div>

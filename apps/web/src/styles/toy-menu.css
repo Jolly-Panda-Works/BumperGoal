@@ -513,3 +513,136 @@ body .toy-profile {
 html[dir='rtl'] .toy-play {
   font-size: clamp(22px, 3.4cqw, 46px);
 }
+/* Restore the original home anchors; controls show centered icons only. */
+body .toy-settings {
+  right: auto;
+  left: calc(min(24cqw, 310px) + 16px);
+}
+body:has(.toy-menu) .stadium-wallet.stadium-wallet--shared {
+  right: max(18px, env(safe-area-inset-right));
+}
+.toy-menu__left {
+  top: 26%;
+  gap: 5cqh;
+}
+.toy-shortcut {
+  width: clamp(76px, 11cqw, 142px);
+}
+body .toy-shortcut__face {
+  width: clamp(64px, 9cqw, 112px);
+  height: clamp(64px, 14cqh, 112px);
+}
+.toy-menu__bottom {
+  grid-template-columns: 1.1fr 1.2fr 1fr 1.6fr;
+}
+.toy-shop {
+  grid-column: 1;
+}
+.toy-garage {
+  grid-column: 3;
+}
+.toy-play {
+  grid-column: 4;
+}
+.toy-bottom-button > img {
+  width: auto;
+  height: 88%;
+  max-width: 88%;
+}
+.toy-bottom-button > .toy-art {
+  width: auto;
+  height: 94%;
+}
+body .toy-play > span:first-child {
+  font-size: clamp(30px, 5cqw, 66px);
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .toy-menu__bottom {
+    grid-template-columns: 1.1fr 1.2fr 1fr 1.6fr;
+  }
+  .toy-menu__left {
+    top: 26%;
+    gap: 5cqh;
+  }
+}
+@media (orientation: portrait) {
+  body .toy-settings {
+    left: calc(42cqw + 12px);
+  }
+  .toy-menu__bottom {
+    grid-template-columns: 1fr 1fr;
+  }
+  .toy-shop {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .toy-garage {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .toy-play {
+    grid-column: 1/-1;
+    grid-row: 2;
+  }
+}
+/* Compact molded icon frames, matching the reference silhouettes. */
+.toy-menu__bottom {
+  grid-template-columns: 1fr 1fr auto auto;
+}
+body .toy-bottom-button {
+  width: auto;
+  aspect-ratio: 1;
+  border-radius: 26%;
+  padding: 4px;
+}
+.toy-shop {
+  justify-self: start;
+}
+.toy-garage {
+  justify-self: end;
+}
+body .toy-play {
+  width: auto;
+  aspect-ratio: 1.3;
+  border-radius: 28% 68% 68% 28% / 30% 50% 50% 30%;
+  padding: 0 10px 0 5px;
+}
+body .toy-shortcut__face,
+body .toy-settings {
+  border-radius: 26%;
+}
+.toy-shortcut {
+  width: auto;
+  align-self: flex-start;
+}
+body .toy-shortcut__face {
+  aspect-ratio: 1;
+  width: auto;
+}
+.toy-shortcut .toy-art {
+  width: 92%;
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .toy-menu__bottom {
+    grid-template-columns: 1fr 1fr auto auto;
+  }
+}
+@media (orientation: portrait) {
+  .toy-menu__bottom {
+    grid-template-columns: 1fr auto auto;
+    grid-template-rows: minmax(0, 1fr);
+    height: 76px;
+  }
+  .toy-shop {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .toy-garage {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .toy-play {
+    grid-column: 3;
+    grid-row: 1;
+  }
+}

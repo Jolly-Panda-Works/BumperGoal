@@ -38,9 +38,6 @@ for (const [width, height, language] of [
     await page.goto('/home');
     await page.locator('.toy-garage').click();
     await expect(page).toHaveURL(/\/locker$/);
-    await page.goto('/home');
-    await page.locator('.toy-friends').click();
-    await expect(page).toHaveURL(/\/play\/local$/);
     expect(errors).toEqual([]);
   });
 }
