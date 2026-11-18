@@ -18,6 +18,7 @@ export interface BodyParams {
   halfWidth?: number;
   borderRadius?: number;
   angularDamping?: number;
+  lateralGrip?: number;
   radius: number;
   density: number;
   linearDamping: number;

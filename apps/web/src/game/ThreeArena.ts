@@ -27,7 +27,7 @@ import {
 } from './ecs/traits';
 import { cartoonSurroundings } from './cartoonSurroundings';
 import { fitArenaCamera } from './arenaCamera';
-import { arenaPosition, FIELD_WIDTH_SCALE, shotFromGround } from './arena3dProjection';
+import { arenaPosition, carHeading, FIELD_WIDTH_SCALE, shotFromGround } from './arena3dProjection';
 import { TireMarks } from './tireMarks';
 import { assetUrl } from './art';
 import type { SceneInit } from './MatchScene';
@@ -728,10 +728,10 @@ export class ThreeArena {
           );
         const aim = body.entity.get(Aiming);
         if (body.headingRoot)
-          body.headingRoot.rotation.y =
-            Math.PI -
-            (aim && aim.power > 0 ? aim.angle : (body.entity.get(Heading)?.angle ?? 0)) +
-            (this.orientation === -1 ? Math.PI : 0);
+          body.headingRoot.rotation.y = carHeading(
+            aim && aim.power > 0 ? aim.angle : (body.entity.get(Heading)?.angle ?? 0),
+            this.orientation,
+          );
         if (body.ring) {
           const active = body.entity.has(Highlighted);
           (body.ring.material as THREE.MeshBasicMaterial).color.set(

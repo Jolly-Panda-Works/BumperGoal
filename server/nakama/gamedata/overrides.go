@@ -408,6 +408,7 @@ type Physics struct {
 }
 
 type Body struct {
+	LateralGrip    float64 `json:"lateralGrip,omitempty"`
 	HalfLength     float64 `json:"halfLength,omitempty"`
 	HalfWidth      float64 `json:"halfWidth,omitempty"`
 	BorderRadius   float64 `json:"borderRadius,omitempty"`
@@ -470,6 +471,7 @@ func (d *Data) Validate() error {
 		between("physics.disc.halfWidth", p.Disc.HalfWidth, 0.1, 1.5),
 		between("physics.disc.borderRadius", p.Disc.BorderRadius, 0, math.Min(p.Disc.HalfLength, p.Disc.HalfWidth)),
 		between("physics.disc.angularDamping", p.Disc.AngularDamping, 0, 20),
+		between("physics.disc.lateralGrip", p.Disc.LateralGrip, 0, 30),
 	)
 	for _, c := range []string{"coins", "gems"} {
 		if _, ok := d.Economy.StartingBalance[c]; !ok {

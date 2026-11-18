@@ -31,7 +31,7 @@ var rapierWasm []byte
 const RapierWasmSHA256 = "0570d5c822275fbadbbfe4bda0c589b039c2f41259676dc53f6679085601155d"
 
 // Version must equal SIM_VERSION in packages/sim/src/index.ts.
-const Version = 6
+const Version = 7
 
 const hostModuleName = "./rapier_wasm2d_bg.js"
 
@@ -48,6 +48,7 @@ const (
 const MaxBodies = 32
 
 type BodyParams struct {
+	LateralGrip    float64 `json:"lateralGrip,omitempty"`
 	HalfLength     float64 `json:"halfLength,omitempty"`
 	HalfWidth      float64 `json:"halfWidth,omitempty"`
 	BorderRadius   float64 `json:"borderRadius,omitempty"`
@@ -535,8 +536,21 @@ loop:
 			}
 		}
 		moving := false
-		for _, h := range handles {
+		for i, h := range handles {
 			vx, vy := read("Linvel", h)
+			grip := s.config.Disc.LateralGrip
+			if bodies[i].Kind == "disc" && grip > 0 {
+				angle := float64(api.DecodeF32(s.call("rawrigidbodyset_rbRotation", w.bodies, h)))
+				nx, ny := -math.Sin(angle), math.Cos(angle)
+				lateral := float64(vx)*nx + float64(vy)*ny
+				if math.Abs(lateral) > 0.00001 {
+					amount := lateral * grip / (60 + grip)
+					vx, vy = float32(float64(vx)-nx*amount), float32(float64(vy)-ny*amount)
+					velocity := s.vec(vx, vy)
+					s.call("rawrigidbodyset_rbSetLinvel", w.bodies, h, velocity, true)
+					s.free("vector", velocity)
+				}
+			}
 			spin := api.DecodeF32(s.call("rawrigidbodyset_rbAngvel", w.bodies, h))
 			speed2 := float64(vx)*float64(vx) + float64(vy)*float64(vy)
 			if speed2 < stop2 {

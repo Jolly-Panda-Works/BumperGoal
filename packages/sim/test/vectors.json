@@ -18,7 +18,8 @@
       "halfLength": 0.71,
       "halfWidth": 0.45,
       "borderRadius": 0.06,
-      "angularDamping": 4
+      "angularDamping": 4,
+      "lateralGrip": 12
     },
     "ball": {
       "radius": 0.33,
@@ -35,29 +36,29 @@
     "disc_disc": [
       {
         "outcome": "settled",
-        "ticks": 212,
-        "hash": "9bff79e5"
+        "ticks": 211,
+        "hash": "0d6fc0f1"
       }
     ],
     "disc_ball": [
       {
         "outcome": "settled",
         "ticks": 314,
-        "hash": "b5183a57"
+        "hash": "2fc1fdcb"
       }
     ],
     "wall_bounce": [
       {
         "outcome": "settled",
-        "ticks": 209,
-        "hash": "4912edac"
+        "ticks": 188,
+        "hash": "0aa5e0b9"
       }
     ],
     "goal_entry": [
       {
         "outcome": "goal_right",
         "ticks": 44,
-        "hash": "7b78d6a8"
+        "hash": "be3bb20d"
       }
     ],
     "low_speed": [
@@ -70,8 +71,8 @@
     "simultaneous_contact": [
       {
         "outcome": "settled",
-        "ticks": 207,
-        "hash": "ef666f99"
+        "ticks": 205,
+        "hash": "f842532d"
       }
     ],
     "resting_threshold": [
@@ -85,32 +86,32 @@
       {
         "outcome": "settled",
         "ticks": 285,
-        "hash": "1be8fc1c"
+        "hash": "35d6f053"
       },
       {
         "outcome": "settled",
-        "ticks": 196,
-        "hash": "1aa9646f"
+        "ticks": 207,
+        "hash": "069bd3ae"
       },
       {
         "outcome": "settled",
-        "ticks": 195,
-        "hash": "37cf047f"
+        "ticks": 170,
+        "hash": "0292f115"
       },
       {
         "outcome": "settled",
-        "ticks": 204,
-        "hash": "11ec1405"
+        "ticks": 278,
+        "hash": "1634a6e3"
       },
       {
         "outcome": "settled",
-        "ticks": 188,
-        "hash": "f746e7c2"
+        "ticks": 189,
+        "hash": "38636163"
       },
       {
         "outcome": "settled",
-        "ticks": 229,
-        "hash": "8e8ab48c"
+        "ticks": 234,
+        "hash": "c303de98"
       }
     ]
   }

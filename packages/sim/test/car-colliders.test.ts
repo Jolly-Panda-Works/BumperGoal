@@ -73,3 +73,27 @@ it('heavier cars move less under the same impulse and retain their mass', () => 
   expect(heavy.bodies[0]!.x).toBeLessThan(light.bodies[0]!.x * 0.9);
   expect(heavy.bodies[0]!.massScale).toBe(Math.fround(1.24));
 });
+
+it.each([0, Math.PI / 6, Math.PI / 2, Math.PI, -Math.PI / 3])('drives forward along the chosen heading %s', (angle) => {
+  const result = sim.simulateShot(
+    toF32Bodies([{ kind: 'disc', x: 0, y: 0 }]),
+    { bodyIndex: 0, ix: Math.fround(2 * Math.cos(angle)), iy: Math.fround(2 * Math.sin(angle)) },
+    { maxSteps: 20 },
+  );
+  const car = result.bodies[0]!;
+  expect(car.x * Math.cos(angle) + car.y * Math.sin(angle)).toBeGreaterThan(0);
+  expect(Math.abs(car.x * Math.sin(angle) - car.y * Math.cos(angle))).toBeLessThan(0.00001);
+});
+
+it('tire grip reduces sideways sliding after a collision', async () => {
+  const noGrip = await FlickSim.create({ ...physicsConfig, disc: { ...physicsConfig.disc, lateralGrip: 0 } });
+  const bodies = toF32Bodies([
+    { kind: 'disc', x: -2, y: 0 },
+    { kind: 'disc', x: 0, y: 0, angle: Math.PI / 2 },
+  ]);
+  const impulse = { bodyIndex: 0, ix: 3, iy: 0 };
+  const withGrip = sim.simulateShot(bodies, impulse);
+  const withoutGrip = noGrip.simulateShot(bodies, impulse);
+  expect(withoutGrip.bodies[1]!.x).toBeGreaterThan(0.1);
+  expect(withGrip.bodies[1]!.x).toBeLessThan(withoutGrip.bodies[1]!.x * 0.8);
+});

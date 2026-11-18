@@ -16,7 +16,8 @@
     "halfLength": 0.71,
     "halfWidth": 0.45,
     "borderRadius": 0.06,
-    "angularDamping": 4.0
+    "angularDamping": 4.0,
+    "lateralGrip": 12
   },
   "ball": {
     "radius": 0.33,

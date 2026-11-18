@@ -11,7 +11,7 @@ import RAPIER from '@dimforge/rapier2d-deterministic-compat';
 import type { PhysicsConfig } from '@flickkick/config';
 
 /** Bump when simulation behaviour changes. Part of the match protocol. */
-export const SIM_VERSION = 6;
+export const SIM_VERSION = 7;
 export const RAPIER_VERSION = '0.21.0';
 
 export type BodyKind = 'disc' | 'ball';
@@ -242,6 +242,20 @@ export class FlickSim {
         let moving = false;
         for (let i = 0; i < n; i++) {
           const v = handles[i]!.linvel();
+          // Tires resist sideways slip while preserving forward/reverse momentum.
+          const grip = config.disc.lateralGrip ?? 0;
+          if (bodies[i]!.kind === 'disc' && grip > 0) {
+            const angle = handles[i]!.rotation();
+            const nx = -Math.sin(angle),
+              ny = Math.cos(angle);
+            const lateral = v.x * nx + v.y * ny;
+            if (Math.abs(lateral) > 0.00001) {
+              const amount = (lateral * grip) / (60 + grip);
+              v.x = Math.fround(v.x - nx * amount);
+              v.y = Math.fround(v.y - ny * amount);
+              handles[i]!.setLinvel(v, true);
+            }
+          }
           const speed2 = v.x * v.x + v.y * v.y;
           const spin = handles[i]!.angvel();
           if (speed2 < stop2) {
