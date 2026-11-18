@@ -8,6 +8,7 @@ import { settingsStore, type Settings } from './settings';
 export type Sfx =
   | 'tap'
   | 'kick'
+  | 'horn'
   | 'hit'
   | 'ball'
   | 'wall'
@@ -177,6 +178,12 @@ class AudioService {
       case 'hit':
       case 'ball':
         tone(420, 0.05, 'square', 0.18 * v);
+        break;
+      case 'horn':
+        for (const at of [0, 0.17]) {
+          tone(392, 0.13, 'sawtooth', 0.1 * v, at);
+          tone(494, 0.13, 'triangle', 0.075 * v, at);
+        }
         break;
       case 'wall':
         tone(140, 0.06, 'triangle', 0.25 * v);

@@ -1,3 +1,4 @@
+import { CarSignals, nightForMatch } from './CarSignals';
 import { ImpactEffects } from './ImpactEffects';
 import { CarTrails } from './CarTrails';
 import { CarDriveEffects, fullPowerNitro, wheelPivots, type CarDriveRig } from './CarDriveEffects';
@@ -70,6 +71,8 @@ export class ThreeArena {
   private impactEffects: ImpactEffects;
   private carTrails: CarTrails;
   private driveEffects: CarDriveEffects;
+  private signals: CarSignals;
+  private night: boolean;
   private nitroIndex = -1;
   private cameraRest = new THREE.Vector3();
   private lastTracks = -1000;
@@ -95,10 +98,15 @@ export class ThreeArena {
     this.renderer.domElement.style.touchAction = 'none';
     this.renderer.domElement.setAttribute('aria-label', 'Bumper Goal 3D football arena');
     parent.appendChild(this.renderer.domElement);
-    this.scene.background = new THREE.Color('#31a54e');
-    this.scene.fog = new THREE.Fog('#31a54e', 80, 150);
-    this.scene.add(new THREE.HemisphereLight(0xe6f7ff, 0x284b65, 0.9));
-    const sun = new THREE.DirectionalLight(0xffffff, 1.6);
+    this.night =
+      init.controller.current.mode !== 'tutorial' &&
+      nightForMatch(init.controller.current.rngSeed, init.controller.current.matchId);
+    this.signals = new CarSignals(this.night);
+    this.renderer.domElement.dataset.timeOfDay = this.night ? 'night' : 'day';
+    this.scene.background = new THREE.Color(this.night ? '#08172c' : '#31a54e');
+    this.scene.fog = new THREE.Fog(this.night ? '#08172c' : '#31a54e', 80, 150);
+    this.scene.add(new THREE.HemisphereLight(this.night ? 0x90baff : 0xe6f7ff, 0x284b65, this.night ? 0.35 : 0.9));
+    const sun = new THREE.DirectionalLight(this.night ? 0x9abbff : 0xffffff, this.night ? 0.48 : 1.6);
     sun.position.set(-7, 15, 8);
     sun.castShadow = true;
     sun.shadow.mapSize.set(2048, 2048);
@@ -107,6 +115,11 @@ export class ThreeArena {
     sun.shadow.normalBias = 0.025;
     sun.shadow.radius = 1.5;
     this.scene.add(sun);
+    if (this.night) {
+      const stadiumFill = new THREE.DirectionalLight(0xb9dcff, 0.3);
+      stadiumFill.position.set(7, 7, -6);
+      this.scene.add(stadiumFill);
+    }
     this.impactEffects = new ImpactEffects(this.scene);
     this.carTrails = new CarTrails(this.scene);
     this.driveEffects = new CarDriveEffects(this.scene);
@@ -455,6 +468,7 @@ export class ThreeArena {
         object.add(headingRoot);
         headingRoot.rotation.y = kickoffCarHeading(entity.get(Team)!.side, this.orientation);
         driveRig = this.driveEffects.rig(headingRoot);
+        this.signals.attach(entity.get(BodyRef)!.index, headingRoot);
         chassis = new THREE.Group();
         headingRoot.add(chassis);
         const modelRoot = chassis;
@@ -632,6 +646,7 @@ export class ThreeArena {
     this.impactEffects.clear();
     this.carTrails.clear();
     this.driveEffects.clear();
+    this.signals.clear();
     this.nitroIndex = -1;
     for (const body of this.bodies)
       if (body.driveRig) {
@@ -655,6 +670,8 @@ export class ThreeArena {
     });
     const contact = collisionContact(impact, bodies);
     const strength = Math.min(1, impact.strength * 6);
+    if (contact.kind === 'car' && strength > 0.1 && this.signals.collision(contact.bodies, this.clock))
+      audio.play('horn', Math.max(0.45, strength));
     const settings = settingsStore.get();
     if (
       this.impactEffects.emit(
@@ -756,9 +773,20 @@ export class ThreeArena {
           settingsStore.get().reducedMotion,
           settingsStore.get().graphics === 'low',
         );
+      if (!body.entity.has(IsBall))
+        this.signals.sample(
+          body.entity.get(BodyRef)!.index,
+          playing && delta > 0 && movement.length() / (delta / 1000) > 0.18,
+          this.clock,
+          settingsStore.get().reducedMotion,
+        );
       body.last.copy(next);
     }
     const settings = settingsStore.get();
+    this.signals.updateCounts();
+    this.renderer.domElement.dataset.headlightCount = String(this.signals.headlightCount);
+    this.renderer.domElement.dataset.hazardCount = String(this.signals.flashingCount);
+    this.renderer.domElement.dataset.hornCount = String(this.signals.hornCount);
     this.driveEffects.update(this.clock, delta, settings.reducedMotion);
     this.renderer.domElement.dataset.smokeCount = String(this.driveEffects.smokeCount);
     this.renderer.domElement.dataset.nitroCount = String(this.driveEffects.nitroCount);
@@ -776,7 +804,9 @@ export class ThreeArena {
         );
       }
     this.drawTracks();
-    (this.scene.background as THREE.Color).setHex(this.clock < this.goalFlashUntil ? this.goalFlashColor : 0x31a54e);
+    (this.scene.background as THREE.Color).setHex(
+      this.clock < this.goalFlashUntil ? this.goalFlashColor : this.night ? 0x08172c : 0x31a54e,
+    );
     this.cameraRest.copy(this.camera.position);
     if (!settings.reducedMotion && settings.graphics === 'high')
       this.camera.position.add(this.impactEffects.cameraOffset(this.clock, this.camera));
