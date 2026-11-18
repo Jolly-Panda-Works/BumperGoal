@@ -2,8 +2,9 @@ import { useCollectibleReaction } from '../ui/collectibleReaction';
 import { TeamAttributes } from '../ui/TeamAttributes';
 import { TeamCarPreview } from '../ui/TeamCarPreview';
 import { TrailPreview } from '../ui/TrailPreview';
-import { PanelScreen } from '../ui/components';
-import { useState } from 'react';
+import { ResourceMeters } from '../ui/ResourceMeters';
+import { LevelStar } from '../ui/LevelStar';
+import { lazy, Suspense, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router';
 import { cosmetics, progressionConfig, physicsConfig } from '@flickkick/config';
@@ -26,10 +27,13 @@ import {
   rankForLevel,
   ScreenHeader,
   Tabs,
-  TeamSwatch,
 } from '../ui/components';
 import {
   IconCheck,
+  IconBack,
+  IconGarage,
+  IconUsers,
+  IconTrophy,
   IconUser,
   IconHistory,
   IconGift,
@@ -44,6 +48,7 @@ import { localOnlineEnabled } from '../services/localRanked';
 import { ownsLocal, useLocalInventory } from '../services/localInventory';
 import { assetUrl } from '../game/art';
 import { toast } from '../ui/toast';
+const ProfileModel = lazy(() => import('../ui/HomeCar'));
 
 /** F-10: profile. Local identity and practice stats; online stats arrive with the server. */
 export function ProfileScreen() {
@@ -79,39 +84,187 @@ export function ProfileScreen() {
   const winRate = p.played ? Math.round((p.won / p.played) * 100) : 0;
 
   return (
-    <PanelScreen className="profile-screen">
-      <div className="profile-heading">
-        <ScreenHeader title={t('profile.title')} />
-        <div className="profile-heading__actions">
-          <Link
-            className="icon-btn"
-            to="/rewards/levels"
-            aria-label={t('rewards.levelRewards')}
-            title={t('rewards.levelRewards')}
-          >
-            <IconGift />
-          </Link>
-          <button
-            type="button"
-            className="icon-btn"
-            onClick={() => setReplayTutorial(true)}
-            aria-label={t('home.tutorial')}
-            title={t('home.tutorial')}
-          >
-            <IconSchool />
-          </button>
-          <Link
-            className="icon-btn"
-            to="/profile/history"
-            aria-label={t('profile.history')}
-            title={t('profile.history')}
-          >
-            <IconHistory />
-          </Link>
-          <Link className="icon-btn" to="/settings" aria-label={t('nav.settings')}>
-            <IconGear />
-          </Link>
+    <div className="screen profile-screen profile-art">
+      <header className="profile-art__header">
+        <Link to="/home" className="cartoon-button cartoon-button--blue profile-art__back">
+          <IconBack size={30} />
+          <span>{t('common.back')}</span>
+        </Link>
+        <div className="profile-art__brand">
+          <img src={assetUrl('home/wordmark.webp')} alt="Bumper Goal" width={900} height={450} />
+          <h1>{t('profile.title')}</h1>
         </div>
+        <ResourceMeters />
+        <Link
+          className="cartoon-button cartoon-button--blue profile-art__settings"
+          to="/settings"
+          aria-label={t('nav.settings')}
+        >
+          <IconGear size={40} />
+        </Link>
+      </header>
+      <div className="profile-art__layout">
+        <section className="profile-art__identity" aria-label={t('profile.displayName')}>
+          <button
+            className="profile-art__avatar"
+            type="button"
+            onClick={() => setEdit('avatar')}
+            aria-label={t('profile.editAvatar')}
+          >
+            <span className="stadium-profile__portrait">
+              <Avatar id={profile.avatarId} size={240} />
+            </span>
+            <ArtImage className="profile-art__avatar-edit" src={assetUrl('lobby/edit.webp')} size={34} />
+          </button>
+          <div className="profile-art__name">
+            <h2>
+              <bdi>{profile.displayName}</bdi>
+            </h2>
+            <button
+              className="icon-btn"
+              type="button"
+              aria-label={t('profile.editName')}
+              onClick={() => {
+                setName(profile.displayName);
+                setEditError('');
+                setEdit('name');
+              }}
+            >
+              <ArtImage src={assetUrl('lobby/edit.webp')} size={30} />
+            </button>
+          </div>
+          <div className="profile-art__experience">
+            <span
+              className="profile-art__level"
+              role="img"
+              aria-label={t('common.levelLong', { level: formatNumber(profile.knownLevel) })}
+            >
+              <LevelStar value={formatNumber(profile.knownLevel)} />
+            </span>
+            <div>
+              <ProgressBar
+                value={xp.current}
+                max={xp.needed || 1}
+                label={t('profile.xp', { current: formatNumber(xp.current), needed: formatNumber(xp.needed) })}
+              />
+              <span>
+                {xp.needed
+                  ? t('profile.xp', { current: formatNumber(xp.current), needed: formatNumber(xp.needed) })
+                  : t('profile.maxLevel')}
+              </span>
+            </div>
+          </div>
+          <div className="profile-art__code">
+            <small>{t('profile.playerCode')}</small>
+            <strong dir="ltr">{profile.playerCode ?? t('profile.codePending')}</strong>
+          </div>
+          <Link className="cartoon-button cartoon-button--purple profile-art__league" to="/league">
+            <RankBadge rank={rankForLevel(profile.knownLevel)} size={85} label={false} />
+            <span>{t(`ranks.${rankForLevel(profile.knownLevel)}`)}</span>
+          </Link>
+          <div className="profile-art__utilities">
+            <Link
+              className="icon-btn"
+              to="/rewards/levels"
+              aria-label={t('rewards.levelRewards')}
+              title={t('rewards.levelRewards')}
+            >
+              <IconGift size={28} />
+            </Link>
+            <button
+              className="icon-btn"
+              type="button"
+              onClick={() => setReplayTutorial(true)}
+              aria-label={t('home.tutorial')}
+              title={t('home.tutorial')}
+            >
+              <IconSchool size={28} />
+            </button>
+          </div>
+        </section>
+        <section className="profile-art__details" aria-labelledby="profile-statistics-title">
+          <h2 id="profile-statistics-title" className="profile-art__section-title">
+            <IconBall size={36} />
+            {t('profile.statistics')}
+            <IconBall size={36} />
+          </h2>
+          <dl className="profile-art__stats">
+            {(
+              [
+                ['played', p.played, <IconUsers size={48} />],
+                ['won', p.won, <IconTrophy size={48} />],
+                ['lost', p.lost, <IconTrophy size={48} />],
+                ['goalsFor', p.goalsFor, <IconBall size={48} />],
+                ['goalsAgainst', p.goalsAgainst, <IconBall size={48} />],
+                ['winRate', `${formatNumber(winRate)}%`, <IconCheck size={48} />],
+              ] as const
+            ).map(([key, value, icon]) => (
+              <div key={key} className={`profile-art__stat profile-art__stat--${key}`}>
+                <span className="profile-art__stat-icon" aria-hidden="true">
+                  {icon}
+                </span>
+                <div>
+                  <dt>{t(`profile.${key}`)}</dt>
+                  <dd>{typeof value === 'number' ? formatNumber(value) : value}</dd>
+                </div>
+              </div>
+            ))}
+          </dl>
+          <section className="profile-art__loadout" aria-labelledby="profile-loadout-title">
+            <h2 id="profile-loadout-title" className="profile-art__section-title">
+              {t('profile.activeLoadout')}
+            </h2>
+            <div className="profile-art__equipment">
+              {(['teams', 'balls', 'formations', 'trails'] as const).map((kind) => {
+                const id =
+                  kind === 'teams'
+                    ? profile.teamId
+                    : kind === 'balls'
+                      ? profile.ballId
+                      : kind === 'formations'
+                        ? profile.formationId
+                        : profile.trailId;
+                return (
+                  <Link
+                    key={kind}
+                    to="/locker"
+                    title={kind === 'trails' && !id ? t('locker.trailNone') : t(`${kind}.${id}`)}
+                  >
+                    {kind === 'trails' && !id ? (
+                      <span className="profile-art__no-trail">
+                        <IconTrail size={64} />
+                      </span>
+                    ) : kind === 'balls' ? (
+                      <span className="profile-art__ball">
+                        <BallPreview ballId={id} size={90} />
+                        <Suspense fallback={null}>
+                          <ProfileModel model={`ball:${id}`} />
+                        </Suspense>
+                      </span>
+                    ) : (
+                      <ItemPreview kind={kind} id={id} />
+                    )}
+                    <span>{kind === 'trails' && !id ? t('locker.trailNone') : t(`shop.tabs.${kind}`)}</span>
+                  </Link>
+                );
+              })}
+            </div>
+          </section>
+          <div className="profile-art__actions">
+            <Link className="cartoon-button cartoon-button--blue" to="/profile/history">
+              <IconHistory size={38} />
+              <span>{t('profile.history')}</span>
+            </Link>
+            <button className="cartoon-button cartoon-button--purple" type="button" onClick={() => setEdit('invite')}>
+              <IconUsers size={38} />
+              <span>{t('referral.invite')}</span>
+            </button>
+            <Link className="cartoon-button cartoon-button--gold" to="/locker">
+              <IconGarage size={46} />
+              <span>{t('nav.inventory')}</span>
+            </Link>
+          </div>
+        </section>
       </div>
       <ConfirmDialog
         open={replayTutorial}
@@ -123,78 +276,6 @@ export function ProfileScreen() {
           navigate('/tutorial');
         }}
       />
-      <Card className="identity-card">
-        <div className="identity-card__top">
-          <button
-            className="avatar-edit"
-            type="button"
-            onClick={() => setEdit('avatar')}
-            aria-label={t('profile.editAvatar')}
-          >
-            <Avatar id={profile.avatarId} size={84} frame="level" />
-            <ArtImage className="edit-mark" src={assetUrl('lobby/edit.webp')} size={28} />
-          </button>
-          <div className="identity-card__name">
-            <div className="identity-name-row">
-              <h2>
-                <bdi>{profile.displayName}</bdi>
-              </h2>
-              <button
-                className="icon-btn identity-edit"
-                type="button"
-                aria-label={t('profile.editName')}
-                onClick={() => {
-                  setName(profile.displayName);
-                  setEditError('');
-                  setEdit('name');
-                }}
-              >
-                <ArtImage src={assetUrl('lobby/edit.webp')} size={24} />
-              </button>
-            </div>
-            <span>{t('common.levelLong', { level: formatNumber(profile.knownLevel) })}</span>
-            <ProgressBar
-              value={xp.current}
-              max={xp.needed || 1}
-              label={t('profile.xp', { current: formatNumber(xp.current), needed: formatNumber(xp.needed) })}
-            />
-            <small>{t('profile.xp', { current: formatNumber(xp.current), needed: formatNumber(xp.needed) })}</small>
-          </div>
-        </div>
-        <div className="identity-code">
-          <span>{t('profile.playerCode')}</span>
-          <strong dir="ltr">{profile.playerCode ?? t('profile.codePending')}</strong>
-        </div>
-        <div className="identity-card__league">
-          <div>
-            <RankBadge rank={rankForLevel(profile.knownLevel)} size={68} />
-          </div>
-          <div>
-            <TeamSwatch teamId={profile.teamId} size={68} />
-            <span>{t(`teams.${profile.teamId}`)}</span>
-          </div>
-        </div>
-        <dl className="identity-stats stat-grid">
-          {(
-            [
-              ['played', p.played],
-              ['won', p.won],
-              ['lost', p.lost],
-              ['goalsFor', p.goalsFor],
-              ['goalsAgainst', p.goalsAgainst],
-              ['winRate', `${formatNumber(winRate)}%`],
-            ] as const
-          ).map(([key, value]) => (
-            <div key={key}>
-              <dt>{t(`profile.${key}`)}</dt>
-              <dd>{typeof value === 'number' ? formatNumber(value) : value}</dd>
-            </div>
-          ))}
-        </dl>
-      </Card>
-      <Button className="profile-invite" onClick={() => setEdit('invite')}>
-        {t('referral.invite')}
-      </Button>
       <Dialog open={edit === 'invite'} title={t('referral.invite')} onClose={() => !inviteBusy && setEdit(null)}>
         <p>{t('referral.description')}</p>
         <Button
@@ -325,7 +406,7 @@ export function ProfileScreen() {
           ))}
         </div>
       </Dialog>
-    </PanelScreen>
+    </div>
   );
 }
 

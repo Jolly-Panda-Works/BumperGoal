@@ -31,3 +31,5 @@ import './styles/rakhtkan.css';
 import './styles/bumper-ui.css';
 
 import './styles/cartoon-ui.css';
+
+import './styles/profile-art.css';

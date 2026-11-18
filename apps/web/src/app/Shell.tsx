@@ -56,7 +56,7 @@ export function Shell() {
 
   return (
     <div
-      className={`shell ${location.pathname === '/home' ? `shell--lobby ${!rakhtkan ? 'shell--stadium' : ''}` : ''}`}
+      className={`shell ${location.pathname === '/home' ? `shell--lobby ${!rakhtkan ? 'shell--stadium' : ''}` : !rakhtkan && location.pathname === '/profile' ? 'shell--profile-art' : ''}`}
     >
       <header className="topbar">
         <div className="topbar__right">

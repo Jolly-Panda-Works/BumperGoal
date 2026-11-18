@@ -5,20 +5,18 @@ import { assetUrl } from '../game/art';
 import { carModelForTeam, progressionConfig } from '@flickkick/config';
 import { levelProgress } from '@flickkick/rules';
 import { useLocalProfile } from '../services/localProfile';
-import { useLocalInventory } from '../services/localInventory';
 import { useOnline } from '../services/online';
 import { formatNumber } from '../i18n';
-import { Avatar, CurrencyIcon, Dialog } from '../ui/components';
+import { Avatar, Dialog } from '../ui/components';
 import { IconGear, IconGift, IconShop, IconTrophy, IconGarage } from '../ui/icons';
+import { ResourceMeters } from '../ui/ResourceMeters';
 import { LevelStar } from '../ui/LevelStar';
 const HomeCar = lazy(() => import('../ui/HomeCar'));
 /** Live controls over independent art layers; no text is baked into the scenery. */
 export function HomeScreen() {
   const { t } = useTranslation();
   const profile = useLocalProfile();
-  const inventory = useLocalInventory();
   const server = useOnline();
-  const wallet = server.status === 'online' ? server.profile?.wallet : inventory;
   const [play, setPlay] = useState(false);
   const model = carModelForTeam(profile.teamId);
   const xp = levelProgress(server.profile?.xp ?? profile.knownXP, progressionConfig);
@@ -67,30 +65,7 @@ export function HomeScreen() {
         <div className="stadium-brand">
           <img src={assetUrl('home/wordmark.webp')} alt="Bumper Goal" width={1776} height={880} />
         </div>
-        <div className="stadium-wallet">
-          <Link to="/shop?tab=currency&group=coins" aria-label={t('common.coins')}>
-            <CurrencyIcon currency="coins" size={80} />
-            <span className="stadium-wallet__amount">
-              <bdi>{formatNumber(wallet?.coins ?? 0)}</bdi>
-            </span>
-            <b className="stadium-wallet__plus" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6Z" />
-              </svg>
-            </b>
-          </Link>
-          <Link to="/shop?tab=currency&group=gems" aria-label={t('common.gems')}>
-            <CurrencyIcon currency="gems" size={80} />
-            <span className="stadium-wallet__amount">
-              <bdi>{formatNumber(wallet?.gems ?? 0)}</bdi>
-            </span>
-            <b className="stadium-wallet__plus" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6Z" />
-              </svg>
-            </b>
-          </Link>
-        </div>
+        <ResourceMeters />
         <div className="stadium-shortcuts">
           <Link className="cartoon-button cartoon-button--purple cartoon-button--labeled" to="/league">
             <IconTrophy size={64} />

@@ -226,7 +226,9 @@
     "usernameHint": "3–20 lowercase letters, digits or underscores. The server checks availability.",
     "playerCode": "Player code",
     "codePending": "Assigned when connected",
-    "identityOnline": "Connect to reserve a unique username and receive your permanent 8-digit player code."
+    "identityOnline": "Connect to reserve a unique username and receive your permanent 8-digit player code.",
+    "statistics": "Match statistics",
+    "activeLoadout": "Active loadout"
   },
   "history": {
     "title": "Match history",
