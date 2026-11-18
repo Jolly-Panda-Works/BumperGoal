@@ -2,24 +2,19 @@ import { lazy, Suspense, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router';
 import { assetUrl } from '../game/art';
-import { carModelForTeam, progressionConfig } from '@flickkick/config';
-import { levelProgress } from '@flickkick/rules';
+import { carModelForTeam } from '@flickkick/config';
 import { useLocalProfile } from '../services/localProfile';
-import { useOnline } from '../services/online';
 import { formatNumber } from '../i18n';
 import { Avatar, Dialog } from '../ui/components';
 import { IconGear, IconGift, IconShop, IconTrophy, IconGarage } from '../ui/icons';
 import { ResourceMeters } from '../ui/ResourceMeters';
-import { LevelStar } from '../ui/LevelStar';
 const HomeCar = lazy(() => import('../ui/HomeCar'));
 /** Live controls over independent art layers; no text is baked into the scenery. */
 export function HomeScreen() {
   const { t } = useTranslation();
   const profile = useLocalProfile();
-  const server = useOnline();
   const [play, setPlay] = useState(false);
   const model = carModelForTeam(profile.teamId);
-  const xp = levelProgress(server.profile?.xp ?? profile.knownXP, progressionConfig);
   const modes = [
     { to: '/play/ai', title: t('home.playAI'), desc: t('home.playAIDesc') },
     { to: '/play/local', title: t('home.local2p'), desc: t('home.local2pDesc') },
@@ -28,31 +23,21 @@ export function HomeScreen() {
   return (
     <div className="screen home stadium-home">
       <div className="stadium-home__stage">
-        <Link to="/profile" className="stadium-profile" aria-label={t('nav.profile')}>
+        <Link to="/profile" className="stadium-profile stadium-profile--nameplate" aria-label={t('nav.profile')}>
           <span className="stadium-profile__portrait">
             <Avatar id={profile.avatarId} size={100} />
+            <span
+              className="stadium-profile__level"
+              role="img"
+              aria-label={t('common.levelLong', { level: formatNumber(profile.knownLevel) })}
+            >
+              <b>{formatNumber(profile.knownLevel)}</b>
+            </span>
           </span>
           <span className="stadium-profile__copy">
             <strong>
               <bdi>{profile.displayName}</bdi>
             </strong>
-            <span
-              className="stadium-profile__xp"
-              role="progressbar"
-              aria-label={t('profile.xp', { current: formatNumber(xp.current), needed: formatNumber(xp.needed) })}
-              aria-valuemin={0}
-              aria-valuemax={xp.needed || 1}
-              aria-valuenow={xp.current}
-            >
-              <i style={{ width: `${Math.min(100, (xp.current / (xp.needed || 1)) * 100)}%` }} />
-            </span>
-          </span>
-          <span
-            className="stadium-profile__level"
-            role="img"
-            aria-label={t('common.levelLong', { level: formatNumber(profile.knownLevel) })}
-          >
-            <LevelStar value={formatNumber(profile.knownLevel)} />
           </span>
         </Link>
         <Link

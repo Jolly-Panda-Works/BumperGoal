@@ -1138,3 +1138,57 @@ html[dir='rtl'] {
     font-size: clamp(14px, 4.5cqw, 20px);
   }
 }
+/* Home identity: full-height nameplate and a separate level medallion on the portrait. */
+.stadium-profile--nameplate > .stadium-profile__copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  gap: 0;
+}
+.stadium-profile--nameplate .stadium-profile__copy strong {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.25;
+}
+.stadium-profile--nameplate .stadium-profile__portrait > .stadium-profile__level {
+  position: absolute;
+  right: -12%;
+  bottom: 8%;
+  width: 45%;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  z-index: 4;
+  border: 2px solid #fff59c;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 20%, #fff7b1, #ffe02c 38%, #f4a400 80%);
+  box-shadow:
+    inset 0 3px #ffffce,
+    inset 0 -3px #d88600,
+    0 3px 0 #8c4600,
+    0 4px 5px #001f5577;
+  filter: none;
+  isolation: isolate;
+}
+.stadium-profile--nameplate .stadium-profile__level::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid #ffec75;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.stadium-profile--nameplate .stadium-profile__level b {
+  font-size: clamp(14px, 1.6cqw, 26px);
+  padding: 0;
+  color: #653100;
+  text-shadow: 0 1px #fff6a7;
+  line-height: 1;
+}
