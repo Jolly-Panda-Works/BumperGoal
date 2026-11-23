@@ -1,10 +1,10 @@
 import { screenPreview } from '../dev/mode';
-// Phone integration: fullscreen and portrait lock for matches. Both are best
+// Phone integration: fullscreen and landscape lock for matches. Both are best
 // effort: browsers allow them only after a user gesture (the tap that starts the
 // match counts for a few seconds), and an installed app is fullscreen already.
 
 type LockableOrientation = ScreenOrientation & {
-  lock?: (orientation: 'portrait') => Promise<void>;
+  lock?: (orientation: 'landscape') => Promise<void>;
   unlock?: () => void;
 };
 
@@ -19,14 +19,14 @@ export async function enterMatchMode(): Promise<void> {
   try {
     const root = document.documentElement;
     if (!document.fullscreenElement && root.requestFullscreen) await root.requestFullscreen({ navigationUI: 'hide' });
-    await (screen.orientation as LockableOrientation | undefined)?.lock?.('portrait');
+    await (screen.orientation as LockableOrientation | undefined)?.lock?.('landscape');
   } catch {
     // Not allowed here (no gesture, iOS Safari, desktop): the rotate hint covers it.
   }
 }
 
 export function leaveMatchMode(): void {
-  // Keep phone menus upright while the game remains in immersive mode.
+  // Keep phone menus in landscape while the game remains in immersive mode.
   if (isPhone() && document.fullscreenElement) return;
   try {
     (screen.orientation as LockableOrientation | undefined)?.unlock?.();
@@ -45,7 +45,7 @@ export function enableImmersiveMode(): () => void {
     void document.documentElement
       .requestFullscreen({ navigationUI: 'hide' })
       .then(async () => {
-        if (isPhone()) await (screen.orientation as LockableOrientation | undefined)?.lock?.('portrait');
+        if (isPhone()) await (screen.orientation as LockableOrientation | undefined)?.lock?.('landscape');
       })
       .catch(() => undefined);
   };

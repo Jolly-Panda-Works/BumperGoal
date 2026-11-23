@@ -169,6 +169,13 @@ test('online features state truthfully whether the server or the feature is miss
 });
 
 test('mobile layout @mobile', async ({ page }) => {
+  await page.setViewportSize({ width: 393, height: 852 });
+  await page.goto('/');
+  await expect(page.locator('.orientation-screen')).toBeVisible();
+  await expect(page.locator('.welcome')).toBeHidden();
+  await page.setViewportSize({ width: 852, height: 393 });
+  await expect(page.locator('.orientation-screen')).toBeHidden();
+  await expect(page.locator('.welcome')).toBeVisible();
   await enterAsGuest(page);
   await page.screenshot({ path: `${SHOTS}/home-mobile.png` });
   await page.getByRole('link', { name: /Play vs AI/ }).click();

@@ -49,7 +49,7 @@ const liveAudio = (page: Page) =>
   );
 
 async function phone(browser: Browser): Promise<Page> {
-  const context = await browser.newContext({ ...devices['Pixel 7'], permissions: ['microphone'] });
+  const context = await browser.newContext({ ...devices['Pixel 7 landscape'], permissions: ['microphone'] });
   return context.newPage();
 }
 

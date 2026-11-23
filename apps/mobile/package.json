@@ -1,0 +1,14 @@
+{
+  "name": "@flickkick/mobile",
+  "private": true,
+  "scripts": {
+    "android:sync": "cap sync android && node configure-android.mjs"
+  },
+  "dependencies": {
+    "@capacitor/android": "7.4.4",
+    "@capacitor/core": "7.4.4"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "7.4.4"
+  }
+}

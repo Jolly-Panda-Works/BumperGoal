@@ -35,7 +35,7 @@ export default defineConfig({
           grepInvert: /@mobile/,
           testIgnore: /prod\/|local-friends\//,
         },
-        { name: 'mobile', use: { ...devices['Pixel 7'] }, grep: /@mobile/, testIgnore: /prod\// },
+        { name: 'mobile', use: { ...devices['Pixel 7 landscape'] }, grep: /@mobile/, testIgnore: /prod\// },
       ],
   // Local runs use the production bundle (built in "e2e" mode, which only adds
   // the read-only window.__fkMatch hook), not the dev server.

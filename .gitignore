@@ -21,3 +21,7 @@ server/deploy/backups/
 .pnpm-store/
 
 /backups/
+
+# Generated Android project
+/apps/mobile/android/
+/out/

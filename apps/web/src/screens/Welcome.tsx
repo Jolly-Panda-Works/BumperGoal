@@ -42,9 +42,8 @@ export function WelcomeScreen() {
 
   return (
     <div className="welcome">
-      {/* Key art behind the form: wide, square or tall to suit the screen. */}
+      {/* Key art behind the form: wide or square to suit the screen. */}
       <picture className="welcome__hero" aria-hidden="true">
-        <source media="(orientation: portrait) and (max-width: 700px)" srcSet={uiUrl('promo_portrait')} />
         <source media="(max-aspect-ratio: 4/3)" srcSet={uiUrl('promo_square')} />
         <img src={uiUrl('promo_landscape')} alt="" decoding="async" />
       </picture>

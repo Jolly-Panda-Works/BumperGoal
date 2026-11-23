@@ -567,8 +567,8 @@
     "legend": "Legend"
   },
   "orientation": {
-    "title": "Turn your phone upright",
-    "hint": "Play portrait on phones and landscape on desktop."
+    "title": "Rotate your device",
+    "hint": "Turn your device sideways to play Bumper Goal."
   },
   "stats": {
     "title": "Match stats",

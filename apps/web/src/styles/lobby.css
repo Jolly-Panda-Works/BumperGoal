@@ -342,6 +342,26 @@ body {
 .orientation-screen {
   display: none;
 }
+
+@media (orientation: portrait) {
+  #root:has(> .orientation-screen) > :not(.orientation-screen),
+  body:has(#root > .orientation-screen) > :is(.dialog-backdrop, .stadium-wallet--shared) {
+    display: none;
+  }
+
+  .orientation-screen {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    color: white;
+    background: #0b1634;
+  }
+}
 .match {
   inline-size: min(100%, 480px);
   margin-inline: auto;

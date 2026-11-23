@@ -34,7 +34,7 @@ async function layout(page: Page) {
 
 for (const viewport of [
   { name: 'desktop', width: 1280, height: 720 },
-  { name: 'phone portrait', width: 393, height: 852 },
+  { name: 'phone landscape', width: 852, height: 393 },
 ]) {
   test(`board and HUD stay put when the turn changes (${viewport.name})`, async ({ page }) => {
     await page.setViewportSize({ width: viewport.width, height: viewport.height });

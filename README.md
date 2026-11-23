@@ -1,18 +1,37 @@
 # Bumper Goal
 
-Turn-based, physics-based car soccer for desktop and mobile browsers, with online multiplayer (Nakama) and AI opponents. Cars replace the player pieces; the football remains.
+Turn-based, physics-based car soccer for Android, desktop, and mobile browsers, with online multiplayer (Nakama) and AI opponents. Cars replace the player pieces; the football remains.
 
-Bumper Goal uses the supplied RetroCartoonCarsPack1 models. The match uses a full-screen cartoon 3D arena with a device-aware oblique camera (portrait on phones, landscape on desktop), matching team car models, raised goals and speed/acceleration-sensitive tire tracks. See [the Bumper Goal notes](docs/BUMPER_GOAL.md).
+Bumper Goal uses the supplied RetroCartoonCarsPack1 models. The match uses a full-screen cartoon 3D arena with a landscape oblique camera on phones and desktop, matching team car models, raised goals and speed/acceleration-sensitive tire tracks. See [the Bumper Goal notes](docs/BUMPER_GOAL.md).
 
 The full UI includes League, Profile, Shop, Assets, rankings, rewards and settings. Purchases and equipment management are separate.
 
-## Branches
+## Android builds
 
-| Branch  | Purpose                             |
-| ------- | ----------------------------------- |
-| `dev`   | All development commits land here.  |
-| `stage` | Promoted from `dev` for staging/QA. |
-| `main`  | Production releases only.           |
+Bumper Goal plays in landscape. Android uses the package ID `com.jollypanda.bumper_goal`. In a portrait browser window, the game prompts the player to rotate the device.
+
+| Branch          | GitHub Actions outputs                                       |
+| --------------- | ------------------------------------------------------------ |
+| `main`          | Debug APK, release APK and release AAB                       |
+| `Iranian-store` | Separate Cafe Bazaar and Myket release APK and AAB artifacts |
+
+A push or manual dispatch starts the [Android workflow](https://github.com/Jolly-Panda-Works/BumperGoal/actions/workflows/android.yml). Both branches use the workflow run number for the Android version code. Merge changes from `main` into `Iranian-store` to rebuild both store packages. Store uploads are handled from the respective developer dashboards.
+
+Configure repository secrets `ANDROID_KEYSTORE_BASE64`, `ANDROID_KEYSTORE_PASSWORD`, `ANDROID_KEY_ALIAS`, and `ANDROID_KEY_PASSWORD` to produce signed packages. Signed main builds publish the debug APK, release APK, AAB, and checksums on [GitHub Releases](https://github.com/Jolly-Panda-Works/BumperGoal/releases). Builds without signing secrets retain unsigned release files as workflow artifacts for inspection.
+
+For online play in Android builds, configure the `VITE_NAKAMA_*` repository variables listed in [the web environment example](apps/web/.env.example). Local modes work without them.
+
+To build a local debug APK, install JDK 21 and Android SDK 35, then run these commands. Run `cap add` once per checkout.
+
+```bash
+pnpm install --frozen-lockfile
+pnpm --filter @flickkick/web build
+cd apps/mobile
+pnpm exec cap add android
+pnpm android:sync
+cd android
+./gradlew assembleDebug
+```
 
 ## Run locally
 
@@ -122,3 +141,7 @@ docker run --rm -v "$PWD:/repo" -w /repo/server/nakama --entrypoint go heroiclab
 Run `npm run dev:screens` and open http://127.0.0.1:5174/dev. If port 5174 is occupied, Vite selects the next free port; use the URL printed in the terminal. Dependencies are managed with `pnpm install --frozen-lockfile`, not `npm install` (using `npm run` to launch a script is fine). The gallery links to every game screen and includes persistent previews for victory, defeat, online rewards, matchmaking and level up. Use the floating «صفحه‌ها» link to return, and the language selector to check Persian, English and Arabic.
 
 This development-only mode disables Nakama connections and fullscreen, uses a separate `screens.*` local-storage namespace, and seeds sample profile, wallet, match and history data on reload. Online-only screens show their offline state; the admin panel still requires a real backend and credentials. Production builds do not expose the gallery.
+
+## Contributing and license
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) and [SECURITY.md](SECURITY.md). Bumper Goal's original source code is released under the [MIT License](LICENSE). Third-party dependencies, artwork, fonts, audio, and 3D models retain their respective terms. This includes the RetroCartoonCarsPack1 models in [the car asset notes](docs/BUMPER_GOAL.md#car-assets).

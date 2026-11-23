@@ -1,0 +1,9 @@
+{
+  "appId": "com.jollypanda.bumper_goal",
+  "appName": "Bumper Goal",
+  "webDir": "../web/dist",
+  "server": {
+    "hostname": "localhost",
+    "androidScheme": "https"
+  }
+}

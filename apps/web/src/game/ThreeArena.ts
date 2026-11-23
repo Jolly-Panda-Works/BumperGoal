@@ -5,8 +5,6 @@ import { CarDriveEffects, fullPowerNitro, wheelPivots, type CarDriveRig } from '
 import { AimArrow } from './AimArrow';
 import { collisionContact } from './collisionContact';
 import { kickoffCarHeading, resetKickoffViews } from './kickoffPresentation';
-import { isPhone } from '../services/device';
-import { preferredArenaLayout } from './arenaLayout';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import type { Entity } from 'koota';
@@ -544,9 +542,7 @@ export class ThreeArena {
     const w = Math.max(1, this.parent.clientWidth),
       h = Math.max(1, this.parent.clientHeight);
     this.renderer.setSize(w, h);
-    const layout = preferredArenaLayout(w, isPhone());
-    this.renderer.domElement.dataset.layout = layout;
-    fitArenaCamera(this.camera, w, h, physicsConfig.arena.halfWidth, layout);
+    fitArenaCamera(this.camera, w, h, physicsConfig.arena.halfWidth);
   }
 
   private point(event: PointerEvent) {

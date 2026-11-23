@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 for (const viewport of [
   { label: 'desktop', width: 1280, height: 800 },
-  { label: 'phone @mobile', width: 393, height: 852 },
+  { label: 'phone @mobile', width: 852, height: 393 },
 ]) {
   test(`complete navigation, purchase and owned equipment (${viewport.label})`, async ({ page }) => {
     await page.setViewportSize(viewport);

@@ -3,7 +3,7 @@ import { boardToPage, waitForArenaInput } from './board3d';
 
 for (const viewport of [
   { label: 'desktop', width: 1280, height: 1000 },
-  { label: 'phone @mobile', width: 393, height: 852 },
+  { label: 'phone @mobile', width: 852, height: 393 },
 ]) {
   test(`3D models and a real slingshot shot (${viewport.label})`, async ({ page }) => {
     await page.addInitScript(() =>
@@ -22,10 +22,6 @@ for (const viewport of [
     await page.goto('/play/local');
     await page.getByRole('button', { name: 'Kick off' }).click();
     await expect(page.getByLabel('Bumper Goal 3D football arena')).toBeVisible();
-    await expect(page.getByLabel('Bumper Goal 3D football arena')).toHaveAttribute(
-      'data-layout',
-      viewport.width >= 700 ? 'landscape' : 'portrait',
-    );
     await expect.poll(() => models.size).toBe(2);
     await expect(page.getByLabel('Bumper Goal 3D football arena')).toHaveAttribute('data-models-ready', '6');
     const canvas = await page.getByLabel('Bumper Goal 3D football arena').boundingBox();
@@ -40,7 +36,7 @@ for (const viewport of [
     );
     const car = state.bodies[state.turn.side === 'L' ? 1 : 4]!;
     const start = await boardToPage(page, car.x, car.y);
-    const pull = viewport.width >= 700 ? 2.8 : 2.3;
+    const pull = viewport.height >= 700 ? 2.8 : 2.3;
     const ball = state.bodies.at(-1)!;
     const distance = Math.hypot(ball.x - car.x, ball.y - car.y);
     const end = await boardToPage(
@@ -76,7 +72,7 @@ for (const viewport of [
     const arena = page.getByLabel('Bumper Goal 3D football arena');
     expect(Number(await arena.getAttribute('data-smoke-count'))).toBeGreaterThan(0);
     expect(Number(await arena.getAttribute('data-wheel-turns'))).toBeGreaterThan(0);
-    if (viewport.width >= 700) expect(Number(await arena.getAttribute('data-nitro-count'))).toBeGreaterThan(0);
+    if (viewport.height >= 700) expect(Number(await arena.getAttribute('data-nitro-count'))).toBeGreaterThan(0);
     else expect(Number(await arena.getAttribute('data-nitro-count'))).toBe(0);
     expect(errors).toEqual([]);
   });

@@ -69,6 +69,19 @@ function FirstRunGate({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
 
+function OrientationNotice() {
+  const { t } = useTranslation();
+  const { pathname } = useLocation();
+  if (pathname.startsWith('/admin')) return null;
+  return (
+    <div className="orientation-screen" role="status">
+      <Logo big />
+      <h1>{t('orientation.title')}</h1>
+      <p>{t('orientation.hint')}</p>
+    </div>
+  );
+}
+
 export function App() {
   const { t } = useTranslation();
   const settings = useSettings();
@@ -119,11 +132,7 @@ export function App() {
 
   return (
     <BrowserRouter>
-      <div className="orientation-screen" role="status">
-        <Logo big />
-        <h1>{t('orientation.title')}</h1>
-        <p>{t('orientation.hint')}</p>
-      </div>
+      <OrientationNotice />
       <MusicDirector />
       <AssetDirector />
       {screenPreview && (
