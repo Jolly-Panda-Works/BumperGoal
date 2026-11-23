@@ -3,7 +3,6 @@ name: Android builds
 on:
   push:
     branches: [main, Iranian-store]
-    paths-ignore: ['**.md', 'docs/**', LICENSE]
   workflow_dispatch:
 
 permissions:

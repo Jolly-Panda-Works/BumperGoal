@@ -23,9 +23,7 @@ const urls = (files: string[]) => files.map(assetUrl);
 
 /** The same choice as the <picture> on the welcome screen. */
 function welcomePromo(): string | undefined {
-  const url = window.matchMedia('(max-aspect-ratio: 4/3)').matches
-    ? uiUrl('promo_square')
-    : uiUrl('promo_landscape');
+  const url = window.matchMedia('(max-aspect-ratio: 4/3)').matches ? uiUrl('promo_square') : uiUrl('promo_landscape');
   return url?.slice(assetUrl('').length);
 }
 

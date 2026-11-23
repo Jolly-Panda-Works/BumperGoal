@@ -8,6 +8,7 @@ export default tseslint.config(
     ignores: [
       '**/dist/**',
       '**/dist-e2e/**',
+      'apps/mobile/android/**',
       'test-results/**',
       '**/node_modules/**',
       'physics/vendor/**',

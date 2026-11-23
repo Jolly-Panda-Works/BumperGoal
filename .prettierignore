@@ -4,4 +4,5 @@ pnpm-lock.yaml
 **/dist
 *.wasm
 **/dist-e2e
+apps/mobile/android/
 test-results
